@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="tableau server,failover," />
+  <meta name="keywords" content="failover,tableau server," />
 
 
 
@@ -372,8 +372,8 @@
 <p>The answer is yes!</p>
 <p>Most Tableau Server services are written in Spring. Spring has a nice datasource class called <code>AbstractRoutingDataSource</code>, which is kind of a proxy that can dynamically route db requests based on a key. In our case, the key is the <code>&lt;DNS name&gt;</code> of <code>primary.posgres</code> in the config file.</p>
 <p>What I did is to make each process watch the config file and update their internal key upon file updates. Therefore, now the db requests can be immediately routed to the new active postgres during a failover within 1 sec, rather than being down for more than 3 mins.</p>
-<p>How <code>AbstractRoutingDataSource</code> works is presented <a href="http://phoenixjiangnan.github.io/2016/03/25/spring/Spring-Dynamic-Datasource/" target="_blank" rel="external">here</a></p>
-<p>Some information about how we monitor Postgres is covered <a href="http://phoenixjiangnan.github.io/2016/07/23/system%20design/How-did-I-improved-our-system-monitoring-accuracy-from-40-50-to-99/" target="_blank" rel="external">here</a></p>
+<p>How <code>AbstractRoutingDataSource</code> works is presented <a href="http://phoenixjiangnan.github.io/2016/03/25/spring/Spring-Dynamic-Datasource/">here</a></p>
+<p>Some information about how we monitor Postgres is covered <a href="http://phoenixjiangnan.github.io/2016/07/23/system%20design/How-did-I-improved-our-system-monitoring-accuracy-from-40-50-to-99/">here</a></p>
 
       
     </div>
@@ -396,9 +396,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/tableau-server/" rel="tag">#tableau server</a>
-          
             <a href="/tags/failover/" rel="tag">#failover</a>
+          
+            <a href="/tags/tableau-server/" rel="tag">#tableau server</a>
           
         </div>
       

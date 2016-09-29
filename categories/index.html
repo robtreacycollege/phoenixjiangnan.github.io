@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="java lambda,lambda,consumer,biconsumer,functional interface," />
+  <meta name="keywords" content="Hexo, Welcome to Bowen's Blog" />
 
 
 
@@ -86,22 +86,16 @@
 
 
 
-<meta name="description" content="12@FunctionalInterfacepublic interface Consumer&amp;lt;T&amp;gt;
-Represents an operation that accepts a single input argument and returns no result. 
-Unlike most other functional interfaces, Consumer is expec">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Java 8 Functional Interface - Consumer and BiConsumber">
-<meta property="og:url" content="https://phoenixjiangnan.github.io/2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Consumer-and-BiConsumber/index.html">
+<meta name="description" content="keep learning">
+<meta property="og:type" content="website">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="https://phoenixjiangnan.github.io/categories/index.html">
 <meta property="og:site_name" content="Bowen's blog">
-<meta property="og:description" content="12@FunctionalInterfacepublic interface Consumer&amp;lt;T&amp;gt;
-Represents an operation that accepts a single input argument and returns no result. 
-Unlike most other functional interfaces, Consumer is expec">
+<meta property="og:description" content="keep learning">
 <meta property="og:updated_time" content="2016-06-29T22:06:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java 8 Functional Interface - Consumer and BiConsumber">
-<meta name="twitter:description" content="12@FunctionalInterfacepublic interface Consumer&amp;lt;T&amp;gt;
-Represents an operation that accepts a single input argument and returns no result. 
-Unlike most other functional interfaces, Consumer is expec">
+<meta name="twitter:title" content="categories">
+<meta name="twitter:description" content="keep learning">
 
 
 
@@ -122,7 +116,13 @@ Unlike most other functional interfaces, Consumer is expec">
 
 
 
-  <title> Java 8 Functional Interface - Consumer and BiConsumber | Bowen's blog </title>
+  <title>
+  
+
+  
+    Category | Bowen's blog
+  
+</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -143,7 +143,7 @@ Unlike most other functional interfaces, Consumer is expec">
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -266,207 +266,24 @@ Unlike most other functional interfaces, Consumer is expec">
 
   <div id="posts" class="posts-expand">
     
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
     
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                Java 8 Functional Interface - Consumer and BiConsumber
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-01-31T16:01:12+08:00" content="2016-01-31">
-              2016-01-31
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index">
-                    <span itemprop="name">java</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/java/java-8/" itemprop="url" rel="index">
-                    <span itemprop="name">java 8</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/java/java-8/lambda/" itemprop="url" rel="index">
-                    <span itemprop="name">lambda</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Consumer-and-BiConsumber/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Consumer-and-BiConsumber/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
+      <div class="category-all-page">
+        <div class="category-all-title">
+            46 categories in total
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@FunctionalInterface</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Consumer</span>&lt;<span class="title">T</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>Represents an operation that accepts a single input argument and returns no result. </p>
-<p>Unlike most other functional interfaces, Consumer is expected to operate via side-effects.</p>
-<p>This is a functional interface whose functional method is accept(Object).</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">accept</span><span class="params">(T t)</span> <span class="comment">// Performs this operation on the given argument.</span></span></div></pre></td></tr></table></figure>
-<a id="more"></a>
-<h1 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConsumerTests</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		Consumer&lt;String&gt; c = (x) -&gt; System.out.println(x.toLowerCase());</div><div class="line">		c.accept(<span class="string">"JOHN"</span>);</div><div class="line"></div><div class="line">		Consumer&lt;Integer&gt; con = (x) -&gt; &#123;</div><div class="line">			System.out.println(x + <span class="number">10</span>);</div><div class="line">			System.out.println(x - <span class="number">10</span>);</div><div class="line">		&#125;;</div><div class="line">		con.accept(<span class="number">10</span>);</div><div class="line"></div><div class="line"></div><div class="line">		BiConsumer&lt;String, String&gt; bc = (x, y) -&gt; &#123; System.out.println(x + y);&#125;;</div><div class="line">		bc.accept(<span class="string">"1"</span>, <span class="string">"2"</span>);</div><div class="line"></div><div class="line"></div><div class="line">		List&lt;Person&gt; plist = Arrays.asList(<span class="keyword">new</span> Person(<span class="string">"John"</span>), <span class="keyword">new</span> Person(<span class="string">"Emma"</span>));</div><div class="line"></div><div class="line">		acceptAllEmployee(plist, p -&gt; System.out.println(p.name));</div><div class="line">		acceptAllEmployee(plist, p -&gt; &#123;p.name = <span class="string">"unknown"</span>;&#125;);</div><div class="line">		acceptAllEmployee(plist, p -&gt; System.out.println(p.name));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">acceptAllEmployee</span><span class="params">(List&lt;Person&gt; plist, Consumer&lt;Person&gt; con)</span> </span>&#123;</div><div class="line">		<span class="keyword">for</span>(Person p : plist) &#123;</div><div class="line">			con.accept(p);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<!-- more -->
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/java-lambda/" rel="tag">#java lambda</a>
-          
-            <a href="/tags/lambda/" rel="tag">#lambda</a>
-          
-            <a href="/tags/consumer/" rel="tag">#consumer</a>
-          
-            <a href="/tags/biconsumer/" rel="tag">#biconsumer</a>
-          
-            <a href="/tags/functional-interface/" rel="tag">#functional interface</a>
-          
+        <div class="category-all">
+          <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/best-practice/">best practice</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/best-practice/design-pattern/">design pattern</a><span class="category-list-count">11</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/best-practices/">best practices</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/career-and-leadership/">career and leadership</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/data-structures-and-algorithms/">data structures and algorithms</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/data-structures-and-algorithms/interview/">interview</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/data-structures-and-algorithms/probability/">probability</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/database/">database</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/database/hibernate/">hibernate</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/disbuted-system/">disbuted system</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/disbuted-system/zookeeper/">zookeeper</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/distributed-system/">distributed system</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/distributed-system/algorithms/">algorithms</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/distributed-system/high-availability/">high availability</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/distributed-system/nosql/">nosql</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/distributed-system/thrift/">thrift</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/distributed-system/zookeeper/">zookeeper</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/java/concurrency/">concurrency</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/exception/">exception</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/guava/">guava</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/java-8/">java 8</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/java/java-8/lambda/">lambda</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/java-8/stream/">stream</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/network/">network</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/reflection/">reflection</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/machine-learning/">machine learning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ruby/">ruby</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/spring/">spring</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/spring/hibernate-integration/">hibernate integration</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/system-design/">system design</a><span class="category-list-count">12</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/system-design/cache/">cache</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/system-design/messaging/">messaging</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/system-design/project-experience/">project experience</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/system-design/task-queue/">task queue</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/test/">test</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/test/jmockit/">jmockit</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/tools/">tools</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/tools/markdown/">markdown</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tools/rake/">rake</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/web-development/">web development</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/web-development/json/">json</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/web-development/json/jackson/">jackson</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/web-development/rest/">rest</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web-development/webhook/">webhook</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Supplier/" rel="next" title="Java 8 Functional Interface - Supplier">
-                <i class="fa fa-chevron-left"></i> Java 8 Functional Interface - Supplier
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/02/01/java/java 8/lambda/Java-8-Functional-Interface/" rel="prev" title="Java 8 Functional Interface">
-                Java 8 Functional Interface <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-  <div class="comments" id="comments">
-    
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
       </div>
     
   </div>
 
+
+          </div>
+          
+
+
+          
 
         </div>
         
@@ -486,17 +303,8 @@ Unlike most other functional interfaces, Consumer is expec">
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/avatar/avatar.jpg"
@@ -564,17 +372,6 @@ Unlike most other functional interfaces, Consumer is expec">
 
       </section>
 
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Example"><span class="nav-number">1.</span> <span class="nav-text">Example</span></a></li></ol></div>
-            
-          </div>
-        </section>
       
 
     </div>
@@ -671,10 +468,6 @@ Unlike most other functional interfaces, Consumer is expec">
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
-
-
 
   
 
@@ -691,9 +484,9 @@ Unlike most other functional interfaces, Consumer is expec">
 
     <script type="text/javascript">
       var disqus_shortname = 'bowensgithubblog';
-      var disqus_identifier = '2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Consumer-and-BiConsumber/';
-      var disqus_title = "Java 8 Functional Interface - Consumer and BiConsumber";
-      var disqus_url = 'https://phoenixjiangnan.github.io/2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Consumer-and-BiConsumber/';
+      var disqus_identifier = 'categories/index.html';
+      var disqus_title = "categories";
+      var disqus_url = 'https://phoenixjiangnan.github.io/categories/index.html';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
@@ -704,8 +497,6 @@ Unlike most other functional interfaces, Consumer is expec">
       }
 
       run_disqus_script('count.js');
-      
-        run_disqus_script('embed.js');
       
     </script>
   
