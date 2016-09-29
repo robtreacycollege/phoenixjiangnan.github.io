@@ -281,6 +281,140 @@
             
               
                 
+                <a class="post-title-link" href="/2016/09/29/hexo/Hexo-How-to-backup-configs-and-blogs-of-Github-Pages-in-a-Github-repository/" itemprop="url">
+                  Hexo - How to backup configs and blogs of Github Pages in a Github repository
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-09-29T17:50:02+08:00" content="2016-09-29">
+              2016-09-29
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/29/hexo/Hexo-How-to-backup-configs-and-blogs-of-Github-Pages-in-a-Github-repository/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/09/29/hexo/Hexo-How-to-backup-configs-and-blogs-of-Github-Pages-in-a-Github-repository/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>Github Pages is great - it allows you to set up static website on it and use it as a blog.</p>
+<p>I’ve been using <a href="https://hexo.io/">Hexo</a> as the blogging platform and static website generator, and <a href="http://theme-next.iissnan.com/">NexT</a> as its theme. One thing I really need when using Hexo is to back up all my blogs which are in markdown format, as well as Hexo configuration file, a bunch website configuration files, and the theme configuration file. The reason being that 1) self-managed blog generator is very easy to be messed up, and 2) I need to re-setup everything when switching computers, both cases requiring reconfigure Hexo and restore all contents and configurations.</p>
+<p>So wouldn’t it be nice that we can use your <code>&lt;username&gt;.github.io</code> repository for Github Pages, and another repository, say <code>Hexo</code>, for all your blogs and configurations?</p>
+<p>It’s a bit tricky, and I’m gonna show you how to do it.</p>
+<h3 id="Backgrounds-What-files-should-be-backed-up"><a href="#Backgrounds-What-files-should-be-backed-up" class="headerlink" title="Backgrounds - What files should be backed up"></a>Backgrounds - What files should be backed up</h3><p>Let’s say Hexo lives in a dir called <code>Hexo</code>, and your theme is NexT, the file layout looks like this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">- Hexo</div><div class="line">    - _config.yml (Hexo config file)</div><div class="line">    - node_modules (Node.js code of Hexo and all plugins)</div><div class="line">    - public (generated static website data)</div><div class="line">    - scaffolds (template files)</div><div class="line">    - source</div><div class="line">        - _posts (all your blogs)</div><div class="line">        -      (other top-level sites you want to add, like `about`, `categories`, and `tags`)</div><div class="line">    - themes (Hexo themes)</div><div class="line">        - landscape (Hexo default theme)</div><div class="line">        - next (NexT theme)</div><div class="line">            - _config.yml (NexT&apos;s config file)</div></pre></td></tr></table></figure>
+<h3 id="1-Init-Hexo-in-a-temp-folder"><a href="#1-Init-Hexo-in-a-temp-folder" class="headerlink" title="1. Init Hexo in a temp folder"></a>1. Init Hexo in a temp folder</h3><p>Let’s init Hexo in a temp folder called <code>hexocopy</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir hexocopy</div><div class="line">cd hexocopy</div><div class="line">hexo init</div></pre></td></tr></table></figure>
+<h3 id="2-Init-your-official-Hexo-repository"><a href="#2-Init-your-official-Hexo-repository" class="headerlink" title="2. Init your official Hexo repository"></a>2. Init your official Hexo repository</h3><ul>
+<li>Create a repository called <code>Hexo</code></li>
+<li>Clone that repository to your local machine by either calling <code>git clone</code> or using Github Desktop App<br>  e.g.   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/phoenixjiangnan/Hexo</div></pre></td></tr></table></figure>
+</li>
+</ul>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/29/hexo/Hexo-How-to-backup-configs-and-blogs-of-Github-Pages-in-a-Github-repository/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/09/21/career and leadership/Repost-Farewell-App-Academy-Hello-Airbnb-Part-II/" itemprop="url">
                   Repost - "Farewell, App Academy. Hello, Airbnb. (Part II)"
                 </a>
@@ -3233,150 +3367,6 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/12/spring/Spring-Spring-s-Core-Concepts/" itemprop="url">
-                  Spring - Spring's Core Concepts
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-07-12T22:42:49+08:00" content="2016-07-12">
-              2016-07-12
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/spring/" itemprop="url" rel="index">
-                    <span itemprop="name">spring</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/07/12/spring/Spring-Spring-s-Core-Concepts/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/12/spring/Spring-Spring-s-Core-Concepts/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="1-Spring-and-IoC-Inversion-of-Control-反转控制"><a href="#1-Spring-and-IoC-Inversion-of-Control-反转控制" class="headerlink" title="1. Spring and IoC (Inversion of Control) 反转控制"></a>1. Spring and IoC (Inversion of Control) 反转控制</h2><blockquote>
-<p>The main idead behind Inversion of Control as a concept is: <strong>component dependencies, lifecycle events, and configuration reside outside of the components themselves but in the framework.</strong> It sounds like giving up too much control, but in fact makes your code more manageable, testable, and portable.</p>
-</blockquote>
-<h3 id="Dependency-Inversion-Precursor-to-Dependency-Injection"><a href="#Dependency-Inversion-Precursor-to-Dependency-Injection" class="headerlink" title="Dependency Inversion: Precursor to Dependency Injection"></a>Dependency Inversion: Precursor to Dependency Injection</h3><p>In <em>The Dependency Inversion Principle</em> (or DIP), the author states the three defining factors of “bad code”:</p>
-<blockquote>
-<ol>
-<li>It is hard to change because every change affects too many other parts of the system (Rigidity)</li>
-<li>When you make a change, unexpected parts of the system break (Fragility)</li>
-<li>It is hard to reuse in another application because it cannot be disentangled from the current application (Immobility) [3]</li>
-</ol>
-</blockquote>
-<p>According to Martin, interdependency causes these coding problems (we’ll call them RFI for Rigidity, Fragility, and Immobility). To fix RFI issues in your OO code, DIP has two basic rules:</p>
-<hr>
-<blockquote>
-<p>1) High level modules should not depend upon low level modules, both should depend upon abstractions. 高层次的模块不应该依赖于低层次的模块，两者都应该依赖于抽象接口</p>
-</blockquote>
-<p>In other words, high level modules – which contain your business logic and all of the important meat of your application – should not depend on lower level components. The reason for this is if these lower level components were to change, the changes might affect the higher level components as well. This is the defining concept behind dependency inversion, that the prevailing wisdom of having higher-level modules dependent on lower-level modules is in fact a bad idea.</p>
-<hr>
-<blockquote>
-<p>2) Abstractions should not depend upon details, details should depend upon abstractions.<br>抽象接口不应该依赖于具体实现。而具体实现则应该依赖于抽象接口</p>
-</blockquote>
-<p>This is another way to say that before you begin coding to the abstraction – <code>the interface or abstract class</code> – you should find the common behaviors in the code and work backwards. Your interface /abstraction should cater to the intersection between the needs of your business logic and the common behaviors of the lower level modules. You should also leave the details of how these behaviors are implemented to the implementation classes.</p>
-<hr>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/12/spring/Spring-Spring-s-Core-Concepts/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3422,7 +3412,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">101</span>
+              <span class="site-state-item-count">102</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
