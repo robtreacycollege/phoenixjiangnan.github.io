@@ -1,0 +1,837 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="spring hibernate," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Bowen's blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="Interface PlatformTransactionManagerhttp://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html
+
+This is the central interface in Spring’s tra">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring - Spring-Hibernate Integration Configuration for DataSource and EntityManager">
+<meta property="og:url" content="https://phoenixjiangnan.github.io/2016/07/04/spring/hibernate integration/Spring-Spring-Hibernate-Integration-Configuration-for-DataSource-and-EntityManager/index.html">
+<meta property="og:site_name" content="Bowen's blog">
+<meta property="og:description" content="Interface PlatformTransactionManagerhttp://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html
+
+This is the central interface in Spring’s tra">
+<meta property="og:updated_time" content="2016-07-05T00:41:29.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Spring - Spring-Hibernate Integration Configuration for DataSource and EntityManager">
+<meta name="twitter:description" content="Interface PlatformTransactionManagerhttp://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html
+
+This is the central interface in Spring’s tra">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <title> Spring - Spring-Hibernate Integration Configuration for DataSource and EntityManager | Bowen's blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Bowen's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">keep learning</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Spring - Spring-Hibernate Integration Configuration for DataSource and EntityManager
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-07-04T16:40:37+08:00" content="2016-07-04">
+              2016-07-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/spring/" itemprop="url" rel="index">
+                    <span itemprop="name">spring</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/spring/hibernate-integration/" itemprop="url" rel="index">
+                    <span itemprop="name">hibernate integration</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/04/spring/hibernate integration/Spring-Spring-Hibernate-Integration-Configuration-for-DataSource-and-EntityManager/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/04/spring/hibernate integration/Spring-Spring-Hibernate-Integration-Configuration-for-DataSource-and-EntityManager/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Interface-PlatformTransactionManager"><a href="#Interface-PlatformTransactionManager" class="headerlink" title="Interface PlatformTransactionManager"></a>Interface PlatformTransactionManager</h2><p><a href="http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html" target="_blank" rel="external">http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html</a></p>
+<blockquote>
+<p>This is the central interface in Spring’s transaction infrastructure. Applications can use this directly, but it is not primarily meant as API: Typically, applications will work with either <code>TransactionTemplate</code> or declarative transaction demarcation through AOP.</p>
+<p>For implementors, it is recommended to derive from the provided <code>AbstractPlatformTransactionManager</code> class, which pre-implements the defined propagation behavior and takes care of transaction synchronization handling. Subclasses have to implement template methods for specific states of the underlying transaction, for example: begin, suspend, resume, commit.</p>
+<p>The default implementations of this strategy interface are <code>JtaTransactionManager</code> and <code>DataSourceTransactionManager</code>, which can serve as an implementation guide for other transaction strategies.</p>
+</blockquote>
+<h1 id="AspectJ’s-Role"><a href="#AspectJ’s-Role" class="headerlink" title="AspectJ’s Role"></a>AspectJ’s Role</h1><p>AspectJ’s role seems important in this Spring app context. I haven’t figured out how, but it didn’t work if removing the AspectJ part.</p>
+<p>W.r.t. the principle, I’ll do more research. Stay tuned.</p>
+<a id="more"></a>
+<h1 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h1><p>Here’s an example of a Spring-Hibernate integration.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Configuration</span></div><div class="line"><span class="meta">@EnableTransactionManagement</span>(mode = AdviceMode.ASPECTJ)  <span class="comment">// AspectJ is IMPORTANT</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SpringHibernateConfig</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="comment">// Key-values in config files</span></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String PRIMARY_HOST = <span class="string">"primary.host"</span>;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String PRIMARY_PORT = <span class="string">"primary.port"</span>;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String SECONDARY_HOST = <span class="string">"secondary.host"</span>;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String SECONDARY_PORT = <span class="string">"secondary.port"</span>;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String JDBC_URL_FORMAT = <span class="string">"jdbc:postgresql://%s:%d/workgroup%s"</span>;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String SSL_ENABLED_SUFFIX = <span class="string">"?ssl=true"</span>;</div><div class="line"></div><div class="line">    <span class="meta">@Autowired</span></div><div class="line">    <span class="keyword">private</span> IApplicationConfig app;</div><div class="line"></div><div class="line">    <span class="comment">/* Dynamic routing datasources */</span></div><div class="line">    <span class="function"><span class="keyword">private</span> DataSource <span class="title">routingDataSource</span><span class="params">(String host, <span class="keyword">int</span> port, <span class="keyword">boolean</span> sslEnabled)</span> </span>&#123;</div><div class="line">        BasicDataSource dataSource = <span class="keyword">new</span> BasicDataSource();</div><div class="line">        dataSource.setDriverClassName(app.getString(<span class="string">"jdbc.driverClassName"</span>));</div><div class="line">        dataSource.setUsername(app.getString(<span class="string">"jdbc.username"</span>));</div><div class="line">        dataSource.setPassword(app.getString(<span class="string">"jdbc.password"</span>));</div><div class="line">        dataSource.setMaxTotal(app.getInt(<span class="string">"jdbc.wg.connections"</span>));</div><div class="line">        dataSource.setMaxIdle(app.getInt(<span class="string">"jdbc.wg.idle_connections"</span>));</div><div class="line">        dataSource.setValidationQuery(<span class="string">"SELECT 1"</span>);</div><div class="line">        dataSource.setAccessToUnderlyingConnectionAllowed(<span class="keyword">true</span>);</div><div class="line">        dataSource.setMaxWaitMillis(app.getLong(<span class="string">"jdbc.wg.timeout"</span>));</div><div class="line">        dataSource.setTimeBetweenEvictionRunsMillis(app.getLong(<span class="string">"jdbc.wg.eviction_interval"</span>));</div><div class="line">        dataSource.setUrl(String.format(JDBC_URL_FORMAT, hostName, port,sslEnabled ? SSL_ENABLED_SUFFIX : <span class="string">""</span>););</div><div class="line"></div><div class="line">        <span class="keyword">return</span> dataSource;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="comment">/* Route datasource based on a datasource map */</span></div><div class="line">    <span class="meta">@Bean</span></div><div class="line">    <span class="function"><span class="keyword">public</span> DataSource <span class="title">getDataSource</span><span class="params">()</span> </span>&#123;</div><div class="line">        RoutingDataSource rds = <span class="keyword">new</span> RoutingDataSource();</div><div class="line">        Map&lt;Object, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line"></div><div class="line">        <span class="comment">// Get hosts and ports from config file</span></div><div class="line">        <span class="keyword">boolean</span> sslEnabled = app.getBool(workgroup);</div><div class="line"></div><div class="line">        String primaryHost = app.getString(PRIMARY_HOST);</div><div class="line">        <span class="keyword">int</span> primaryPort = app.getInt(PRIMARY_PORT);</div><div class="line">        </div><div class="line">        <span class="keyword">boolean</span> hasTwoDatasources = app.getHosts().size == <span class="number">2</span>;</div><div class="line">        <span class="keyword">if</span>(hasTwoDatasources)&#123;</div><div class="line">            String secondaryHost = app.getString(SECONDARY_HOST);</div><div class="line">            <span class="keyword">int</span> secondaryPort = app.getInt(SECONDARY_PORT);</div><div class="line"></div><div class="line">            <span class="comment">// Use host's name as the key for its datasource</span></div><div class="line">            DataSource ds1 = routingDataSource(primaryHost, primaryPort, sslEnabled);</div><div class="line">            DataSource ds2 = routingDataSource(secondaryHost, secondaryPort, sslEnabled);</div><div class="line"></div><div class="line">            map.put(primaryHost, ds1);</div><div class="line">            map.put(secondaryHost, ds2);</div><div class="line"></div><div class="line">            rds.setDefaultTargetDataSource(ds1);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            map.put(host, routingDataSource(primaryHost, primaryPort, sslEnabled));</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        rds.setTargetDataSources(map);</div><div class="line">        <span class="keyword">return</span> rds;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Bean</span></div><div class="line">    <span class="function"><span class="keyword">public</span> AbstractEntityManagerFactoryBean <span class="title">entityManagerFactory</span><span class="params">()</span> </span>&#123;</div><div class="line">        AbstractEntityManagerFactoryBean entityManagerFactoryBean = <span class="keyword">new</span> LocalContainerEntityManagerFactoryBean();</div><div class="line">        entityManagerFactoryBean.setDataSource(getDataSource());</div><div class="line">        entityManagerFactoryBean.setPersistenceUnitName(<span class="string">"sample"</span>);</div><div class="line">        entityManagerFactoryBean.setJpaVendorAdapter(<span class="keyword">new</span> HibernateJpaVendorAdapter());</div><div class="line">        entityManagerFactoryBean.setPersistenceProviderClass(org.hibernate.jpa.HibernatePersistenceProvider.class);</div><div class="line">        entityManagerFactoryBean.setPackagesToScan(</div><div class="line">                <span class="string">"org.test.package.name"</span>);</div><div class="line">        entityManagerFactoryBean.setJpaProperties(hibernateProperties());</div><div class="line"></div><div class="line">        <span class="keyword">return</span> entityManagerFactoryBean;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/* Util method to return Hibernate properties */</span></div><div class="line">    <span class="function"><span class="keyword">private</span> Properties <span class="title">hibernateProperties</span><span class="params">()</span> </span>&#123;</div><div class="line">        Properties properties = <span class="keyword">new</span> Properties();</div><div class="line">        properties.put(<span class="string">"hibernate.order_updates"</span>, <span class="keyword">true</span>);</div><div class="line">        properties.put(<span class="string">"hibernate.show_sql"</span>, <span class="keyword">false</span>);</div><div class="line">        properties.put(<span class="string">"hibernate.dialect"</span>, PostgreSQL9Dialect.class.getName());</div><div class="line">        <span class="keyword">return</span> properties;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/* Transaction manager */</span></div><div class="line">    <span class="meta">@Bean</span></div><div class="line">    <span class="function"><span class="keyword">public</span> PlatformTransactionManager <span class="title">transactionManager</span><span class="params">()</span> </span>&#123;</div><div class="line">            JpaTransactionManager transactionManager = <span class="keyword">new</span> JpaTransactionManager();</div><div class="line">            transactionManager.setEntityManagerFactory(entityManagerFactory().getObject());</div><div class="line">            <span class="keyword">return</span> transactionManager;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/spring-hibernate/" rel="tag">#spring hibernate</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/04/java/exception/Java - Exception - Principles to Handle Exception/" rel="next" title="Java - Exception - Principles to Handle Exception">
+                <i class="fa fa-chevron-left"></i> Java - Exception - Principles to Handle Exception
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/04/ruby/Ruby-Basic-Data-Structures-Array-List-and-Hash/" rel="prev" title="Ruby - Basic Data Structures, Array, List, and Hash">
+                Ruby - Basic Data Structures, Array, List, and Hash <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/avatar/avatar.jpg"
+               alt="Bowen" />
+          <p class="site-author-name" itemprop="name">Bowen</p>
+          <p class="site-description motion-element" itemprop="description">keep learning</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">101</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">46</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">249</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/phoenixjiangnan" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Interface-PlatformTransactionManager"><span class="nav-number">1.</span> <span class="nav-text">Interface PlatformTransactionManager</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#AspectJ’s-Role"><span class="nav-number"></span> <span class="nav-text">AspectJ’s Role</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Example"><span class="nav-number"></span> <span class="nav-text">Example</span></a></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bowen</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'bowensgithubblog';
+      var disqus_identifier = '2016/07/04/spring/hibernate integration/Spring-Spring-Hibernate-Integration-Configuration-for-DataSource-and-EntityManager/';
+      var disqus_title = "Spring - Spring-Hibernate Integration Configuration for DataSource and EntityManager";
+      var disqus_url = 'https://phoenixjiangnan.github.io/2016/07/04/spring/hibernate integration/Spring-Spring-Hibernate-Integration-Configuration-for-DataSource-and-EntityManager/';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
+    </script>
+  
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
