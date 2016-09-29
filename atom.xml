@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://phoenixjiangnan.github.io/"/>
-  <updated>2016-09-29T08:05:20.000Z</updated>
+  <updated>2016-09-29T09:36:41.000Z</updated>
   <id>https://phoenixjiangnan.github.io/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>Repost - &quot;Farewell, App Academy. Hello, Airbnb. (Part II)&quot;</title>
-    <link href="https://phoenixjiangnan.github.io/2016/09/21/career%20and%20leadership/Repost%20-%20%22Farewell,%20App%20Academy.%20Hello,%20Airbnb.%20(Part%20II)%22/"/>
-    <id>https://phoenixjiangnan.github.io/2016/09/21/career and leadership/Repost - &quot;Farewell, App Academy. Hello, Airbnb. (Part II)&quot;/</id>
+    <link href="https://phoenixjiangnan.github.io/2016/09/21/career%20and%20leadership/Repost-Farewell-App-Academy-Hello-Airbnb-Part-II/"/>
+    <id>https://phoenixjiangnan.github.io/2016/09/21/career and leadership/Repost-Farewell-App-Academy-Hello-Airbnb-Part-II/</id>
     <published>2016-09-21T15:10:23.000Z</published>
-    <updated>2016-09-29T08:05:20.000Z</updated>
+    <updated>2016-09-29T09:36:41.000Z</updated>
     
     <content type="html"><![CDATA[<p>I think this is a great great blog talking about, as a SDE, how to negotiate your salary package with tech companies.</p>
 <hr>
@@ -1899,9 +1899,9 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
       <category term="project experience" scheme="https://phoenixjiangnan.github.io/categories/system-design/project-experience/"/>
     
     
-      <category term="failover" scheme="https://phoenixjiangnan.github.io/tags/failover/"/>
-    
       <category term="tableau server" scheme="https://phoenixjiangnan.github.io/tags/tableau-server/"/>
+    
+      <category term="failover" scheme="https://phoenixjiangnan.github.io/tags/failover/"/>
     
   </entry>
   
