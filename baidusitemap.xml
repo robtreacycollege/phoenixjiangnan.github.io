@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://phoenixjiangnan.github.io/2016/01/23/hexo/Hexo-How-to-install-hexo-on-Mac-with-github-pages/</loc>
-    <lastmod>2016-09-30T02:47:55.000Z</lastmod>
+    <lastmod>2016-09-30T06:32:22.000Z</lastmod>
     <data>
         <display>
         <title>Hexo - How to install Hexo on Mac with github pages</title>
@@ -1358,18 +1358,18 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/05/10/spring/Spring-Set-up-and-Enable-Scheduled-Tasks/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/03/27/spring/Spring-Factory-Pattern/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Spring - Set up and Enable Scheduled Tasks</title>
-        <pubTime>2016-05-10T03:25:40.000Z</pubTime>
+        <title>Spring - Factory Pattern</title>
+        <pubTime>2016-03-27T08:01:17.000Z</pubTime>
         
-        <tag>scheduled task</tag>
+        <tag>spring</tag>
          
-        <tag>spring task</tag>
+        <tag>spring factory</tag>
          
-        <tag>enable scheduling</tag>
+        <tag>spring factory pattern</tag>
          
          
            
@@ -1516,21 +1516,23 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/06/20/ruby/Ruby-attr-accessor-attr-reader-and-attr-writer/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/05/10/spring/Spring-Set-up-and-Enable-Scheduled-Tasks/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Ruby - attr_accessor, attr_reader, and attr_writer</title>
-        <pubTime>2016-06-20T14:26:46.000Z</pubTime>
+        <title>Spring - Set up and Enable Scheduled Tasks</title>
+        <pubTime>2016-05-10T03:25:40.000Z</pubTime>
         
-        <tag>ruby accessors</tag>
+        <tag>scheduled task</tag>
          
-        <tag>attribute accessors</tag>
+        <tag>spring task</tag>
+         
+        <tag>enable scheduling</tag>
          
          
            
              
-              <breadCrumb title="ruby" url="https://phoenixjiangnan.github.io/categories/ruby/"/>
+              <breadCrumb title="spring" url="https://phoenixjiangnan.github.io/categories/spring/"/>
           
         </display>
     </data>
@@ -1563,21 +1565,29 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/06/21/ruby/Ruby-Variables-in-Ruby/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/04/03/spring/Spring-Spring-configuration-styles/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Ruby - Variables and Constant in Ruby</title>
-        <pubTime>2016-06-21T14:49:27.000Z</pubTime>
+        <title>Spring - Spring configuration styles</title>
+        <pubTime>2016-04-03T15:37:39.000Z</pubTime>
         
-        <tag>ruby variables</tag>
+        <tag>spring configuration</tag>
          
-        <tag>ruby variable types</tag>
+        <tag>spring config</tag>
+         
+        <tag>spring java config</tag>
+         
+        <tag>spring xml config</tag>
+         
+        <tag>spring combining config</tag>
+         
+        <tag>spring config styles</tag>
          
          
            
              
-              <breadCrumb title="ruby" url="https://phoenixjiangnan.github.io/categories/ruby/"/>
+              <breadCrumb title="spring" url="https://phoenixjiangnan.github.io/categories/spring/"/>
           
         </display>
     </data>
@@ -1616,26 +1626,25 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/05/17/database/hibernate/Hibernate-the-hi-lo-algorithm/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/01/24/hexo/Hexo-Hexo-commands/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Hibernate - the hi/lo algorithm</title>
-        <pubTime>2016-05-17T15:10:04.000Z</pubTime>
+        <title>Hexo - Hexo commands</title>
+        <pubTime>2016-01-24T15:00:37.000Z</pubTime>
         
-        <tag>hi/lo</tag>
+        <tag>hexo</tag>
          
-        <tag>hibernate high low</tag>
+        <tag>hexo commands</tag>
          
-        <tag>high low algorithm</tag>
+        <tag>hexo and github pages</tag>
+         
+        <tag>hexo on mac</tag>
          
          
            
              
-              <breadCrumb title="database" url="https://phoenixjiangnan.github.io/categories/database/"/>
-          
-             
-              <breadCrumb title="hibernate" url="https://phoenixjiangnan.github.io/categories/database/hibernate/"/>
+              <breadCrumb title="hexo" url="https://phoenixjiangnan.github.io/categories/hexo/"/>
           
         </display>
     </data>
@@ -1643,59 +1652,19 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/28/database/hibernate/Hibernate-Hibernate-Enum-and-Decoupling-Java-Class-with-Database-Record/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/06/21/ruby/Ruby-Methods-in-Ruby/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Hibernate - Hibernate Enum and Decoupling Java Class with Database Record</title>
-        <pubTime>2016-04-28T07:34:59.000Z</pubTime>
+        <title>Ruby - Methods in Ruby</title>
+        <pubTime>2016-06-21T15:54:37.000Z</pubTime>
         
-        <tag>hibernate enum</tag>
-         
-        <tag>enum in database</tag>
-         
-        <tag>decouple enum with database data</tag>
+        <tag>ruby methods</tag>
          
          
            
              
-              <breadCrumb title="database" url="https://phoenixjiangnan.github.io/categories/database/"/>
-          
-             
-              <breadCrumb title="hibernate" url="https://phoenixjiangnan.github.io/categories/database/hibernate/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/01/29/java/guava/Guava-EventBus/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Google Guava EventBus - an Easy and Elegant Way for Your Publisher - Subscriber Use Cases</title>
-        <pubTime>2016-01-29T14:46:21.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>eventbus</tag>
-         
-        <tag>guava</tag>
-         
-        <tag>guava eventbus</tag>
-         
-        <tag>google guava</tag>
-         
-        <tag>google eventbus</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
-          
-             
-              <breadCrumb title="guava" url="https://phoenixjiangnan.github.io/categories/java/guava/"/>
+              <breadCrumb title="ruby" url="https://phoenixjiangnan.github.io/categories/ruby/"/>
           
         </display>
     </data>
@@ -1730,6 +1699,284 @@
 
     
   <url>
+    <loc>https://phoenixjiangnan.github.io/2016/01/29/java/guava/Guava-EventBus/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Google Guava EventBus - an Easy and Elegant Way for Your Publisher - Subscriber Use Cases</title>
+        <pubTime>2016-01-29T14:46:21.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>guava</tag>
+         
+        <tag>eventbus</tag>
+         
+        <tag>guava eventbus</tag>
+         
+        <tag>google guava</tag>
+         
+        <tag>google eventbus</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
+          
+             
+              <breadCrumb title="guava" url="https://phoenixjiangnan.github.io/categories/java/guava/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/01/26/best%20practices/Logging/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Logging</title>
+        <pubTime>2016-01-26T13:45:22.000Z</pubTime>
+        
+        <tag>best practices</tag>
+         
+        <tag>logging best practices</tag>
+         
+         
+           
+             
+              <breadCrumb title="best practices" url="https://phoenixjiangnan.github.io/categories/best-practices/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/06/28/system%20design/SNAKE-System-Design-Principles-to-crack-a-system-design-in-5-steps/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>SNAKE - System Design Principles to crack a system design in 5 steps</title>
+        <pubTime>2016-06-28T15:07:46.000Z</pubTime>
+        
+        <tag>SNAKE principles of system design</tag>
+         
+         
+           
+             
+              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/04/28/database/hibernate/Hibernate-Hibernate-Enum-and-Decoupling-Java-Class-with-Database-Record/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hibernate - Hibernate Enum and Decoupling Java Class with Database Record</title>
+        <pubTime>2016-04-28T07:34:59.000Z</pubTime>
+        
+        <tag>hibernate enum</tag>
+         
+        <tag>enum in database</tag>
+         
+        <tag>decouple enum with database data</tag>
+         
+         
+           
+             
+              <breadCrumb title="database" url="https://phoenixjiangnan.github.io/categories/database/"/>
+          
+             
+              <breadCrumb title="hibernate" url="https://phoenixjiangnan.github.io/categories/database/hibernate/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/03/27/system%20design/cache/Cache-Best-Practices-to-design-cache-system-for-your-system/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Cache - Best practices to design cache system for your system</title>
+        <pubTime>2016-03-27T14:44:21.000Z</pubTime>
+        
+        <tag>system design</tag>
+         
+        <tag>cache design</tag>
+         
+        <tag>design cache</tag>
+         
+        <tag>cache design best practice</tag>
+         
+         
+           
+             
+              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
+          
+             
+              <breadCrumb title="cache" url="https://phoenixjiangnan.github.io/categories/system-design/cache/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/04/14/system%20design/cache/Cache-Design-a-cache-with-inspiration-from-Guava-Cache/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Cache - Design a cache with inspiration from Guava Cache</title>
+        <pubTime>2016-04-14T06:48:01.000Z</pubTime>
+        
+        <tag>cache design</tag>
+         
+        <tag>design cache</tag>
+         
+        <tag>cache design best practice</tag>
+         
+        <tag>system deisng</tag>
+         
+         
+           
+             
+              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
+          
+             
+              <breadCrumb title="cache" url="https://phoenixjiangnan.github.io/categories/system-design/cache/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/03/27/system%20design/cache/Cache-Design-a-distributed-cache-system/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Cache - Design a distributed cache system</title>
+        <pubTime>2016-03-27T15:47:18.000Z</pubTime>
+        
+        <tag>system design</tag>
+         
+        <tag>cache</tag>
+         
+        <tag>distributed cache</tag>
+         
+        <tag>cache sharding</tag>
+         
+         
+           
+             
+              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
+          
+             
+              <breadCrumb title="cache" url="https://phoenixjiangnan.github.io/categories/system-design/cache/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/05/20/system%20design/messaging/System-Design-When-to-use-Push-and-Pull-mechanism-in-a-messaging-app-or-the-timeline-of-a-social-app/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>System Design - When to use Push and Pull mechanism in a messaging app or the timeline of a social app</title>
+        <pubTime>2016-05-20T09:57:53.000Z</pubTime>
+        
+        <tag>pull</tag>
+         
+        <tag>push</tag>
+         
+        <tag>pull or push</tag>
+         
+         
+           
+             
+              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
+          
+             
+              <breadCrumb title="messaging" url="https://phoenixjiangnan.github.io/categories/system-design/messaging/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/05/17/database/hibernate/Hibernate-the-hi-lo-algorithm/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hibernate - the hi/lo algorithm</title>
+        <pubTime>2016-05-17T15:10:04.000Z</pubTime>
+        
+        <tag>hi/lo</tag>
+         
+        <tag>hibernate high low</tag>
+         
+        <tag>high low algorithm</tag>
+         
+         
+           
+             
+              <breadCrumb title="database" url="https://phoenixjiangnan.github.io/categories/database/"/>
+          
+             
+              <breadCrumb title="hibernate" url="https://phoenixjiangnan.github.io/categories/database/hibernate/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/02/08/distributed%20system/high%20availibility/Gossip-Protocol/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Gossip Protocol</title>
+        <pubTime>2016-02-08T08:49:41.000Z</pubTime>
+        
+        <tag>cassandra</tag>
+         
+        <tag>apache cassandra</tag>
+         
+        <tag>high availability</tag>
+         
+        <tag>cap theory</tag>
+         
+        <tag>gossip protocol</tag>
+         
+        <tag>distributed system</tag>
+         
+        <tag>system design</tag>
+         
+         
+           
+             
+              <breadCrumb title="distributed system" url="https://phoenixjiangnan.github.io/categories/distributed-system/"/>
+          
+             
+              <breadCrumb title="high availability" url="https://phoenixjiangnan.github.io/categories/distributed-system/high-availability/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://phoenixjiangnan.github.io/2016/02/16/distributed%20system/algorithems/Merkle-Tree-and-Anti-Entropy/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
@@ -1737,15 +1984,15 @@
         <title>Merkle Tree and Anti-Entropy</title>
         <pubTime>2016-02-16T08:56:25.000Z</pubTime>
         
+        <tag>cassandra</tag>
+         
+        <tag>apache cassandra</tag>
+         
         <tag>merkle tree</tag>
          
         <tag>anti entropy</tag>
          
         <tag>anti-entropy</tag>
-         
-        <tag>cassandra</tag>
-         
-        <tag>apache cassandra</tag>
          
         <tag>nosql</tag>
          
@@ -1798,23 +2045,25 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/03/27/spring/Spring-Factory-Pattern/</loc>
+    <loc>https://phoenixjiangnan.github.io/2015/04/08/data%20structures%20and%20algorithms/Array/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Spring - Factory Pattern</title>
-        <pubTime>2016-03-27T08:01:17.000Z</pubTime>
+        <title>Data Strucutre - Array</title>
+        <pubTime>2015-04-08T14:17:38.000Z</pubTime>
         
-        <tag>spring</tag>
+        <tag>data structures and algorithms</tag>
          
-        <tag>spring factory</tag>
+        <tag>array</tag>
          
-        <tag>spring factory pattern</tag>
+        <tag>1d array</tag>
+         
+        <tag>2d array</tag>
          
          
            
              
-              <breadCrumb title="spring" url="https://phoenixjiangnan.github.io/categories/spring/"/>
+              <breadCrumb title="data structures and algorithms" url="https://phoenixjiangnan.github.io/categories/data-structures-and-algorithms/"/>
           
         </display>
     </data>
@@ -1822,128 +2071,16 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/03/27/system%20design/cache/Cache-Best-Practices-to-design-cache-system-for-your-system/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/06/21/ruby/Ruby-Variables-in-Ruby/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Cache - Best practices to design cache system for your system</title>
-        <pubTime>2016-03-27T14:44:21.000Z</pubTime>
+        <title>Ruby - Variables and Constant in Ruby</title>
+        <pubTime>2016-06-21T14:49:27.000Z</pubTime>
         
-        <tag>system design</tag>
+        <tag>ruby variables</tag>
          
-        <tag>cache design</tag>
-         
-        <tag>design cache</tag>
-         
-        <tag>cache design best practice</tag>
-         
-         
-           
-             
-              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
-          
-             
-              <breadCrumb title="cache" url="https://phoenixjiangnan.github.io/categories/system-design/cache/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/03/27/system%20design/cache/Cache-Design-a-distributed-cache-system/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Cache - Design a distributed cache system</title>
-        <pubTime>2016-03-27T15:47:18.000Z</pubTime>
-        
-        <tag>system design</tag>
-         
-        <tag>cache</tag>
-         
-        <tag>distributed cache</tag>
-         
-        <tag>cache sharding</tag>
-         
-         
-           
-             
-              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
-          
-             
-              <breadCrumb title="cache" url="https://phoenixjiangnan.github.io/categories/system-design/cache/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/14/system%20design/cache/Cache-Design-a-cache-with-inspiration-from-Guava-Cache/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Cache - Design a cache with inspiration from Guava Cache</title>
-        <pubTime>2016-04-14T06:48:01.000Z</pubTime>
-        
-        <tag>cache design</tag>
-         
-        <tag>design cache</tag>
-         
-        <tag>cache design best practice</tag>
-         
-        <tag>system deisng</tag>
-         
-         
-           
-             
-              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
-          
-             
-              <breadCrumb title="cache" url="https://phoenixjiangnan.github.io/categories/system-design/cache/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/05/20/system%20design/messaging/System-Design-When-to-use-Push-and-Pull-mechanism-in-a-messaging-app-or-the-timeline-of-a-social-app/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>System Design - When to use Push and Pull mechanism in a messaging app or the timeline of a social app</title>
-        <pubTime>2016-05-20T09:57:53.000Z</pubTime>
-        
-        <tag>pull</tag>
-         
-        <tag>push</tag>
-         
-        <tag>pull or push</tag>
-         
-         
-           
-             
-              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
-          
-             
-              <breadCrumb title="messaging" url="https://phoenixjiangnan.github.io/categories/system-design/messaging/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/06/21/ruby/Ruby-Methods-in-Ruby/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Ruby - Methods in Ruby</title>
-        <pubTime>2016-06-21T15:54:37.000Z</pubTime>
-        
-        <tag>ruby methods</tag>
+        <tag>ruby variable types</tag>
          
          
            
@@ -1956,156 +2093,21 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/03/25/spring/Spring-Dynamic-Datasource/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/06/20/ruby/Ruby-attr-accessor-attr-reader-and-attr-writer/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Spring - Dynamic DataSource</title>
-        <pubTime>2016-03-25T14:06:07.000Z</pubTime>
+        <title>Ruby - attr_accessor, attr_reader, and attr_writer</title>
+        <pubTime>2016-06-20T14:26:46.000Z</pubTime>
         
-        <tag>spring</tag>
+        <tag>ruby accessors</tag>
          
-        <tag>spring jdbc</tag>
-         
-        <tag>routing data source</tag>
-         
-        <tag>datasource</tag>
-         
-        <tag>dynamic datasource</tag>
-         
-        <tag>dynamic routing datasource</tag>
-         
-        <tag>AbstractRoutingDataSourcespring</tag>
+        <tag>attribute accessors</tag>
          
          
            
              
-              <breadCrumb title="spring" url="https://phoenixjiangnan.github.io/categories/spring/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/02/08/distributed%20system/high%20availibility/Gossip-Protocol/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Gossip Protocol</title>
-        <pubTime>2016-02-08T08:49:41.000Z</pubTime>
-        
-        <tag>cassandra</tag>
-         
-        <tag>apache cassandra</tag>
-         
-        <tag>high availability</tag>
-         
-        <tag>cap theory</tag>
-         
-        <tag>gossip protocol</tag>
-         
-        <tag>distributed system</tag>
-         
-        <tag>system design</tag>
-         
-         
-           
-             
-              <breadCrumb title="distributed system" url="https://phoenixjiangnan.github.io/categories/distributed-system/"/>
-          
-             
-              <breadCrumb title="high availability" url="https://phoenixjiangnan.github.io/categories/distributed-system/high-availability/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/01/26/best%20practices/Logging/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Logging</title>
-        <pubTime>2016-01-26T13:45:22.000Z</pubTime>
-        
-        <tag>best practices</tag>
-         
-        <tag>logging best practices</tag>
-         
-         
-           
-             
-              <breadCrumb title="best practices" url="https://phoenixjiangnan.github.io/categories/best-practices/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/06/07/spring/Spring-Conditional-Annotation-and-Condition-Interface-in-Action/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Spring - @Conditional Annotation and Condition Interface in Action</title>
-        <pubTime>2016-06-07T08:03:09.000Z</pubTime>
-        
-        <tag>spring condition</tag>
-         
-        <tag>spring conditional</tag>
-         
-         
-           
-             
-              <breadCrumb title="spring" url="https://phoenixjiangnan.github.io/categories/spring/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/06/28/system%20design/SNAKE-System-Design-Principles-to-crack-a-system-design-in-5-steps/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>SNAKE - System Design Principles to crack a system design in 5 steps</title>
-        <pubTime>2016-06-28T15:07:46.000Z</pubTime>
-        
-        <tag>SNAKE principles of system design</tag>
-         
-         
-           
-             
-              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/01/24/hexo/Hexo-Hexo-commands/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo - Hexo commands</title>
-        <pubTime>2016-01-24T15:00:37.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>hexo commands</tag>
-         
-        <tag>hexo and github pages</tag>
-         
-        <tag>hexo on mac</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="https://phoenixjiangnan.github.io/categories/hexo/"/>
+              <breadCrumb title="ruby" url="https://phoenixjiangnan.github.io/categories/ruby/"/>
           
         </display>
     </data>
@@ -2177,29 +2179,46 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/03/spring/Spring-Spring-configuration-styles/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/06/07/spring/Spring-Conditional-Annotation-and-Condition-Interface-in-Action/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Spring - Spring configuration styles</title>
-        <pubTime>2016-04-03T15:37:39.000Z</pubTime>
+        <title>Spring - @Conditional Annotation and Condition Interface in Action</title>
+        <pubTime>2016-06-07T08:03:09.000Z</pubTime>
         
-        <tag>spring configuration</tag>
+        <tag>spring condition</tag>
          
-        <tag>spring config</tag>
-         
-        <tag>spring java config</tag>
-         
-        <tag>spring xml config</tag>
-         
-        <tag>spring combining config</tag>
-         
-        <tag>spring config styles</tag>
+        <tag>spring conditional</tag>
          
          
            
              
               <breadCrumb title="spring" url="https://phoenixjiangnan.github.io/categories/spring/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/04/15/tools/rake/Rake-Introduction-to-Rake/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Rake - Introduction to Rake</title>
+        <pubTime>2016-04-15T05:58:30.000Z</pubTime>
+        
+        <tag>rake</tag>
+         
+        <tag>rake build</tag>
+         
+         
+           
+             
+              <breadCrumb title="tools" url="https://phoenixjiangnan.github.io/categories/tools/"/>
+          
+             
+              <breadCrumb title="rake" url="https://phoenixjiangnan.github.io/categories/tools/rake/"/>
           
         </display>
     </data>
@@ -2229,31 +2248,6 @@
           
              
               <breadCrumb title="markdown" url="https://phoenixjiangnan.github.io/categories/tools/markdown/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/15/tools/rake/Rake-Introduction-to-Rake/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Rake - Introduction to Rake</title>
-        <pubTime>2016-04-15T05:58:30.000Z</pubTime>
-        
-        <tag>rake</tag>
-         
-        <tag>rake build</tag>
-         
-         
-           
-             
-              <breadCrumb title="tools" url="https://phoenixjiangnan.github.io/categories/tools/"/>
-          
-             
-              <breadCrumb title="rake" url="https://phoenixjiangnan.github.io/categories/tools/rake/"/>
           
         </display>
     </data>
@@ -2335,54 +2329,20 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/02/06/java/java%208/stream/Java-8-Stream/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Predicate-and-BiPredicate/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Java 8 Stream</title>
-        <pubTime>2016-02-06T15:36:01.000Z</pubTime>
+        <title>Java 8 Functional Interface - Predicate and BiPredicate</title>
+        <pubTime>2016-01-31T07:35:16.000Z</pubTime>
         
-        <tag>stream api</tag>
-         
-        <tag>java 8 stream</tag>
-         
-        <tag>java stream</tag>
-         
-        <tag>java streaming</tag>
-         
-        <tag>lambda</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
-          
-             
-              <breadCrumb title="java 8" url="https://phoenixjiangnan.github.io/categories/java/java-8/"/>
-          
-             
-              <breadCrumb title="stream" url="https://phoenixjiangnan.github.io/categories/java/java-8/stream/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Consumer-and-BiConsumber/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Java 8 Functional Interface - Consumer and BiConsumber</title>
-        <pubTime>2016-01-31T08:01:12.000Z</pubTime>
-        
-        <tag>lambda</tag>
-         
         <tag>java lambda</tag>
          
-        <tag>consumer</tag>
+        <tag>lambda</tag>
          
-        <tag>biconsumer</tag>
+        <tag>predicate</tag>
+         
+        <tag>bipredicate</tag>
          
         <tag>functional interface</tag>
          
@@ -2403,22 +2363,22 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Predicate-and-BiPredicate/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Consumer-and-BiConsumber/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Java 8 Functional Interface - Predicate and BiPredicate</title>
-        <pubTime>2016-01-31T07:35:16.000Z</pubTime>
+        <title>Java 8 Functional Interface - Consumer and BiConsumber</title>
+        <pubTime>2016-01-31T08:01:12.000Z</pubTime>
         
-        <tag>lambda</tag>
-         
         <tag>java lambda</tag>
+         
+        <tag>lambda</tag>
          
         <tag>functional interface</tag>
          
-        <tag>predicate</tag>
+        <tag>consumer</tag>
          
-        <tag>bipredicate</tag>
+        <tag>biconsumer</tag>
          
          
            
@@ -2444,9 +2404,9 @@
         <title>Java 8 Functional Interface - Function and BiFunction</title>
         <pubTime>2016-01-31T07:37:22.000Z</pubTime>
         
-        <tag>lambda</tag>
-         
         <tag>java lambda</tag>
+         
+        <tag>lambda</tag>
          
         <tag>functional interface</tag>
          
@@ -2478,9 +2438,9 @@
         <title>Java 8 Functional Interface - Supplier</title>
         <pubTime>2016-01-31T07:42:17.000Z</pubTime>
         
-        <tag>lambda</tag>
-         
         <tag>java lambda</tag>
+         
+        <tag>lambda</tag>
          
         <tag>functional interface</tag>
          
@@ -2510,47 +2470,13 @@
         <title>Java 8 Functional Interface</title>
         <pubTime>2016-02-01T09:00:03.000Z</pubTime>
         
-        <tag>lambda</tag>
-         
         <tag>java lambda</tag>
+         
+        <tag>lambda</tag>
          
         <tag>functional interface</tag>
          
         <tag>java 8</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
-          
-             
-              <breadCrumb title="java 8" url="https://phoenixjiangnan.github.io/categories/java/java-8/"/>
-          
-             
-              <breadCrumb title="lambda" url="https://phoenixjiangnan.github.io/categories/java/java-8/lambda/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/02/01/java/java%208/lambda/Java-8-Lambda-Expression/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Java 8 Lambda Expression</title>
-        <pubTime>2016-02-01T13:32:18.000Z</pubTime>
-        
-        <tag>lambda</tag>
-         
-        <tag>java lambda</tag>
-         
-        <tag>java 8</tag>
-         
-        <tag>lambda expression</tag>
-         
-        <tag>java 8 lambda</tag>
          
          
            
@@ -2576,15 +2502,83 @@
         <title>Java 8 Method Reference</title>
         <pubTime>2016-03-05T13:27:30.000Z</pubTime>
         
-        <tag>lambda</tag>
-         
         <tag>java lambda</tag>
+         
+        <tag>lambda</tag>
          
         <tag>java 8</tag>
          
         <tag>method reference</tag>
          
         <tag>java 8 method</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
+          
+             
+              <breadCrumb title="java 8" url="https://phoenixjiangnan.github.io/categories/java/java-8/"/>
+          
+             
+              <breadCrumb title="lambda" url="https://phoenixjiangnan.github.io/categories/java/java-8/lambda/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/02/06/java/java%208/stream/Java-8-Stream/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Java 8 Stream</title>
+        <pubTime>2016-02-06T15:36:01.000Z</pubTime>
+        
+        <tag>lambda</tag>
+         
+        <tag>stream api</tag>
+         
+        <tag>java 8 stream</tag>
+         
+        <tag>java stream</tag>
+         
+        <tag>java streaming</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
+          
+             
+              <breadCrumb title="java 8" url="https://phoenixjiangnan.github.io/categories/java/java-8/"/>
+          
+             
+              <breadCrumb title="stream" url="https://phoenixjiangnan.github.io/categories/java/java-8/stream/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/02/01/java/java%208/lambda/Java-8-Lambda-Expression/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Java 8 Lambda Expression</title>
+        <pubTime>2016-02-01T13:32:18.000Z</pubTime>
+        
+        <tag>java lambda</tag>
+         
+        <tag>lambda</tag>
+         
+        <tag>java 8</tag>
+         
+        <tag>lambda expression</tag>
+         
+        <tag>java 8 lambda</tag>
          
          
            
@@ -2665,25 +2659,31 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2015/04/08/data%20structures%20and%20algorithms/Array/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/03/25/spring/Spring-Dynamic-Datasource/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Data Strucutre - Array</title>
-        <pubTime>2015-04-08T14:17:38.000Z</pubTime>
+        <title>Spring - Dynamic DataSource</title>
+        <pubTime>2016-03-25T14:06:07.000Z</pubTime>
         
-        <tag>data structures and algorithms</tag>
+        <tag>spring</tag>
          
-        <tag>array</tag>
+        <tag>spring jdbc</tag>
          
-        <tag>1d array</tag>
+        <tag>routing data source</tag>
          
-        <tag>2d array</tag>
+        <tag>datasource</tag>
+         
+        <tag>dynamic datasource</tag>
+         
+        <tag>dynamic routing datasource</tag>
+         
+        <tag>AbstractRoutingDataSourcespring</tag>
          
          
            
              
-              <breadCrumb title="data structures and algorithms" url="https://phoenixjiangnan.github.io/categories/data-structures-and-algorithms/"/>
+              <breadCrumb title="spring" url="https://phoenixjiangnan.github.io/categories/spring/"/>
           
         </display>
     </data>
