@@ -94,7 +94,7 @@ What is this project about?Tableau Server is an on-premise data analytics and vi
 <meta property="og:site_name" content="Bowen's blog">
 <meta property="og:description" content="For more information about Tableau Server, you can read my blogs here
 What is this project about?Tableau Server is an on-premise data analytics and visualization platform. Customer can deploy bits in">
-<meta property="og:updated_time" content="2016-09-15T05:24:56.000Z">
+<meta property="og:updated_time" content="2016-09-30T06:52:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How did I develop a crypto service for Tableau Server">
 <meta name="twitter:description" content="For more information about Tableau Server, you can read my blogs here
@@ -175,7 +175,7 @@ What is this project about?Tableau Server is an on-premise data analytics and vi
       
         
         <li class="menu-item menu-item-home">
-          <a href="https://phoenixjiangnan.github.io" rel="section">
+          <a href="/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -362,7 +362,7 @@ What is this project about?Tableau Server is an on-premise data analytics and vi
       
 
       
-        <p>For more information about Tableau Server, you can read my blogs <a href="http://phoenixjiangnan.github.io/categories/system-design/project-experience/">here</a></p>
+        <p>For more information about Tableau Server, you can read my blogs <a href="https://phoenixjiangnan.github.io/categories/system-design/project-experience/">here</a></p>
 <h2 id="What-is-this-project-about"><a href="#What-is-this-project-about" class="headerlink" title="What is this project about?"></a>What is this project about?</h2><p>Tableau Server is an on-premise data analytics and visualization platform. Customer can deploy bits in their own data center, or in AWS, Azure, and GCP.</p>
 <p>There are two categories of passwords within a Tableau Server cluster:</p>
 <ul>
@@ -385,7 +385,7 @@ What is this project about?Tableau Server is an on-premise data analytics and vi
 </ul>
 <p>So the passwords I’m talking about is not the password for someone’s server account. The latter ones live in a table of the cluster’s PostgreSQL database and are already encrypted.</p>
 <p>The current version of Tableau Server (v10) stores all the passwords in <code>plain text</code> in a configuration file, which is distributed among machines.</p>
-<p>The new version of Tableau Server also stores all passwords in <code>plain text</code>, but in a <code>Znode</code> in ZooKeeper, as I described in <a href="http://phoenixjiangnan.github.io/2016/08/16/system%20design/project%20experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/">this blog</a>.</p>
+<p>The new version of Tableau Server also stores all passwords in <code>plain text</code>, but in a <code>Znode</code> in ZooKeeper, as I described in <a href="https://phoenixjiangnan.github.io/2016/08/16/system%20design/project%20experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/">this blog</a>.</p>
 <blockquote>
 <p>The project is about developing a crypto service that encrypts passwords before persisting them somewhere, and decrypts passwords into memory when server uses them, so that no more clear text secrets live in Tableau Server. The new service should support both our old monolith JRuby app and our new service-oriented server architecture.</p>
 </blockquote>
@@ -458,7 +458,7 @@ What is this project about?Tableau Server is an on-premise data analytics and vi
 <li>Whenever the admin think is necessary</li>
 </ul>
 <h2 id="My-Role-in-this-project"><a href="#My-Role-in-this-project" class="headerlink" title="My Role in this project"></a>My Role in this project</h2><p>I played two major roles in this project</p>
-<h3 id="1-Fireman"><a href="#1-Fireman" class="headerlink" title="1. Fireman"></a>1. Fireman</h3><p>I was not an orginal team member of this project. This project was started in parallel with <a href="http://phoenixjiangnan.github.io/2016/08/16/system%20design/project%20experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/">my ZooKeeper project</a>. When I finished mine, my manager asked me to join my colleague in this project.</p>
+<h3 id="1-Fireman"><a href="#1-Fireman" class="headerlink" title="1. Fireman"></a>1. Fireman</h3><p>I was not an orginal team member of this project. This project was started in parallel with <a href="https://phoenixjiangnan.github.io/2016/08/16/system%20design/project%20experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/">my ZooKeeper project</a>. When I finished mine, my manager asked me to join my colleague in this project.</p>
 <p>At that point, probably some time in June, everyone was positive about the project progress and thought it was on schedule. Adding me is just to help the project move faster. After I joined, and gave an estimation of all backlogs, I realized that we were actually far behind the schedule, even two of us were not able to finish it on time.</p>
 <p>I brought this up to my manager, and had all our devs, testers, and PM sit down and evaluate our backlogs together. It turned out we WERE at an extreme risky schedule. I didn’t know why my colleague (the only original developer for this project) didn’t warn everybody.</p>
 <h3 id="2-One-of-the-Key-Contributor"><a href="#2-One-of-the-Key-Contributor" class="headerlink" title="2. One of the Key Contributor"></a>2. One of the Key Contributor</h3><p>I am one of the main contributors, and finish the following works:</p>

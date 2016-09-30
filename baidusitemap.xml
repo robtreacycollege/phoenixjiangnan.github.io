@@ -4,6 +4,127 @@
 
     
   <url>
+    <loc>https://phoenixjiangnan.github.io/2016/09/17/java/concurrency/Java-Concurrency-wait-notify-and-notifyAll/</loc>
+    <lastmod>2016-09-30T06:53:04.000Z</lastmod>
+    <data>
+        <display>
+        <title>Java Concurrency - wait(), notify(), and notifyAll()</title>
+        <pubTime>2016-09-17T02:57:30.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/08/16/system%20design/project%20experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/</loc>
+    <lastmod>2016-09-30T06:53:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>How did I build a custom dynamic ZooKeeper management and migration framework and an asynchronous job framework for Tableau Server 11</title>
+        <pubTime>2016-08-16T05:45:18.000Z</pubTime>
+        
+        <tag>zookeeper management</tag>
+         
+        <tag>zookeeper migration</tag>
+         
+        <tag>tableau server 11</tag>
+         
+        <tag>async job framework</tag>
+         
+         
+           
+             
+              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
+          
+             
+              <breadCrumb title="project experience" url="https://phoenixjiangnan.github.io/categories/system-design/project-experience/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/07/26/system%20design/project%20experience/How-did-I-reduce-Tableau-Server-s-downtime-in-a-Postgres-failover-from-3-min-to-1-sec/</loc>
+    <lastmod>2016-09-30T06:52:58.000Z</lastmod>
+    <data>
+        <display>
+        <title>How did I reduce Tableau Server's downtime in a Postgres failover from 3 min to 1 sec</title>
+        <pubTime>2016-07-26T14:51:35.000Z</pubTime>
+        
+        <tag>tableau server</tag>
+         
+        <tag>failover</tag>
+         
+         
+           
+             
+              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
+          
+             
+              <breadCrumb title="project experience" url="https://phoenixjiangnan.github.io/categories/system-design/project-experience/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/09/14/system%20design/project%20experience/How-did-I-develop-a-crypto-service-for-Tableau-Server/</loc>
+    <lastmod>2016-09-30T06:52:58.000Z</lastmod>
+    <data>
+        <display>
+        <title>How did I develop a crypto service for Tableau Server</title>
+        <pubTime>2016-09-14T14:23:35.000Z</pubTime>
+        
+        <tag>tableau server</tag>
+         
+        <tag>crypto service</tag>
+         
+         
+           
+             
+              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
+          
+             
+              <breadCrumb title="project experience" url="https://phoenixjiangnan.github.io/categories/system-design/project-experience/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/06/17/system%20design/task%20queue/System-Design-How-to-query-status-of-10-000-machines/</loc>
+    <lastmod>2016-09-30T06:52:57.000Z</lastmod>
+    <data>
+        <display>
+        <title>System Design - How to query status of 10,000 machines</title>
+        <pubTime>2016-06-17T03:16:19.000Z</pubTime>
+        
+        <tag>system design</tag>
+         
+        <tag>task queue</tag>
+         
+        <tag>interview questions</tag>
+         
+         
+           
+             
+              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
+          
+             
+              <breadCrumb title="task queue" url="https://phoenixjiangnan.github.io/categories/system-design/task-queue/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://phoenixjiangnan.github.io/2016/01/23/hexo/Hexo-How-to-install-hexo-on-Mac-with-github-pages/</loc>
     <lastmod>2016-09-30T06:32:22.000Z</lastmod>
     <data>
@@ -148,21 +269,6 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/09/17/java/concurrency/Java-Concurrency-wait-notify-and-notifyAll/</loc>
-    <lastmod>2016-09-17T18:03:50.000Z</lastmod>
-    <data>
-        <display>
-        <title>Java Concurrency - wait(), notify(), and notifyAll()</title>
-        <pubTime>2016-09-17T02:57:30.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://phoenixjiangnan.github.io/2016/04/03/java/concurrency/Java-Concurrency-Semaphore/</loc>
     <lastmod>2016-09-17T17:54:00.000Z</lastmod>
     <data>
@@ -262,31 +368,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/09/14/system%20design/project%20experience/How-did-I-develop-a-crypto-service-for-Tableau-Server/</loc>
-    <lastmod>2016-09-15T05:24:56.000Z</lastmod>
-    <data>
-        <display>
-        <title>How did I develop a crypto service for Tableau Server</title>
-        <pubTime>2016-09-14T14:23:35.000Z</pubTime>
-        
-        <tag>tableau server</tag>
-         
-        <tag>crypto service</tag>
-         
-         
-           
-             
-              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
-          
-             
-              <breadCrumb title="project experience" url="https://phoenixjiangnan.github.io/categories/system-design/project-experience/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>https://phoenixjiangnan.github.io/2016/06/11/web%20development/Web-Development-TCP-Transportation/</loc>
@@ -709,35 +790,6 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/08/16/system%20design/project%20experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/</loc>
-    <lastmod>2016-08-24T06:13:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>How did I build a custom dynamic ZooKeeper management and migration framework and an asynchronous job framework for Tableau Server 11</title>
-        <pubTime>2016-08-16T05:45:18.000Z</pubTime>
-        
-        <tag>zookeeper management</tag>
-         
-        <tag>zookeeper migration</tag>
-         
-        <tag>tableau server 11</tag>
-         
-        <tag>async job framework</tag>
-         
-         
-           
-             
-              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
-          
-             
-              <breadCrumb title="project experience" url="https://phoenixjiangnan.github.io/categories/system-design/project-experience/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://phoenixjiangnan.github.io/2016/08/23/java/concurrency/Java-Concurrency-Multi-Thread-1-Implements-Runnable-or-Extends-Thread/</loc>
     <lastmod>2016-08-24T06:10:19.000Z</lastmod>
     <data>
@@ -783,31 +835,6 @@
         <tag>tableau vizoftheday</tag>
          
         <tag>tableau votd</tag>
-         
-         
-           
-             
-              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
-          
-             
-              <breadCrumb title="project experience" url="https://phoenixjiangnan.github.io/categories/system-design/project-experience/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/07/26/system%20design/project%20experience/How-did-I-reduce-Tableau-Server-s-downtime-in-a-Postgres-failover-from-3-min-to-1-sec/</loc>
-    <lastmod>2016-08-16T20:25:55.000Z</lastmod>
-    <data>
-        <display>
-        <title>How did I reduce Tableau Server's downtime in a Postgres failover from 3 min to 1 sec</title>
-        <pubTime>2016-07-26T14:51:35.000Z</pubTime>
-        
-        <tag>tableau server</tag>
-         
-        <tag>failover</tag>
          
          
            
@@ -884,33 +911,6 @@
            
              
               <breadCrumb title="machine learning" url="https://phoenixjiangnan.github.io/categories/machine-learning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/06/17/system%20design/task%20queue/System-Design-How-to-query-status-of-10-000-machines/</loc>
-    <lastmod>2016-07-18T04:37:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>System Design - How to query status of 10,000 machines</title>
-        <pubTime>2016-06-17T03:16:19.000Z</pubTime>
-        
-        <tag>system design</tag>
-         
-        <tag>task queue</tag>
-         
-        <tag>interview questions</tag>
-         
-         
-           
-             
-              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
-          
-             
-              <breadCrumb title="task queue" url="https://phoenixjiangnan.github.io/categories/system-design/task-queue/"/>
           
         </display>
     </data>
@@ -1181,26 +1181,6 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/07/09/spring/Spring-Wiring-Beans/</loc>
-    <lastmod>2016-07-10T06:16:13.000Z</lastmod>
-    <data>
-        <display>
-        <title>Spring - Wiring Beans</title>
-        <pubTime>2016-07-09T15:14:21.000Z</pubTime>
-        
-        <tag>spring bean wiring</tag>
-         
-         
-           
-             
-              <breadCrumb title="spring" url="https://phoenixjiangnan.github.io/categories/spring/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://phoenixjiangnan.github.io/2016/04/06/test/jmockit/Unit-Test-JMockit-What-are-the-differences-between-Mocked-and-Injectable-in-JMockit-and-when-to-use-Injectable-rather-than-Mocked/</loc>
     <lastmod>2016-07-10T06:16:13.000Z</lastmod>
     <data>
@@ -1231,6 +1211,26 @@
           
              
               <breadCrumb title="jmockit" url="https://phoenixjiangnan.github.io/categories/test/jmockit/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/07/09/spring/Spring-Wiring-Beans/</loc>
+    <lastmod>2016-07-10T06:16:13.000Z</lastmod>
+    <data>
+        <display>
+        <title>Spring - Wiring Beans</title>
+        <pubTime>2016-07-09T15:14:21.000Z</pubTime>
+        
+        <tag>spring bean wiring</tag>
+         
+         
+           
+             
+              <breadCrumb title="spring" url="https://phoenixjiangnan.github.io/categories/spring/"/>
           
         </display>
     </data>

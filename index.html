@@ -173,7 +173,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="https://phoenixjiangnan.github.io" rel="section">
+          <a href="/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -1265,7 +1265,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
 
       
         
-          <p>For more information about Tableau Server, you can read my blogs <a href="http://phoenixjiangnan.github.io/categories/system-design/project-experience/">here</a></p>
+          <p>For more information about Tableau Server, you can read my blogs <a href="https://phoenixjiangnan.github.io/categories/system-design/project-experience/">here</a></p>
 <h2 id="What-is-this-project-about"><a href="#What-is-this-project-about" class="headerlink" title="What is this project about?"></a>What is this project about?</h2><p>Tableau Server is an on-premise data analytics and visualization platform. Customer can deploy bits in their own data center, or in AWS, Azure, and GCP.</p>
 <p>There are two categories of passwords within a Tableau Server cluster:</p>
 <ul>
@@ -1288,7 +1288,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
 </ul>
 <p>So the passwords I’m talking about is not the password for someone’s server account. The latter ones live in a table of the cluster’s PostgreSQL database and are already encrypted.</p>
 <p>The current version of Tableau Server (v10) stores all the passwords in <code>plain text</code> in a configuration file, which is distributed among machines.</p>
-<p>The new version of Tableau Server also stores all passwords in <code>plain text</code>, but in a <code>Znode</code> in ZooKeeper, as I described in <a href="http://phoenixjiangnan.github.io/2016/08/16/system%20design/project%20experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/">this blog</a>.</p>
+<p>The new version of Tableau Server also stores all passwords in <code>plain text</code>, but in a <code>Znode</code> in ZooKeeper, as I described in <a href="https://phoenixjiangnan.github.io/2016/08/16/system%20design/project%20experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/">this blog</a>.</p>
 <blockquote>
 <p>The project is about developing a crypto service that encrypts passwords before persisting them somewhere, and decrypts passwords into memory when server uses them, so that no more clear text secrets live in Tableau Server. The new service should support both our old monolith JRuby app and our new service-oriented server architecture.</p>
 </blockquote>

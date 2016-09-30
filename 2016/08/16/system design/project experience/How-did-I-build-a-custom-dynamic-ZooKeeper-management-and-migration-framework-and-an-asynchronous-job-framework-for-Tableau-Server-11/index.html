@@ -94,7 +94,7 @@ Product Strategy OverviewTableau Server is an enterpise data analytics and visua
 <meta property="og:site_name" content="Bowen's blog">
 <meta property="og:description" content="First of all, Tableau Server 11 is not out yet. Tableau Server 10 is just released yesterday.
 Product Strategy OverviewTableau Server is an enterpise data analytics and visualization platform, and our">
-<meta property="og:updated_time" content="2016-08-24T06:13:19.000Z">
+<meta property="og:updated_time" content="2016-09-30T06:53:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How did I build a custom dynamic ZooKeeper management and migration framework and an asynchronous job framework for Tableau Server 11">
 <meta name="twitter:description" content="First of all, Tableau Server 11 is not out yet. Tableau Server 10 is just released yesterday.
@@ -175,7 +175,7 @@ Product Strategy OverviewTableau Server is an enterpise data analytics and visua
       
         
         <li class="menu-item menu-item-home">
-          <a href="https://phoenixjiangnan.github.io" rel="section">
+          <a href="/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -391,7 +391,7 @@ Product Strategy OverviewTableau Server is an enterpise data analytics and visua
 <h4 id="Our-New-Asynchronous-Job-Framework-in-Tableau-Server-11"><a href="#Our-New-Asynchronous-Job-Framework-in-Tableau-Server-11" class="headerlink" title="Our New Asynchronous Job Framework in Tableau Server 11"></a>Our New Asynchronous Job Framework in Tableau Server 11</h4><p>First thing first, the new <code>Async Job</code> Framework that I’m talking about is different from <code>Async Background Jobs</code>.</p>
 <p><code>Async Background Jobs</code> are taken care of by backgrounder processes in Tableau Server. Those jobs are all kinds of scheduled jobs that can be run in parallel by multiple backgrounders.</p>
 <p><code>Async Jobs</code> in new Tableau Server are a serial of configuring and initializing jobs that have to be executed in order and one at a time, to perform changes to cluster Configuration and Topology.</p>
-<p>Each of our Async Job is created as <code>PERSISTENT_SEQUENTIAL</code> node under a ZK node <code>/asyncjobs</code>, so that name of each async job node looks like <code>asyncjob00000000001</code>, <code>asyncjob00000000002</code>, and keep on increasing. How that works is discussed <a href="http://phoenixjiangnan.github.io/2016/07/07/distributed%20system/zookeeper/How-does-ZooKeeper-s-persistent-sequential-id-work/">here</a>.</p>
+<p>Each of our Async Job is created as <code>PERSISTENT_SEQUENTIAL</code> node under a ZK node <code>/asyncjobs</code>, so that name of each async job node looks like <code>asyncjob00000000001</code>, <code>asyncjob00000000002</code>, and keep on increasing. How that works is discussed <a href="https://phoenixjiangnan.github.io/2016/07/07/distributed%20system/zookeeper/How-does-ZooKeeper-s-persistent-sequential-id-work/">here</a>.</p>
 <p>Other Components involved are:</p>
 <ul>
 <li><p>Configuration / Topology</p>

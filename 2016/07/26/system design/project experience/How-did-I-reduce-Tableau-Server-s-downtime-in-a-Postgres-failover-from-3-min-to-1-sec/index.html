@@ -92,7 +92,7 @@
 <meta property="og:url" content="https://phoenixjiangnan.github.io/2016/07/26/system design/project experience/How-did-I-reduce-Tableau-Server-s-downtime-in-a-Postgres-failover-from-3-min-to-1-sec/index.html">
 <meta property="og:site_name" content="Bowen's blog">
 <meta property="og:description" content="Another project I did in the middle of last year is to reduce the downtime of Tableau Server during a Postgres failover. I was able to significantly cut the downtime from 3 min to 1 sec. Here is how I">
-<meta property="og:updated_time" content="2016-08-16T20:25:55.000Z">
+<meta property="og:updated_time" content="2016-09-30T06:52:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How did I reduce Tableau Server's downtime in a Postgres failover from 3 min to 1 sec">
 <meta name="twitter:description" content="Another project I did in the middle of last year is to reduce the downtime of Tableau Server during a Postgres failover. I was able to significantly cut the downtime from 3 min to 1 sec. Here is how I">
@@ -172,7 +172,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="https://phoenixjiangnan.github.io" rel="section">
+          <a href="/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -374,8 +374,8 @@
 <p>The answer is yes!</p>
 <p>Most Tableau Server services are written in Spring. Spring has a nice datasource class called <code>AbstractRoutingDataSource</code>, which is kind of a proxy that can dynamically route db requests based on a key. In our case, the key is the <code>&lt;DNS name&gt;</code> of <code>primary.posgres</code> in the config file.</p>
 <p>What I did is to make each process watch the config file and update their internal key upon file updates. Therefore, now the db requests can be immediately routed to the new active postgres during a failover within 1 sec, rather than being down for more than 3 mins.</p>
-<p>How <code>AbstractRoutingDataSource</code> works is presented <a href="http://phoenixjiangnan.github.io/2016/03/25/spring/Spring-Dynamic-Datasource/">here</a></p>
-<p>Some information about how we monitor Postgres is covered <a href="http://phoenixjiangnan.github.io/2016/07/23/system%20design/How-did-I-improved-our-system-monitoring-accuracy-from-40-50-to-99/">here</a></p>
+<p>How <code>AbstractRoutingDataSource</code> works is presented <a href="https://phoenixjiangnan.github.io/2016/03/25/spring/Spring-Dynamic-Datasource/">here</a></p>
+<p>Some information about how we monitor Postgres is covered <a href="https://phoenixjiangnan.github.io/2016/07/23/system%20design/How-did-I-improved-our-system-monitoring-accuracy-from-40-50-to-99/">here</a></p>
 
       
     </div>
