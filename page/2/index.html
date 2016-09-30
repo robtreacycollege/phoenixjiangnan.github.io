@@ -283,6 +283,198 @@
             
               
                 
+                <a class="post-title-link" href="/2016/07/14/system design/task queue/System-Design-Design-Task-Scheduling-System-in-Distributed-System/" itemprop="url">
+                  System Design - Design Task Scheduling System in Distributed System
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-07-14T22:59:43+08:00" content="2016-07-14">
+              2016-07-14
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/system-design/" itemprop="url" rel="index">
+                    <span itemprop="name">system design</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/system-design/task-queue/" itemprop="url" rel="index">
+                    <span itemprop="name">task queue</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/14/system design/task queue/System-Design-Design-Task-Scheduling-System-in-Distributed-System/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/14/system design/task queue/System-Design-Design-Task-Scheduling-System-in-Distributed-System/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="Distributed-Architecture"><a href="#Distributed-Architecture" class="headerlink" title="Distributed Architecture"></a>Distributed Architecture</h2><blockquote>
+<p>A set of workers on distributed machines grab tasks from a <code>task queue</code>.</p>
+</blockquote>
+<p>This is exactly how <code>Hadoop MapReduce</code> works.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">                   task queue</div><div class="line">                   ---------</div><div class="line">                   | taskN |</div><div class="line">                   | ------|</div><div class="line">                   |  ...  |</div><div class="line">                   | ------|</div><div class="line">                   | task1 |</div><div class="line">                   | ------|</div><div class="line">                   | task0 |</div><div class="line">                   ---------</div><div class="line">                /      |       \</div><div class="line">              /        |         \</div><div class="line">            /          |           \</div><div class="line">-----------     -----------          -----------     </div><div class="line">| worker0 |     | worker1 |    ...   | workerM |</div><div class="line">-----------     -----------          -----------</div></pre></td></tr></table></figure>
+<h2 id="Pros-and-Cons"><a href="#Pros-and-Cons" class="headerlink" title="Pros and Cons"></a>Pros and Cons</h2><h3 id="Pros"><a href="#Pros" class="headerlink" title="Pros"></a>Pros</h3><ul>
+<li>Fully parallel</li>
+<li>Non-blocking in a system level, even though a single machine might be blocked</li>
+</ul>
+<h3 id="Cons"><a href="#Cons" class="headerlink" title="Cons"></a>Cons</h3><ul>
+<li>A lot of overhead if each task is too small and inexpensive, because of cost to parallelize work and communicate between nodes will increase and overcome the benefits of parallelization</li>
+</ul>
+<h2 id="How-to-keep-a-task-queue-within-a-cluster"><a href="#How-to-keep-a-task-queue-within-a-cluster" class="headerlink" title="How to keep a task queue within a cluster:"></a>How to keep a task queue within a cluster:</h2><h3 id="1-Maintain-a-task-queue-in-memory-in-the-primary-node"><a href="#1-Maintain-a-task-queue-in-memory-in-the-primary-node" class="headerlink" title="1) Maintain a task queue in memory in the primary node."></a>1) Maintain a task queue in memory in the primary node.</h3><p>Cons:</p>
+<ul>
+<li>hard to recover from primary machine’s failure</li>
+</ul>
+<h3 id="1-1-Improvement-Have-a-standby-secondary-machine-that-consistently-replicate-states-from-the-primary-machine"><a href="#1-1-Improvement-Have-a-standby-secondary-machine-that-consistently-replicate-states-from-the-primary-machine" class="headerlink" title="1.1) Improvement - Have a standby secondary machine that consistently replicate states from the primary machine"></a>1.1) Improvement - Have a standby secondary machine that consistently replicate states from the primary machine</h3><h3 id="2-Use-message-queue-system-like-Kafka-or-RabbitQueue-to-persist-task-queue"><a href="#2-Use-message-queue-system-like-Kafka-or-RabbitQueue-to-persist-task-queue" class="headerlink" title="2) Use message queue system like Kafka or RabbitQueue to persist task queue"></a>2) Use message queue system like Kafka or RabbitQueue to persist task queue</h3><h3 id="3-Use-ZooKeeper-to-persist-task-queue"><a href="#3-Use-ZooKeeper-to-persist-task-queue" class="headerlink" title="3) Use ZooKeeper to persist task queue"></a>3) Use ZooKeeper to persist task queue</h3><p>ZooKeeper is highly available, and can create nodes with PERSISTENT_SEQUENTIAL ids</p>
+<h3 id="4-Use-a-task-table-in-SQL-database-PostgreSQL-or-MySQL-to-persisit-task-queue-Most-commonly-used-approach"><a href="#4-Use-a-task-table-in-SQL-database-PostgreSQL-or-MySQL-to-persisit-task-queue-Most-commonly-used-approach" class="headerlink" title="4) Use a task table in SQL database (PostgreSQL or MySQL) to persisit task queue - Most commonly used approach"></a>4) Use a task table in SQL database (PostgreSQL or MySQL) to persisit task queue - Most commonly used approach</h3><p>An general architecture like this:</p>
+<table>
+<thead>
+<tr>
+<th>task_id</th>
+<th>type</th>
+<th>task_state</th>
+<th>priority</th>
+<th>params</th>
+<th>available_time</th>
+<th>end_time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>taskType1</td>
+<td>completed</td>
+<td>0</td>
+<td>{…}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>taskType2</td>
+<td>running</td>
+<td>1</td>
+<td>{…}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/14/system design/task queue/System-Design-Design-Task-Scheduling-System-in-Distributed-System/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/07/12/spring/Spring-Spring-s-Core-Concepts/" itemprop="url">
                   Spring - Spring's Core Concepts
                 </a>
@@ -2902,153 +3094,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/16/java/reflection/Java-Reflection-and-the-Class-Objects/" itemprop="url">
-                  Java Reflection and the Class Objects
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-06-16T12:00:45+08:00" content="2016-06-16">
-              2016-06-16
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index">
-                    <span itemprop="name">java</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/java/reflection/" itemprop="url" rel="index">
-                    <span itemprop="name">reflection</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/16/java/reflection/Java-Reflection-and-the-Class-Objects/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/06/16/java/reflection/Java-Reflection-and-the-Class-Objects/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="What-is-Reflection"><a href="#What-is-Reflection" class="headerlink" title="What is Reflection"></a>What is Reflection</h1><p>Java Reflection makes it possible to inspect classes, interfaces, fields and methods at runtime, without knowing the names of the classes, methods etc. at compile time. It is also possible to instantiate new objects, invoke methods and get/set field values using reflection.</p>
-<h1 id="Uses-of-Reflection"><a href="#Uses-of-Reflection" class="headerlink" title="Uses of Reflection"></a>Uses of Reflection</h1><p>Reflection is commonly used by programs which require the ability to examine or modify the runtime behavior of applications running in the Java virtual machine. This is a relatively advanced feature and should be used only by developers who have a strong grasp of the fundamentals of the language. With that caveat in mind, reflection is a powerful technique and can enable applications to perform operations which would otherwise be impossible.</p>
-<p>Using Java Reflection you can inspect Java classes <code>at runtime</code>. Inspecting classes is often the first thing you do when using Reflection. From the classes you can obtain information about</p>
-<ul>
-<li>Class Name</li>
-<li>Class Modifies (public, private, synchronized etc.)</li>
-<li>Package Info</li>
-<li>Superclass</li>
-<li>Implemented Interfaces</li>
-<li>Constructors</li>
-<li>Methods</li>
-<li>Fields</li>
-<li>Annotations</li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/06/16/java/reflection/Java-Reflection-and-the-Class-Objects/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3094,7 +3139,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">102</span>
+              <span class="site-state-item-count">103</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -3102,7 +3147,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">46</span>
+                <span class="site-state-item-count">47</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>

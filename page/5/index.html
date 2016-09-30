@@ -283,6 +283,207 @@
             
               
                 
+                <a class="post-title-link" href="/2016/03/30/java/guava/Guava-Cache/" itemprop="url">
+                  Guava - Cache
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-03-30T15:47:22+08:00" content="2016-03-30">
+              2016-03-30
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/java/guava/" itemprop="url" rel="index">
+                    <span itemprop="name">guava</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/30/java/guava/Guava-Cache/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/30/java/guava/Guava-Cache/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="Google-Guava"><a href="#Google-Guava" class="headerlink" title="Google Guava"></a><a href="https://github.com/google/guava/wiki/CachesExplained">Google Guava</a></h1><ol>
+<li>Cache Heating<ul>
+<li><code>Pre-loading</code> v.s. <code>Non-loading</code></li>
+</ul>
+</li>
+<li>Concurrency<ul>
+<li>Lock striping (a couple of locks for different key segments)</li>
+<li>ReadWriteLock</li>
+</ul>
+</li>
+<li>Weak keys<ul>
+<li>What if the cache keys are transient objects (e.g. requests), which don’t belong in the cache if there are no other references elsewhere?</li>
+<li>Allow the garbage collector to immediately collect cache keys when other references are gone</li>
+</ul>
+</li>
+<li>Eviction<ul>
+<li>Passive<ul>
+<li>cache max size</li>
+<li>cache max weight</li>
+</ul>
+</li>
+<li>Active<ul>
+<li>time to idle - expireAfterAccess()</li>
+<li>time to live - expireAfterWrite()</li>
+</ul>
+</li>
+<li>Order<ul>
+<li>LRU (Least Recently Used Cache)<ul>
+<li>HashMap + DoublyLinkedList</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Two layer caching (L1 + L2 cache)</li>
+<li>Cache statistics &amp; performance tuning<ul>
+<li>Enable cache runtime configuration<ul>
+<li>change max size/weight</li>
+</ul>
+</li>
+<li>Statistics<ul>
+<li>Hit rate/ hit count</li>
+<li>Miss rate/ miss count</li>
+<li>Load exception count</li>
+<li>Load success count</li>
+<li>Average load penalty</li>
+<li>Total load time</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>RemovalNotification<ul>
+<li>Sometimes cached entries are associated with resources which need to be closed or cleaned up</li>
+</ul>
+</li>
+<li>Refresh<ul>
+<li><code>Automatic Refresh</code> v.s. <code>Passive Visit-triggered Refresh</code></li>
+<li><code>Asynchronized</code> v.s. <code>Synchronized</code></li>
+<li><code>Bulk Operation</code> v.s. <code>Single entry</code></li>
+</ul>
+</li>
+<li>Snapshot &amp; iterating<ul>
+<li>cache changes dynamically</li>
+<li>define asMap() to make a snapshot</li>
+</ul>
+</li>
+</ol>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/30/java/guava/Guava-Cache/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/28/tools/markdown/Markdown-Markdown-tutorial-how-to-write-in-Markdown/" itemprop="url">
                   Markdown - Markdown tutorial - how to write in Markdown
                 </a>
@@ -3144,130 +3345,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/24/hexo/Hexo-Hexo-commands/" itemprop="url">
-                  Hexo - Hexo commands
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-01-24T23:00:37+08:00" content="2016-01-24">
-              2016-01-24
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/24/hexo/Hexo-Hexo-commands/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/24/hexo/Hexo-Hexo-commands/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Most-Frequently-Used"><a href="#Most-Frequently-Used" class="headerlink" title="Most Frequently Used"></a>Most Frequently Used</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;postName&quot; 		# new post</div><div class="line">hexo new page &quot;pageName&quot; 	# new page</div><div class="line">hexo generate 				# generate static pages to dir &apos;public&apos;</div><div class="line">hexo server 				# start on localhost with default port 4000</div><div class="line">hexo deploy 	# deploy to github or git</div></pre></td></tr></table></figure>
-<h2 id="Chained-Commands"><a href="#Chained-Commands" class="headerlink" title="Chained Commands"></a>Chained Commands</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo d -g 	# generate content and deploy</div><div class="line">hexo s -g 	# generate content and preview locally</div></pre></td></tr></table></figure>
-<h2 id="Brevity"><a href="#Brevity" class="headerlink" title="Brevity"></a>Brevity</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo n == hexo new</div><div class="line">hexo g == hexo generate</div><div class="line">hexo s == hexo server</div><div class="line">hexo d == hexo deploy</div></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/24/hexo/Hexo-Hexo-commands/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3313,7 +3390,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">102</span>
+              <span class="site-state-item-count">103</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -3321,7 +3398,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">46</span>
+                <span class="site-state-item-count">47</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
