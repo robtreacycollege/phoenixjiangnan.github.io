@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://phoenixjiangnan.github.io/"/>
-  <updated>2016-09-30T15:20:13.000Z</updated>
+  <updated>2016-09-30T15:35:58.000Z</updated>
   <id>https://phoenixjiangnan.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://phoenixjiangnan.github.io/2016/09/30/spring/spring%20boot/Spring-Boot-Introduction-to-Spring-Boot/"/>
     <id>https://phoenixjiangnan.github.io/2016/09/30/spring/spring boot/Spring-Boot-Introduction-to-Spring-Boot/</id>
     <published>2016-09-30T15:18:56.000Z</published>
-    <updated>2016-09-30T15:20:13.000Z</updated>
+    <updated>2016-09-30T15:35:58.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Spring-io-Spring-Boot"><a href="#Spring-io-Spring-Boot" class="headerlink" title="Spring.io - Spring Boot"></a>Spring.io - Spring Boot</h2><p>I’m taking some important parts from it and summarizing them as my learning notes.</p>
 <p>Spring has been notorious for its heaviness when starting a project. Lots of people avoid this framework because of that. Many lighter dependency injection frameworks emerge as a replacement for Spring, <a href="https://github.com/google/guice" target="_blank" rel="external">Google’s Guice</a> being one of the most representative ones. </p>
@@ -57,7 +57,8 @@
 <li><code>Actuator</code> — The Spring Boot Actuator adds certain management features to a Spring Boot application.</li>
 </ul>
 </blockquote>
-<h3 id="1-1-Adding-starter-dependencies"><a href="#1-1-Adding-starter-dependencies" class="headerlink" title="1.1 Adding starter dependencies"></a>1.1 Adding starter dependencies</h3><p>There are two ways to bake a cake. The ambitious baker will mix flour, eggs, sugar, baking powder, salt, butter, vanilla, and milk into a batter. Or you can buy a prepackaged box of cake mix that includes most of the ingredients you’ll need and only mix in a few wet ingredients like water, eggs, and vegetable oil.</p>
+<a id="more"></a>
+<h3 id="1-Adding-starter-dependencies"><a href="#1-Adding-starter-dependencies" class="headerlink" title="1 Adding starter dependencies"></a>1 Adding starter dependencies</h3><p>There are two ways to bake a cake. The ambitious baker will mix flour, eggs, sugar, baking powder, salt, butter, vanilla, and milk into a batter. Or you can buy a prepackaged box of cake mix that includes most of the ingredients you’ll need and only mix in a few wet ingredients like water, eggs, and vegetable oil.</p>
 <p>Much as a prepackaged cake mix aggregates many of the ingredients of a cake recipe into a single ingredient, Spring Boot starters aggregate the various dependencies of an application into a single dependency.</p>
 <p>If you’re building your project with Gradle, you’ll need (at least) the following dependencies in <code>build.gradle</code>:</p>
 <figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">dependencies</span> &#123;</div><div class="line">  <span class="keyword">compile</span>(<span class="string">"org.springframework:spring-web:4.0.6.RELEASE"</span>)</div><div class="line">  <span class="keyword">compile</span>(<span class="string">"org.springframework:spring-webmvc:4.0.6.RELEASE"</span>)</div><div class="line">  <span class="keyword">compile</span>(<span class="string">"com.fasterxml.jackson.core:jackson-databind:2.2.2"</span>)</div><div class="line">  <span class="keyword">compile</span>(<span class="string">"org.springframework:spring-jdbc:4.0.6.RELEASE"</span>)</div><div class="line">  <span class="keyword">compile</span>(<span class="string">"org.springframework:spring-tx:4.0.6.RELEASE"</span>)</div><div class="line">  <span class="keyword">compile</span>(<span class="string">"com.h2database:h2:1.3.174"</span>)</div><div class="line">  <span class="keyword">compile</span>(<span class="string">"org.thymeleaf:thymeleaf-spring4:2.1.2.RELEASE"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -92,9 +93,9 @@
 </tbody>
 </table>
 <p>Taking advantage of Maven’s and Gradle’s transitive dependency resolution, the starters declare several dependencies in their own pom.xml file. When you add one of these starter dependencies to your Maven or Gradle build, the starter’s dependencies are resolved transitively.</p>
-<h3 id="1-2-Autoconfiguration"><a href="#1-2-Autoconfiguration" class="headerlink" title="1.2 Autoconfiguration"></a>1.2 Autoconfiguration</h3><p>Whereas <code>Spring Boot starters cut down the size of your build&#39;s dependency list</code>, <code>Spring Boot autoconfiguration cuts down on the amount of Spring configuration</code>. It does this by considering other factors in your application and making assumptions about what Spring configuration you’ll need.</p>
+<h3 id="2-Autoconfiguration"><a href="#2-Autoconfiguration" class="headerlink" title="2 Autoconfiguration"></a>2 Autoconfiguration</h3><p>Whereas <code>Spring Boot starters cut down the size of your build&#39;s dependency list</code>, <code>Spring Boot autoconfiguration cuts down on the amount of Spring configuration</code>. It does this by considering other factors in your application and making assumptions about what Spring configuration you’ll need.</p>
 <p>Spring Boot starters can trigger autoconfiguration. For instance, all you need to do to use Spring MVC in your Spring Boot application is to add <code>the web starter</code> as a dependency in the build. When you add the web starter to your project’s build, it will transitively pull in Spring MVC dependencies. When Spring Boot’s web autoconfiguration detects Spring MVC in the classpath, it will automatically configure several beans to support Spring MVC, including view resolvers, resource handlers, and message converters (among others). All that’s left for you to do is write the controller classes to handle the requests.</p>
-<h3 id="1-3-The-Spring-Boot-CLI"><a href="#1-3-The-Spring-Boot-CLI" class="headerlink" title="1.3 The Spring Boot CLI"></a>1.3 The Spring Boot CLI</h3><p>The Spring Boot CLI takes the magic provided by Spring Boot <code>starters</code> and <code>autoconfiguration</code> and spices it up a little with Groovy. It reduces the Spring development process to the point where you can run one or more Groovy scripts through a CLI and see it run. In the course of running the application, the CLI will also automatically import Spring types and resolve dependencies.</p>
+<h3 id="3-The-Spring-Boot-CLI"><a href="#3-The-Spring-Boot-CLI" class="headerlink" title="3 The Spring Boot CLI"></a>3 The Spring Boot CLI</h3><p>The Spring Boot CLI takes the magic provided by Spring Boot <code>starters</code> and <code>autoconfiguration</code> and spices it up a little with Groovy. It reduces the Spring development process to the point where you can run one or more Groovy scripts through a CLI and see it run. In the course of running the application, the CLI will also automatically import Spring types and resolve dependencies.</p>
 <p>One of the most interesting examples used to illustrate Spring Boot CLI is contained in the following Groovy script:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RestController</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Hi</span> </span>&#123;</div><div class="line">    <span class="meta">@RequestMapping</span>(<span class="string">"/"</span>)</div><div class="line">    <span class="function">String <span class="title">hi</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="string">"Hi!"</span> </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>Believe it or not, that is a complete (albeit simple) Spring application that can be executed through the Spring Boot CLI. Including whitespace, it’s 82 characters in length. You can paste it into your Twitter client and tweet it to your friends.</p>
@@ -102,7 +103,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RestController</span> <span class="class"><span class="keyword">class</span> <span class="title">Hi</span></span>&#123;<span class="meta">@RequestMapping</span>(<span class="string">"/"</span>)<span class="function">String <span class="title">hi</span><span class="params">()</span></span>&#123;<span class="string">"Hi!"</span>&#125;&#125;</div></pre></td></tr></table></figure>
 <p>This version is so brief that you can paste it twice into a single tweet on Twitter. But it’s still a complete and runnable (if feature-poor) Spring application. If you have the Spring Boot CLI installed, you can run it with the following command line:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ spring run Hi.groovy</div></pre></td></tr></table></figure>
-<h3 id="1-4-The-Actuator"><a href="#1-4-The-Actuator" class="headerlink" title="1.4 The Actuator"></a>1.4 The Actuator</h3><p>The Spring Boot Actuator brings a handful of useful features to a Spring Boot project, including:</p>
+<h3 id="4-The-Actuator"><a href="#4-The-Actuator" class="headerlink" title="4 The Actuator"></a>4 The Actuator</h3><p>The Spring Boot Actuator brings a handful of useful features to a Spring Boot project, including:</p>
 <blockquote>
 <ul>
 <li>Management endpoint</li>
@@ -234,7 +235,41 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;Spring-io-Spring-Boot&quot;&gt;&lt;a href=&quot;#Spring-io-Spring-Boot&quot; class=&quot;headerlink&quot; title=&quot;Spring.io - Spring Boot&quot;&gt;&lt;/a&gt;Spring.io - Spring Bo
+      &lt;h2 id=&quot;Spring-io-Spring-Boot&quot;&gt;&lt;a href=&quot;#Spring-io-Spring-Boot&quot; class=&quot;headerlink&quot; title=&quot;Spring.io - Spring Boot&quot;&gt;&lt;/a&gt;Spring.io - Spring Boot&lt;/h2&gt;&lt;p&gt;I’m taking some important parts from it and summarizing them as my learning notes.&lt;/p&gt;
+&lt;p&gt;Spring has been notorious for its heaviness when starting a project. Lots of people avoid this framework because of that. Many lighter dependency injection frameworks emerge as a replacement for Spring, &lt;a href=&quot;https://github.com/google/guice&quot;&gt;Google’s Guice&lt;/a&gt; being one of the most representative ones. &lt;/p&gt;
+&lt;p&gt;I’ve talked to quite a few folks who touched Spring a few years back and then switched to some better solutions because of the pain of managing the sophisticated configs. They hadn’t heard of Spring Boot, and were surprised about this project when I introduced it to them.&lt;/p&gt;
+&lt;p&gt;Here, let’s discuss some of the very basic yet fundamental aspects of Spring Boot.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;The following content is from the official guidance of &lt;a href=&quot;http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#getting-started&quot;&gt;Spring Boot&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;Introducing-Spring-Boot&quot;&gt;&lt;a href=&quot;#Introducing-Spring-Boot&quot; class=&quot;headerlink&quot; title=&quot;Introducing Spring Boot&quot;&gt;&lt;/a&gt;Introducing Spring Boot&lt;/h2&gt;&lt;p&gt;Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can &lt;code&gt;just run&lt;/code&gt;. We take an opinionated view of the Spring platform and third-party libraries so you can get started with minimum fuss. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Most Spring Boot applications need very little Spring configuration.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;You can use Spring Boot to create Java applications that can be started using &lt;code&gt;java -jar&lt;/code&gt; or more traditional war deployments. We also provide a command line tool that runs &lt;code&gt;spring scripts&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Some featured characteristics are:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Provide a radically faster and widely accessible getting started experience for all Spring development.&lt;ul&gt;
+&lt;li&gt;Create stand-alone Spring applications&lt;/li&gt;
+&lt;li&gt;Embed Tomcat, Jetty or Undertow directly (no need to deploy WAR files)&lt;/li&gt;
+&lt;li&gt;Provide opinionated &lt;code&gt;starter&lt;/code&gt; POMs (Project Object Model) to simplify your Maven configuration&lt;/li&gt;
+&lt;li&gt;Automatically configure Spring whenever possible&lt;/li&gt;
+&lt;li&gt;Provide production-ready features such as metrics, health checks and externalized configuration&lt;/li&gt;
+&lt;li&gt;Absolutely &lt;code&gt;no code generation&lt;/code&gt; and &lt;code&gt;no requirement for XML configuration&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Spring Boot offers four main features that will change the way you develop Spring applications:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Spring Boot starters&lt;/code&gt; — Spring Boot starters aggregate common groupings of dependencies into single dependencies that can be added to a project’s Maven or Gradle build.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Autoconfiguration&lt;/code&gt; — Spring Boot’s autoconfiguration feature leverages Spring 4’s support for conditional configuration to make reasonable guesses about the beans your application needs and automatically configure them.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Command-line interface (CLI)&lt;/code&gt; — Spring Boot’s CLI takes advantage of the Groovy programming language along with autoconfiguration to further simplify Spring application development.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Actuator&lt;/code&gt; — The Spring Boot Actuator adds certain management features to a Spring Boot application.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
     
     </summary>
     

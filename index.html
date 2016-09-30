@@ -364,13 +364,12 @@
 
       
         
-          
-            <h2 id="Spring-io-Spring-Boot"><a href="#Spring-io-Spring-Boot" class="headerlink" title="Spring.io - Spring Boot"></a>Spring.io - Spring Boot</h2><p>I’m taking some important parts from it and summarizing them as my learning notes.</p>
-<p>Spring has been notorious for its heaviness when starting a project. Lots of people avoid this framework because of that. Many lighter dependency injection frameworks emerge as a replacement for Spring, <a href="https://github.com/google/guice" target="_blank" rel="external">Google’s Guice</a> being one of the most representative ones. </p>
+          <h2 id="Spring-io-Spring-Boot"><a href="#Spring-io-Spring-Boot" class="headerlink" title="Spring.io - Spring Boot"></a>Spring.io - Spring Boot</h2><p>I’m taking some important parts from it and summarizing them as my learning notes.</p>
+<p>Spring has been notorious for its heaviness when starting a project. Lots of people avoid this framework because of that. Many lighter dependency injection frameworks emerge as a replacement for Spring, <a href="https://github.com/google/guice">Google’s Guice</a> being one of the most representative ones. </p>
 <p>I’ve talked to quite a few folks who touched Spring a few years back and then switched to some better solutions because of the pain of managing the sophisticated configs. They hadn’t heard of Spring Boot, and were surprised about this project when I introduced it to them.</p>
 <p>Here, let’s discuss some of the very basic yet fundamental aspects of Spring Boot.</p>
 <hr>
-<p>The following content is from the official guidance of <a href="http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#getting-started" target="_blank" rel="external">Spring Boot</a></p>
+<p>The following content is from the official guidance of <a href="http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#getting-started">Spring Boot</a></p>
 <hr>
 <h2 id="Introducing-Spring-Boot"><a href="#Introducing-Spring-Boot" class="headerlink" title="Introducing Spring Boot"></a>Introducing Spring Boot</h2><p>Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can <code>just run</code>. We take an opinionated view of the Spring platform and third-party libraries so you can get started with minimum fuss. </p>
 <blockquote>
@@ -400,181 +399,11 @@
 <li><code>Actuator</code> — The Spring Boot Actuator adds certain management features to a Spring Boot application.</li>
 </ul>
 </blockquote>
-<h3 id="1-1-Adding-starter-dependencies"><a href="#1-1-Adding-starter-dependencies" class="headerlink" title="1.1 Adding starter dependencies"></a>1.1 Adding starter dependencies</h3><p>There are two ways to bake a cake. The ambitious baker will mix flour, eggs, sugar, baking powder, salt, butter, vanilla, and milk into a batter. Or you can buy a prepackaged box of cake mix that includes most of the ingredients you’ll need and only mix in a few wet ingredients like water, eggs, and vegetable oil.</p>
-<p>Much as a prepackaged cake mix aggregates many of the ingredients of a cake recipe into a single ingredient, Spring Boot starters aggregate the various dependencies of an application into a single dependency.</p>
-<p>If you’re building your project with Gradle, you’ll need (at least) the following dependencies in <code>build.gradle</code>:</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">dependencies</span> &#123;</div><div class="line">  <span class="keyword">compile</span>(<span class="string">"org.springframework:spring-web:4.0.6.RELEASE"</span>)</div><div class="line">  <span class="keyword">compile</span>(<span class="string">"org.springframework:spring-webmvc:4.0.6.RELEASE"</span>)</div><div class="line">  <span class="keyword">compile</span>(<span class="string">"com.fasterxml.jackson.core:jackson-databind:2.2.2"</span>)</div><div class="line">  <span class="keyword">compile</span>(<span class="string">"org.springframework:spring-jdbc:4.0.6.RELEASE"</span>)</div><div class="line">  <span class="keyword">compile</span>(<span class="string">"org.springframework:spring-tx:4.0.6.RELEASE"</span>)</div><div class="line">  <span class="keyword">compile</span>(<span class="string">"com.h2database:h2:1.3.174"</span>)</div><div class="line">  <span class="keyword">compile</span>(<span class="string">"org.thymeleaf:thymeleaf-spring4:2.1.2.RELEASE"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Fortunately, Gradle makes it possible to express dependencies succinctly. Even so, a lot of work went into creating this list, and more will go into maintaining it. How can you know if these dependencies will play well together? As the application grows and evolves, dependency management will become even more challenging.</p>
-<p>But if you’re using the prepackaged dependencies from Spring Boot starters, the Gradle dependency list can be a little shorter:</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">dependencies &#123;</div><div class="line">  compile("org.springframework.boot:spring-boot-starter-web:</div><div class="line">           1.1.4.RELEASE")</div><div class="line">  compile("org.springframework.boot:spring-boot-starter-jdbc:</div><div class="line">           1.1.4.RELEASE")</div><div class="line">  compile("com.h2database:h2:1.3.174")</div><div class="line">  compile("org.thymeleaf:thymeleaf-spring4:2.1.2.RELEASE")</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>As you can see, Spring Boot’s web and JDBC starters replaced several of the finergrained dependencies. You still need to include the H2 and Thymeleaf dependencies, but the other dependencies are rolled up into the starter dependencies. Aside from making the dependency list shorter, you can feel confident that the versions of dependencies provided by the starters are compatible with each other.</p>
-<p>E.g.</p>
-<table>
-<thead>
-<tr>
-<th>Starter</th>
-<th>Provides</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>spring-boot-starter-ac tuator</td>
-<td>spring-boot-starter, spring-boot- actuator, spring-core</td>
-</tr>
-<tr>
-<td></td>
-</tr>
-<tr>
-<td>spring-boot-starter-amqp</td>
-<td>spring-boot-starter, spring-boot-rabbit, spring-core, spring-tx</td>
-</tr>
-<tr>
-<td>spring-boot-starter-aop</td>
-<td>spring-boot-starter, spring-aop, AspectJ Runtime, AspectJ Weaver, spring-core</td>
-</tr>
-</tbody>
-</table>
-<p>Taking advantage of Maven’s and Gradle’s transitive dependency resolution, the starters declare several dependencies in their own pom.xml file. When you add one of these starter dependencies to your Maven or Gradle build, the starter’s dependencies are resolved transitively.</p>
-<h3 id="1-2-Autoconfiguration"><a href="#1-2-Autoconfiguration" class="headerlink" title="1.2 Autoconfiguration"></a>1.2 Autoconfiguration</h3><p>Whereas <code>Spring Boot starters cut down the size of your build&#39;s dependency list</code>, <code>Spring Boot autoconfiguration cuts down on the amount of Spring configuration</code>. It does this by considering other factors in your application and making assumptions about what Spring configuration you’ll need.</p>
-<p>Spring Boot starters can trigger autoconfiguration. For instance, all you need to do to use Spring MVC in your Spring Boot application is to add <code>the web starter</code> as a dependency in the build. When you add the web starter to your project’s build, it will transitively pull in Spring MVC dependencies. When Spring Boot’s web autoconfiguration detects Spring MVC in the classpath, it will automatically configure several beans to support Spring MVC, including view resolvers, resource handlers, and message converters (among others). All that’s left for you to do is write the controller classes to handle the requests.</p>
-<h3 id="1-3-The-Spring-Boot-CLI"><a href="#1-3-The-Spring-Boot-CLI" class="headerlink" title="1.3 The Spring Boot CLI"></a>1.3 The Spring Boot CLI</h3><p>The Spring Boot CLI takes the magic provided by Spring Boot <code>starters</code> and <code>autoconfiguration</code> and spices it up a little with Groovy. It reduces the Spring development process to the point where you can run one or more Groovy scripts through a CLI and see it run. In the course of running the application, the CLI will also automatically import Spring types and resolve dependencies.</p>
-<p>One of the most interesting examples used to illustrate Spring Boot CLI is contained in the following Groovy script:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RestController</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Hi</span> </span>&#123;</div><div class="line">    <span class="meta">@RequestMapping</span>(<span class="string">"/"</span>)</div><div class="line">    <span class="function">String <span class="title">hi</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="string">"Hi!"</span> </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Believe it or not, that is a complete (albeit simple) Spring application that can be executed through the Spring Boot CLI. Including whitespace, it’s 82 characters in length. You can paste it into your Twitter client and tweet it to your friends.</p>
-<p>Eliminate the unnecessary whitespace and you get this 64-character one-liner:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RestController</span> <span class="class"><span class="keyword">class</span> <span class="title">Hi</span></span>&#123;<span class="meta">@RequestMapping</span>(<span class="string">"/"</span>)<span class="function">String <span class="title">hi</span><span class="params">()</span></span>&#123;<span class="string">"Hi!"</span>&#125;&#125;</div></pre></td></tr></table></figure>
-<p>This version is so brief that you can paste it twice into a single tweet on Twitter. But it’s still a complete and runnable (if feature-poor) Spring application. If you have the Spring Boot CLI installed, you can run it with the following command line:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ spring run Hi.groovy</div></pre></td></tr></table></figure>
-<h3 id="1-4-The-Actuator"><a href="#1-4-The-Actuator" class="headerlink" title="1.4 The Actuator"></a>1.4 The Actuator</h3><p>The Spring Boot Actuator brings a handful of useful features to a Spring Boot project, including:</p>
-<blockquote>
-<ul>
-<li>Management endpoint</li>
-<li>Sensible error handling and a default mapping for an <code>/error</code> endpoint</li>
-<li>An <code>/info</code> endpoint that can communicate information about an application</li>
-<li>An audit events framework when Spring Security is in play</li>
-</ul>
-</blockquote>
-<p>All of these features are useful, but the management endpoints are the most immediately useful and interesting features of the Actuator.</p>
-<p>Spring Boot includes a number of additional features to help you monitor and manage your application when it’s pushed to production. You can choose to manage and monitor your application using HTTP endpoints, with JMX or even by remote shell (SSH or Telnet). Auditing, health and metrics gathering can be automatically applied to your application.</p>
-<p>Actuator HTTP endpoints are only available with a Spring MVC-based application. In particular, it will not work with Jersey unless you enable Spring MVC as well.</p>
-<table>
-<thead>
-<tr>
-<th>ID</th>
-<th style="text-align:center">Description</th>
-<th style="text-align:right">Sensitive Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>actuator</td>
-<td style="text-align:center">Provides a hypermedia-based “discovery page” for the other endpoints. Requires Spring HATEOAS to be on the classpath.</td>
-<td style="text-align:right">true</td>
-</tr>
-<tr>
-<td>autoconfig</td>
-<td style="text-align:center">Displays an auto-configuration report showing all auto-configuration candidates and the reason why they ‘were’ or ‘were not’ applied.</td>
-<td style="text-align:right">true</td>
-</tr>
-<tr>
-<td>beans</td>
-<td style="text-align:center">Displays a complete list of all the Spring beans in your application.</td>
-<td style="text-align:right">true</td>
-</tr>
-<tr>
-<td>configprops</td>
-<td style="text-align:center">Displays a collated list of all @ConfigurationProperties.</td>
-<td style="text-align:right">true</td>
-</tr>
-<tr>
-<td>dump</td>
-<td style="text-align:center">Performs a thread dump.</td>
-<td style="text-align:right">true</td>
-</tr>
-<tr>
-<td>env</td>
-<td style="text-align:center">Exposes properties from Spring’s ConfigurableEnvironment.</td>
-<td style="text-align:right">true</td>
-</tr>
-<tr>
-<td>flyway</td>
-<td style="text-align:center">Shows any Flyway database migrations that have been applied.</td>
-<td style="text-align:right">true</td>
-</tr>
-<tr>
-<td>health</td>
-<td style="text-align:center">Shows application health information (when the application is secure, a simple ‘status’ when accessed over an unauthenticated connection or full message details when authenticated).</td>
-<td style="text-align:right">false</td>
-</tr>
-<tr>
-<td>info</td>
-<td style="text-align:center">Displays arbitrary application info.</td>
-<td style="text-align:right">false</td>
-</tr>
-<tr>
-<td>liquibase</td>
-<td style="text-align:center">Shows any Liquibase database migrations that have been applied.</td>
-<td style="text-align:right">true</td>
-</tr>
-<tr>
-<td>metrics</td>
-<td style="text-align:center">Shows ‘metrics’ information for the current application.</td>
-<td style="text-align:right">true</td>
-</tr>
-<tr>
-<td>mappings</td>
-<td style="text-align:center">Displays a collated list of all @RequestMapping paths.</td>
-<td style="text-align:right">true</td>
-</tr>
-<tr>
-<td>shutdown</td>
-<td style="text-align:center">Allows the application to be gracefully shutdown (not enabled by default).</td>
-<td style="text-align:right">true</td>
-</tr>
-<tr>
-<td>trace</td>
-<td style="text-align:center">Displays trace information (by default the last 100 HTTP requests).</td>
-<td style="text-align:right">true</td>
-</tr>
-</tbody>
-</table>
-<p>If you are using Spring MVC, the following additional endpoints can also be used:</p>
-<table>
-<thead>
-<tr>
-<th>ID</th>
-<th style="text-align:center">Description</th>
-<th style="text-align:right">Sensitive Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>docs</td>
-<td style="text-align:center">Displays documentation, including example requests and responses, for the Actuator’s endpoints. Requires spring-boot-actuator-docs to be on the classpath.</td>
-<td style="text-align:right">false</td>
-</tr>
-<tr>
-<td>heapdump</td>
-<td style="text-align:center">Returns a GZip compressed hprof heap dump file.</td>
-<td style="text-align:right">true</td>
-</tr>
-<tr>
-<td>jolokia</td>
-<td style="text-align:center">Exposes JMX beans over HTTP (when Jolokia is on the classpath).</td>
-<td style="text-align:right">true</td>
-</tr>
-<tr>
-<td>logfile</td>
-<td style="text-align:center">Returns the contents of the logfile (if logging.file or logging.path properties have been set). Supports the use of the HTTP Range header to retrieve part of the log file’s content.</td>
-<td style="text-align:right">true</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>Depending on how an endpoint is exposed, the sensitive property may be used as a security hint. For example, sensitive endpoints will require a username/password when they are accessed over HTTP (or simply disabled if web security is not enabled).</p>
-</blockquote>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/30/spring/spring boot/Spring-Boot-Introduction-to-Spring-Boot/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
         
       
     </div>
