@@ -98,7 +98,7 @@ Apache Kafka has been a hot topic in the data field for a while, and, of course,
 <meta property="og:image" content="http://cdn2.hubspot.net/hub/540072/file-3062870518-png/blog-files/stream_data_platform.png">
 <meta property="og:image" content="http://cdn2.hubspot.net/hub/540072/file-3062870538-png/blog-files/commit_log-copy.png">
 <meta property="og:image" content="http://cdn2.hubspot.net/hub/540072/file-3062870548-png/blog-files/job-view.png">
-<meta property="og:updated_time" content="2016-10-03T10:50:03.000Z">
+<meta property="og:updated_time" content="2016-10-03T14:51:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Putting Apache Kafka To Use - A Practical Guide to Building a Stream Data Platform (Part 1)">
 <meta name="twitter:description" content="BackgroundI’m preparing to start a new journey, which I’ll annouce soon. The new opportunity is about data.
@@ -387,6 +387,7 @@ Apache Kafka has been a hot topic in the data field for a while, and, of course,
 <h2 id="The-Stream-Data-Platform-A-Clean-Well-lighted-Place-For-Events"><a href="#The-Stream-Data-Platform-A-Clean-Well-lighted-Place-For-Events" class="headerlink" title="The Stream Data Platform: A Clean, Well-lighted Place For Events"></a>The Stream Data Platform: A Clean, Well-lighted Place For Events</h2><p>We built Apache Kafka at LinkedIn with a specific purpose in mind: to serve as a central repository of data streams. But why do this? There were two motivations.</p>
 <p>The first problem was how to transport data between systems. We had lots of data systems: relational OLTP databases, Hadoop, Teradata, a search system, monitoring systems, OLAP stores, and derived key-value stores. Each of these needed reliable feeds of data in a geographically distributed environment. I’ll call this problem <code>data integration</code>, though we could also call it <code>ETL</code>.</p>
 <p>The second part of this problem was the need to do richer analytical data processing—the kind of thing that would normally happen in a data warehouse or Hadoop cluster—but with very low latency. I call this “stream processing” though others might call it “messaging” or CEP or something similar.</p>
+<a id="more"></a>
 <p>I’ll talk a little about how these ideas developed at LinkedIn. At first we didn’t realize that these problems were connected at all. Our approach was very ad hoc: we built jerry-rigged piping between systems and applications on an as needed basis and shoe-horned any asynchronous processing into request-response web services. Over time this set-up got more and more complex as we ended up building pipelines between all kinds of different systems:</p>
 <p><img src="http://cdn2.hubspot.net/hub/540072/file-3062870508-png/blog-files/data-flow-ugly.png" alt="data-flow-ugly"></p>
 <p>Each of the pipelines was problematic in different ways. Our pipeline for log data was scalable but lossy and could only deliver data with high latency. Our pipeline between Oracle instances was fast, exact, and real-time, but not available to any other systems. Our pipeline of Oracle data for Hadoop was periodic CSV dumps—high throughput, but batch. Our pipeline of data to our search system was low latency, but unscalable and tied directly to the database. Our messaging systems were low latency but unreliable and unscalable.</p>
