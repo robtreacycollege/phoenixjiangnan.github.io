@@ -283,6 +283,144 @@
             
               
                 
+                <a class="post-title-link" href="/2016/01/26/best practices/Logging/" itemprop="url">
+                  Logging
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-01-26T21:45:22+08:00" content="2016-01-26">
+              2016-01-26
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/best-practices/" itemprop="url" rel="index">
+                    <span itemprop="name">best practices</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/26/best practices/Logging/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/26/best practices/Logging/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="Apache-log4j-and-commons-logging"><a href="#Apache-log4j-and-commons-logging" class="headerlink" title="Apache log4j and commons-logging"></a>Apache log4j and commons-logging</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> org.apache.log4j.Logger;</div><div class="line"></div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> Logger s_logger = Logger.getLogger(FileStoreMonitor.class);</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> org.apache.commons.logging.Log;</div><div class="line"><span class="keyword">import</span> org.apache.commons.logging.LogFactory;</div><div class="line"></div><div class="line">	<span class="keyword">protected</span> Log m_logger = LogFactory.getLog( <span class="keyword">this</span>.getClass() );</div></pre></td></tr></table></figure>
+<ul>
+<li>commons-logging.jar是Apache Commons包中的一个，包含了日志功能必须使用的jar包。</li>
+<li>这个包本身包含了一个Simple Logger，但是功能很弱。</li>
+<li>在运行的时候它会先在CLASSPATH找log4j<ul>
+<li>如果有，就使用log4j</li>
+<li>如果没有，就找JDK1.4带的java.util.logging</li>
+<li>如果也找不到就用Simple Logger</li>
+</ul>
+</li>
+<li>commons-logging.jar的出现是一个历史的的遗留的遗憾，当初Apache极力游说Sun把log4j加入JDK1.4，然而JDK1.4项目小组已经接近发布JDK1.4产品的时间了，因此拒绝了Apache的要求，使用自己的java.util.logging，这个包的功能比log4j差的很远，性能也一般。</li>
+<li><code>后来Apache就开发出来了commons-logging.jar用来兼容两个logger。因此用 commons-logging.jar写的log程序，底层的Logger是可以切换的,可以选择log4j，java.util.logging或者它自带的Simple Logger。</code></li>
+<li>强烈建议使用log4j，因为log4j性能很高，log输出信息时间几乎等于System.out，而处理一条log平均只需要5us。</li>
+</ul>
+<p>总结区别 ：<code>Log4j是一个强大的日志实现的系统，而commons-logging是一个十分便利的接口，对Log4j的优势的封装，使日志实现系统与项目做到解耦的效果。</code></p>
+<p>ps: commons-logging 不仅仅对Log4j的封装，还有着其他的日志实现系统，包括它自身简单的日志实现系统</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/01/26/best practices/Logging/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/01/24/hexo/Hexo-Hexo-commands/" itemprop="url">
                   Hexo - Hexo commands
                 </a>
@@ -697,7 +835,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="https://phoenixjiangnan.github.io/archives">
-              <span class="site-state-item-count">103</span>
+              <span class="site-state-item-count">104</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -705,7 +843,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="https://phoenixjiangnan.github.io/categories">
-                <span class="site-state-item-count">47</span>
+                <span class="site-state-item-count">48</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -714,7 +852,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="https://phoenixjiangnan.github.io/tags">
-                <span class="site-state-item-count">249</span>
+                <span class="site-state-item-count">250</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

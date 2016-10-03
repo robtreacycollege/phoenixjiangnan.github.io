@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://phoenixjiangnan.github.io/2016/10/03/distributed%20system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-1/</loc>
+    
+    <lastmod>2016-10-03T10:50:03.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://phoenixjiangnan.github.io/2016/01/23/hexo/Hexo-How-to-install-hexo-on-Mac-with-github-pages/</loc>
     
     <lastmod>2016-10-01T01:25:01.000Z</lastmod>
@@ -30,14 +37,14 @@
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/09/14/system%20design/project%20experience/How-did-I-develop-a-crypto-service-for-Tableau-Server/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/07/26/system%20design/project%20experience/How-did-I-reduce-Tableau-Server-s-downtime-in-a-Postgres-failover-from-3-min-to-1-sec/</loc>
     
     <lastmod>2016-09-30T06:52:58.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/07/26/system%20design/project%20experience/How-did-I-reduce-Tableau-Server-s-downtime-in-a-Postgres-failover-from-3-min-to-1-sec/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/09/14/system%20design/project%20experience/How-did-I-develop-a-crypto-service-for-Tableau-Server/</loc>
     
     <lastmod>2016-09-30T06:52:58.000Z</lastmod>
     
@@ -352,14 +359,14 @@
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/07/09/spring/Spring-Wiring-Beans/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/04/06/test/jmockit/Unit-Test-JMockit-What-are-the-differences-between-Mocked-and-Injectable-in-JMockit-and-when-to-use-Injectable-rather-than-Mocked/</loc>
     
     <lastmod>2016-07-10T06:16:13.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/06/test/jmockit/Unit-Test-JMockit-What-are-the-differences-between-Mocked-and-Injectable-in-JMockit-and-when-to-use-Injectable-rather-than-Mocked/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/07/09/spring/Spring-Wiring-Beans/</loc>
     
     <lastmod>2016-07-10T06:16:13.000Z</lastmod>
     
@@ -401,13 +408,6 @@
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/01/29/java/guava/Guava-EventBus/</loc>
-    
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://phoenixjiangnan.github.io/2016/04/03/java/concurrency/Java-Concurrency-java-util-concurrent-atomic-package/</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
@@ -415,7 +415,7 @@
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/03/27/spring/Spring-Factory-Pattern/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/05/02/spring/Spring-Primary-annotation/</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     
@@ -443,14 +443,14 @@
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/02/08/distributed%20system/high%20availibility/Gossip-Protocol/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/04/03/spring/Spring-Spring-configuration-styles/</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/03/25/spring/Spring-Dynamic-Datasource/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/03/27/spring/Spring-Factory-Pattern/</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     
@@ -464,14 +464,7 @@
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/06/07/spring/Spring-Conditional-Annotation-and-Condition-Interface-in-Action/</loc>
-    
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/05/10/spring/Spring-Set-up-and-Enable-Scheduled-Tasks/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/03/25/spring/Spring-Dynamic-Datasource/</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     
@@ -485,7 +478,14 @@
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/03/spring/Spring-Spring-configuration-styles/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/06/07/spring/Spring-Conditional-Annotation-and-Condition-Interface-in-Action/</loc>
+    
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://phoenixjiangnan.github.io/categories/index.html</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     
@@ -583,7 +583,7 @@
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/01/24/hexo/Hexo-Hexo-commands/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/03/30/java/guava/Guava-Cache/</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     
@@ -597,7 +597,7 @@
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/25/database/The-N-1-Query-Problem/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/01/24/hexo/Hexo-Hexo-commands/</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     
@@ -611,7 +611,7 @@
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/03/30/java/guava/Guava-Cache/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/05/10/spring/Spring-Set-up-and-Enable-Scheduled-Tasks/</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     
@@ -639,7 +639,7 @@
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/05/02/spring/Spring-Primary-annotation/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/01/29/java/guava/Guava-EventBus/</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     
@@ -723,6 +723,13 @@
   </url>
   
   <url>
+    <loc>https://phoenixjiangnan.github.io/2016/04/25/database/The-N-1-Query-Problem/</loc>
+    
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://phoenixjiangnan.github.io/2015/04/08/data%20structures%20and%20algorithms/Array/</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
@@ -737,7 +744,7 @@
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/categories/index.html</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/02/08/distributed%20system/high%20availibility/Gossip-Protocol/</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     

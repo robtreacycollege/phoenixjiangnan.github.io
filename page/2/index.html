@@ -283,6 +283,132 @@
             
               
                 
+                <a class="post-title-link" href="/2016/07/16/ruby/Ruby-How-to-write-Singleton-in-Ruby/" itemprop="url">
+                  Ruby - How to write Singleton in Ruby
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-07-16T23:50:44+08:00" content="2016-07-16">
+              2016-07-16
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/ruby/" itemprop="url" rel="index">
+                    <span itemprop="name">ruby</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/16/ruby/Ruby-How-to-write-Singleton-in-Ruby/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/16/ruby/Ruby-How-to-write-Singleton-in-Ruby/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h2><ul>
+<li>require ‘singleton’ module</li>
+<li><code>include Singleton</code> in your class</li>
+<li>create the instance of your class by assigning <code>MyClass.instance</code> to a variable</li>
+</ul>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># appconfig_factory.rb</span></div><div class="line"></div><div class="line"><span class="keyword">require</span> <span class="string">'singleton'</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">AppConfigFactory</span></span></div><div class="line">  <span class="keyword">include</span> Singleton</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span></span></div><div class="line">    _init_appconfig</div><div class="line">    ...</div><div class="line">  <span class="keyword">end</span></div><div class="line"></div><div class="line">  <span class="keyword">attr_reader</span> <span class="symbol">:config_dir</span></div><div class="line">  </div><div class="line">private</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">_init_appconfig</span></span></div><div class="line">    <span class="keyword">unless</span> Object.const_defined?(<span class="string">'AppConfig'</span>)</div><div class="line">      Object.const_set(<span class="string">'AppConfig'</span>, OpenStruct.new)</div><div class="line">    <span class="keyword">end</span></div><div class="line">  <span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line">AppConfigInstance = AppConfigFactory.instance</div></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># test.rb</span></div><div class="line"><span class="keyword">require</span> <span class="string">'appconfig_factory'</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span></span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span></span></div><div class="line">        puts <span class="string">"<span class="subst">#&#123;AppConfigInstance.config_dir&#125;</span>"</span></div><div class="line">    <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/07/14/system design/task queue/System-Design-Design-Task-Scheduling-System-in-Distributed-System/" itemprop="url">
                   System Design - Design Task Scheduling System in Distributed System
                 </a>
@@ -2951,149 +3077,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/17/system design/task queue/System-Design-How-to-query-status-of-10-000-machines/" itemprop="url">
-                  System Design - How to query status of 10,000 machines
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-06-17T11:16:19+08:00" content="2016-06-17">
-              2016-06-17
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/system-design/" itemprop="url" rel="index">
-                    <span itemprop="name">system design</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/system-design/task-queue/" itemprop="url" rel="index">
-                    <span itemprop="name">task queue</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/17/system design/task queue/System-Design-How-to-query-status-of-10-000-machines/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/06/17/system design/task queue/System-Design-How-to-query-status-of-10-000-machines/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>As promised in <a href="https://phoenixjiangnan.github.io/2016/07/01/system%20design/task%20queue/System-Design-Design-Task-Scheduling-System-in-Distributed-System/">https://phoenixjiangnan.github.io/2016/07/01/system%20design/task%20queue/System-Design-Design-Task-Scheduling-System-in-Distributed-System/</a>, I’m writing my experience and thoughts on that problem, which I got interviewed with Palantir 2 years ago.</p>
-<p>To refresh your thoughts, the problem we are trying so solve looks like this.</p>
-<blockquote>
-<p>How to retrieve 10,000 machines’ health status (can be as simple as live or dead, or as complicated as checking a service is functioning or not) and show all status on a web UI.</p>
-</blockquote>
-<p>This is a pretty practical problem, just imagine how you see your EC2 machines’ status on AWS console.</p>
-<p>The general answer is to 1) maintain a queue of 10,000 jobs, each one is to query a machine’s status 2) have a bunch of worker machines run in parallel, retrieving and executing one status querying job at a time.</p>
-<p>Following are the steps of getting deeper in this question and ultimately reach a satisfying state.</p>
-<h2 id="Step-1-Naive-Approach"><a href="#Step-1-Naive-Approach" class="headerlink" title="Step 1 - Naive Approach"></a>Step 1 - Naive Approach</h2><p>A pitfall when the interviewer presents this question is that, he won’t tell you how many machines you can use to do such an operation. Thus, the first impression an inteviewee got is it can be a dead simple a loop.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function">List&lt;Status&gt; <span class="title">getStatus</span><span class="params">(List&lt;Host&gt; hosts)</span> </span>&#123;</div><div class="line">    List&lt;Status&gt; status = Lists.newArrayList();</div><div class="line">    hosts.forEach(h -&gt; &#123;</div><div class="line">        status.add(h.getStatus());</div><div class="line">    &#125;)</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> status;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/06/17/system design/task queue/System-Design-How-to-query-status-of-10-000-machines/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3139,7 +3122,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="https://phoenixjiangnan.github.io/archives">
-              <span class="site-state-item-count">103</span>
+              <span class="site-state-item-count">104</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -3147,7 +3130,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="https://phoenixjiangnan.github.io/categories">
-                <span class="site-state-item-count">47</span>
+                <span class="site-state-item-count">48</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -3156,7 +3139,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="https://phoenixjiangnan.github.io/tags">
-                <span class="site-state-item-count">249</span>
+                <span class="site-state-item-count">250</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
