@@ -283,6 +283,148 @@
             
               
                 
+                <a class="post-title-link" href="/2016/03/30/best practices/design pattern/Design-Pattern-Factory-Pattern/" itemprop="url">
+                  Design Pattern - Factory Pattern
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-03-30T22:31:20+08:00" content="2016-03-30">
+              2016-03-30
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/best-practice/" itemprop="url" rel="index">
+                    <span itemprop="name">best practice</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/best-practice/design-pattern/" itemprop="url" rel="index">
+                    <span itemprop="name">design pattern</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/30/best practices/design pattern/Design-Pattern-Factory-Pattern/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/30/best practices/design pattern/Design-Pattern-Factory-Pattern/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="Use-Scenario"><a href="#Use-Scenario" class="headerlink" title="Use Scenario:"></a>Use Scenario:</h2><ul>
+<li>When you want to create objects implementing some interface, or having the same parent</li>
+<li>Creating an object is complex, e.g. lots of constructor parameters</li>
+<li><p>Possible to simplify choice of objects</p>
+</li>
+<li><p>If object creation code is spread in whole application, and if you need to change the process of object creation then you need to go in each and every place to make necessary changes. After finishing this article, while writing your application, consider using factory pattern.</p>
+</li>
+</ul>
+<h3 id="E-g-1"><a href="#E-g-1" class="headerlink" title="E.g. 1"></a>E.g. 1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Interface</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Animal</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">speak</span><span class="params">()</span></span>;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</div><div class="line">* Imagine that this class requires lots of </div><div class="line">* configuration before use, e.g. via constructor parameters</div><div class="line">*/</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Cat</span> <span class="keyword">implements</span> <span class="title">Animal</span> <span class="keyword">extends</span> <span class="title">AbstractAnimal</span></span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">speak</span><span class="params">()</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"cat"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">implements</span> <span class="title">Animal</span> <span class="keyword">extends</span> <span class="title">AbstractAnimal</span></span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">speak</span><span class="params">()</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"dog"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/30/best practices/design pattern/Design-Pattern-Factory-Pattern/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/30/best practices/design pattern/Design-Pattern-Abstract-Factory-Pattern/" itemprop="url">
                   Design Pattern - Abstract Factory Pattern
                 </a>
@@ -3199,155 +3341,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Predicate-and-BiPredicate/" itemprop="url">
-                  Java 8 Functional Interface - Predicate and BiPredicate
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-01-31T15:35:16+08:00" content="2016-01-31">
-              2016-01-31
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index">
-                    <span itemprop="name">java</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/java/java-8/" itemprop="url" rel="index">
-                    <span itemprop="name">java 8</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/java/java-8/lambda/" itemprop="url" rel="index">
-                    <span itemprop="name">lambda</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Predicate-and-BiPredicate/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Predicate-and-BiPredicate/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Predicate"><a href="#Predicate" class="headerlink" title="Predicate"></a>Predicate</h1><p>Represents a predicate (boolean-valued function) of one argument.</p>
-<p>This is a functional interface whose functional method is test(Object).</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@FunctionalInterface</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Predicate</span>&lt;<span class="title">T</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">default</span> Predicate&lt;T&gt; <span class="title">and</span><span class="params">(Predicate&lt;? <span class="keyword">super</span> T&gt; other)</span></span>;  <span class="comment">// Returns a composed predicate that represents a short-circuiting logical AND of this predicate and another.</span></div><div class="line"></div><div class="line"><span class="keyword">static</span> &lt;T&gt; <span class="function">Predicate&lt;T&gt;	<span class="title">isEqual</span><span class="params">(Object targetRef)</span></span>;  <span class="comment">// Returns a predicate that tests if two arguments are equal according to Objects.equals(Object, Object).</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">default</span> Predicate&lt;T&gt; <span class="title">negate</span><span class="params">()</span></span>;  <span class="comment">// Returns a predicate that represents the logical negation of this predicate.</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">default</span> Predicate&lt;T&gt; <span class="title">or</span><span class="params">(Predicate&lt;? <span class="keyword">super</span> T&gt; other)</span></span>;  <span class="comment">// Returns a composed predicate that represents a short-circuiting logical OR of this predicate and another.</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">boolean</span>	<span class="title">test</span><span class="params">(T t)</span></span>;  <span class="comment">//Evaluates this predicate on the given argument.</span></div></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Predicate-and-BiPredicate/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3393,7 +3386,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="https://phoenixjiangnan.github.io/archives">
-              <span class="site-state-item-count">105</span>
+              <span class="site-state-item-count">106</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -3410,7 +3403,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="https://phoenixjiangnan.github.io/tags">
-                <span class="site-state-item-count">250</span>
+                <span class="site-state-item-count">254</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

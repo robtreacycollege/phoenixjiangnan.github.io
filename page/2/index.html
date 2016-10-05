@@ -283,6 +283,148 @@
             
               
                 
+                <a class="post-title-link" href="/2016/07/23/system design/project experience/How-did-I-improved-our-system-monitoring-accuracy-from-40-50-to-99/" itemprop="url">
+                  How did I improved our system monitoring accuracy from ~40%/50% to ~99%
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-07-23T00:47:33+08:00" content="2016-07-23">
+              2016-07-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/system-design/" itemprop="url" rel="index">
+                    <span itemprop="name">system design</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/system-design/project-experience/" itemprop="url" rel="index">
+                    <span itemprop="name">project experience</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/23/system design/project experience/How-did-I-improved-our-system-monitoring-accuracy-from-40-50-to-99/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/23/system design/project experience/How-did-I-improved-our-system-monitoring-accuracy-from-40-50-to-99/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>Here is some experience of the work I did last year. When I first got assigned to bugs to this area, the stream of bugs seem never end - due to bad design, bugs kept coming. The accuracy is as low as around 50%, and QA generaously filed bugs to me without any hesitation. </p>
+<p>Suffered from it for a while, I eventually determined to refactor the design. I ended up raising the accuracy significantly up to ~99%, and I haven’t heard any bugs since then, which was 1 year ago. </p>
+<p>So I’m gonna talk about how the original system works, what the problems it had, and how I improved our system monitoring accuracy from 50% to ~99%.</p>
+<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>Tableau Server is on-premise solution for enterprise business intelligence and data visualization. A cluster of Tableau Server runs like this:</p>
+<ol>
+<li>Processes like <code>gateways</code>, <code>filestores</code>, <code>vizportals</code> (our web portal), <code>backgrounders</code>, and other processes are scattered across nodes</li>
+<li>There’s a <code>Cluster Controller</code> runs on each node within the cluster, and only one of them is the <code>Leader</code></li>
+<li>We run <code>Postgres</code> as our database. Users need to specify a few configurations for <code>Postgres</code>, like which two machines will run the active <code>Postgres</code> and the standby <code>Postgres</code>, and which machine runs the preferred active <code>Postgres</code>. For machines where <code>Postgres</code> reside, <code>Cluster Controller</code> runs <code>PostgresManager</code> to control the lifecycle of the database. <code>Active PostgresManager</code> runs active <code>Postgres</code>, and <code>passive PostgresManager</code> manages standby <code>Postgres</code> </li>
+</ol>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/23/system design/project experience/How-did-I-improved-our-system-monitoring-accuracy-from-40-50-to-99/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/07/19/machine learning/Machine-Learning-some-of-my-academic-machine-learning-related-projects/" itemprop="url">
                   Machine Learning - some of my academic machine learning related projects
                 </a>
@@ -3015,134 +3157,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/21/ruby/Ruby-Variables-in-Ruby/" itemprop="url">
-                  Ruby - Variables and Constant in Ruby
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-06-21T22:49:27+08:00" content="2016-06-21">
-              2016-06-21
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/ruby/" itemprop="url" rel="index">
-                    <span itemprop="name">ruby</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/21/ruby/Ruby-Variables-in-Ruby/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/06/21/ruby/Ruby-Variables-in-Ruby/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Ruby-Variables"><a href="#Ruby-Variables" class="headerlink" title="Ruby Variables"></a>Ruby Variables</h1><p>Ruby provides five types of variables:</p>
-<ul>
-<li><code>Local Variables</code>: variables defined in a method. Local variables are not available outside the method. You will see more details about method in subsequent chapter. Local variables begin with <code>a lowercase letter</code> or <code>_</code>.</li>
-<li><code>Instance Variables</code>: variables available across methods for any particular instance or object. That means that instance variables change from object to object. Instance variables are preceded by the at sign <code>@</code> followed by the variable name.</li>
-<li><code>Class Variables</code>: variables available across different objects. A class variable belongs to the class and is a characteristic of a class. They are preceded by the sign <code>@@</code> and are followed by the variable name.</li>
-<li><code>Global Variables</code>: Class variables are not available across classes. If you want to have a single variable, which is available across classes, you need to define a global variable. The global variables are always preceded by the dollar sign <code>$</code>.</li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/06/21/ruby/Ruby-Variables-in-Ruby/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3188,7 +3202,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="https://phoenixjiangnan.github.io/archives">
-              <span class="site-state-item-count">105</span>
+              <span class="site-state-item-count">106</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -3205,7 +3219,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="https://phoenixjiangnan.github.io/tags">
-                <span class="site-state-item-count">250</span>
+                <span class="site-state-item-count">254</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

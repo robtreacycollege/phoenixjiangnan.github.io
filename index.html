@@ -283,6 +283,233 @@
             
               
                 
+                <a class="post-title-link" href="/2016/10/05/Throttling-and-Traffic-Shaping/" itemprop="url">
+                  Throttling and Traffic Shaping
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-10-05T23:49:42+08:00" content="2016-10-05">
+              2016-10-05
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/system-design/" itemprop="url" rel="index">
+                    <span itemprop="name">system design</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/05/Throttling-and-Traffic-Shaping/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/05/Throttling-and-Traffic-Shaping/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Throttling-and-Traffic-Shaping"><a href="#Throttling-and-Traffic-Shaping" class="headerlink" title="Throttling and Traffic Shaping"></a>Throttling and Traffic Shaping</h2><blockquote>
+<p>Throttling is, to control the consumption of resources used by an instance of an application, an individual tenant, or an entire service. </p>
+</blockquote>
+<p>Throttling can allow the system to continue to function and meet service level agreements, even when an increase in demand places an extreme load on resources.</p>
+<p>The system could implement several throttling strategies, including:</p>
+<ul>
+<li><code>Service Metering</code> - that is, rejecting requests from an individual user who has already accessed system APIs more than n times per second over a given period of time. This requires that the system meters the use of resources for each tenant or user running an application.</li>
+<li><code>Leaky bucket as a queue</code> - that is, using load leveling to smooth the volume of activity (also called <code>Queue-based Load Leveling pattern</code>). </li>
+<li><code>Leaky bucket as a priority queue</code> - in a multitenant environment, <code>Leaky bucket as a queue</code> will reduce the performance for every tenant. <ul>
+<li>If the system must support a mix of tenants with different SLAs, the work for high-value tenants might be performed immediately. </li>
+<li>Requests for other tenants can be held back, and handled when the backlog has eased. Deferring operations being performed on behalf of lower priority applications or tenants. These operations can be suspended or curtailed, with an exception generated to inform the tenant that the system is busy and that the operation should be retried later.</li>
+</ul>
+</li>
+<li><code>Token bucket</code> - that is, using tokens to limit the volume of activity</li>
+<li><code>Disable non-critical services</code> Disabling or degrading the functionality of selected nonessential services so that essential services can run unimpeded with sufficient resources. For example, if the application is streaming video output, it could switch to a lower resolution.</li>
+</ul>
+<p>There are two most commonly used algorithms:</p>
+<ol>
+<li>Leaky Bucket for rate controll</li>
+<li>Token Bucket for concurrency control</li>
+</ol>
+<h2 id="Leaky-Bucket-Algorithm"><a href="#Leaky-Bucket-Algorithm" class="headerlink" title="Leaky Bucket Algorithm"></a>Leaky Bucket Algorithm</h2><blockquote>
+<p>Leaky Bucket Algorithm as a Queue, a.k.a Queue-Based Load Leveling Pattern</p>
+</blockquote>
+<h3 id="Statistics"><a href="#Statistics" class="headerlink" title="Statistics"></a>Statistics</h3><ul>
+<li>What’s the max latency time a request can experience:<ul>
+<li>V/(T - O) : V - the bucket’s volume, T - the request input rate, O - the output rate to process requests </li>
+</ul>
+</li>
+</ul>
+<h3 id="Pros"><a href="#Pros" class="headerlink" title="Pros:"></a>Pros:</h3><ul>
+<li>Easy to implement</li>
+<li>Best used to control processing rate</li>
+</ul>
+<h3 id="Cons"><a href="#Cons" class="headerlink" title="Cons:"></a>Cons:</h3><ul>
+<li>Leaky bucket algorithms cannot effectively take advantages of resources. The leaking rate is fixed, so it cannot process a bulky traffic that exceeds its threshold even though there are plenty of resources. (Token Bucket Algorithm can do that)</li>
+</ul>
+<h3 id="Use-Case"><a href="#Use-Case" class="headerlink" title="Use Case:"></a>Use Case:</h3><ul>
+<li>To address system callback flood</li>
+</ul>
+<h2 id="Token-Bucket-Algorithm"><a href="#Token-Bucket-Algorithm" class="headerlink" title="Token Bucket Algorithm"></a>Token Bucket Algorithm</h2><blockquote>
+<p>What a token bucket limits is the traffic within a predefined time window. From the API level, the traffic that we always talk about is <code>QPS (Queries per sec)</code> and <code>TPS (Transactions per sec)</code>, and they are just the traffic in a 1-sec time window.</p>
+</blockquote>
+<p>The token bucket algorithm can be conceptually understood as follows:</p>
+<ul>
+<li>A token is added to the bucket every <code>1/r</code>  seconds.</li>
+<li>The current number of tokens in the bucket is <code>c</code>. <ul>
+<li>Strategy 1: The bucket can hold at the most <code>b</code> tokens. <code>c</code> &lt;= <code>b</code>. If a token arrives when the bucket is full, it is discarded.</li>
+<li>Strategy 2: The bucket can hold unlimited tokens</li>
+</ul>
+</li>
+<li>When n bytes/requests arrive, n tokens will be removed from the bucket, and the bytes/requests are sent to the network.</li>
+</ul>
+<p>There are four strategies for situations when <code>n</code> &gt; <code>c</code>.</p>
+<ol>
+<li>(simple and rudimentary) Consider the packet to be non-conformant, and discard the packet for now (availiable for request resubmit)</li>
+<li>(naive and impractical) Have the packet wait until enough tokens accumulated<ul>
+<li>simple waiting may block the workflow</li>
+<li>maybe lower the priority of the packet, but it still possibily will not be processed forever</li>
+</ul>
+</li>
+<li>(good for batch processing) Break the packet into smaller ones</li>
+<li>(google guava supports) Grant the packet <code>n</code> tokens for now, but will have to delay its further requests in order to make it up. This requires a service metering to keep track of hosts’ token usage. Google Guava <code>RateLimiter</code> supports this feature.</li>
+</ol>
+<h3 id="Statistics-1"><a href="#Statistics-1" class="headerlink" title="Statistics"></a>Statistics</h3><ul>
+<li>What’s the average allowed hit rate<ul>
+<li>the rate to issue tokens <code>r</code></li>
+</ul>
+</li>
+<li>How much is the max tolerable flood peak<ul>
+<li>if the flood peak comes when the token buckets are full, the volume of max tolerable flood peak = V + r. V - token bucket size, r - the rate to issue tokens</li>
+</ul>
+</li>
+</ul>
+<h3 id="Pros-1"><a href="#Pros-1" class="headerlink" title="Pros:"></a>Pros:</h3><ul>
+<li>Best used to control max concurrency</li>
+</ul>
+<h3 id="Cons-1"><a href="#Cons-1" class="headerlink" title="Cons:"></a>Cons:</h3><ul>
+<li>It really depends on which above strategy you choose</li>
+</ul>
+<h3 id="Use-Case-1"><a href="#Use-Case-1" class="headerlink" title="Use Case:"></a>Use Case:</h3><ul>
+<li>To address user requests flood</li>
+</ul>
+<h2 id="Difference-between-Leaky-Bucket-and-Token-Bucket"><a href="#Difference-between-Leaky-Bucket-and-Token-Bucket" class="headerlink" title="Difference between Leaky Bucket and Token Bucket"></a>Difference between Leaky Bucket and Token Bucket</h2><blockquote>
+<p>Leaky bucket strictly forces a fixed maximum rate of processing. In some circumstances, leaky bucket cannot effectively use the internet resources, because it only grants fixed rate of processing and thus cannot handle traffic floods.</p>
+<p>While token bucket not only limit the average rate of processing, it also allows systems to handle sudden flood peaks.</p>
+</blockquote>
+<p>Pratically, leaky bucket and token bucket algorithms are put together to provide a more powerful yet more flexible control over web traffic.</p>
+<hr>
+<p>References:</p>
+<ul>
+<li><p><a href="http://jm.taobao.org/2016/05/19/how-to-withstand-the-world-s-largest-traffic/" target="_blank" rel="external">http://jm.taobao.org/2016/05/19/how-to-withstand-the-world-s-largest-traffic/</a></p>
+</li>
+<li><p><a href="https://msdn.microsoft.com/en-us/library/dn589798.aspx" target="_blank" rel="external">https://msdn.microsoft.com/en-us/library/dn589798.aspx</a></p>
+</li>
+<li><p><a href="http://www.cnblogs.com/LBSer/p/4083131.html" target="_blank" rel="external">http://www.cnblogs.com/LBSer/p/4083131.html</a></p>
+</li>
+</ul>
+<ul>
+<li><a href="https://blog.jamespan.me/2015/10/19/traffic-shaping-with-token-bucket/" target="_blank" rel="external">https://blog.jamespan.me/2015/10/19/traffic-shaping-with-token-bucket/</a></li>
+</ul>
+<ul>
+<li><a href="https://msdn.microsoft.com/en-us/library/dn589783.aspx" target="_blank" rel="external">https://msdn.microsoft.com/en-us/library/dn589783.aspx</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/google/guava/blob/v18.0/guava/src/com/google/common/util/concurrent/RateLimiter.java" target="_blank" rel="external">https://github.com/google/guava/blob/v18.0/guava/src/com/google/common/util/concurrent/RateLimiter.java</a></li>
+<li><a href="https://github.com/google/guava/blob/v18.0/guava/src/com/google/common/util/concurrent/SmoothRateLimiter.java" target="_blank" rel="external">https://github.com/google/guava/blob/v18.0/guava/src/com/google/common/util/concurrent/SmoothRateLimiter.java</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/10/03/distributed system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-2/" itemprop="url">
                   Putting Apache Kafka To Use: A Practical Guide to Building a Stream Data Platform (Part 2)
                 </a>
@@ -3192,148 +3419,6 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/23/system design/project experience/How-did-I-improved-our-system-monitoring-accuracy-from-40-50-to-99/" itemprop="url">
-                  How did I improved our system monitoring accuracy from ~40%/50% to ~99%
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-07-23T00:47:33+08:00" content="2016-07-23">
-              2016-07-23
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/system-design/" itemprop="url" rel="index">
-                    <span itemprop="name">system design</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/system-design/project-experience/" itemprop="url" rel="index">
-                    <span itemprop="name">project experience</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/07/23/system design/project experience/How-did-I-improved-our-system-monitoring-accuracy-from-40-50-to-99/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/23/system design/project experience/How-did-I-improved-our-system-monitoring-accuracy-from-40-50-to-99/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Here is some experience of the work I did last year. When I first got assigned to bugs to this area, the stream of bugs seem never end - due to bad design, bugs kept coming. The accuracy is as low as around 50%, and QA generaously filed bugs to me without any hesitation. </p>
-<p>Suffered from it for a while, I eventually determined to refactor the design. I ended up raising the accuracy significantly up to ~99%, and I haven’t heard any bugs since then, which was 1 year ago. </p>
-<p>So I’m gonna talk about how the original system works, what the problems it had, and how I improved our system monitoring accuracy from 50% to ~99%.</p>
-<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>Tableau Server is on-premise solution for enterprise business intelligence and data visualization. A cluster of Tableau Server runs like this:</p>
-<ol>
-<li>Processes like <code>gateways</code>, <code>filestores</code>, <code>vizportals</code> (our web portal), <code>backgrounders</code>, and other processes are scattered across nodes</li>
-<li>There’s a <code>Cluster Controller</code> runs on each node within the cluster, and only one of them is the <code>Leader</code></li>
-<li>We run <code>Postgres</code> as our database. Users need to specify a few configurations for <code>Postgres</code>, like which two machines will run the active <code>Postgres</code> and the standby <code>Postgres</code>, and which machine runs the preferred active <code>Postgres</code>. For machines where <code>Postgres</code> reside, <code>Cluster Controller</code> runs <code>PostgresManager</code> to control the lifecycle of the database. <code>Active PostgresManager</code> runs active <code>Postgres</code>, and <code>passive PostgresManager</code> manages standby <code>Postgres</code> </li>
-</ol>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/23/system design/project experience/How-did-I-improved-our-system-monitoring-accuracy-from-40-50-to-99/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3379,7 +3464,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="https://phoenixjiangnan.github.io/archives">
-              <span class="site-state-item-count">105</span>
+              <span class="site-state-item-count">106</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -3396,7 +3481,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
           
             <div class="site-state-item site-state-tags">
               <a href="https://phoenixjiangnan.github.io/tags">
-                <span class="site-state-item-count">250</span>
+                <span class="site-state-item-count">254</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
