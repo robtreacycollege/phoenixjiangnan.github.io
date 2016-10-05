@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://phoenixjiangnan.github.io/2016/10/03/distributed%20system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-2/</loc>
+    
+    <lastmod>2016-10-03T15:24:31.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://phoenixjiangnan.github.io/2016/10/03/distributed%20system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-1/</loc>
     
-    <lastmod>2016-10-03T14:51:57.000Z</lastmod>
+    <lastmod>2016-10-03T15:19:28.000Z</lastmod>
     
   </url>
   
@@ -359,14 +366,14 @@
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/06/test/jmockit/Unit-Test-JMockit-What-are-the-differences-between-Mocked-and-Injectable-in-JMockit-and-when-to-use-Injectable-rather-than-Mocked/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/07/09/spring/Spring-Wiring-Beans/</loc>
     
     <lastmod>2016-07-10T06:16:13.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/07/09/spring/Spring-Wiring-Beans/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/04/06/test/jmockit/Unit-Test-JMockit-What-are-the-differences-between-Mocked-and-Injectable-in-JMockit-and-when-to-use-Injectable-rather-than-Mocked/</loc>
     
     <lastmod>2016-07-10T06:16:13.000Z</lastmod>
     
@@ -408,98 +415,7 @@
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/03/java/concurrency/Java-Concurrency-java-util-concurrent-atomic-package/</loc>
-    
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/05/02/spring/Spring-Primary-annotation/</loc>
-    
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/06/20/ruby/Ruby-attr-accessor-attr-reader-and-attr-writer/</loc>
-    
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/02/16/distributed%20system/algorithems/Merkle-Tree-and-Anti-Entropy/</loc>
-    
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/06/28/system%20design/SNAKE-System-Design-Principles-to-crack-a-system-design-in-5-steps/</loc>
-    
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/03/spring/Spring-Spring-configuration-styles/</loc>
-    
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/03/27/spring/Spring-Factory-Pattern/</loc>
-    
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/02/10/distributed%20system/nosql/Cassandra-V-S-HBase/</loc>
-    
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/03/25/spring/Spring-Dynamic-Datasource/</loc>
-    
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/28/database/hibernate/Hibernate-Hibernate-Enum-and-Decoupling-Java-Class-with-Database-Record/</loc>
-    
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/06/07/spring/Spring-Conditional-Annotation-and-Condition-Interface-in-Action/</loc>
-    
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://phoenixjiangnan.github.io/categories/index.html</loc>
-    
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/05/17/database/hibernate/Hibernate-the-hi-lo-algorithm/</loc>
-    
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/20/java/concurrency/Java-Concurrency-BlockingQueue/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/05/10/spring/Spring-Set-up-and-Enable-Scheduled-Tasks/</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     
@@ -513,6 +429,97 @@
   </url>
   
   <url>
+    <loc>https://phoenixjiangnan.github.io/2016/04/03/java/concurrency/Java-Concurrency-CountDownLatch/</loc>
+    
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/04/20/java/concurrency/Java-Concurrency-BlockingQueue/</loc>
+    
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/04/03/java/concurrency/Java-Concurrency-Executor-and-Thread-Pools/</loc>
+    
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/01/24/hexo/Hexo-Hexo-commands/</loc>
+    
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/04/20/java/concurrency/Java-Concurrency-ReentrantLock/</loc>
+    
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/04/03/java/concurrency/Java-Concurrency-java-util-concurrent-atomic-package/</loc>
+    
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/06/28/system%20design/SNAKE-System-Design-Principles-to-crack-a-system-design-in-5-steps/</loc>
+    
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/06/21/ruby/Ruby-Variables-in-Ruby/</loc>
+    
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/06/20/ruby/Ruby-attr-accessor-attr-reader-and-attr-writer/</loc>
+    
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/03/30/java/guava/Guava-Cache/</loc>
+    
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/01/29/java/guava/Guava-EventBus/</loc>
+    
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/04/28/database/hibernate/Hibernate-Hibernate-Enum-and-Decoupling-Java-Class-with-Database-Record/</loc>
+    
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/05/17/database/hibernate/Hibernate-the-hi-lo-algorithm/</loc>
+    
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://phoenixjiangnan.github.io/2016/03/27/system%20design/cache/Cache-Best-Practices-to-design-cache-system-for-your-system/</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
@@ -520,7 +527,21 @@
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/03/java/concurrency/Java-Concurrency-CountDownLatch/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/02/16/distributed%20system/algorithems/Merkle-Tree-and-Anti-Entropy/</loc>
+    
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/02/08/distributed%20system/high%20availibility/Gossip-Protocol/</loc>
+    
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/05/20/system%20design/messaging/System-Design-When-to-use-Push-and-Pull-mechanism-in-a-messaging-app-or-the-timeline-of-a-social-app/</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     
@@ -541,28 +562,7 @@
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/05/20/system%20design/messaging/System-Design-When-to-use-Push-and-Pull-mechanism-in-a-messaging-app-or-the-timeline-of-a-social-app/</loc>
-    
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/03/java/concurrency/Java-Concurrency-Executor-and-Thread-Pools/</loc>
-    
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/20/java/concurrency/Java-Concurrency-ReentrantLock/</loc>
-    
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/06/21/ruby/Ruby-Variables-in-Ruby/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/02/10/distributed%20system/nosql/Cassandra-V-S-HBase/</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     
@@ -576,6 +576,20 @@
   </url>
   
   <url>
+    <loc>https://phoenixjiangnan.github.io/2015/04/08/data%20structures%20and%20algorithms/Array/</loc>
+    
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/04/25/database/The-N-1-Query-Problem/</loc>
+    
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://phoenixjiangnan.github.io/2016/06/21/ruby/Ruby-Methods-in-Ruby/</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
@@ -583,7 +597,7 @@
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/03/30/java/guava/Guava-Cache/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/06/07/spring/Spring-Conditional-Annotation-and-Condition-Interface-in-Action/</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     
@@ -597,13 +611,6 @@
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/01/24/hexo/Hexo-Hexo-commands/</loc>
-    
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://phoenixjiangnan.github.io/2016/04/25/test/jmockit/Unit-Test-JMockit-Difference-between-Expectations-NonStrictExpectations-and-StrictExpectations/</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
@@ -611,7 +618,14 @@
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/05/10/spring/Spring-Set-up-and-Enable-Scheduled-Tasks/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/03/25/spring/Spring-Dynamic-Datasource/</loc>
+    
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/03/27/spring/Spring-Factory-Pattern/</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     
@@ -639,13 +653,6 @@
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/01/29/java/guava/Guava-EventBus/</loc>
-    
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://phoenixjiangnan.github.io/2016/05/22/web%20development/rest/What-is-REST-RESTful/</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
@@ -653,14 +660,7 @@
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Consumer-and-BiConsumber/</loc>
-    
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Function-and-BiFunction/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/05/02/spring/Spring-Primary-annotation/</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     
@@ -674,6 +674,20 @@
   </url>
   
   <url>
+    <loc>https://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Function-and-BiFunction/</loc>
+    
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Consumer-and-BiConsumber/</loc>
+    
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Supplier/</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
@@ -681,7 +695,7 @@
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/02/01/java/java%208/lambda/Java-8-Functional-Interface/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/03/05/java/java%208/lambda/Java-8-Method-Reference/</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     
@@ -695,7 +709,7 @@
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/03/05/java/java%208/lambda/Java-8-Method-Reference/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/02/01/java/java%208/lambda/Java-8-Functional-Interface/</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     
@@ -723,14 +737,14 @@
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/25/database/The-N-1-Query-Problem/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/04/03/spring/Spring-Spring-configuration-styles/</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://phoenixjiangnan.github.io/2015/04/08/data%20structures%20and%20algorithms/Array/</loc>
+    <loc>https://phoenixjiangnan.github.io/categories/index.html</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     
@@ -738,13 +752,6 @@
   
   <url>
     <loc>https://phoenixjiangnan.github.io/tags/index.html</loc>
-    
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/02/08/distributed%20system/high%20availibility/Gossip-Protocol/</loc>
     
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     

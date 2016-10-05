@@ -283,6 +283,132 @@
             
               
                 
+                <a class="post-title-link" href="/2016/06/20/ruby/Ruby-attr-accessor-attr-reader-and-attr-writer/" itemprop="url">
+                  Ruby - attr_accessor, attr_reader, and attr_writer
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-06-20T22:26:46+08:00" content="2016-06-20">
+              2016-06-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/ruby/" itemprop="url" rel="index">
+                    <span itemprop="name">ruby</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/20/ruby/Ruby-attr-accessor-attr-reader-and-attr-writer/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/06/20/ruby/Ruby-attr-accessor-attr-reader-and-attr-writer/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>Recently, I started working on Ruby and JRuby. Good to start posting some tutorials. </p>
+<p>You may use the different accessors to communicate your intent to someone reading your code, and make it easier to write classes which will work correctly no matter how their public API is called.</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span></div><div class="line">  <span class="keyword">attr_accessor</span> <span class="symbol">:age</span></div><div class="line">  </div><div class="line">  ...</div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+<p>Here, I can see that I may both read and write the age.</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span></div><div class="line">  <span class="keyword">attr_reader</span> <span class="symbol">:age</span></div><div class="line">  </div><div class="line">  ...</div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/06/20/ruby/Ruby-attr-accessor-attr-reader-and-attr-writer/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/06/17/system design/task queue/System-Design-How-to-query-status-of-10-000-machines/" itemprop="url">
                   System Design - How to query status of 10,000 machines
                 </a>
@@ -2980,149 +3106,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/17/test/jmockit/Unit-Test-JMockit-Capturing-Invocation-Arguments-for-Verification/" itemprop="url">
-                  Unit Test - JMockit - Capturing Invocation Arguments for Verification
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-17T22:07:43+08:00" content="2016-04-17">
-              2016-04-17
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/test/" itemprop="url" rel="index">
-                    <span itemprop="name">test</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/test/jmockit/" itemprop="url" rel="index">
-                    <span itemprop="name">jmockit</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/17/test/jmockit/Unit-Test-JMockit-Capturing-Invocation-Arguments-for-Verification/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/17/test/jmockit/Unit-Test-JMockit-Capturing-Invocation-Arguments-for-Verification/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Recently I was pushed into a new world in Java unit test - withCapture(). The main reason for knowing this is that I start to write more and more lambda expressions recently, with Java 9 being adopted in my company.</p>
-<p>So I’m writing to explain what kind of problems I ran into and how I dealt with them. Most of the following content is based on <a href="http://jmockit.org/tutorial/Mocking.html#withCapture">http://jmockit.org/tutorial/Mocking.html#withCapture</a> and polished by myself to have them make more sense</p>
-<h1 id="Capturing-Invocation-Arguments-for-Verification"><a href="#Capturing-Invocation-Arguments-for-Verification" class="headerlink" title="Capturing Invocation Arguments for Verification"></a>Capturing Invocation Arguments for Verification</h1><p>Invocation arguments can be captured for later verification through a set of special <code>withCapture(...)</code> methods. </p>
-<p>There are three different cases, each with its own specific capturing method: </p>
-<ol>
-<li>verification of arguments passed to a mocked method, in a single invocation: T withCapture(); </li>
-<li>verification of arguments passed to a mocked method, in multiple invocations: T withCapture(List<T>);</li>
-<li>verification of arguments passed to a mocked constructor: List<T> withCapture(T).</li>
-</ol>
-<p>Let’s see some demos for each scenario. And here are some base classes, <code>Team</code> being the one we are gonna test. </p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/17/test/jmockit/Unit-Test-JMockit-Capturing-Invocation-Arguments-for-Verification/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3168,7 +3151,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="https://phoenixjiangnan.github.io/archives">
-              <span class="site-state-item-count">104</span>
+              <span class="site-state-item-count">105</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

@@ -283,6 +283,159 @@
             
               
                 
+                <a class="post-title-link" href="/2016/10/03/distributed system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-2/" itemprop="url">
+                  Putting Apache Kafka To Use: A Practical Guide to Building a Stream Data Platform (Part 2)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-10-03T23:21:05+08:00" content="2016-10-03">
+              2016-10-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/distributed-system/" itemprop="url" rel="index">
+                    <span itemprop="name">distributed system</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/distributed-system/kafka/" itemprop="url" rel="index">
+                    <span itemprop="name">kafka</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/03/distributed system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/03/distributed system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-2/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p>I’m preparing to start a new journey, which I’ll annouce soon. The new opportunity is about data.</p>
+<p><code>Apache Kafka</code> has been a hot topic in the data field for a while, and, of course, I cannot taking on data problems without it. While learning and reading more about Kafka, I found <a href="http://www.confluent.io/blog/">Conluent’s official tech blog</a> has been an amazingly useful place to find out materials I need - because the company is started by founders of Kafka in Linkedin.</p>
+<p>Thus, I decided to repost a few great blogs from Confluent, add my own notes, and publish them here.</p>
+<p>All posts are <a href="https://phoenixjiangnan.github.io/categories/distributed-system/kafka/">here</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>This post is Part II of a couple blogs from Concluent’s CEO Jay Kreps. Part II has been really amazing to present you an overall view of all major technical details of Kafka.</p>
+<p><em><a href="http://www.confluent.io/blog/stream-data-platform-2/">Original Post</a> from Jay Kreps. February 25, 2015.</em></p>
+</blockquote>
+<hr>
+<p><img src="http://cdn2.hubspot.net/hub/540072/file-3062870613-png/blog-files/data-systems-sdp.png" alt=""></p>
+<p>This is the second part of our guide on streaming data and Apache Kafka. In part one I talked about the uses for real-time data streams and explained our idea of a stream data platform. The remainder of this guide will contain specific advice on how to go about building a stream data platform in your organization.</p>
+<p>This advice is drawn from our experience building and implementing Kafka at LinkedIn and rolling it out across all the data types and systems there. It also comes from four years working with tech companies in Silicon Valley to build Kafka-based stream data platforms in their organizations.</p>
+<p>This is meant to be a living document. As we learn new techniques, or new tools become available, I’ll update it.</p>
+<h2 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h2><p>Much of the advice in this guide covers techniques that will scale to hundreds or thousands of well formed data streams. No one starts with that, of course. Usually you start with one or two trial applications, often ones that have scalability requirements that make other systems less suitable. Even in this kind of limited deployment, though, the techniques described in this guide will help you to start off with good practices, which is critical as your usage expands.</p>
+<p>Starting with something more limited is good, it let’s you get a hands on feel for what works and what doesn’t, so that, when broader adoption comes, you are well prepared for it.</p>
+<h2 id="Recommendations"><a href="#Recommendations" class="headerlink" title="Recommendations"></a>Recommendations</h2><p>I’ll give a set of general recommendations for streaming data and Kafka and then discuss some specifics of different types of data.</p>
+<h3 id="1-Limit-The-Number-of-Clusters"><a href="#1-Limit-The-Number-of-Clusters" class="headerlink" title="1. Limit The Number of Clusters"></a>1. Limit The Number of Clusters</h3><p>In early experimentation phases it is normal to end up with a few different Kafka clusters as adoption occurs organically in different parts of the organization.</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/03/distributed system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-2/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/10/03/distributed system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-1/" itemprop="url">
                   Putting Apache Kafka To Use - A Practical Guide to Building a Stream Data Platform (Part 1)
                 </a>
@@ -368,6 +521,7 @@
 <h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p>I’m preparing to start a new journey, which I’ll annouce soon. The new opportunity is about data.</p>
 <p><code>Apache Kafka</code> has been a hot topic in the data field for a while, and, of course, I cannot taking on data problems without it. While learning and reading more about Kafka, I found <a href="http://www.confluent.io/blog/">Conluent’s official tech blog</a> has been an amazingly useful place to find out materials I need - because the company is started by founders of Kafka in Linkedin.</p>
 <p>Thus, I decided to repost a few great blogs from Confluent, add my own notes, and publish them here.</p>
+<p>All posts are <a href="https://phoenixjiangnan.github.io/categories/distributed-system/kafka/">here</a></p>
 </blockquote>
 <hr>
 <blockquote>
@@ -3180,198 +3334,6 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/19/machine learning/Machine-Learning-some-of-my-academic-machine-learning-related-projects/" itemprop="url">
-                  Machine Learning - some of my academic machine learning related projects
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-07-19T21:29:44+08:00" content="2016-07-19">
-              2016-07-19
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/machine-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">machine learning</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/07/19/machine learning/Machine-Learning-some-of-my-academic-machine-learning-related-projects/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/19/machine learning/Machine-Learning-some-of-my-academic-machine-learning-related-projects/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>The following are a few of all my academic machine learning related projects in my last two semesters (2014) in Carnegie Mellon U. </p>
-<ul>
-<li>Learning to Rank (LETOR) Implementation (Nov 2014)<ul>
-<li>Using self-implemented RLR and SVM implementation from CITESEER to perform learning to rank experiments on a dataset from Microsoft Research</li>
-</ul>
-</li>
-</ul>
-<hr>
-<ul>
-<li>Regularized Logistic Regression (RLR) Implementation (Oct 2014)<ul>
-<li>Implemented RLR with gradient ascent to predict labels for a set of paper abstracts from the CITESEER dataset</li>
-<li>Achieved MACRO-AVG Precision, Recall, and F1 scores over 0.65, and compared it with SVM from CITESEER</li>
-</ul>
-</li>
-</ul>
-<hr>
-<ul>
-<li>Collaborative Filtering with Netflix Prize dataset (Sep 2014)<ul>
-<li>Implemented weighted memory-based method and model-based methods to predict the ratings of movies</li>
-<li>Evaluated the results with a subset of Netflix Prize dataset and achieved RMSE of 1.0</li>
-</ul>
-</li>
-</ul>
-<hr>
-<ul>
-<li>Bipartite Reinforcement Clustering (Sep 2014)<ul>
-<li>Implemented bipartite reinforcement clustering with Mahout and SciPy to discover the latent clusters of both words and documents</li>
-<li>Evaluated result sets with internal evaluation metrics (RSS and sum of cosine similarity) and human annotated external metrics (Macro F1)</li>
-</ul>
-</li>
-</ul>
-<hr>
-<ul>
-<li>Parallel K-Means Clustering with MPI for 2D data points and DNA strands (Nov 2014)<ul>
-<li>Developed parallel k-means clustering algorithms with MPI to categorize 2D data points and DNA strands for distributed processing</li>
-</ul>
-</li>
-</ul>
-<hr>
-<ul>
-<li>Twitter Analytics Web Service with AWS (Feb 2014)<ul>
-<li>Developed REST web services that retrieve data from HBase cluster and respond to various types of queries</li>
-<li>Desgined HBase schema, and joined the extract, transform and load (ETL) process of a 200GB tweets dataset using MapReduce on AWS EMR</li>
-<li>Passed the full performance tests, ranking 6th in the final live test among 59 teams</li>
-</ul>
-</li>
-</ul>
-<hr>
-<ul>
-<li>Input Text Predictor on AWS (Apr 2014)<ul>
-<li>Built a Input Text Predictor</li>
-<li>Generated inverted index, n-grams tokens ranking, and a statistical language model by MapReduce based on 6000+ books from Project Gutenberg, and store all data in HBase</li>
-<li>Created a GUI with autocomplete predictions for possible search terms</li>
-</ul>
-</li>
-</ul>
-<hr>
-<ul>
-<li>Big Data Analytics of Wikipedia Pageviews with AWS (Mar 2014)<ul>
-<li>Utilized AWS Elastic MapReduce to analyze Wikipedia daily/monthly pageviews dataset (~65GB in S3)</li>
-</ul>
-</li>
-</ul>
-<hr>
-<ul>
-<li>Automobile Accident Predictions and Heat Maps (Capstone Project Aug 2014 – Dec 2014)<ul>
-<li>Integrating public datasets including weather, nearby businesses, and accident data</li>
-<li>Predicting accident propensity with Regression and Bayesian methods</li>
-<li>Identifying key risk indicators using Association Rules, Information Gain, and Clustering</li>
-<li>Authored client reports establishing business case for actuaries and urban planners</li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3417,7 +3379,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="https://phoenixjiangnan.github.io/archives">
-              <span class="site-state-item-count">104</span>
+              <span class="site-state-item-count">105</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
