@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://phoenixjiangnan.github.io/"/>
-  <updated>2016-10-05T15:50:36.000Z</updated>
+  <updated>2016-10-06T11:55:32.000Z</updated>
   <id>https://phoenixjiangnan.github.io/</id>
   
   <author>
@@ -16,9 +16,23 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Apache Kafka, Samza, and the Unix Philosopy of Distributed Data</title>
+    <link href="https://phoenixjiangnan.github.io/2016/10/06/distributed%20system/kafka/Apache-Kafka-Samza-and-the-Unix-Philosopy-of-Distributed-Data/"/>
+    <id>https://phoenixjiangnan.github.io/2016/10/06/distributed system/kafka/Apache-Kafka-Samza-and-the-Unix-Philosopy-of-Distributed-Data/</id>
+    <published>2016-10-06T11:55:32.000Z</published>
+    <updated>2016-10-06T11:55:32.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Throttling and Traffic Shaping</title>
-    <link href="https://phoenixjiangnan.github.io/2016/10/05/Throttling-and-Traffic-Shaping/"/>
-    <id>https://phoenixjiangnan.github.io/2016/10/05/Throttling-and-Traffic-Shaping/</id>
+    <link href="https://phoenixjiangnan.github.io/2016/10/05/system%20design/Throttling-and-Traffic-Shaping/"/>
+    <id>https://phoenixjiangnan.github.io/2016/10/05/system design/Throttling-and-Traffic-Shaping/</id>
     <published>2016-10-05T15:49:42.000Z</published>
     <updated>2016-10-05T15:50:36.000Z</updated>
     
@@ -2717,58 +2731,6 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     
       <category term="inverted index" scheme="https://phoenixjiangnan.github.io/tags/inverted-index/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>How did I reduce Tableau Server&#39;s downtime in a Postgres failover from 3 min to 1 sec</title>
-    <link href="https://phoenixjiangnan.github.io/2016/07/26/system%20design/project%20experience/How-did-I-reduce-Tableau-Server-s-downtime-in-a-Postgres-failover-from-3-min-to-1-sec/"/>
-    <id>https://phoenixjiangnan.github.io/2016/07/26/system design/project experience/How-did-I-reduce-Tableau-Server-s-downtime-in-a-Postgres-failover-from-3-min-to-1-sec/</id>
-    <published>2016-07-26T14:51:35.000Z</published>
-    <updated>2016-09-30T06:52:58.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Another project I did in the middle of last year is to reduce the downtime of Tableau Server during a Postgres failover. I was able to significantly cut the downtime from 3 min to 1 sec. Here is how I did it.</p>
-<h2 id="Background-How-does-Tableau-Server-failover-on-Postgres-before"><a href="#Background-How-does-Tableau-Server-failover-on-Postgres-before" class="headerlink" title="Background - How does Tableau Server failover on Postgres before?"></a>Background - How does Tableau Server failover on Postgres before?</h2><p>Previously, Tableau Server uses a properties config file to store connection information of the Active Postgres. The file contains something like this,</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//.properties file</div><div class="line">primary.postgres: &lt;DNS name&gt;</div><div class="line">primary.port: &lt;port&gt;</div></pre></td></tr></table></figure>
-<p>When <code>PostgresManager</code>, the class that manages Postgres, determines the Active Postgres is dead, it overrides the old config file with new properties pointing to the new Active Postgres, which is just promoted from Passive Postgres.</p>
-<p>All other components (distributed file store, backgrounders, web portal, data servers) that talks to Postgres watch that config file. When that file changes, components reload the file, and will restart themselves if the new key-values pairs.</p>
-<h2 id="Problems"><a href="#Problems" class="headerlink" title="Problems"></a>Problems</h2><p>There are a bunch of issues with this approach:</p>
-<ul>
-<li>There’s a huge downtime gap, which can be as big as three minutes for all those components to restart. All active sessions will be kicked out, and users cannot do anything before the new Postgres come up</li>
-<li>Lots of services lose their state during restart, especially cached data</li>
-</ul>
-<a id="more"></a>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>The most straightforward question is, “is it possible to switch connections between Postgres at runtime without having to restart each process?”</p>
-<p>The answer is yes!</p>
-<p>Most Tableau Server services are written in Spring. Spring has a nice datasource class called <code>AbstractRoutingDataSource</code>, which is kind of a proxy that can dynamically route db requests based on a key. In our case, the key is the <code>&lt;DNS name&gt;</code> of <code>primary.posgres</code> in the config file.</p>
-<p>What I did is to make each process watch the config file and update their internal key upon file updates. Therefore, now the db requests can be immediately routed to the new active postgres during a failover within 1 sec, rather than being down for more than 3 mins.</p>
-<p>How <code>AbstractRoutingDataSource</code> works is presented <a href="https://phoenixjiangnan.github.io/2016/03/25/spring/Spring-Dynamic-Datasource/">here</a></p>
-<p>Some information about how we monitor Postgres is covered <a href="https://phoenixjiangnan.github.io/2016/07/23/system%20design/How-did-I-improved-our-system-monitoring-accuracy-from-40-50-to-99/">here</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Another project I did in the middle of last year is to reduce the downtime of Tableau Server during a Postgres failover. I was able to significantly cut the downtime from 3 min to 1 sec. Here is how I did it.&lt;/p&gt;
-&lt;h2 id=&quot;Background-How-does-Tableau-Server-failover-on-Postgres-before&quot;&gt;&lt;a href=&quot;#Background-How-does-Tableau-Server-failover-on-Postgres-before&quot; class=&quot;headerlink&quot; title=&quot;Background - How does Tableau Server failover on Postgres before?&quot;&gt;&lt;/a&gt;Background - How does Tableau Server failover on Postgres before?&lt;/h2&gt;&lt;p&gt;Previously, Tableau Server uses a properties config file to store connection information of the Active Postgres. The file contains something like this,&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;//.properties file&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;primary.postgres: &amp;lt;DNS name&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;primary.port: &amp;lt;port&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;When &lt;code&gt;PostgresManager&lt;/code&gt;, the class that manages Postgres, determines the Active Postgres is dead, it overrides the old config file with new properties pointing to the new Active Postgres, which is just promoted from Passive Postgres.&lt;/p&gt;
-&lt;p&gt;All other components (distributed file store, backgrounders, web portal, data servers) that talks to Postgres watch that config file. When that file changes, components reload the file, and will restart themselves if the new key-values pairs.&lt;/p&gt;
-&lt;h2 id=&quot;Problems&quot;&gt;&lt;a href=&quot;#Problems&quot; class=&quot;headerlink&quot; title=&quot;Problems&quot;&gt;&lt;/a&gt;Problems&lt;/h2&gt;&lt;p&gt;There are a bunch of issues with this approach:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;There’s a huge downtime gap, which can be as big as three minutes for all those components to restart. All active sessions will be kicked out, and users cannot do anything before the new Postgres come up&lt;/li&gt;
-&lt;li&gt;Lots of services lose their state during restart, especially cached data&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="system design" scheme="https://phoenixjiangnan.github.io/categories/system-design/"/>
-    
-      <category term="project experience" scheme="https://phoenixjiangnan.github.io/categories/system-design/project-experience/"/>
-    
-    
-      <category term="tableau server" scheme="https://phoenixjiangnan.github.io/tags/tableau-server/"/>
-    
-      <category term="failover" scheme="https://phoenixjiangnan.github.io/tags/failover/"/>
     
   </entry>
   

@@ -283,6 +283,163 @@
             
               
                 
+                <a class="post-title-link" href="/2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Function-and-BiFunction/" itemprop="url">
+                  Java 8 Functional Interface - Function and BiFunction
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-01-31T15:37:22+08:00" content="2016-01-31">
+              2016-01-31
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/java/java-8/" itemprop="url" rel="index">
+                    <span itemprop="name">java 8</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/java/java-8/lambda/" itemprop="url" rel="index">
+                    <span itemprop="name">lambda</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Function-and-BiFunction/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Function-and-BiFunction/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="Function-interface"><a href="#Function-interface" class="headerlink" title="Function interface"></a>Function interface</h1><p>This is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@FunctionalInterface</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Function</span>&lt;<span class="title">T</span>,<span class="title">R</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Represents a function that accepts one argument and produces a result.</p>
+<p>This is a functional interface whose functional method is <code>apply(Object)</code>.</p>
+<p>Function interface has two methods:</p>
+<ul>
+<li><code>R apply(T t)</code> – Compute the result of applying the function to the input argument</li>
+<li><code>default &lt;V&gt; Function&lt;T,V&gt; andThen(Function&lt;? super R,? extends V&gt; after)</code> – Combine with another function returning a function which performs both functions.</li>
+</ul>
+<blockquote>
+<p>Function interface is uses in cases where you want to encapsulate some code into a method which accepts some value as an input parameter and then returns another value after performing required operations on the input. The input parameter type and the return type of the method can either be same or different.</p>
+</blockquote>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Function-and-BiFunction/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Predicate-and-BiPredicate/" itemprop="url">
                   Java 8 Functional Interface - Predicate and BiPredicate
                 </a>
@@ -1125,7 +1282,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="https://phoenixjiangnan.github.io/archives">
-              <span class="site-state-item-count">106</span>
+              <span class="site-state-item-count">107</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

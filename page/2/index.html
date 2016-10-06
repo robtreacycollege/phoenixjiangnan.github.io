@@ -283,6 +283,149 @@
             
               
                 
+                <a class="post-title-link" href="/2016/07/26/system design/project experience/How-did-I-reduce-Tableau-Server-s-downtime-in-a-Postgres-failover-from-3-min-to-1-sec/" itemprop="url">
+                  How did I reduce Tableau Server's downtime in a Postgres failover from 3 min to 1 sec
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-07-26T22:51:35+08:00" content="2016-07-26">
+              2016-07-26
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/system-design/" itemprop="url" rel="index">
+                    <span itemprop="name">system design</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/system-design/project-experience/" itemprop="url" rel="index">
+                    <span itemprop="name">project experience</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/26/system design/project experience/How-did-I-reduce-Tableau-Server-s-downtime-in-a-Postgres-failover-from-3-min-to-1-sec/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/26/system design/project experience/How-did-I-reduce-Tableau-Server-s-downtime-in-a-Postgres-failover-from-3-min-to-1-sec/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>Another project I did in the middle of last year is to reduce the downtime of Tableau Server during a Postgres failover. I was able to significantly cut the downtime from 3 min to 1 sec. Here is how I did it.</p>
+<h2 id="Background-How-does-Tableau-Server-failover-on-Postgres-before"><a href="#Background-How-does-Tableau-Server-failover-on-Postgres-before" class="headerlink" title="Background - How does Tableau Server failover on Postgres before?"></a>Background - How does Tableau Server failover on Postgres before?</h2><p>Previously, Tableau Server uses a properties config file to store connection information of the Active Postgres. The file contains something like this,</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//.properties file</div><div class="line">primary.postgres: &lt;DNS name&gt;</div><div class="line">primary.port: &lt;port&gt;</div></pre></td></tr></table></figure>
+<p>When <code>PostgresManager</code>, the class that manages Postgres, determines the Active Postgres is dead, it overrides the old config file with new properties pointing to the new Active Postgres, which is just promoted from Passive Postgres.</p>
+<p>All other components (distributed file store, backgrounders, web portal, data servers) that talks to Postgres watch that config file. When that file changes, components reload the file, and will restart themselves if the new key-values pairs.</p>
+<h2 id="Problems"><a href="#Problems" class="headerlink" title="Problems"></a>Problems</h2><p>There are a bunch of issues with this approach:</p>
+<ul>
+<li>There’s a huge downtime gap, which can be as big as three minutes for all those components to restart. All active sessions will be kicked out, and users cannot do anything before the new Postgres come up</li>
+<li>Lots of services lose their state during restart, especially cached data</li>
+</ul>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/26/system design/project experience/How-did-I-reduce-Tableau-Server-s-downtime-in-a-Postgres-failover-from-3-min-to-1-sec/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/07/23/system design/project experience/How-did-I-improved-our-system-monitoring-accuracy-from-40-50-to-99/" itemprop="url">
                   How did I improved our system monitoring accuracy from ~40%/50% to ~99%
                 </a>
@@ -3024,139 +3167,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/21/ruby/Ruby-Methods-in-Ruby/" itemprop="url">
-                  Ruby - Methods in Ruby
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-06-21T23:54:37+08:00" content="2016-06-21">
-              2016-06-21
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/ruby/" itemprop="url" rel="index">
-                    <span itemprop="name">ruby</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/21/ruby/Ruby-Methods-in-Ruby/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/06/21/ruby/Ruby-Methods-in-Ruby/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Member-Functions-in-Ruby-Class"><a href="#Member-Functions-in-Ruby-Class" class="headerlink" title="Member Functions in Ruby Class"></a>Member Functions in Ruby Class</h1><p>In Ruby, functions are called <code>methods</code>. Each method in a class starts with the keyword def followed by the method name.</p>
-<p>The method name always preferred in lowercase letters. You end a method in Ruby by using the keyword <code>end</code>.</p>
-<p>Here is the example to define a Ruby method:</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sample</span></span></div><div class="line">   <span class="function"><span class="keyword">def</span> <span class="title">function</span></span></div><div class="line">      statement</div><div class="line">   <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sample</span></span></div><div class="line">   <span class="function"><span class="keyword">def</span> <span class="title">hello</span></span></div><div class="line">      puts <span class="string">"Hello Ruby!"</span></div><div class="line">   <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
-<h2 id="Ruby-Methods"><a href="#Ruby-Methods" class="headerlink" title="Ruby Methods"></a>Ruby Methods</h2><p>Methods should be defined before calling them, otherwise Ruby will raise an exception for undefined method invoking.</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">method_name</span> </span></div><div class="line">   expr..</div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">method_name</span> <span class="params">(var1, var2)</span></span></div><div class="line">   expr..</div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
-<h2 id="Default-Arguments"><a href="#Default-Arguments" class="headerlink" title="Default Arguments"></a>Default Arguments</h2><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># var1's default value is value1, if it's missing</span></div><div class="line"><span class="comment"># var2's default value is value2, if it's missing</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">method_name</span> <span class="params">(var1=value1, var2=value2)</span></span></div><div class="line">   expr..</div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">test</span><span class="params">(arg1=<span class="string">"Ruby"</span>, arg2=<span class="string">"Perl"</span>)</span></span></div><div class="line">   puts <span class="string">"The programming language is <span class="subst">#&#123;arg1&#125;</span>"</span></div><div class="line">   puts <span class="string">"The programming language is <span class="subst">#&#123;arg2&#125;</span>"</span></div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line">test <span class="string">"C"</span>, <span class="string">"C++"</span></div><div class="line">test</div></pre></td></tr></table></figure>
-<p>Output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">The programming language is C</div><div class="line">The programming language is C++</div><div class="line">The programming language is Ruby</div><div class="line">The programming language is Perl</div></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/06/21/ruby/Ruby-Methods-in-Ruby/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3202,7 +3212,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="https://phoenixjiangnan.github.io/archives">
-              <span class="site-state-item-count">106</span>
+              <span class="site-state-item-count">107</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>

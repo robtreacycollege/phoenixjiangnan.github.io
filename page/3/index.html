@@ -283,6 +283,139 @@
             
               
                 
+                <a class="post-title-link" href="/2016/06/21/ruby/Ruby-Methods-in-Ruby/" itemprop="url">
+                  Ruby - Methods in Ruby
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-06-21T23:54:37+08:00" content="2016-06-21">
+              2016-06-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/ruby/" itemprop="url" rel="index">
+                    <span itemprop="name">ruby</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/21/ruby/Ruby-Methods-in-Ruby/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/06/21/ruby/Ruby-Methods-in-Ruby/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="Member-Functions-in-Ruby-Class"><a href="#Member-Functions-in-Ruby-Class" class="headerlink" title="Member Functions in Ruby Class"></a>Member Functions in Ruby Class</h1><p>In Ruby, functions are called <code>methods</code>. Each method in a class starts with the keyword def followed by the method name.</p>
+<p>The method name always preferred in lowercase letters. You end a method in Ruby by using the keyword <code>end</code>.</p>
+<p>Here is the example to define a Ruby method:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sample</span></span></div><div class="line">   <span class="function"><span class="keyword">def</span> <span class="title">function</span></span></div><div class="line">      statement</div><div class="line">   <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sample</span></span></div><div class="line">   <span class="function"><span class="keyword">def</span> <span class="title">hello</span></span></div><div class="line">      puts <span class="string">"Hello Ruby!"</span></div><div class="line">   <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+<h2 id="Ruby-Methods"><a href="#Ruby-Methods" class="headerlink" title="Ruby Methods"></a>Ruby Methods</h2><p>Methods should be defined before calling them, otherwise Ruby will raise an exception for undefined method invoking.</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">method_name</span> </span></div><div class="line">   expr..</div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">method_name</span> <span class="params">(var1, var2)</span></span></div><div class="line">   expr..</div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+<h2 id="Default-Arguments"><a href="#Default-Arguments" class="headerlink" title="Default Arguments"></a>Default Arguments</h2><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># var1's default value is value1, if it's missing</span></div><div class="line"><span class="comment"># var2's default value is value2, if it's missing</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">method_name</span> <span class="params">(var1=value1, var2=value2)</span></span></div><div class="line">   expr..</div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">test</span><span class="params">(arg1=<span class="string">"Ruby"</span>, arg2=<span class="string">"Perl"</span>)</span></span></div><div class="line">   puts <span class="string">"The programming language is <span class="subst">#&#123;arg1&#125;</span>"</span></div><div class="line">   puts <span class="string">"The programming language is <span class="subst">#&#123;arg2&#125;</span>"</span></div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line">test <span class="string">"C"</span>, <span class="string">"C++"</span></div><div class="line">test</div></pre></td></tr></table></figure>
+<p>Output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">The programming language is C</div><div class="line">The programming language is C++</div><div class="line">The programming language is Ruby</div><div class="line">The programming language is Perl</div></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/06/21/ruby/Ruby-Methods-in-Ruby/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/06/21/ruby/Ruby-Variables-in-Ruby/" itemprop="url">
                   Ruby - Variables and Constant in Ruby
                 </a>
@@ -2932,182 +3065,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/20/java/concurrency/Java-Concurrency-BlockingQueue/" itemprop="url">
-                  Java Concurrency - BlockingQueue
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-20T16:51:31+08:00" content="2016-04-20">
-              2016-04-20
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index">
-                    <span itemprop="name">java</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/java/concurrency/" itemprop="url" rel="index">
-                    <span itemprop="name">concurrency</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/20/java/concurrency/Java-Concurrency-BlockingQueue/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/20/java/concurrency/Java-Concurrency-BlockingQueue/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Java’s <code>BlockingQueue</code> is a <code>Queue</code> that additionally supports operations that wait for:</p>
-<ul>
-<li>the queue to become non-empty when retrieving an element</li>
-<li>space to become available in the queue when storing an element.</li>
-</ul>
-<p><code>BlockingQueue</code> methods come in four forms, with different ways of handling operations that cannot be satisfied immediately, but may be satisfied at some point in the future: </p>
-<ul>
-<li>one throws an exception</li>
-<li>the second returns a special value (either null or false, depending on the operation)</li>
-<li>the third blocks the current thread indefinitely until the operation can succeed</li>
-<li>and the fourth blocks for only a given maximum time limit before giving up. These methods are summarized in the following table:</li>
-</ul>
-<p>Summary of BlockingQueue methods</p>
-<table>
-<thead>
-<tr>
-<th>Throws exception</th>
-<th>Special value</th>
-<th>Blocks</th>
-<th>Times out</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Insert add(e)</td>
-<td>offer(e)</td>
-<td>put(e)</td>
-<td>offer(e, time, unit)</td>
-</tr>
-<tr>
-<td>Remove remove()</td>
-<td>poll()</td>
-<td>take()</td>
-<td>poll(time, unit)</td>
-</tr>
-<tr>
-<td>Examine element()</td>
-<td>peek()</td>
-<td>not applicable</td>
-<td>not applicable</td>
-</tr>
-</tbody>
-</table>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/20/java/concurrency/Java-Concurrency-BlockingQueue/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3153,7 +3110,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="https://phoenixjiangnan.github.io/archives">
-              <span class="site-state-item-count">106</span>
+              <span class="site-state-item-count">107</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
