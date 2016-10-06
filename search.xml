@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[Apache Kafka, Samza, and the Unix Philosopy of Distributed Data]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/10/06/distributed%20system/kafka/Apache-Kafka-Samza-and-the-Unix-Philosopy-of-Distributed-Data/</url>
+      <url>https://phoenixjiangnan.github.io/2016/10/06/distributed%20system/kafka/Apache-Kafka-Samza-and-the-Unix-Philosopy-of-Distributed-Data/</url>
       <content type="html"><![CDATA[<p>Here’s another blog from Confluent’s website. What’s interesting about this article is that it compares the design philosophy between Unix and monolith database, and refers to Kafka as a distributed version of Unix pipeline. The latter point is exceptionally interesting and brings a whole new view of Kafka to me.</p>
 <p>After working fulltime in the IT industry for almost two years, I’ve seen repeatedly that design of modern system borrows ideas from the design of Linux/Unix. Besides Kafka and Unix pipeline, another example is the <a href="http://docs.oracle.com/cd/E13924_01/coh.340/e13819/readthrough.htm" target="_blank" rel="external">Write Behind Caching Pattern</a> in modern system actually refers to <a href="https://www.thomas-krenn.com/en/wiki/Linux_Page_Cache_Basics" target="_blank" rel="external">Linux’s Page Cache</a></p>
 <hr>
@@ -128,7 +128,7 @@
     
     <entry>
       <title><![CDATA[Throttling and Traffic Shaping]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/10/05/system%20design/Throttling-and-Traffic-Shaping/</url>
+      <url>https://phoenixjiangnan.github.io/2016/10/05/system%20design/Throttling-and-Traffic-Shaping/</url>
       <content type="html"><![CDATA[<h2 id="Throttling-and-Traffic-Shaping"><a href="#Throttling-and-Traffic-Shaping" class="headerlink" title="Throttling and Traffic Shaping"></a>Throttling and Traffic Shaping</h2><blockquote>
 <p>Throttling is, to control the consumption of resources used by an instance of an application, an individual tenant, or an entire service. </p>
 </blockquote>
@@ -242,7 +242,7 @@
     
     <entry>
       <title><![CDATA[Putting Apache Kafka To Use: A Practical Guide to Building a Stream Data Platform (Part 2)]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/10/03/distributed%20system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-2/</url>
+      <url>https://phoenixjiangnan.github.io/2016/10/03/distributed%20system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-2/</url>
       <content type="html"><![CDATA[<blockquote>
 <h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p>I’m preparing to start a new journey, which I’ll annouce soon. The new opportunity is about data.</p>
 <p><code>Apache Kafka</code> has been a hot topic in the data field for a while, and, of course, I cannot taking on data problems without it. While learning and reading more about Kafka, I found <a href="http://www.confluent.io/blog/" target="_blank" rel="external">Conluent’s official tech blog</a> has been an amazingly useful place to find out materials I need - because the company is started by founders of Kafka in Linkedin.</p>
@@ -456,7 +456,7 @@
     
     <entry>
       <title><![CDATA[Putting Apache Kafka To Use - A Practical Guide to Building a Stream Data Platform (Part 1)]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/10/03/distributed%20system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-1/</url>
+      <url>https://phoenixjiangnan.github.io/2016/10/03/distributed%20system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-1/</url>
       <content type="html"><![CDATA[<blockquote>
 <h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p>I’m preparing to start a new journey, which I’ll annouce soon. The new opportunity is about data.</p>
 <p><code>Apache Kafka</code> has been a hot topic in the data field for a while, and, of course, I cannot taking on data problems without it. While learning and reading more about Kafka, I found <a href="http://www.confluent.io/blog/" target="_blank" rel="external">Conluent’s official tech blog</a> has been an amazingly useful place to find out materials I need - because the company is started by founders of Kafka in Linkedin.</p>
@@ -582,7 +582,7 @@
     
     <entry>
       <title><![CDATA[Spring Boot - Introduction to Spring Boot]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/09/30/spring/spring%20boot/Spring-Boot-Introduction-to-Spring-Boot/</url>
+      <url>https://phoenixjiangnan.github.io/2016/09/30/spring/spring%20boot/Spring-Boot-Introduction-to-Spring-Boot/</url>
       <content type="html"><![CDATA[<h2 id="Spring-io-Spring-Boot"><a href="#Spring-io-Spring-Boot" class="headerlink" title="Spring.io - Spring Boot"></a>Spring.io - Spring Boot</h2><p>I’m taking some important parts from it and summarizing them as my learning notes.</p>
 <p>Spring has been notorious for its heaviness when starting a project. Lots of people avoid this framework because of that. Many lighter dependency injection frameworks emerge as a replacement for Spring, <a href="https://github.com/google/guice" target="_blank" rel="external">Google’s Guice</a> being one of the most representative ones. </p>
 <p>I’ve talked to quite a few folks who touched Spring a few years back and then switched to some better solutions because of the pain of managing the sophisticated configs. They hadn’t heard of Spring Boot, and were surprised about this project when I introduced it to them.</p>
@@ -797,7 +797,7 @@
     
     <entry>
       <title><![CDATA[Hexo - How to backup configs and blogs of Github Pages in a Github repository]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/09/29/hexo/Hexo-How-to-backup-configs-and-blogs-of-Github-Pages-in-a-Github-repository/</url>
+      <url>https://phoenixjiangnan.github.io/2016/09/29/hexo/Hexo-How-to-backup-configs-and-blogs-of-Github-Pages-in-a-Github-repository/</url>
       <content type="html"><![CDATA[<p>Github Pages is great - it allows you to set up static website on it and use it as a blog.</p>
 <p>I’ve been using <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a> as the blogging platform and static website generator, and <a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT</a> as its theme. One thing I really need when using Hexo is to back up all my blogs which are in markdown format, as well as Hexo configuration file, a bunch website configuration files, and the theme configuration file. The reason being that 1) self-managed blog generator is very easy to be messed up, and 2) I need to re-setup everything when switching computers, both cases requiring reconfigure Hexo and restore all contents and configurations.</p>
 <p>So wouldn’t it be nice that we can use your <code>&lt;username&gt;.github.io</code> repository for Github Pages, and another repository, say <code>Hexo</code>, for all your blogs and configurations?</p>
@@ -820,7 +820,7 @@
     
     <entry>
       <title><![CDATA[Repost - "Farewell, App Academy. Hello, Airbnb. (Part II)"]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/09/21/career%20and%20leadership/Repost-Farewell-App-Academy-Hello-Airbnb-Part-II/</url>
+      <url>https://phoenixjiangnan.github.io/2016/09/21/career%20and%20leadership/Repost-Farewell-App-Academy-Hello-Airbnb-Part-II/</url>
       <content type="html"><![CDATA[<p>I think this is a great great blog talking about, as a SDE, how to negotiate your salary package with tech companies.</p>
 <hr>
 <p>The original post is <a href="http://haseebq.com/farewell-app-academy-hello-airbnb-part-ii/" target="_blank" rel="external">here</a></p>
@@ -994,7 +994,7 @@
     
     <entry>
       <title><![CDATA[Java Network - TCP and Socket]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/09/19/java/network/Java-Network-TCP-and-Socket/</url>
+      <url>https://phoenixjiangnan.github.io/2016/09/19/java/network/Java-Network-TCP-and-Socket/</url>
       <content type="html"><![CDATA[<p>The <code>Transmission Control Protocol (TCP)</code> is a core protocol of the Internet protocol suite.</p>
 <p>It originated in the initial network implementation in which it complemented the <code>Internet Protocol (IP)</code>. Therefore, the entire suite is commonly referred to as <code>TCP/IP</code>. </p>
 <p>TCP provides <code>reliable</code>, <code>ordered</code>, and <code>error-checked</code> delivery of a stream of octets between applications running on hosts communicating over an IP network.</p>
@@ -1054,7 +1054,7 @@
     
     <entry>
       <title><![CDATA[Java Concurrency - wait(), notify(), and notifyAll()]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/09/17/java/concurrency/Java-Concurrency-wait-notify-and-notifyAll/</url>
+      <url>https://phoenixjiangnan.github.io/2016/09/17/java/concurrency/Java-Concurrency-wait-notify-and-notifyAll/</url>
       <content type="html"><![CDATA[<h2 id="How-to-Work-With-wait-notify-and-notifyAll-in-Java"><a href="#How-to-Work-With-wait-notify-and-notifyAll-in-Java" class="headerlink" title="How to Work With wait(), notify() and notifyAll() in Java?"></a>How to Work With <code>wait()</code>, <code>notify()</code> and <code>notifyAll()</code> in Java?</h2><p>Multithreading in java is pretty complex topic and requires a lot of attention while writing application code dealing with multiple threads accessing one/more shared resources at any given time.</p>
 <p>Java 5, introduced some classes like <code>BlockingQueue</code> and <code>Executors</code> which take away some of the complexity by providing easy to use APIs. Programmers using these classes will feel a lot more confident than programmers directly handling synchronization stuff using <code>wait()</code> and <code>notify()</code> method calls.</p>
 <p>I will also recommend to use these newer APIs over synchronization yourself, BUT many times we are required to do so for various reasons e.g. maintaining legacy code. A good knowledge around these methods will help you in such situation when arrived.</p>
@@ -1113,7 +1113,7 @@
     
     <entry>
       <title><![CDATA[Apache Thrift - Introduction]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/09/16/distributed%20system/thrift/Apache-Thrift-Introduction/</url>
+      <url>https://phoenixjiangnan.github.io/2016/09/16/distributed%20system/thrift/Apache-Thrift-Introduction/</url>
       <content type="html"><![CDATA[<h2 id="What-is-Thrift"><a href="#What-is-Thrift" class="headerlink" title="What is Thrift"></a>What is Thrift</h2><p>According to <a href="https://thrift.apache.org/" target="_blank" rel="external">Apache Thrift</a>, </p>
 <blockquote>
 <p>The Apache Thrift software framework, for <code>scalable cross-language services development</code>, combines a software stack with <code>a code generation engine</code> to build services that work efficiently and seamlessly between C++, Java, Python, PHP, Ruby, Erlang, Perl, Haskell, C#, Cocoa, JavaScript, Node.js, Smalltalk, OCaml and Delphi and other languages.</p>
@@ -1156,7 +1156,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[ZooKeeper - Sessions and Session Management]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/09/15/distributed%20system/zookeeper/ZooKeeper-Sessions-and-Session-Management/</url>
+      <url>https://phoenixjiangnan.github.io/2016/09/15/distributed%20system/zookeeper/ZooKeeper-Sessions-and-Session-Management/</url>
       <content type="html"><![CDATA[<p>A ZooKeeper client establishes a <code>session</code> with the ZooKeeper service by creating a handle to the service using a language binding.</p>
 <h2 id="Session-States"><a href="#Session-States" class="headerlink" title="Session States"></a>Session States</h2><p>Once created, the handle starts of in the <code>CONNECTING</code> state and the client library tries to connect to one of the servers that make up the ZooKeeper service at which point it switches to the <code>CONNECTED</code> state.</p>
 <p>During normal operation will be in one of these two states. If an unrecoverable error occurs, such as session expiration or authentication failure, or if the application explicitly closes the handle, the handle will move to the <code>CLOSED</code> state.</p>
@@ -1217,7 +1217,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[How did I develop a crypto service for Tableau Server]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/09/14/system%20design/project%20experience/How-did-I-develop-a-crypto-service-for-Tableau-Server/</url>
+      <url>https://phoenixjiangnan.github.io/2016/09/14/system%20design/project%20experience/How-did-I-develop-a-crypto-service-for-Tableau-Server/</url>
       <content type="html"><![CDATA[<p>For more information about Tableau Server, you can read my blogs <a href="https://phoenixjiangnan.github.io/categories/system-design/project-experience/">here</a></p>
 <h2 id="What-is-this-project-about"><a href="#What-is-this-project-about" class="headerlink" title="What is this project about?"></a>What is this project about?</h2><p>Tableau Server is an on-premise data analytics and visualization platform. Customer can deploy bits in their own data center, or in AWS, Azure, and GCP.</p>
 <p>There are two categories of passwords within a Tableau Server cluster:</p>
@@ -1339,7 +1339,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[How to compare float numbers]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/08/27/best%20practices/How-to-compare-float-numbers/</url>
+      <url>https://phoenixjiangnan.github.io/2016/08/27/best%20practices/How-to-compare-float-numbers/</url>
       <content type="html"><![CDATA[<p>The reason I want to have a special blog talking about this problem is that, many people I know tend to think that float number comparison is the same as integer comparison. </p>
 <p>They usually write code like</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">somefunction() &#123;</div><div class="line">	<span class="keyword">double</span> threeTenths1 = <span class="number">0.3</span>;</div><div class="line">	<span class="keyword">double</span> threeTenths2 = <span class="number">0.1</span> + <span class="number">0.1</span> + <span class="number">0.1</span>;</div><div class="line">	    </div><div class="line">	<span class="keyword">if</span> (threeTenths1 == threeTenths2) &#123;</div><div class="line">		<span class="comment">// ...</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -1382,7 +1382,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[How to test a program involving probability - take an algorithm that shuffles array as example]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/08/26/data%20structures%20and%20algorithms/probability/How-to-test-a-program-involving-probability-take-an-algorithm-that-shuffles-array-as-example/</url>
+      <url>https://phoenixjiangnan.github.io/2016/08/26/data%20structures%20and%20algorithms/probability/How-to-test-a-program-involving-probability-take-an-algorithm-that-shuffles-array-as-example/</url>
       <content type="html"><![CDATA[<p>This article is about some inspirations I got from another blog pasted below.</p>
 <blockquote>
 <p>That post discusses which algorithm is truly correct to randomly shuffle an array of integers (or shuffle pokers), and how to test an algorithm to make sure it’s the right one.</p>
@@ -1462,7 +1462,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Facebook User Group and Bipartite Graph]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/08/26/data%20structures%20and%20algorithms/interview/Facebook-User-Group-and-Bipartite-Graph/</url>
+      <url>https://phoenixjiangnan.github.io/2016/08/26/data%20structures%20and%20algorithms/interview/Facebook-User-Group-and-Bipartite-Graph/</url>
       <content type="html"><![CDATA[<h2 id="The-Problem"><a href="#The-Problem" class="headerlink" title="The Problem"></a>The Problem</h2><p>大家都知道Facebook用户都是双向的好友，a是b的好友，那么b一定是a的好友，现在给定一个用户列表，其中有些用户是好友，有些不是，请判断，这些用户是否可以划分为两组，并且每组内的用户，互相都不是好友。如果能，请给出这个划分。</p>
 <p>例子1:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">用户：&#123;1, 2, 3&#125;</div><div class="line">好友关系：1-2， 2-3</div><div class="line">划分：&#123;1,3&#125; &#123;2&#125;</div></pre></td></tr></table></figure>
@@ -1549,7 +1549,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Java - Concurrency - Multi-Thread 1 - Implements Runnable or Extends Thread]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/08/23/java/concurrency/Java-Concurrency-Multi-Thread-1-Implements-Runnable-or-Extends-Thread/</url>
+      <url>https://phoenixjiangnan.github.io/2016/08/23/java/concurrency/Java-Concurrency-Multi-Thread-1-Implements-Runnable-or-Extends-Thread/</url>
       <content type="html"><![CDATA[<h2 id="1-Difference-between-Process-and-Thread"><a href="#1-Difference-between-Process-and-Thread" class="headerlink" title="1. Difference between Process and Thread"></a>1. Difference between Process and Thread</h2><ul>
 <li><code>Threads</code> are used for small tasks, whereas <code>processes</code> are used for more ‘heavyweight’ tasks – basically the execution of applications. </li>
 <li><code>Threads</code> within the same process share the same address space, whereas different <code>processes</code> do not.</li>
@@ -1602,7 +1602,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Spring - What is dependency injection and how it works in Spring]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/08/21/spring/Spring-What-is-dependency-injection-and-how-it-works-in-Spring/</url>
+      <url>https://phoenixjiangnan.github.io/2016/08/21/spring/Spring-What-is-dependency-injection-and-how-it-works-in-Spring/</url>
       <content type="html"><![CDATA[<h2 id="How-Dependency-Injection-works"><a href="#How-Dependency-Injection-works" class="headerlink" title="How Dependency Injection works"></a>How Dependency Injection works</h2><p>Traditionally, each object is responsible for obtaining its own references to the objects it collaborates with (its dependencies). This can lead to highly coupled and hard-to-test code.</p>
 <p>E.g.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DamselRescueKnight</span> <span class="keyword">implements</span> <span class="title">Knight</span></span>&#123;</div><div class="line">	<span class="keyword">private</span> RescueDamselQuest quest;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">DamselRescueKnight</span><span class="params">()</span> </span>&#123;</div><div class="line">		quest = <span class="keyword">new</span> RescueDamselQuest();  <span class="comment">// Tightly coupled to RescueDamselQuest!</span></div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">embarkOnQuest</span><span class="params">()</span> </span>&#123;</div><div class="line">		quest.embark();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -1627,7 +1627,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[How did I build a custom dynamic ZooKeeper management and migration framework and an asynchronous job framework for Tableau Server 11]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/08/16/system%20design/project%20experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/</url>
+      <url>https://phoenixjiangnan.github.io/2016/08/16/system%20design/project%20experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/</url>
       <content type="html"><![CDATA[<p>First of all, Tableau Server 11 is not out yet. Tableau Server 10 is just released yesterday.</p>
 <h2 id="Product-Strategy-Overview"><a href="#Product-Strategy-Overview" class="headerlink" title="Product Strategy Overview"></a>Product Strategy Overview</h2><p>Tableau Server is an enterpise data analytics and visualization platform, and our customers are business people. In order to make the project usage experience as smooth as possible, we believe we should enable business people to manage Tableau Server on their own without any help from enterprise IT. </p>
 <p>Therefore, one of the most critical goals for developing Tableau Server is that Tableau will provide GUIs and built-in workflows to automate as many managing processes as possible.  </p>
@@ -1740,7 +1740,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[How did I build a Facebook Messenger chatbot for Tableau's 'VizOfTheDay' feed]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/08/10/system%20design/project%20experience/How-did-I-build-a-Facebook-Messenger-chatbot-for-Tableau-s-VizOfTheDay-feed/</url>
+      <url>https://phoenixjiangnan.github.io/2016/08/10/system%20design/project%20experience/How-did-I-build-a-Facebook-Messenger-chatbot-for-Tableau-s-VizOfTheDay-feed/</url>
       <content type="html"><![CDATA[<h2 id="What-is-Viz-Of-The-Day"><a href="#What-is-Viz-Of-The-Day" class="headerlink" title="What is Viz Of The Day"></a>What is <em>Viz Of The Day</em></h2><p>It’s a Tableau Public product used mainly for promoting Tableau as a brand.</p>
 <p><a href="https://public.tableau.com/s/gallery" target="_blank" rel="external">https://public.tableau.com/s/gallery</a></p>
 <h2 id="What-is-Facebook-Messenger-chatbot"><a href="#What-is-Facebook-Messenger-chatbot" class="headerlink" title="What is Facebook Messenger chatbot"></a>What is Facebook Messenger chatbot</h2><p><a href="https://developers.facebook.com/blog/post/2016/04/12/bots-for-messenger/" target="_blank" rel="external">https://developers.facebook.com/blog/post/2016/04/12/bots-for-messenger/</a></p>
@@ -1813,7 +1813,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Inverted Index]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/08/10/machine%20learning/Inverted-Index/</url>
+      <url>https://phoenixjiangnan.github.io/2016/08/10/machine%20learning/Inverted-Index/</url>
       <content type="html"><![CDATA[<h2 id="Application"><a href="#Application" class="headerlink" title="Application"></a>Application</h2><p>In computer science, an <code>inverted index</code> (also referred to as postings file or inverted file) is an index data structure storing a mapping from content, such as words or numbers, to its locations in a database file, or in a document or a set of documents (named in contrast to a Forward Index, which maps from documents to content). </p>
 <p>The purpose of an inverted index is to allow fast full text searches, at a cost of increased processing when a document is added to the database. The inverted file may be the database file itself, rather than its index. It is the most popular data structure used in document retrieval systems, used on a large scale for example in search engines. Additionally, several significant general-purpose mainframe-based database management systems have used inverted list architectures.</p>
 <blockquote>
@@ -2040,7 +2040,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[How did I reduce Tableau Server's downtime in a Postgres failover from 3 min to 1 sec]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/07/26/system%20design/project%20experience/How-did-I-reduce-Tableau-Server-s-downtime-in-a-Postgres-failover-from-3-min-to-1-sec/</url>
+      <url>https://phoenixjiangnan.github.io/2016/07/26/system%20design/project%20experience/How-did-I-reduce-Tableau-Server-s-downtime-in-a-Postgres-failover-from-3-min-to-1-sec/</url>
       <content type="html"><![CDATA[<p>Another project I did in the middle of last year is to reduce the downtime of Tableau Server during a Postgres failover. I was able to significantly cut the downtime from 3 min to 1 sec. Here is how I did it.</p>
 <h2 id="Background-How-does-Tableau-Server-failover-on-Postgres-before"><a href="#Background-How-does-Tableau-Server-failover-on-Postgres-before" class="headerlink" title="Background - How does Tableau Server failover on Postgres before?"></a>Background - How does Tableau Server failover on Postgres before?</h2><p>Previously, Tableau Server uses a properties config file to store connection information of the Active Postgres. The file contains something like this,</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//.properties file</div><div class="line">primary.postgres: &lt;DNS name&gt;</div><div class="line">primary.port: &lt;port&gt;</div></pre></td></tr></table></figure>
@@ -2063,7 +2063,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[How did I improved our system monitoring accuracy from ~40%/50% to ~99%]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/07/23/system%20design/project%20experience/How-did-I-improved-our-system-monitoring-accuracy-from-40-50-to-99/</url>
+      <url>https://phoenixjiangnan.github.io/2016/07/23/system%20design/project%20experience/How-did-I-improved-our-system-monitoring-accuracy-from-40-50-to-99/</url>
       <content type="html"><![CDATA[<p>Here is some experience of the work I did last year. When I first got assigned to bugs to this area, the stream of bugs seem never end - due to bad design, bugs kept coming. The accuracy is as low as around 50%, and QA generaously filed bugs to me without any hesitation. </p>
 <p>Suffered from it for a while, I eventually determined to refactor the design. I ended up raising the accuracy significantly up to ~99%, and I haven’t heard any bugs since then, which was 1 year ago. </p>
 <p>So I’m gonna talk about how the original system works, what the problems it had, and how I improved our system monitoring accuracy from 50% to ~99%.</p>
@@ -2144,7 +2144,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Machine Learning - some of my academic machine learning related projects]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/07/19/machine%20learning/Machine-Learning-some-of-my-academic-machine-learning-related-projects/</url>
+      <url>https://phoenixjiangnan.github.io/2016/07/19/machine%20learning/Machine-Learning-some-of-my-academic-machine-learning-related-projects/</url>
       <content type="html"><![CDATA[<p>The following are a few of all my academic machine learning related projects in my last two semesters (2014) in Carnegie Mellon U. </p>
 <ul>
 <li>Learning to Rank (LETOR) Implementation (Nov 2014)<ul>
@@ -2223,7 +2223,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Ruby - How to write Singleton in Ruby]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/07/16/ruby/Ruby-How-to-write-Singleton-in-Ruby/</url>
+      <url>https://phoenixjiangnan.github.io/2016/07/16/ruby/Ruby-How-to-write-Singleton-in-Ruby/</url>
       <content type="html"><![CDATA[<h2 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h2><ul>
 <li>require ‘singleton’ module</li>
 <li><code>include Singleton</code> in your class</li>
@@ -2236,7 +2236,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[System Design - Design Task Scheduling System in Distributed System]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/07/14/system%20design/task%20queue/System-Design-Design-Task-Scheduling-System-in-Distributed-System/</url>
+      <url>https://phoenixjiangnan.github.io/2016/07/14/system%20design/task%20queue/System-Design-Design-Task-Scheduling-System-in-Distributed-System/</url>
       <content type="html"><![CDATA[<h2 id="Distributed-Architecture"><a href="#Distributed-Architecture" class="headerlink" title="Distributed Architecture"></a>Distributed Architecture</h2><blockquote>
 <p>A set of workers on distributed machines grab tasks from a <code>task queue</code>.</p>
 </blockquote>
@@ -2314,7 +2314,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Spring - Spring's Core Concepts]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/07/12/spring/Spring-Spring-s-Core-Concepts/</url>
+      <url>https://phoenixjiangnan.github.io/2016/07/12/spring/Spring-Spring-s-Core-Concepts/</url>
       <content type="html"><![CDATA[<h2 id="1-Spring-and-IoC-Inversion-of-Control-反转控制"><a href="#1-Spring-and-IoC-Inversion-of-Control-反转控制" class="headerlink" title="1. Spring and IoC (Inversion of Control) 反转控制"></a>1. Spring and IoC (Inversion of Control) 反转控制</h2><blockquote>
 <p>The main idead behind Inversion of Control as a concept is: <strong>component dependencies, lifecycle events, and configuration reside outside of the components themselves but in the framework.</strong> It sounds like giving up too much control, but in fact makes your code more manageable, testable, and portable.</p>
 </blockquote>
@@ -2424,7 +2424,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[ZooKeeper Data Model - Znode, Time, and Stat]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/07/12/distributed%20system/zookeeper/ZooKeeper-Data-Model-Znode-Time-and-Stat/</url>
+      <url>https://phoenixjiangnan.github.io/2016/07/12/distributed%20system/zookeeper/ZooKeeper-Data-Model-Znode-Time-and-Stat/</url>
       <content type="html"><![CDATA[<p>In distributed application engineering, the word <code>node</code> can refer to a generic host machine, a server, a member of an ensemble, a client process, etc. In the ZooKeeper documentatin, </p>
 <ul>
 <li><code>znodes</code> refer to the <code>data nodes</code></li>
@@ -2475,7 +2475,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[ZooKeeper - Watches]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/07/11/distributed%20system/zookeeper/ZooKeeper-Watches/</url>
+      <url>https://phoenixjiangnan.github.io/2016/07/11/distributed%20system/zookeeper/ZooKeeper-Watches/</url>
       <content type="html"><![CDATA[<p>All of the read operations in ZooKeeper - <code>getData()</code>, <code>getChildren()</code>, and <code>exists()</code> - have the option of setting a watch as a side effect. Here is ZooKeeper’s definition of a watch: </p>
 <blockquote>
 <p>a watch event is one-time trigger, sent to the client that set the watch, which occurs when the data for which the watch was set changes.</p>
@@ -2539,7 +2539,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Spring - @Autowired for List Types]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/07/10/spring/Spring-Autowired-for-List-Types/</url>
+      <url>https://phoenixjiangnan.github.io/2016/07/10/spring/Spring-Autowired-for-List-Types/</url>
       <content type="html"><![CDATA[<p>How to use Spring to autowire list types? How to autowired all subclasses of a parent class, or all implementations of an interface.</p>
 <p>Let’s see an example - we have three pets that we’d like to register them on the public animal registry.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123; ... &#125;</div></pre></td></tr></table></figure>
@@ -2562,7 +2562,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Ruby - Understanding class_eval and instance_eval]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/07/10/ruby/Ruby-Understanding-class-eval-and-instance-eval/</url>
+      <url>https://phoenixjiangnan.github.io/2016/07/10/ruby/Ruby-Understanding-class-eval-and-instance-eval/</url>
       <content type="html"><![CDATA[<p>Two Ruby methods seem to cause more confusion than any others, particularly due to the way they are explained. These two are <code>class_eval</code> and <code>instance_eval</code>. The names are very similar, and their behavior is counterintuitive. The bottom line is this:</p>
 <ul>
 <li>Use <code>ClassName.instance_eval</code> to define a class method (one associated with the class object but not visible to instances other than the instance itself).</li>
@@ -2602,7 +2602,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Spring - Wiring Beans]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/07/09/spring/Spring-Wiring-Beans/</url>
+      <url>https://phoenixjiangnan.github.io/2016/07/09/spring/Spring-Wiring-Beans/</url>
       <content type="html"><![CDATA[<h2 id="Spring-Bean-Annotation"><a href="#Spring-Bean-Annotation" class="headerlink" title="Spring Bean Annotation"></a>Spring Bean Annotation</h2><ul>
 <li><code>@Repository</code> - a bean as DAO Component on persistence layer</li>
 <li><code>@Service</code> - a bean as Service Component on business layer</li>
@@ -2692,7 +2692,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Ruby - Ruby blocks and yield statement]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/07/08/ruby/Ruby-Ruby-blocks-and-yield-statement/</url>
+      <url>https://phoenixjiangnan.github.io/2016/07/08/ruby/Ruby-Ruby-blocks-and-yield-statement/</url>
       <content type="html"><![CDATA[<h2 id="Ruby-Blocks"><a href="#Ruby-Blocks" class="headerlink" title="Ruby Blocks"></a>Ruby Blocks</h2><p>Ruby has a concept of Block.</p>
 <ul>
 <li>A block consists of chunks of code.</li>
@@ -2734,7 +2734,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[How does ZooKeeper's persistent sequential id work]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/07/07/distributed%20system/zookeeper/How-does-ZooKeeper-s-persistent-sequential-id-work/</url>
+      <url>https://phoenixjiangnan.github.io/2016/07/07/distributed%20system/zookeeper/How-does-ZooKeeper-s-persistent-sequential-id-work/</url>
       <content type="html"><![CDATA[<p>I got the opportunity to learn <code>how ZooKeeper&#39;s PERSISTENT_SEQUENTIAL node works</code>, <code>how a PERSISTENT_SEQUENTIAL node is created</code>, and <code>how the persistent sequential id is generated</code> recently in a ZooKeeper data migration project.</p>
 <p>The project is about implementing our own logic to back and restore ZooKeeper’s data. There are several reasons why we are doing it ourselves rather than using ZooKeeper’s logs and snapshots, but it’s beyond the scope of this article.</p>
 <p>The <code>PERSISTENT_SEQUENTIAL</code> node problem came up to the table in the following scenario. Let’s say you want to maintain <code>a list of strictly ordered tasks</code> in ZooKeeper, basically <code>using ZooKeeper as a task scheduling pool</code>. The best practice to do it is, having a parent node <code>/tasks</code> and creating new tasks as its children nodes with <code>CreateMode.PERSISTENT_SEQUENTIAL</code>, with names like <code>/tasks/task0000000001</code> and <code>/tasks/task0000000002</code>. How is the sequential id generated? ZooKeeper has an internally maintained counter.</p>
@@ -2809,7 +2809,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[ZooKeeper - Consistency Guarantees]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/07/04/distributed%20system/zookeeper/ZooKeeper-Consistency-Guarantees/</url>
+      <url>https://phoenixjiangnan.github.io/2016/07/04/distributed%20system/zookeeper/ZooKeeper-Consistency-Guarantees/</url>
       <content type="html"><![CDATA[<p>ZooKeeper is a high performance, scalable service. Both reads and write operations are designed to be fast, though reads are faster than writes. The reason for this is that in the case of reads, ZooKeeper can serve older data, which in turn is due to ZooKeeper’s consistency guarantees:</p>
 <h3 id="Sequential-Consistency"><a href="#Sequential-Consistency" class="headerlink" title="Sequential Consistency"></a>Sequential Consistency</h3><pre><code>Updates from a client will be applied in the order that they were sent.
 </code></pre><h3 id="Atomicity"><a href="#Atomicity" class="headerlink" title="Atomicity"></a>Atomicity</h3><pre><code>Updates either succeed or fail -- there are no partial results.
@@ -2835,7 +2835,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Ruby - Basic Data Structures, Array, List, and Hash]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/07/04/ruby/Ruby-Basic-Data-Structures-Array-List-and-Hash/</url>
+      <url>https://phoenixjiangnan.github.io/2016/07/04/ruby/Ruby-Basic-Data-Structures-Array-List-and-Hash/</url>
       <content type="html"><![CDATA[<h2 id="Arrays"><a href="#Arrays" class="headerlink" title="Arrays"></a>Arrays</h2><p>Array indexing starts at 0, as in C or Java. <code>A negative index is assumed relative to the end of the array</code> — that is, <code>an index of -1 indicates the last element of the array</code>, <code>-2 is the next to last element in the array</code>, and so on.</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Creating arrays</span></div><div class="line">names = Array.new</div><div class="line">names = Array.new(<span class="number">20</span>)  <span class="comment"># Set the size of an array</span></div><div class="line"></div><div class="line">puts names.size <span class="comment"># 20</span></div><div class="line">puts names.length <span class="comment">#20</span></div><div class="line"></div><div class="line"><span class="comment">#----------------</span></div><div class="line"></div><div class="line">names = Array.new(<span class="number">4</span>, <span class="string">"mac"</span>)</div><div class="line">puts <span class="string">"<span class="subst">#&#123;names&#125;</span>"</span> <span class="comment"># macmacmacmac</span></div><div class="line"></div><div class="line"><span class="comment">#----------------</span></div><div class="line"></div><div class="line">nums = Array.new(<span class="number">10</span>) &#123;<span class="params">|e|</span> e = e * <span class="number">2</span>&#125;</div><div class="line">puts <span class="string">"<span class="subst">#&#123;nums&#125;</span>"</span> <span class="comment"># 024681012141618</span></div><div class="line"></div><div class="line">nums = Array.new(<span class="number">10</span>) &#123;<span class="params">|e|</span> e = e + <span class="number">1</span>&#125;</div><div class="line">puts <span class="string">"<span class="subst">#&#123;nums&#125;</span>"</span> <span class="comment"># 12345678910</span></div><div class="line"></div><div class="line"><span class="comment">#----------------</span></div><div class="line"></div><div class="line">nums = Array.[](<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>)</div><div class="line">puts <span class="string">"<span class="subst">#&#123;nums&#125;</span>"</span> <span class="comment"># 12345</span></div><div class="line"></div><div class="line">nums = Array[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</div><div class="line">puts <span class="string">"<span class="subst">#&#123;nums&#125;</span>"</span> <span class="comment"># 12345</span></div></pre></td></tr></table></figure>
 <p>The <code>Kernel</code> module available in core Ruby has an Array method, which only accepts a single argument. Here, the method takes a range as an argument to create an array of digits:</p>
@@ -2865,7 +2865,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Spring - Spring-Hibernate Integration Configuration for DataSource and EntityManager]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/07/04/spring/hibernate%20integration/Spring-Spring-Hibernate-Integration-Configuration-for-DataSource-and-EntityManager/</url>
+      <url>https://phoenixjiangnan.github.io/2016/07/04/spring/hibernate%20integration/Spring-Spring-Hibernate-Integration-Configuration-for-DataSource-and-EntityManager/</url>
       <content type="html"><![CDATA[<h2 id="Interface-PlatformTransactionManager"><a href="#Interface-PlatformTransactionManager" class="headerlink" title="Interface PlatformTransactionManager"></a>Interface PlatformTransactionManager</h2><p><a href="http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html" target="_blank" rel="external">http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html</a></p>
 <blockquote>
 <p>This is the central interface in Spring’s transaction infrastructure. Applications can use this directly, but it is not primarily meant as API: Typically, applications will work with either <code>TransactionTemplate</code> or declarative transaction demarcation through AOP.</p>
@@ -2881,7 +2881,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Java - Exception - Principles to Handle Exception]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/07/04/java/exception/Java%20-%20Exception%20-%20Principles%20to%20Handle%20Exception/</url>
+      <url>https://phoenixjiangnan.github.io/2016/07/04/java/exception/Java%20-%20Exception%20-%20Principles%20to%20Handle%20Exception/</url>
       <content type="html"><![CDATA[<h2 id="Introduction-to-Exception"><a href="#Introduction-to-Exception" class="headerlink" title="Introduction to Exception"></a>Introduction to Exception</h2><p><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html" target="_blank" rel="external">https://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html</a></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Exception</span> <span class="keyword">extends</span> <span class="title">Throwable</span></span></div></pre></td></tr></table></figure>
 <blockquote>
@@ -2939,7 +2939,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[ZooKeeper - Security and ACL (Access Control List)]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/07/01/distributed%20system/zookeeper/ZooKeeper-Security-and-ACL-Access-Control-List/</url>
+      <url>https://phoenixjiangnan.github.io/2016/07/01/distributed%20system/zookeeper/ZooKeeper-Security-and-ACL-Access-Control-List/</url>
       <content type="html"><![CDATA[<p>ZooKeeper uses ACLs (Access Control List) to control access to its znodes (the data nodes of a ZooKeeper data tree).</p>
 <p>The ACL implementation is quite similar to <code>UNIX</code> file access permissions: it employs permission bits to allow/disallow various operations against a node and the scope to which the bits apply.</p>
 <p>Unlike standard UNIX permissions, a ZooKeeper node is not limited by the three standard scopes for user (owner of the file), group, and world (other). ZooKeeper does not have a notion of an owner of a znode. Instead, an ACL specifies sets of ids and permissions that are associated with those ids.</p>
@@ -2974,7 +2974,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[SNAKE - System Design Principles to crack a system design in 5 steps]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/06/28/system%20design/SNAKE-System-Design-Principles-to-crack-a-system-design-in-5-steps/</url>
+      <url>https://phoenixjiangnan.github.io/2016/06/28/system%20design/SNAKE-System-Design-Principles-to-crack-a-system-design-in-5-steps/</url>
       <content type="html"><![CDATA[<p>Here are 5 steps to crack any system design questions in general.</p>
 <ol>
 <li><p>Scenario: case/interface</p>
@@ -3019,7 +3019,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Jackson - How to use Jackson to parse basic Json to Java POJO]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/06/28/web%20development/json/jackson/Jackson-How-to-use-Jackson-to-parse-basic-Json-to-Java-POJO/</url>
+      <url>https://phoenixjiangnan.github.io/2016/06/28/web%20development/json/jackson/Jackson-How-to-use-Jackson-to-parse-basic-Json-to-Java-POJO/</url>
       <content type="html"><![CDATA[<h2 id="The-Problem"><a href="#The-Problem" class="headerlink" title="The Problem"></a>The Problem</h2><p>We are trying to map or parse a json block to a POJO object.</p>
 <p>The sample json block is:</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"hosts"</span>:[</div><div class="line">                &#123;<span class="attr">"identifier"</span>:<span class="string">"host0"</span>&#125;,</div><div class="line">                &#123;<span class="attr">"identifier"</span>:<span class="string">"host1"</span>&#125;,</div><div class="line">                &#123;<span class="attr">"identifier"</span>:<span class="string">"host2"</span>&#125;</div><div class="line">            ],</div><div class="line">    <span class="attr">"targetId"</span>:<span class="number">0</span>,</div><div class="line">    <span class="attr">"sourceId"</span>:<span class="number">1</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -3046,7 +3046,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Ruby - Methods in Ruby]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/06/21/ruby/Ruby-Methods-in-Ruby/</url>
+      <url>https://phoenixjiangnan.github.io/2016/06/21/ruby/Ruby-Methods-in-Ruby/</url>
       <content type="html"><![CDATA[<h1 id="Member-Functions-in-Ruby-Class"><a href="#Member-Functions-in-Ruby-Class" class="headerlink" title="Member Functions in Ruby Class"></a>Member Functions in Ruby Class</h1><p>In Ruby, functions are called <code>methods</code>. Each method in a class starts with the keyword def followed by the method name.</p>
 <p>The method name always preferred in lowercase letters. You end a method in Ruby by using the keyword <code>end</code>.</p>
 <p>Here is the example to define a Ruby method:</p>
@@ -3086,7 +3086,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Ruby - Variables and Constant in Ruby]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/06/21/ruby/Ruby-Variables-in-Ruby/</url>
+      <url>https://phoenixjiangnan.github.io/2016/06/21/ruby/Ruby-Variables-in-Ruby/</url>
       <content type="html"><![CDATA[<h1 id="Ruby-Variables"><a href="#Ruby-Variables" class="headerlink" title="Ruby Variables"></a>Ruby Variables</h1><p>Ruby provides five types of variables:</p>
 <ul>
 <li><code>Local Variables</code>: variables defined in a method. Local variables are not available outside the method. You will see more details about method in subsequent chapter. Local variables begin with <code>a lowercase letter</code> or <code>_</code>.</li>
@@ -3136,7 +3136,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Ruby - attr_accessor, attr_reader, and attr_writer]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/06/20/ruby/Ruby-attr-accessor-attr-reader-and-attr-writer/</url>
+      <url>https://phoenixjiangnan.github.io/2016/06/20/ruby/Ruby-attr-accessor-attr-reader-and-attr-writer/</url>
       <content type="html"><![CDATA[<p>Recently, I started working on Ruby and JRuby. Good to start posting some tutorials. </p>
 <p>You may use the different accessors to communicate your intent to someone reading your code, and make it easier to write classes which will work correctly no matter how their public API is called.</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span></div><div class="line">  <span class="keyword">attr_accessor</span> <span class="symbol">:age</span></div><div class="line">  </div><div class="line">  ...</div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
@@ -3168,7 +3168,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[System Design - How to query status of 10,000 machines]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/06/17/system%20design/task%20queue/System-Design-How-to-query-status-of-10-000-machines/</url>
+      <url>https://phoenixjiangnan.github.io/2016/06/17/system%20design/task%20queue/System-Design-How-to-query-status-of-10-000-machines/</url>
       <content type="html"><![CDATA[<p>As promised in <a href="https://phoenixjiangnan.github.io/2016/07/01/system%20design/task%20queue/System-Design-Design-Task-Scheduling-System-in-Distributed-System/">https://phoenixjiangnan.github.io/2016/07/01/system%20design/task%20queue/System-Design-Design-Task-Scheduling-System-in-Distributed-System/</a>, I’m writing my experience and thoughts on that problem, which I got interviewed with Palantir 2 years ago.</p>
 <p>To refresh your thoughts, the problem we are trying so solve looks like this.</p>
 <blockquote>
@@ -3233,7 +3233,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Java Reflection and the Class Objects]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/06/16/java/reflection/Java-Reflection-and-the-Class-Objects/</url>
+      <url>https://phoenixjiangnan.github.io/2016/06/16/java/reflection/Java-Reflection-and-the-Class-Objects/</url>
       <content type="html"><![CDATA[<h1 id="What-is-Reflection"><a href="#What-is-Reflection" class="headerlink" title="What is Reflection"></a>What is Reflection</h1><p>Java Reflection makes it possible to inspect classes, interfaces, fields and methods at runtime, without knowing the names of the classes, methods etc. at compile time. It is also possible to instantiate new objects, invoke methods and get/set field values using reflection.</p>
 <h1 id="Uses-of-Reflection"><a href="#Uses-of-Reflection" class="headerlink" title="Uses of Reflection"></a>Uses of Reflection</h1><p>Reflection is commonly used by programs which require the ability to examine or modify the runtime behavior of applications running in the Java virtual machine. This is a relatively advanced feature and should be used only by developers who have a strong grasp of the fundamentals of the language. With that caveat in mind, reflection is a powerful technique and can enable applications to perform operations which would otherwise be impossible.</p>
 <p>Using Java Reflection you can inspect Java classes <code>at runtime</code>. Inspecting classes is often the first thing you do when using Reflection. From the classes you can obtain information about</p>
@@ -3312,7 +3312,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Web Development - TCP Transportation]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/06/11/web%20development/Web-Development-TCP-Transportation/</url>
+      <url>https://phoenixjiangnan.github.io/2016/06/11/web%20development/Web-Development-TCP-Transportation/</url>
       <content type="html"><![CDATA[<p>This is a blog about TCP and how to implement TCP. The content is from some of my academic courses, and my personal project.</p>
 <p>I want to post it here for quick reference in the future - Obviously not a whole lot developers use TCP on a daily basis.</p>
 <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>The <code>Transmission Control Protocol (TCP)</code> is a core protocol of the Internet protocol suite.</p>
@@ -3375,7 +3375,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Spring - @Conditional Annotation and Condition Interface in Action]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/06/07/spring/Spring-Conditional-Annotation-and-Condition-Interface-in-Action/</url>
+      <url>https://phoenixjiangnan.github.io/2016/06/07/spring/Spring-Conditional-Annotation-and-Condition-Interface-in-Action/</url>
       <content type="html"><![CDATA[<h2 id="Spring-Conditional-Annotation"><a href="#Spring-Conditional-Annotation" class="headerlink" title="Spring @Conditional Annotation"></a>Spring @Conditional Annotation</h2><p>From <a href="http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/Conditional.html" target="_blank" rel="external">Spring API Doc</a></p>
 <blockquote>
 <p>Indicates that a component is only eligible for registration when all specified conditions match.</p>
@@ -3414,7 +3414,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[RESTful - What is Idempotent]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/06/05/web%20development/rest/RESTful-What-is-Idempotent/</url>
+      <url>https://phoenixjiangnan.github.io/2016/06/05/web%20development/rest/RESTful-What-is-Idempotent/</url>
       <content type="html"><![CDATA[<h1 id="Idempotence"><a href="#Idempotence" class="headerlink" title="Idempotence"></a>Idempotence</h1><p>Reference:  <a href="http://www.restapitutorial.com/lessons/idempotency.html" target="_blank" rel="external">http://www.restapitutorial.com/lessons/idempotency.html</a></p>
 <p><code>Idempotence</code> is a funky word that often hooks people. Idempotence is sometimes a confusing concept, at least from the academic definition.</p>
 <blockquote>
@@ -3439,7 +3439,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[What is REST/RESTful]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/05/22/web%20development/rest/What-is-REST-RESTful/</url>
+      <url>https://phoenixjiangnan.github.io/2016/05/22/web%20development/rest/What-is-REST-RESTful/</url>
       <content type="html"><![CDATA[<p>Found <a href="https://spring.io/understanding/REST" target="_blank" rel="external">this article</a> explaining <code>what is rest</code> quite well. It can be a great introduction for newbies to understand REST.</p>
 <hr>
 <h1 id="Understanding-REST"><a href="#Understanding-REST" class="headerlink" title="Understanding REST"></a>Understanding REST</h1><p><code>REST (Representational State Transfer)</code> was introduced and defined in 2000 by Roy Fielding in his doctoral dissertation. REST is an architectural style for designing distributed systems. It is not a standard but a set of constraints, such as being stateless, having a client/server relationship, and a uniform interface. REST is not strictly related to HTTP, but it is most commonly associated with it.</p>
@@ -3476,7 +3476,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[System Design - When to use Push and Pull mechanism in a messaging app or the timeline of a social app]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/05/20/system%20design/messaging/System-Design-When-to-use-Push-and-Pull-mechanism-in-a-messaging-app-or-the-timeline-of-a-social-app/</url>
+      <url>https://phoenixjiangnan.github.io/2016/05/20/system%20design/messaging/System-Design-When-to-use-Push-and-Pull-mechanism-in-a-messaging-app-or-the-timeline-of-a-social-app/</url>
       <content type="html"><![CDATA[<h1 id="What-is-Pull-and-Push"><a href="#What-is-Pull-and-Push" class="headerlink" title="What is Pull and Push?"></a>What is Pull and Push?</h1><ul>
 <li>Data-pull: build a user’s timeline by pulling data from his followings</li>
 <li>Data-push: build a user’s timeline by pushing data from his followings</li>
@@ -3524,7 +3524,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[What is Callback and Webhook]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/05/18/web%20development/webhook/What-is-Callback-and-Webhook/</url>
+      <url>https://phoenixjiangnan.github.io/2016/05/18/web%20development/webhook/What-is-Callback-and-Webhook/</url>
       <content type="html"><![CDATA[<p>I first know these two words when developing a chatbot on Facebook Messenger. Facebook developer guide has some references and explaination on its webhook, shown here <a href="https://developers.facebook.com/docs/messenger-platform/webhook-reference" target="_blank" rel="external">https://developers.facebook.com/docs/messenger-platform/webhook-reference</a>. But I didn’t actually get what a webhook realy is, until I saw this <a href="https://medium.com/robinhood-engineering/thorn-easy-webhooks-for-python-82a78e170bdb#.2ut4we18n" target="_blank" rel="external">blog post talking about Python Thorn developed by Robinhood</a>. So I did some research, and now I’ll well explain to you what a callback and a webhook is.</p>
 <h1 id="What-is-a-Callback"><a href="#What-is-a-Callback" class="headerlink" title="What is a Callback"></a>What is a Callback</h1><p>Here’s <a href="http://stackoverflow.com/a/9652434/1936713" target="_blank" rel="external">a very good answer on stackoverflowing explaining what a callback is</a></p>
 <blockquote>
@@ -3564,7 +3564,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Hibernate - the hi/lo algorithm]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/05/17/database/hibernate/Hibernate-the-hi-lo-algorithm/</url>
+      <url>https://phoenixjiangnan.github.io/2016/05/17/database/hibernate/Hibernate-the-hi-lo-algorithm/</url>
       <content type="html"><![CDATA[<p>When designing the database model, you need to be aware of the <code>database identifier strategies</code>. Database sequences are very convenient, because they are both flexible and efficient for most use cases.</p>
 <blockquote>
 <p>But even with cached sequences, the application requires a database round-trip for every new the sequence value. If your applications demands a high number of insert operations per transaction, the sequence allocation may be optimized with a <code>hi/lo algorithm</code>.</p>
@@ -3597,7 +3597,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Jackson - How does Jackson deserialize json to complex objects?]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/05/15/web%20development/json/jackson/Jackson-How-does-Jackson-deserialize-json-to-complex-objects/</url>
+      <url>https://phoenixjiangnan.github.io/2016/05/15/web%20development/json/jackson/Jackson-How-does-Jackson-deserialize-json-to-complex-objects/</url>
       <content type="html"><![CDATA[<p>Deserialization is really useful when you are reading a POST entity from a request body and a response body.</p>
 <p>Spring boot has packaged Jackson and are using Jackson for objects serialization and deserialization. You can choose another json library if you are using Apache httpclient.</p>
 <p>Here’s a demo class that sends a http GET request and receives a response whose entity needs to be deserialized.</p>
@@ -3630,7 +3630,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Spring - Set up and Enable Scheduled Tasks]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/05/10/spring/Spring-Set-up-and-Enable-Scheduled-Tasks/</url>
+      <url>https://phoenixjiangnan.github.io/2016/05/10/spring/Spring-Set-up-and-Enable-Scheduled-Tasks/</url>
       <content type="html"><![CDATA[<h1 id="Annotation-EnableScheduling-and-Scheduled"><a href="#Annotation-EnableScheduling-and-Scheduled" class="headerlink" title="Annotation @EnableScheduling and @Scheduled"></a>Annotation @EnableScheduling and @Scheduled</h1><ul>
 <li><a href="http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/scheduling/annotation/EnableScheduling.html" target="_blank" rel="external">EnableScheduling.java</a></li>
 <li><a href="http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/scheduling/annotation/Scheduled.html" target="_blank" rel="external">Scheduled.java</a></li>
@@ -3666,7 +3666,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Spring - @Primary annotation]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/05/02/spring/Spring-Primary-annotation/</url>
+      <url>https://phoenixjiangnan.github.io/2016/05/02/spring/Spring-Primary-annotation/</url>
       <content type="html"><![CDATA[<p><code>@Primary</code> indicates that a bean should be given preference when multiple candidates are qualified to autowire a single-valued dependency. If exactly one <code>primary</code> bean exists among the candidates, it will be the autowired value. This annotation is semantically equivalent to the <code>&lt;bean&gt;</code> element’s primary attribute in Spring XML.</p>
 <p>May be used on any class directly or indirectly annotated with <code>@Component</code> or on methods annotated with <code>@Bean</code>.</p>
 <a id="more"></a>
@@ -3680,7 +3680,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Hibernate - Hibernate Enum and Decoupling Java Class with Database Record]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/04/28/database/hibernate/Hibernate-Hibernate-Enum-and-Decoupling-Java-Class-with-Database-Record/</url>
+      <url>https://phoenixjiangnan.github.io/2016/04/28/database/hibernate/Hibernate-Hibernate-Enum-and-Decoupling-Java-Class-with-Database-Record/</url>
       <content type="html"><![CDATA[<h2 id="Example-that-Hibernate-Persists-Enum"><a href="#Example-that-Hibernate-Persists-Enum" class="headerlink" title="Example that Hibernate Persists Enum"></a>Example that Hibernate Persists Enum</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Table</span>(name = <span class="string">"tasks"</span>)</div><div class="line"><span class="meta">@Entity</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Tasks</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">enum</span> Task &#123;</div><div class="line">        Task1                  (<span class="string">"task 1"</span>, Type.Job1),</div><div class="line">        Task2                  (<span class="string">"task 2"</span>, Type.Job2),</div><div class="line">        </div><div class="line">        <span class="keyword">private</span> String name;</div><div class="line">        <span class="keyword">private</span> Type Type;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">private</span> <span class="title">Task</span><span class="params">(String n, Type j)</span> </span>&#123;</div><div class="line">            name = n;</div><div class="line">            Type = j;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span>｛</span></div><div class="line">            return name;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Type <span class="title">getType</span><span class="params">()</span> </span>&#123;</div><div class="line">            <span class="keyword">return</span> Type;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">// A map that maps enum name with Task</span></div><div class="line">        <span class="keyword">private</span> <span class="keyword">static</span> Map&lt;String, Task&gt; s_typeMap = <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line">        <span class="keyword">static</span> &#123;</div><div class="line">            <span class="keyword">for</span> (Task tt : Task.values()) &#123;</div><div class="line">                s_typeMap.put(tt.name(), tt);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">/**</span></div><div class="line">         * Converts a String to a enum instance of Task.</div><div class="line">         * Throw an exception if the String does not match any enum's name</div><div class="line">         * */</div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Task <span class="title">fromString</span><span class="params">(String TaskName)</span> </span>&#123;</div><div class="line">            <span class="keyword">if</span>(!s_typeMap.containsKey(TaskName)) &#123;</div><div class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"No task type named"</span> + TaskName));</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="keyword">return</span> s_typeMap.get(TaskName);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    ...</div><div class="line">    <span class="keyword">private</span> Task m_Task;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Tasks</span><span class="params">()</span> </span>&#123;&#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Tasks</span><span class="params">(Task type)</span> </span>&#123;</div><div class="line">        m_Task = type;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Column</span>(name = <span class="string">"type"</span>)</div><div class="line">    <span class="meta">@Enumerated</span>(EnumType.String)</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getType</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> m_type;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">setType</span><span class="params">(String type)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.m_type= type;</div><div class="line">    &#125;</div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="Example-that-decouples-enum-and-db-values"><a href="#Example-that-decouples-enum-and-db-values" class="headerlink" title="Example that decouples enum and db values"></a>Example that decouples enum and db values</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Table</span>(name = <span class="string">"tasks"</span>)</div><div class="line"><span class="meta">@Entity</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Task</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">enum</span> Task &#123;</div><div class="line">        Task1                  (<span class="string">"task 1"</span>, Type.Job1),</div><div class="line">        Task2                  (<span class="string">"task 2"</span>, Type.Job2),</div><div class="line">        </div><div class="line">        <span class="keyword">private</span> String name;</div><div class="line">        <span class="keyword">private</span> Type Type;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">private</span> <span class="title">Task</span><span class="params">(String n, Type j)</span> </span>&#123;</div><div class="line">            name = n;</div><div class="line">            Type = j;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span>｛</span></div><div class="line">            return name;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Type <span class="title">getType</span><span class="params">()</span> </span>&#123;</div><div class="line">            <span class="keyword">return</span> Type;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">// A map that maps enum name with Task</span></div><div class="line">        <span class="keyword">private</span> <span class="keyword">static</span> Map&lt;String, Task&gt; s_typeMap = <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line">        <span class="keyword">static</span> &#123;</div><div class="line">            <span class="keyword">for</span> (Task tt : Task.values()) &#123;</div><div class="line">                s_typeMap.put(tt.name(), tt);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">/**</span></div><div class="line">         * Converts a String to a enum instance of Task.</div><div class="line">         * Throw an exception if the String does not match any enum's name</div><div class="line">         * */</div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Task <span class="title">fromString</span><span class="params">(String TaskName)</span> </span>&#123;</div><div class="line">            <span class="keyword">if</span>(!s_typeMap.containsKey(TaskName)) &#123;</div><div class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"No task type named"</span> + TaskName));</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="keyword">return</span> s_typeMap.get(TaskName);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    ...</div><div class="line">    <span class="keyword">private</span> Task m_Task;</div><div class="line">    <span class="keyword">private</span> String m_typeName;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Tasks</span><span class="params">()</span> </span>&#123;&#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Tasks</span><span class="params">(Task type)</span> </span>&#123;</div><div class="line">        m_Task = type;</div><div class="line">        m_typeName = type.name();</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="meta">@Transient</span></div><div class="line">    <span class="function"><span class="keyword">public</span> Task <span class="title">getType</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> Task.fromString(getTypeName());</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setType</span><span class="params">(Task type)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.m_Task = type;</div><div class="line">        setTypeName(m_Task.name());</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Column</span>(name = <span class="string">"type"</span>)</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getTypeName</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> m_typeName;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * <span class="doctag">@param</span> typeName the name of the Task</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">setTypeName</span><span class="params">(String typeName)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.m_typeName = typeName;</div><div class="line">    &#125;</div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 ]]></content>
@@ -3688,7 +3688,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[The N + 1 Query Problem]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/04/25/database/The-N-1-Query-Problem/</url>
+      <url>https://phoenixjiangnan.github.io/2016/04/25/database/The-N-1-Query-Problem/</url>
       <content type="html"><![CDATA[<p><a href="https://secure.phabricator.com/book/phabcontrib/article/n_plus_one/" target="_blank" rel="external">https://secure.phabricator.com/book/phabcontrib/article/n_plus_one/</a></p>
 <h1 id="What-is-N-1-Query-Problem"><a href="#What-is-N-1-Query-Problem" class="headerlink" title="What is N+1 Query Problem"></a>What is N+1 Query Problem</h1><p>The N+1 query problem is a common performance anti-pattern. It looks like this:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Set&lt;division&gt; divisions = getAllDivisions();</div><div class="line">divisions.foreach (</div><div class="line">    d -&gt; &#123;</div><div class="line">        Set&lt;Employee&gt; employees = getEmployeesByDivision(d)Ï</div><div class="line">        <span class="comment">// ...</span></div><div class="line">    &#125;</div><div class="line">);</div></pre></td></tr></table></figure>
@@ -3712,7 +3712,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Unit Test - JMockit - Difference between Expectations, NonStrictExpectations, and StrictExpectations]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/04/25/test/jmockit/Unit-Test-JMockit-Difference-between-Expectations-NonStrictExpectations-and-StrictExpectations/</url>
+      <url>https://phoenixjiangnan.github.io/2016/04/25/test/jmockit/Unit-Test-JMockit-Difference-between-Expectations-NonStrictExpectations-and-StrictExpectations/</url>
       <content type="html"><![CDATA[<h2 id="NonStrictExpectations-is-deprecated-now"><a href="#NonStrictExpectations-is-deprecated-now" class="headerlink" title="NonStrictExpectations is deprecated now!"></a>NonStrictExpectations is deprecated now!</h2><p>Before V1.23, <code>Expectations</code> equals <code>StrictExpectations</code>. From V1.23, JMockit has dropped <code>NonStrictExpectations</code>, and replace it with <code>Expectations</code>.</p>
 <p>Here’s the release note from JMockit</p>
 <blockquote>
@@ -3748,7 +3748,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Java Concurrency - ReentrantLock]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/04/20/java/concurrency/Java-Concurrency-ReentrantLock/</url>
+      <url>https://phoenixjiangnan.github.io/2016/04/20/java/concurrency/Java-Concurrency-ReentrantLock/</url>
       <content type="html"><![CDATA[<h1 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h1><p>Java’s <code>synchronized</code> keyword is a wonderful tool – it allows us a simple and reliable way to synchronize access to critical sections and it’s not too hard to understand.</p>
 <p>But sometimes we need more control over synchronization. Either we need to control types of access (read and write) separately, or it is cumbersome to use because either there is no obvious mutex or we need to maintain multiple mutexes.</p>
 <p>Thankfully, lock utility classes make these problems easier to solve.</p>
@@ -3842,7 +3842,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Java Concurrency - Callable, Future, and FutureTask]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/04/20/java/concurrency/Java-Concurrency-Callable-Future-and-FutureTask/</url>
+      <url>https://phoenixjiangnan.github.io/2016/04/20/java/concurrency/Java-Concurrency-Callable-Future-and-FutureTask/</url>
       <content type="html"><![CDATA[<h1 id="1-Motivation-Drawbacks-of-Thread-and-Runnable"><a href="#1-Motivation-Drawbacks-of-Thread-and-Runnable" class="headerlink" title="1 Motivation: Drawbacks of Thread and Runnable"></a>1 Motivation: Drawbacks of Thread and Runnable</h1><p>One of the beautiful things about Java from its very first release was the ease with which we could write multi-threaded programs and introduce asynchronous processing into our designs. The <code>Thread</code> class and <code>Runnable</code> interface combined with Java’s memory management model meant for straightforward thread programming.</p>
 <blockquote>
 <p>But neither the <code>Thread</code> class nor the <code>Runnable</code> interface allowed for thrown Exceptions or returned values. The lack of returned values was mildly annoying.</p>
@@ -3877,7 +3877,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Java Concurrency - BlockingQueue]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/04/20/java/concurrency/Java-Concurrency-BlockingQueue/</url>
+      <url>https://phoenixjiangnan.github.io/2016/04/20/java/concurrency/Java-Concurrency-BlockingQueue/</url>
       <content type="html"><![CDATA[<p>Java’s <code>BlockingQueue</code> is a <code>Queue</code> that additionally supports operations that wait for:</p>
 <ul>
 <li>the queue to become non-empty when retrieving an element</li>
@@ -3936,7 +3936,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Leadership - Thinking Strategically as a Software Engineer]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/04/17/career%20and%20leadership/Leadership-Thinking-Strategically-as-a-Software-Engineer/</url>
+      <url>https://phoenixjiangnan.github.io/2016/04/17/career%20and%20leadership/Leadership-Thinking-Strategically-as-a-Software-Engineer/</url>
       <content type="html"><![CDATA[<p>About a month ago, my manager told me that he has come up with some ideas on how to improve our product by reducing the downtime during a product upgrade (I’m not going to talk about how to do that though :P).</p>
 <p>To be honest, I actually have thought about the same idea a long time ago, because our product’s upgrade right has been very painful - it requires a manual unintall accompanied by a full backup taken long time, and then a install of the product in new version and restore of the backup. The process is so time-consuming and painful that we internally have created some scripts to automate this workflow.</p>
 <p>I clearly remember I thought of how to improve the upgrade process, but that idea was somehow lost, until my manager brought it up again. When I heard it, it turned out to be such a moment that must have happened to everybody in this industry - “hey! I had the same idea before! I just didn’t do anything to make it happen!”.</p>
@@ -3977,7 +3977,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Unit Test - JMockit - Capturing Invocation Arguments for Verification]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/04/17/test/jmockit/Unit-Test-JMockit-Capturing-Invocation-Arguments-for-Verification/</url>
+      <url>https://phoenixjiangnan.github.io/2016/04/17/test/jmockit/Unit-Test-JMockit-Capturing-Invocation-Arguments-for-Verification/</url>
       <content type="html"><![CDATA[<p>Recently I was pushed into a new world in Java unit test - withCapture(). The main reason for knowing this is that I start to write more and more lambda expressions recently, with Java 9 being adopted in my company.</p>
 <p>So I’m writing to explain what kind of problems I ran into and how I dealt with them. Most of the following content is based on <a href="http://jmockit.org/tutorial/Mocking.html#withCapture" target="_blank" rel="external">http://jmockit.org/tutorial/Mocking.html#withCapture</a> and polished by myself to have them make more sense</p>
 <h1 id="Capturing-Invocation-Arguments-for-Verification"><a href="#Capturing-Invocation-Arguments-for-Verification" class="headerlink" title="Capturing Invocation Arguments for Verification"></a>Capturing Invocation Arguments for Verification</h1><p>Invocation arguments can be captured for later verification through a set of special <code>withCapture(...)</code> methods. </p>
@@ -4004,7 +4004,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Rake - Introduction to Rake]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/04/15/tools/rake/Rake-Introduction-to-Rake/</url>
+      <url>https://phoenixjiangnan.github.io/2016/04/15/tools/rake/Rake-Introduction-to-Rake/</url>
       <content type="html"><![CDATA[<h1 id="Ruby-code-for-build"><a href="#Ruby-code-for-build" class="headerlink" title="Ruby code for build"></a>Ruby code for build</h1><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/env ruby</span></div><div class="line"></div><div class="line"><span class="keyword">require</span> <span class="string">'ftools'</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_directories</span></span></div><div class="line">  File.makedirs <span class="string">"html"</span></div><div class="line">  File.makedirs <span class="string">"html/images"</span></div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">copy_images</span></span></div><div class="line">  File.copy <span class="string">"pics/rake.gif"</span>, <span class="string">"html/images/rake.gif"</span></div><div class="line">  File.copy <span class="string">"pics/target.jpg"</span>, <span class="string">"html/images/target.jpg"</span></div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">generate_html</span></span></div><div class="line">  system <span class="string">%&#123;./runwpb rake.wpb&#125;</span></div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">build</span></span></div><div class="line">  make_directories</div><div class="line">  copy_images</div><div class="line">  generate_html</div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line">build</div></pre></td></tr></table></figure>
 <a id="more"></a>
 <h1 id="Task-Dependencies"><a href="#Task-Dependencies" class="headerlink" title="Task Dependencies"></a>Task Dependencies</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">      / Generate HTML \</div><div class="line">Build                   Create Directories</div><div class="line">      \ Copy Images   /</div></pre></td></tr></table></figure>
@@ -4060,7 +4060,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Apache Thrift - Detailed Thrift Examples]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/04/15/distributed%20system/thrift/Apache-Thrift-Detailed-Thrift-Examples/</url>
+      <url>https://phoenixjiangnan.github.io/2016/04/15/distributed%20system/thrift/Apache-Thrift-Detailed-Thrift-Examples/</url>
       <content type="html"><![CDATA[<h1 id="Simple-Thrift-Server-and-Client-Example"><a href="#Simple-Thrift-Server-and-Client-Example" class="headerlink" title="Simple Thrift Server and Client Example"></a>Simple Thrift Server and Client Example</h1><h2 id="1-define-a-service-with-methods-in-a-thrift-file"><a href="#1-define-a-service-with-methods-in-a-thrift-file" class="headerlink" title="1. define a service with methods in a .thrift file"></a>1. define a service with methods in a .thrift file</h2><figure class="highlight thrift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">namespace java server</div><div class="line"></div><div class="line">typedef i64 long</div><div class="line">typedef i32 int</div><div class="line"></div><div class="line">service ArithmeticService &#123;  // defines simple arithmetic service</div><div class="line">    long add(1:int num1, 2:int num2);</div><div class="line"></div><div class="line">    long multiply(1:int num1, 2:int num2);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="2-Run-thrift-exe-to-autogenerate-a-corresponding-class-to-the-service"><a href="#2-Run-thrift-exe-to-autogenerate-a-corresponding-class-to-the-service" class="headerlink" title="2. Run thrift .exe to autogenerate a corresponding class to the service,"></a>2. Run thrift .exe to autogenerate a corresponding class to the service,</h2><p>with an interface <code>Iface</code> containing all the methods</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// <span class="keyword">In</span> Mac/Linux, <span class="built_in">cd</span> to thrift-<span class="number">0</span>.<span class="number">9</span>.<span class="number">2</span> folder</div><div class="line">$ thrift –gen java arithmetic.thrift</div><div class="line">or</div><div class="line">$ "thrift.exe" –gen java arithmetic.thrift</div></pre></td></tr></table></figure>
@@ -4081,7 +4081,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Design Pattern - Singleton]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/04/15/best%20practices/design%20pattern/Design-Pattern-Singleton/</url>
+      <url>https://phoenixjiangnan.github.io/2016/04/15/best%20practices/design%20pattern/Design-Pattern-Singleton/</url>
       <content type="html"><![CDATA[<p>##Eager Initialization</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Singleton s = <span class="keyword">new</span> Singleton();</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;&#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> s;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>##Lazy Initialization</p>
@@ -4092,7 +4092,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Design Pattern - Adapter Pattern]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/04/14/best%20practices/design%20pattern/Design-Pattern-Adapter-Pattern/</url>
+      <url>https://phoenixjiangnan.github.io/2016/04/14/best%20practices/design%20pattern/Design-Pattern-Adapter-Pattern/</url>
       <content type="html"><![CDATA[<p><code>Adapter Pattern</code> is a software design pattern that <code>allows the interface of an existing class to be used from another interface</code>. It is often used to make existing classes work with others without modifying their source code.</p>
 <p>An adapter helps two incompatible interfaces to work together. Adapter pattern works as a bridge between two incompatible interfaces. This is the real world definition for an adapter. Interfaces may be incompatible but the inner functionality should suit the need. The Adapter design pattern allows otherwise incompatible classes to work together by converting the interface of one class into an interface expected by the clients.</p>
 <p>This pattern involves a single class which is responsible to join functionalities of independent or incompatible interfaces. A real life example could be a case of card reader which acts as an adapter between memory card and a laptop. You plugin the memory card into card reader and card reader into the laptop so that memory card can be read via laptop.</p>
@@ -4106,7 +4106,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Design Pattern - Decorator Pattern]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/04/14/best%20practices/design%20pattern/Design-Pattern-Decorator-Pattern/</url>
+      <url>https://phoenixjiangnan.github.io/2016/04/14/best%20practices/design%20pattern/Design-Pattern-Decorator-Pattern/</url>
       <content type="html"><![CDATA[<ul>
 <li><code>Decorator Pattern</code> is used to add additional features or behaviors to a particular instance of a class, while not modifying the other instances of same class.</li>
 <li>Decorators provide a flexible alternative to sub-classing for extending functionality. </li>
@@ -4153,7 +4153,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Design Pattern - Proxy Pattern]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/04/14/best%20practices/design%20pattern/Design-Pattern-Proxy-Pattern/</url>
+      <url>https://phoenixjiangnan.github.io/2016/04/14/best%20practices/design%20pattern/Design-Pattern-Proxy-Pattern/</url>
       <content type="html"><![CDATA[<p>In proxy pattern, a class represents functionality of another class. This type of design pattern comes under structural pattern.</p>
 <p>In proxy pattern, we create object having original object to interface its functionality to outer world.</p>
 <p>The following Java example illustrates the “virtual proxy” pattern. The <code>ProxyImage</code> class is used to access a remote method.</p>
@@ -4176,7 +4176,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Design Pattern - Strategy Pattern - Program to an interface, not an implementation]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/04/14/best%20practices/design%20pattern/Design-Pattern-Strategy-Pattern-Program-to-an-interface-not-an-implementation/</url>
+      <url>https://phoenixjiangnan.github.io/2016/04/14/best%20practices/design%20pattern/Design-Pattern-Strategy-Pattern-Program-to-an-interface-not-an-implementation/</url>
       <content type="html"><![CDATA[<h2 id="Dependency-Inversion-Principles"><a href="#Dependency-Inversion-Principles" class="headerlink" title="Dependency Inversion Principles"></a>Dependency Inversion Principles</h2><ul>
 <li>No variable should hold a reference to a concrete class</li>
 <li>No class should derive from a concrete class</li>
@@ -4205,7 +4205,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Design Pattern - Observer Pattern]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/04/14/best%20practices/design%20pattern/Design-Pattern-Observer-Pattern/</url>
+      <url>https://phoenixjiangnan.github.io/2016/04/14/best%20practices/design%20pattern/Design-Pattern-Observer-Pattern/</url>
       <content type="html"><![CDATA[<h1 id="Keeping-your-Objects-in-the-know-Observer-Pattern"><a href="#Keeping-your-Objects-in-the-know-Observer-Pattern" class="headerlink" title="Keeping your Objects in the know - Observer Pattern"></a>Keeping your Objects in the know - Observer Pattern</h1><blockquote>
 <p>Publishers + Subscribers = Observer Pattern</p>
 <p><code>Observer Pattern</code> defines a one-to-many dependency between objects so that when one object changes state, all of its dependents are notified and updated automatically.</p>
@@ -4220,7 +4220,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Design Pattern - Command Pattern]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/04/14/best%20practices/design%20pattern/Design-Pattern-Command-Pattern/</url>
+      <url>https://phoenixjiangnan.github.io/2016/04/14/best%20practices/design%20pattern/Design-Pattern-Command-Pattern/</url>
       <content type="html"><![CDATA[<ul>
 <li><p>The goal of this pattern is to <code>encapsulate method invocation</code></p>
 <ul>
@@ -4255,7 +4255,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Cache - Design a cache with inspiration from Guava Cache]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/04/14/system%20design/cache/Cache-Design-a-cache-with-inspiration-from-Guava-Cache/</url>
+      <url>https://phoenixjiangnan.github.io/2016/04/14/system%20design/cache/Cache-Design-a-cache-with-inspiration-from-Guava-Cache/</url>
       <content type="html"><![CDATA[<h2 id="Cache-Design-Google-Guava"><a href="#Cache-Design-Google-Guava" class="headerlink" title="Cache Design - Google Guava"></a>Cache Design - Google Guava</h2><ol>
 <li>Cache Heating<ul>
 <li><code>Pre-loading</code> v.s. <code>Non-loading</code></li>
@@ -4332,7 +4332,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Java - Java Basics]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/04/08/java/Java-Java-Basics/</url>
+      <url>https://phoenixjiangnan.github.io/2016/04/08/java/Java-Java-Basics/</url>
       <content type="html"><![CDATA[<p>‘a’ 字符数据<br>“a” 字符串数据</p>
 <p>强制类型转换  eg：  </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">byte</span> b = <span class="number">3</span>;</div><div class="line">b = (<span class="keyword">byte</span>)(b+<span class="number">5</span>);</div></pre></td></tr></table></figure>
@@ -4591,7 +4591,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Unit Test - JMockit - What are the differences between @Mocked and @Injectable in JMockit, and when to use @Injectable rather than @Mocked]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/04/06/test/jmockit/Unit-Test-JMockit-What-are-the-differences-between-Mocked-and-Injectable-in-JMockit-and-when-to-use-Injectable-rather-than-Mocked/</url>
+      <url>https://phoenixjiangnan.github.io/2016/04/06/test/jmockit/Unit-Test-JMockit-What-are-the-differences-between-Mocked-and-Injectable-in-JMockit-and-when-to-use-Injectable-rather-than-Mocked/</url>
       <content type="html"><![CDATA[<p>Recently, an engineer from my company sent out an email encouraging devs to use more <code>@Injectable</code> not <code>@Mocked</code>. He gave some examples demonstrating that <code>@Mocked</code> will mock more things than we expect, like class constructors. Personally, I usually just use <code>@Mocked</code>. I read about the differences between <code>@Injectable</code> and <code>@Mocked</code> before from JMockit official doc, but didn’t fully get what they are exactly about. So I kept his remindings in mind. Today, when I worked on some java unit tests, I tried <code>@Injectable</code> (normally I just use <code>@Mocked</code>), and while writing a few tests I think I understand much deeper about what the differences between them are and what the scenarios to apply one of them.</p>
 <p>In one sentence, <code>@Mocked</code> will mock everything and all instances of that class, and <code>@Injectable</code> will only mock a specific method/field of one instance of that class.</p>
 <p>Let’s understand this better by discussing about when to use one rather than the other. I summarized some principles from my own experience:</p>
@@ -4640,7 +4640,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Java Concurrency - Executor and Thread Pools]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/04/03/java/concurrency/Java-Concurrency-Executor-and-Thread-Pools/</url>
+      <url>https://phoenixjiangnan.github.io/2016/04/03/java/concurrency/Java-Concurrency-Executor-and-Thread-Pools/</url>
       <content type="html"><![CDATA[<h1 id="Executor-Interfaces"><a href="#Executor-Interfaces" class="headerlink" title="Executor Interfaces"></a>Executor Interfaces</h1><p>The <code>java.util.concurrent</code> package defines <code>three executor interfaces</code>to <code>provide us the basic interface for a thread pool</code>:</p>
 <ul>
 <li><code>Executor</code>, a simple interface that supports launching new tasks.</li>
@@ -4681,7 +4681,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     <entry>
       <title><![CDATA[Java Concurrency - java.util.concurrent.atomic package]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/04/03/java/concurrency/Java-Concurrency-java-util-concurrent-atomic-package/</url>
+      <url>https://phoenixjiangnan.github.io/2016/04/03/java/concurrency/Java-Concurrency-java-util-concurrent-atomic-package/</url>
       <content type="html"><![CDATA[<h1 id="package-java-util-concurrent-atomic"><a href="#package-java-util-concurrent-atomic" class="headerlink" title="package java.util.concurrent.atomic"></a>package java.util.concurrent.atomic</h1><h2 id="volatile-keyword-in-Java"><a href="#volatile-keyword-in-Java" class="headerlink" title="volatile keyword in Java"></a>volatile keyword in Java</h2><p>Essentially, <code>volatile</code> is used to indicate that <code>a variable&#39;s value will be modified by different threads</code>.</p>
 <p>Declaring a volatile Java variable means:</p>
 <blockquote>
@@ -4731,7 +4731,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Java Concurrency - CountDownLatch]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/04/03/java/concurrency/Java-Concurrency-CountDownLatch/</url>
+      <url>https://phoenixjiangnan.github.io/2016/04/03/java/concurrency/Java-Concurrency-CountDownLatch/</url>
       <content type="html"><![CDATA[<p>#java.util.concurrent.CountDownLatch – a more general wait/notify mechanism</p>
 <blockquote>
 <p>A synchronization aid that allows one or more threads to wait until a<br>set of operations being performed in other threads completes.</p>
@@ -4768,7 +4768,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Java Concurrency - Semaphore]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/04/03/java/concurrency/Java-Concurrency-Semaphore/</url>
+      <url>https://phoenixjiangnan.github.io/2016/04/03/java/concurrency/Java-Concurrency-Semaphore/</url>
       <content type="html"><![CDATA[<h1 id="java-util-concurrent-Semaphore"><a href="#java-util-concurrent-Semaphore" class="headerlink" title="java.util.concurrent.Semaphore"></a>java.util.concurrent.Semaphore</h1><p>A <code>Semaphore</code> is a thread synchronization construct that can be used either <code>to send signals between threads to avoid missed signals</code>, or <code>to guard a critical section like you would with a lock</code>.</p>
 <p>A counting semaphore. Conceptually, a semaphore maintains <code>a set of permits</code>, or <code>a given number of &quot;permits&quot;</code>, with the following characteristics.</p>
 <blockquote>
@@ -4866,7 +4866,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Spring - Spring configuration styles]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/04/03/spring/Spring-Spring-configuration-styles/</url>
+      <url>https://phoenixjiangnan.github.io/2016/04/03/spring/Spring-Spring-configuration-styles/</url>
       <content type="html"><![CDATA[<p>JavaConfig can be used in conjunction with any or all of Spring’s other container configuration approaches.</p>
 <h2 id="6-1-JavaConfig-and-XML"><a href="#6-1-JavaConfig-and-XML" class="headerlink" title="6.1. JavaConfig and XML"></a>6.1. JavaConfig and XML</h2><h3 id="6-1-1-Bootstrapping-JavaConfig-from-XML-with-ConfigurationPostProcessor"><a href="#6-1-1-Bootstrapping-JavaConfig-from-XML-with-ConfigurationPostProcessor" class="headerlink" title="6.1.1.  Bootstrapping JavaConfig from XML with ConfigurationPostProcessor"></a>6.1.1.  Bootstrapping JavaConfig from XML with ConfigurationPostProcessor</h3><p>You may desire or be required to use XML as the primary mechanism for configuring the container, but wish to selectively use @Configuration classes to define certain beans. For such cases, JavaConfig provides ConfigurationPostProcessor, a Spring BeanPostProcessor capable of processing @Configuration classes.</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">beans</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- first, define your individual @Configuration classes as beans --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"com.myapp.config.AppConfig"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"com.myapp.config.DataConfig"</span>/&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- be sure to include the JavaConfig bean post-processor --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"org.springframework.config.java.process.ConfigurationPostProcessor"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -4888,7 +4888,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Design Pattern - Enum and EnumSet]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/03/30/best%20practices/design%20pattern/Enum-and-EnumSet/</url>
+      <url>https://phoenixjiangnan.github.io/2016/03/30/best%20practices/design%20pattern/Enum-and-EnumSet/</url>
       <content type="html"><![CDATA[<h1 id="Enum"><a href="#Enum" class="headerlink" title="Enum"></a>Enum</h1><h2 id="Enum-with-Single-Value"><a href="#Enum-with-Single-Value" class="headerlink" title="Enum with Single Value"></a>Enum with Single Value</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">enum</span> ScheduleType &#123;</div><div class="line">    Hourly(<span class="number">0</span>), Daily(<span class="number">1</span>), Weekly(<span class="number">2</span>), Monthly(<span class="number">3</span>);</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> m_type;</div><div class="line"></div><div class="line">    ScheduleType(<span class="keyword">int</span> type) &#123;</div><div class="line">        m_type = type;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getType</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> m_type;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">ScheduleType s = ScheduleType.Daily;</div><div class="line">System.out.println(s.getType()); <span class="comment">// 1</span></div><div class="line">System.out.println(s.name());    <span class="comment">// Daily</span></div><div class="line"></div><div class="line"><span class="comment">// ### Create enum from ordinal ###</span></div><div class="line">ScheduledAction s = ScheduledAction.values()[<span class="number">1</span>];</div><div class="line"></div><div class="line"><span class="comment">// ### Create enum from String ###</span></div><div class="line">s = ScheduleType.valueOf(<span class="string">"Hourly"</span>);</div></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -4903,7 +4903,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Design Pattern - Factory Pattern]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/03/30/best%20practices/design%20pattern/Design-Pattern-Factory-Pattern/</url>
+      <url>https://phoenixjiangnan.github.io/2016/03/30/best%20practices/design%20pattern/Design-Pattern-Factory-Pattern/</url>
       <content type="html"><![CDATA[<h2 id="Use-Scenario"><a href="#Use-Scenario" class="headerlink" title="Use Scenario:"></a>Use Scenario:</h2><ul>
 <li>When you want to create objects implementing some interface, or having the same parent</li>
 <li>Creating an object is complex, e.g. lots of constructor parameters</li>
@@ -4933,7 +4933,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Design Pattern - Abstract Factory Pattern]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/03/30/best%20practices/design%20pattern/Design-Pattern-Abstract-Factory-Pattern/</url>
+      <url>https://phoenixjiangnan.github.io/2016/03/30/best%20practices/design%20pattern/Design-Pattern-Abstract-Factory-Pattern/</url>
       <content type="html"><![CDATA[<p>Abstract Factory patterns work around  <code>a super-factory which creates other factories</code>. This factory is also called as <code>factory of factories</code>. This type of design pattern comes under creational pattern as this pattern provides one of the best ways to create an object.</p>
 <p>In Abstract Factory pattern, <code>an interface is responsible for creating a factory of related objects without explicitly specifying their classes</code>. Each generated factory can give the objects as per the Factory pattern.</p>
 <h3 id="E-g-1"><a href="#E-g-1" class="headerlink" title="E.g. 1"></a>E.g. 1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Shape</span> </span>&#123;</div><div class="line">   <span class="function"><span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -4952,7 +4952,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Design Pattern - Builder Pattern]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/03/30/best%20practices/design%20pattern/Design-Pattern-Builder-Pattern/</url>
+      <url>https://phoenixjiangnan.github.io/2016/03/30/best%20practices/design%20pattern/Design-Pattern-Builder-Pattern/</url>
       <content type="html"><![CDATA[<p>The builder pattern is an object creation software design pattern. </p>
 <blockquote>
 <p>Unlike the <code>abstract factory pattern</code> and the <code>factory method pattern</code> whose intention is to enable polymorphism, the intention of the builder pattern is to </p>
@@ -4972,7 +4972,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Guava - Cache]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/03/30/java/guava/Guava-Cache/</url>
+      <url>https://phoenixjiangnan.github.io/2016/03/30/java/guava/Guava-Cache/</url>
       <content type="html"><![CDATA[<h1 id="Google-Guava"><a href="#Google-Guava" class="headerlink" title="Google Guava"></a><a href="https://github.com/google/guava/wiki/CachesExplained" target="_blank" rel="external">Google Guava</a></h1><ol>
 <li>Cache Heating<ul>
 <li><code>Pre-loading</code> v.s. <code>Non-loading</code></li>
@@ -5050,7 +5050,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Markdown - Markdown tutorial - how to write in Markdown]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/03/28/tools/markdown/Markdown-Markdown-tutorial-how-to-write-in-Markdown/</url>
+      <url>https://phoenixjiangnan.github.io/2016/03/28/tools/markdown/Markdown-Markdown-tutorial-how-to-write-in-Markdown/</url>
       <content type="html"><![CDATA[<h1 id="MD-tutorial"><a href="#MD-tutorial" class="headerlink" title="MD tutorial"></a>MD tutorial</h1><p>标签（空格分隔）： backbone</p>
 <hr>
 <h1 id="欢迎使用-Cmd-Markdown-编辑阅读器"><a href="#欢迎使用-Cmd-Markdown-编辑阅读器" class="headerlink" title="欢迎使用 Cmd Markdown 编辑阅读器"></a>欢迎使用 Cmd Markdown 编辑阅读器</h1><hr>
@@ -5108,7 +5108,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Cache - Design a distributed cache system]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/03/27/system%20design/cache/Cache-Design-a-distributed-cache-system/</url>
+      <url>https://phoenixjiangnan.github.io/2016/03/27/system%20design/cache/Cache-Design-a-distributed-cache-system/</url>
       <content type="html"><![CDATA[<p>Here’s <a href="http://jimwebber.org/2011/02/scaling-neo4j-with-cache-sharding-and-neo4j-ha/" target="_blank" rel="external">A blog</a> talking about the cache sharding mechanism for Neo4j.</p>
 <p>The way that </p>
 <a id="more"></a> 
@@ -5117,7 +5117,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Cache - Best practices to design cache system for your system]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/03/27/system%20design/cache/Cache-Best-Practices-to-design-cache-system-for-your-system/</url>
+      <url>https://phoenixjiangnan.github.io/2016/03/27/system%20design/cache/Cache-Best-Practices-to-design-cache-system-for-your-system/</url>
       <content type="html"><![CDATA[<p>In this post, we are gonna discuss some best practices when you design a local cache. Another post ‘System Design: Cache - design a distributed cache system’ will talk about designing a distributed cache system or cluster.</p>
 <h2 id="1-A-key-value-collection-is-not-a-Cache"><a href="#1-A-key-value-collection-is-not-a-Cache" class="headerlink" title="1. A key/value collection is not a Cache"></a>1. A key/value collection is not a Cache</h2><p>Almost all projects I worked on have been using some sort of custom caching solutions, built on top of Java Maps. A Map is not an out-of-the-box Caching solution, since a Cache is more than a key/value store. And it’s defninitely more complicated that the general LRU cache implementation you ran into in interviewing. </p>
 <p>A Cache also requires:</p>
@@ -5161,7 +5161,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Spring - Factory Pattern]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/03/27/spring/Spring-Factory-Pattern/</url>
+      <url>https://phoenixjiangnan.github.io/2016/03/27/spring/Spring-Factory-Pattern/</url>
       <content type="html"><![CDATA[<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">ITemplate</span> </span>&#123;</div><div class="line">    <span class="function">String <span class="title">generateSubject</span><span class="params">()</span></span>;</div><div class="line">    <span class="function">String <span class="title">generateBody</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Component</span>(<span class="string">"Server"</span>)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ServerTemplate</span> <span class="keyword">implements</span> <span class="title">ITemplate</span> </span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">generateSubject</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">"server subject"</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">generateBody</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">"server body"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">@Component</span>(<span class="string">"Client"</span>)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ClientTemplate</span> <span class="keyword">implements</span> <span class="title">ITemplate</span> </span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">generateSubject</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">"client subject"</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">generateBody</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">"client body"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Factory</span></div><div class="line"><span class="meta">@Configuration</span></div><div class="line"><span class="meta">@ComponentScan</span>(<span class="string">"template"</span>)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TemplateFactory</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Bean</span>(name = <span class="string">"Server"</span>)</div><div class="line">    <span class="function"><span class="keyword">public</span> ITemplate <span class="title">getServerTemplate</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ServerTemplate();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Bean</span>(name = <span class="string">"Client"</span>)</div><div class="line">    <span class="function"><span class="keyword">public</span> ITemplate <span class="title">getClientTemplate</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ClientTemplate();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> ITemplate <span class="title">getTemplate</span><span class="params">(Type type)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span>(type == Type.Server) &#123;</div><div class="line">            <span class="keyword">return</span> getServerTemplate();</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span>(type == Type.Client) &#123;</div><div class="line">            <span class="keyword">return</span> getClientTemplate();</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -5171,7 +5171,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Spring - Dynamic DataSource]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/03/25/spring/Spring-Dynamic-Datasource/</url>
+      <url>https://phoenixjiangnan.github.io/2016/03/25/spring/Spring-Dynamic-Datasource/</url>
       <content type="html"><![CDATA[<p>Recently I was involved in a project that requires dynamic determining data sources between multiple PostgreSQL databases. The use case is that, after the primary database fails over to a secondary one, applications should be able to switch their jdbc connections to the new primary dynamically at runtime.</p>
 <p>I found this blog quite useful as an entry point for the dynamic datasource domain <a href="http://spring.io/blog/2007/01/23/dynamic-datasource-routing/" target="_blank" rel="external">http://spring.io/blog/2007/01/23/dynamic-datasource-routing/</a></p>
 <blockquote>
@@ -5197,7 +5197,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Java 8 Method Reference]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/03/05/java/java%208/lambda/Java-8-Method-Reference/</url>
+      <url>https://phoenixjiangnan.github.io/2016/03/05/java/java%208/lambda/Java-8-Method-Reference/</url>
       <content type="html"><![CDATA[<p>You use lambda expressions to create anonymous methods. Sometimes, however, a lambda expression does nothing but call an existing method. In those cases, it’s often clearer to refer to the existing method by name. Method references enable you to do this; they are compact, easy-to-read lambda expressions for methods that already have a name.</p>
 <h1 id="What-is-Method-References"><a href="#What-is-Method-References" class="headerlink" title="What is Method References?"></a>What is Method References?</h1><p>It is a feature which is related to Lambda Expression. It allows us to reference constructors or methods without executing them. Method references and Lambda are similar in that they both require a target type that consist of a compatible functional interface.</p>
 <h1 id="Types-of-Method-Reference"><a href="#Types-of-Method-Reference" class="headerlink" title="Types of Method Reference"></a>Types of Method Reference</h1><p>There are four types of method reference, the table below summarizes this.</p>
@@ -5256,7 +5256,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Merkle Tree and Anti-Entropy]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/02/16/distributed%20system/algorithems/Merkle-Tree-and-Anti-Entropy/</url>
+      <url>https://phoenixjiangnan.github.io/2016/02/16/distributed%20system/algorithems/Merkle-Tree-and-Anti-Entropy/</url>
       <content type="html"><![CDATA[<p><a href="http://www.slideshare.net/quipo/modern-algorithms-and-data-structures-1-bloom-filters-merkle-trees" target="_blank" rel="external">http://www.slideshare.net/quipo/modern-algorithms-and-data-structures-1-bloom-filters-merkle-trees</a></p>
 <p><a href="http://thornydev.blogspot.com/2015/06/merkle-tree.html" target="_blank" rel="external">http://thornydev.blogspot.com/2015/06/merkle-tree.html</a><br><a href="https://github.com/apache/cassandra/blob/4a748f31599b7add59c522e72f0b52d372351041/src/java/org/apache/cassandra/utils/MerkleTrees.java" target="_blank" rel="external">https://github.com/apache/cassandra/blob/4a748f31599b7add59c522e72f0b52d372351041/src/java/org/apache/cassandra/utils/MerkleTrees.java</a><br><a href="https://github.com/apache/cassandra/blob/05de664acd369d98154148dbf441accfa7f0552c/src/java/org/apache/cassandra/utils/MerkleTree.java" target="_blank" rel="external">https://github.com/apache/cassandra/blob/05de664acd369d98154148dbf441accfa7f0552c/src/java/org/apache/cassandra/utils/MerkleTree.java</a><br><a href="http://adc.sourceforge.net/draft-jchapweske-thex-02.html" target="_blank" rel="external">http://adc.sourceforge.net/draft-jchapweske-thex-02.html</a></p>
 <h1 id="1-Merkle-Tree"><a href="#1-Merkle-Tree" class="headerlink" title="1. Merkle Tree"></a>1. Merkle Tree</h1><p>Merkle trees are typically implemented as <code>binary trees</code> where<br>1) each non-leaf node is a hash of the two nodes below it<br>2) The leaves can either be the data itself or a hash/signature of the data.</p>
@@ -5367,7 +5367,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Cassandra V.S. HBase]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/02/10/distributed%20system/nosql/Cassandra-V-S-HBase/</url>
+      <url>https://phoenixjiangnan.github.io/2016/02/10/distributed%20system/nosql/Cassandra-V-S-HBase/</url>
       <content type="html"><![CDATA[<blockquote>
 <ul>
 <li>Cassandra satisfies the <code>Availability</code> and <code>Partition Tolerance</code> properties. Its consistency model is <code>Eventual consistency</code></li>
@@ -5436,7 +5436,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Gossip Protocol]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/02/08/distributed%20system/high%20availibility/Gossip-Protocol/</url>
+      <url>https://phoenixjiangnan.github.io/2016/02/08/distributed%20system/high%20availibility/Gossip-Protocol/</url>
       <content type="html"><![CDATA[<h1 id="Gossip-protocol"><a href="#Gossip-protocol" class="headerlink" title="Gossip protocol"></a>Gossip protocol</h1><p>A gossip protocol is a style of computer-to-computer communication protocol inspired by the form of gossip seen in social networks. Modern distributed systems often use gossip protocols to solve problems that might be difficult to solve in other ways, either because the underlying network has an inconvenient structure and is extremely large, or because gossip solutions are the most efficient ones available.</p>
 <p>The term <code>epidemic protocol</code> is sometimes used as a synonym for a gossip protocol, because gossip spreads information in a manner similar to the spread of a virus in a biological community.</p>
 <h1 id="Gossip-communication"><a href="#Gossip-communication" class="headerlink" title="Gossip communication"></a>Gossip communication</h1><p>The concept of <code>gossip communication</code> can be illustrated by the analogy of office workers spreading rumors. Let’s say each hour the office workers congregate around the water cooler. Each employee pairs off with another, chosen at random, and shares the latest gossip. At the start of the day, Alice starts a new rumor: she comments to Bob that she believes that Charlie dyes his mustache. At the next meeting, Bob tells Dave, while Alice repeats the idea to Eve. After each water cooler rendezvous, the number of individuals who have heard the rumor roughly doubles (though this doesn’t account for gossiping twice to the same person; perhaps Alice tries to tell the story to Frank, only to find that Frank already heard it from Dave). Computer systems typically implement this type of protocol with a form of random “peer selection”: with a given frequency, each machine picks another machine at random and shares any hot rumors.</p>
@@ -5458,7 +5458,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Java 8 Stream]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/02/06/java/java%208/stream/Java-8-Stream/</url>
+      <url>https://phoenixjiangnan.github.io/2016/02/06/java/java%208/stream/Java-8-Stream/</url>
       <content type="html"><![CDATA[<h1 id="Package-java-util-stream"><a href="#Package-java-util-stream" class="headerlink" title="Package - java.util.stream"></a>Package - java.util.stream</h1><p>Classes to support functional-style operations on streams of elements, such as map-reduce transformations on collections.</p>
 <p>For example:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> sum = widgets.stream()</div><div class="line">           .filter(b -&gt; b.getColor() == RED)</div><div class="line">           .mapToInt(b -&gt; b.getWeight())</div><div class="line">           .sum();</div></pre></td></tr></table></figure>
@@ -5622,7 +5622,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Java - String Formatting]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/02/04/java/Java-String-Formatting/</url>
+      <url>https://phoenixjiangnan.github.io/2016/02/04/java/Java-String-Formatting/</url>
       <content type="html"><![CDATA[<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">System.out.println(String.format(<span class="string">"Int: %d"</span>, <span class="number">100</span>));</div><div class="line">System.out.println(String.format(<span class="string">"Int: %08d"</span>, <span class="number">100</span>));  <span class="comment">// 00000100</span></div><div class="line"></div><div class="line">System.out.println(String.format(<span class="string">"Float: %f"</span>, <span class="number">100.111</span>));  <span class="comment">// 100.111000</span></div><div class="line">System.out.println(String.format(<span class="string">"Float: %.2f"</span>, <span class="number">100.111</span>));  <span class="comment">// 100.11</span></div><div class="line"></div><div class="line">System.out.println(String.format(<span class="string">"String: %s"</span>, <span class="string">"a string"</span>));</div><div class="line"></div><div class="line">Date today = <span class="keyword">new</span> Date();</div><div class="line">System.out.println(String.format(<span class="string">"Date: %tD"</span>, today));  <span class="comment">// Date: 04/06/15</span></div><div class="line">System.out.println(String.format(<span class="string">"Date mm/dd/yy: %tm/%td/%ty"</span>, today, today, today));  <span class="comment">// Date mm/dd/yy: 04/06/15</span></div><div class="line">System.out.println(String.format(<span class="string">"Date: %tc"</span>, today));  <span class="comment">// Date: Mon Apr 06 09:10:47 PDT 2015</span></div></pre></td></tr></table></figure>
 <a id="more"></a>
 ]]></content>
@@ -5630,7 +5630,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Java 8 Lambda Expression]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/02/01/java/java%208/lambda/Java-8-Lambda-Expression/</url>
+      <url>https://phoenixjiangnan.github.io/2016/02/01/java/java%208/lambda/Java-8-Lambda-Expression/</url>
       <content type="html"><![CDATA[<p><a href="http://examples.javacodegeeks.com/java-basics/lambdas/java-8-lambda-expressions-tutorial/" target="_blank" rel="external">http://examples.javacodegeeks.com/java-basics/lambdas/java-8-lambda-expressions-tutorial/</a></p>
 <h1 id="Lambdas"><a href="#Lambdas" class="headerlink" title="Lambdas?"></a>Lambdas?</h1><p>A Lambda, in general, is <code>a function that expects and accepts input parameters and produce output results</code> (it may also produce some collateral changes).</p>
 <p>Java offers Lambdas as one of its main new features since Java 8.</p>
@@ -5689,7 +5689,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Java 8 Functional Interface]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/02/01/java/java%208/lambda/Java-8-Functional-Interface/</url>
+      <url>https://phoenixjiangnan.github.io/2016/02/01/java/java%208/lambda/Java-8-Functional-Interface/</url>
       <content type="html"><![CDATA[<h1 id="Java-8-Built-in-Interface-Summary"><a href="#Java-8-Built-in-Interface-Summary" class="headerlink" title="Java 8 Built-in Interface    Summary"></a>Java 8 Built-in Interface    Summary</h1><p><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html" target="_blank" rel="external">Java 8 functional interface summary</a></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">Consumer&lt;T&gt;</div><div class="line"><span class="comment">// An operation that accepts a single input argument and returns no result.</span></div><div class="line">BiConsumer&lt;T,U&gt;	</div><div class="line"><span class="comment">// An operation that accepts two input arguments and returns no result.</span></div><div class="line"></div><div class="line"><span class="comment">//--------------</span></div><div class="line">Function&lt;T,R&gt;</div><div class="line"><span class="comment">// A function that accepts one argument and produces a result.</span></div><div class="line">BiFunction&lt;T,U,R&gt;</div><div class="line"><span class="comment">// A function that accepts two arguments and produces a result.</span></div><div class="line"></div><div class="line"><span class="comment">//--------------</span></div><div class="line">UnaryOperator&lt;T&gt;</div><div class="line"><span class="comment">// An operation on a single operand that produces a result of the same type as its operand.</span></div><div class="line">BinaryOperator&lt;T&gt;</div><div class="line"><span class="comment">// An operation upon two operands of the same type, producing a result of the same type as the operands.</span></div><div class="line"></div><div class="line"><span class="comment">//--------------</span></div><div class="line">Predicate&lt;T&gt;</div><div class="line"><span class="comment">// A predicate (boolean-valued function) of one argument.</span></div><div class="line">BiPredicate&lt;T,U&gt;</div><div class="line"><span class="comment">// A predicate (boolean-valued function) of two arguments.</span></div><div class="line"></div><div class="line"><span class="comment">//--------------</span></div><div class="line">Supplier&lt;T&gt;</div><div class="line"><span class="comment">// A supplier of results.</span></div><div class="line">BooleanSupplier</div><div class="line"><span class="comment">// A supplier of boolean-valued results.</span></div></pre></td></tr></table></figure>
 <h1 id="What-is-a-functional-interface"><a href="#What-is-a-functional-interface" class="headerlink" title="What is a functional interface"></a>What is a functional interface</h1><ul>
@@ -5721,7 +5721,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Java 8 Functional Interface - Consumer and BiConsumber]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Consumer-and-BiConsumber/</url>
+      <url>https://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Consumer-and-BiConsumber/</url>
       <content type="html"><![CDATA[<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@FunctionalInterface</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Consumer</span>&lt;<span class="title">T</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>Represents an operation that accepts a single input argument and returns no result. </p>
 <p>Unlike most other functional interfaces, Consumer is expected to operate via side-effects.</p>
@@ -5735,7 +5735,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Java 8 Functional Interface - Supplier]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Supplier/</url>
+      <url>https://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Supplier/</url>
       <content type="html"><![CDATA[<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@FunctionalInterface</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Supplier</span>&lt;<span class="title">T</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>Represents a supplier of results.<br>There is no requirement that a new or distinct result be returned each time the supplier is invoked.</p>
 <p>This is a functional interface whose functional method is <code>get()</code>.</p>
@@ -5748,7 +5748,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Java 8 Functional Interface - Function and BiFunction]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Function-and-BiFunction/</url>
+      <url>https://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Function-and-BiFunction/</url>
       <content type="html"><![CDATA[<h1 id="Function-interface"><a href="#Function-interface" class="headerlink" title="Function interface"></a>Function interface</h1><p>This is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@FunctionalInterface</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Function</span>&lt;<span class="title">T</span>,<span class="title">R</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>Represents a function that accepts one argument and produces a result.</p>
@@ -5777,7 +5777,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Java 8 Functional Interface - Predicate and BiPredicate]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Predicate-and-BiPredicate/</url>
+      <url>https://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Predicate-and-BiPredicate/</url>
       <content type="html"><![CDATA[<h1 id="Predicate"><a href="#Predicate" class="headerlink" title="Predicate"></a>Predicate</h1><p>Represents a predicate (boolean-valued function) of one argument.</p>
 <p>This is a functional interface whose functional method is test(Object).</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@FunctionalInterface</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Predicate</span>&lt;<span class="title">T</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -5796,7 +5796,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Google Guava EventBus - an Easy and Elegant Way for Your Publisher - Subscriber Use Cases]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/01/29/java/guava/Guava-EventBus/</url>
+      <url>https://phoenixjiangnan.github.io/2016/01/29/java/guava/Guava-EventBus/</url>
       <content type="html"><![CDATA[<p><a href="http://tomaszdziurko.pl/2012/01/google-guava-eventbus-easy-elegant-publisher-subscriber-cases/" target="_blank" rel="external">http://tomaszdziurko.pl/2012/01/google-guava-eventbus-easy-elegant-publisher-subscriber-cases/</a></p>
 <p>Google Guava in version number 10 introduced new package eventbus with a few very interesting classes to deal with listener (or publisher – subscriber) use case. Below I present my short introduction to EventBus class and its family.</p>
 <h2 id="Constructor"><a href="#Constructor" class="headerlink" title="Constructor"></a>Constructor</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">EventBus()                                              # Creates a new EventBus named &quot;default&quot;.</div><div class="line">EventBus(String identifier)                             # Creates a new EventBus with the given identifier.</div><div class="line">EventBus(SubscriberExceptionHandler exceptionHandler)   # Creates a new EventBus with the given SubscriberExceptionHandler.</div></pre></td></tr></table></figure>
@@ -5832,7 +5832,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Logging]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/01/26/best%20practices/Logging/</url>
+      <url>https://phoenixjiangnan.github.io/2016/01/26/best%20practices/Logging/</url>
       <content type="html"><![CDATA[<h2 id="Apache-log4j-and-commons-logging"><a href="#Apache-log4j-and-commons-logging" class="headerlink" title="Apache log4j and commons-logging"></a>Apache log4j and commons-logging</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> org.apache.log4j.Logger;</div><div class="line"></div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> Logger s_logger = Logger.getLogger(FileStoreMonitor.class);</div></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> org.apache.commons.logging.Log;</div><div class="line"><span class="keyword">import</span> org.apache.commons.logging.LogFactory;</div><div class="line"></div><div class="line">	<span class="keyword">protected</span> Log m_logger = LogFactory.getLog( <span class="keyword">this</span>.getClass() );</div></pre></td></tr></table></figure>
 <ul>
@@ -5864,7 +5864,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Hexo - Hexo commands]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/01/24/hexo/Hexo-Hexo-commands/</url>
+      <url>https://phoenixjiangnan.github.io/2016/01/24/hexo/Hexo-Hexo-commands/</url>
       <content type="html"><![CDATA[<h2 id="Most-Frequently-Used"><a href="#Most-Frequently-Used" class="headerlink" title="Most Frequently Used"></a>Most Frequently Used</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;postName&quot; 		# new post</div><div class="line">hexo new page &quot;pageName&quot; 	# new page</div><div class="line">hexo generate 				# generate static pages to dir &apos;public&apos;</div><div class="line">hexo server 				# start on localhost with default port 4000</div><div class="line">hexo deploy 	# deploy to github or git</div></pre></td></tr></table></figure>
 <h2 id="Chained-Commands"><a href="#Chained-Commands" class="headerlink" title="Chained Commands"></a>Chained Commands</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo d -g 	# generate content and deploy</div><div class="line">hexo s -g 	# generate content and preview locally</div></pre></td></tr></table></figure>
 <h2 id="Brevity"><a href="#Brevity" class="headerlink" title="Brevity"></a>Brevity</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo n == hexo new</div><div class="line">hexo g == hexo generate</div><div class="line">hexo s == hexo server</div><div class="line">hexo d == hexo deploy</div></pre></td></tr></table></figure>
@@ -5873,7 +5873,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Hexo - How to install Hexo on Mac with github pages]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2016/01/23/hexo/Hexo-How-to-install-hexo-on-Mac-with-github-pages/</url>
+      <url>https://phoenixjiangnan.github.io/2016/01/23/hexo/Hexo-How-to-install-hexo-on-Mac-with-github-pages/</url>
       <content type="html"><![CDATA[<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul>
 <li><a href="http://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="external">http://www.jianshu.com/p/05289a4bc8b2</a></li>
 </ul>
@@ -5926,7 +5926,7 @@ classes</code>. The compareAndSet method is not a general replacement for<br>loc
     
     <entry>
       <title><![CDATA[Data Strucutre - Array]]></title>
-      <url>https://phoenixjiangnan.github.iohttps://phoenixjiangnan.github.io/2015/04/08/data%20structures%20and%20algorithms/Array/</url>
+      <url>https://phoenixjiangnan.github.io/2015/04/08/data%20structures%20and%20algorithms/Array/</url>
       <content type="html"><![CDATA[<p>This tutorial is what I used to learn Java at the beginning. I still feel it’s useful though sometimes…</p>
 <h2 id="one-dimendinal-array"><a href="#one-dimendinal-array" class="headerlink" title="one-dimendinal array"></a>one-dimendinal array</h2><p>Format 1</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">TYPE[] NAME = <span class="keyword">new</span> TYPE[size];</div><div class="line"></div><div class="line"><span class="keyword">int</span>[] arr = <span class="keyword">new</span> arr[<span class="number">5</span>];</div></pre></td></tr></table></figure>

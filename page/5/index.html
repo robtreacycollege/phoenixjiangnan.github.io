@@ -29,7 +29,7 @@
 
   
   
-  <link href="https:/phoenixjiangnan.github.io/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -63,9 +63,9 @@
 
 
 
-<link href="https:/phoenixjiangnan.github.io/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="https:/phoenixjiangnan.github.io/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Hexo, welcome to Bowen's blog" />
@@ -74,12 +74,12 @@
 
 
 
-  <link rel="alternate" href="https:/phoenixjiangnan.github.io/atom.xml" title="Bowen's blog" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="Bowen's blog" type="application/atom+xml" />
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="https:/phoenixjiangnan.github.io/favicon.ico?v=5.0.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
 
 
@@ -148,7 +148,7 @@
   
 
   <div class="custom-logo-site-title">
-    <a href="https://phoenixjiangnan.github.io/"  class="brand" rel="start">
+    <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">Bowen's blog</span>
       <span class="logo-line-after"><i></i></span>
@@ -175,7 +175,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="https:/phoenixjiangnan.github.io/" rel="section">
+          <a href="/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -285,7 +285,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/03/30/best practices/design pattern/Enum-and-EnumSet/" itemprop="url">
+                <a class="post-title-link" href="/2016/03/30/best practices/design pattern/Enum-and-EnumSet/" itemprop="url">
                   Design Pattern - Enum and EnumSet
                 </a>
               
@@ -313,7 +313,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/best-practice/" itemprop="url" rel="index">
+                  <a href="/categories/best-practice/" itemprop="url" rel="index">
                     <span itemprop="name">best practice</span>
                   </a>
                 </span>
@@ -325,7 +325,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/best-practice/design-pattern/" itemprop="url" rel="index">
+                  <a href="/categories/best-practice/design-pattern/" itemprop="url" rel="index">
                     <span itemprop="name">design pattern</span>
                   </a>
                 </span>
@@ -341,7 +341,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/03/30/best practices/design pattern/Enum-and-EnumSet/#comments" itemprop="discussionUrl">
+                <a href="/2016/03/30/best practices/design pattern/Enum-and-EnumSet/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/30/best practices/design pattern/Enum-and-EnumSet/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -369,7 +369,7 @@
           <h1 id="Enum"><a href="#Enum" class="headerlink" title="Enum"></a>Enum</h1><h2 id="Enum-with-Single-Value"><a href="#Enum-with-Single-Value" class="headerlink" title="Enum with Single Value"></a>Enum with Single Value</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">enum</span> ScheduleType &#123;</div><div class="line">    Hourly(<span class="number">0</span>), Daily(<span class="number">1</span>), Weekly(<span class="number">2</span>), Monthly(<span class="number">3</span>);</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> m_type;</div><div class="line"></div><div class="line">    ScheduleType(<span class="keyword">int</span> type) &#123;</div><div class="line">        m_type = type;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getType</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> m_type;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">ScheduleType s = ScheduleType.Daily;</div><div class="line">System.out.println(s.getType()); <span class="comment">// 1</span></div><div class="line">System.out.println(s.name());    <span class="comment">// Daily</span></div><div class="line"></div><div class="line"><span class="comment">// ### Create enum from ordinal ###</span></div><div class="line">ScheduledAction s = ScheduledAction.values()[<span class="number">1</span>];</div><div class="line"></div><div class="line"><span class="comment">// ### Create enum from String ###</span></div><div class="line">s = ScheduleType.valueOf(<span class="string">"Hourly"</span>);</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/03/30/best practices/design pattern/Enum-and-EnumSet/#more" rel="contents">
+            <a class="btn" href="/2016/03/30/best practices/design pattern/Enum-and-EnumSet/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -420,7 +420,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/03/30/best practices/design pattern/Design-Pattern-Factory-Pattern/" itemprop="url">
+                <a class="post-title-link" href="/2016/03/30/best practices/design pattern/Design-Pattern-Factory-Pattern/" itemprop="url">
                   Design Pattern - Factory Pattern
                 </a>
               
@@ -448,7 +448,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/best-practice/" itemprop="url" rel="index">
+                  <a href="/categories/best-practice/" itemprop="url" rel="index">
                     <span itemprop="name">best practice</span>
                   </a>
                 </span>
@@ -460,7 +460,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/best-practice/design-pattern/" itemprop="url" rel="index">
+                  <a href="/categories/best-practice/design-pattern/" itemprop="url" rel="index">
                     <span itemprop="name">design pattern</span>
                   </a>
                 </span>
@@ -476,7 +476,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/03/30/best practices/design pattern/Design-Pattern-Factory-Pattern/#comments" itemprop="discussionUrl">
+                <a href="/2016/03/30/best practices/design pattern/Design-Pattern-Factory-Pattern/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/30/best practices/design pattern/Design-Pattern-Factory-Pattern/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -511,7 +511,7 @@
 </ul>
 <h3 id="E-g-1"><a href="#E-g-1" class="headerlink" title="E.g. 1"></a>E.g. 1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Interface</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Animal</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">speak</span><span class="params">()</span></span>;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</div><div class="line">* Imagine that this class requires lots of </div><div class="line">* configuration before use, e.g. via constructor parameters</div><div class="line">*/</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Cat</span> <span class="keyword">implements</span> <span class="title">Animal</span> <span class="keyword">extends</span> <span class="title">AbstractAnimal</span></span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">speak</span><span class="params">()</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"cat"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">implements</span> <span class="title">Animal</span> <span class="keyword">extends</span> <span class="title">AbstractAnimal</span></span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">speak</span><span class="params">()</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"dog"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/03/30/best practices/design pattern/Design-Pattern-Factory-Pattern/#more" rel="contents">
+            <a class="btn" href="/2016/03/30/best practices/design pattern/Design-Pattern-Factory-Pattern/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -562,7 +562,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/03/30/best practices/design pattern/Design-Pattern-Abstract-Factory-Pattern/" itemprop="url">
+                <a class="post-title-link" href="/2016/03/30/best practices/design pattern/Design-Pattern-Abstract-Factory-Pattern/" itemprop="url">
                   Design Pattern - Abstract Factory Pattern
                 </a>
               
@@ -590,7 +590,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/best-practice/" itemprop="url" rel="index">
+                  <a href="/categories/best-practice/" itemprop="url" rel="index">
                     <span itemprop="name">best practice</span>
                   </a>
                 </span>
@@ -602,7 +602,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/best-practice/design-pattern/" itemprop="url" rel="index">
+                  <a href="/categories/best-practice/design-pattern/" itemprop="url" rel="index">
                     <span itemprop="name">design pattern</span>
                   </a>
                 </span>
@@ -618,7 +618,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/03/30/best practices/design pattern/Design-Pattern-Abstract-Factory-Pattern/#comments" itemprop="discussionUrl">
+                <a href="/2016/03/30/best practices/design pattern/Design-Pattern-Abstract-Factory-Pattern/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/30/best practices/design pattern/Design-Pattern-Abstract-Factory-Pattern/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -648,7 +648,7 @@
 <h3 id="E-g-1"><a href="#E-g-1" class="headerlink" title="E.g. 1"></a>E.g. 1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Shape</span> </span>&#123;</div><div class="line">   <span class="function"><span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Rectangle</span> <span class="keyword">implements</span> <span class="title">Shape</span> </span>&#123;</div><div class="line">   <span class="meta">@Override</span></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span> </span>&#123;</div><div class="line">      System.out.println(<span class="string">"Inside Rectangle::draw() method."</span>);</div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Square</span> <span class="keyword">implements</span> <span class="title">Shape</span> </span>&#123;</div><div class="line">   <span class="meta">@Override</span></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span> </span>&#123;</div><div class="line">      System.out.println(<span class="string">"Inside Square::draw() method."</span>);</div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Circle</span> <span class="keyword">implements</span> <span class="title">Shape</span> </span>&#123;</div><div class="line">   <span class="meta">@Override</span></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span> </span>&#123;</div><div class="line">      System.out.println(<span class="string">"Inside Circle::draw() method."</span>);</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/03/30/best practices/design pattern/Design-Pattern-Abstract-Factory-Pattern/#more" rel="contents">
+            <a class="btn" href="/2016/03/30/best practices/design pattern/Design-Pattern-Abstract-Factory-Pattern/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -699,7 +699,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/03/30/best practices/design pattern/Design-Pattern-Builder-Pattern/" itemprop="url">
+                <a class="post-title-link" href="/2016/03/30/best practices/design pattern/Design-Pattern-Builder-Pattern/" itemprop="url">
                   Design Pattern - Builder Pattern
                 </a>
               
@@ -727,7 +727,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/best-practice/" itemprop="url" rel="index">
+                  <a href="/categories/best-practice/" itemprop="url" rel="index">
                     <span itemprop="name">best practice</span>
                   </a>
                 </span>
@@ -739,7 +739,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/best-practice/design-pattern/" itemprop="url" rel="index">
+                  <a href="/categories/best-practice/design-pattern/" itemprop="url" rel="index">
                     <span itemprop="name">design pattern</span>
                   </a>
                 </span>
@@ -755,7 +755,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/03/30/best practices/design pattern/Design-Pattern-Builder-Pattern/#comments" itemprop="discussionUrl">
+                <a href="/2016/03/30/best practices/design pattern/Design-Pattern-Builder-Pattern/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/30/best practices/design pattern/Design-Pattern-Builder-Pattern/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -793,7 +793,7 @@
 <p>The builder pattern has another benefit. It can be used for objects that contain flat data (html code, SQL query, X.509 certificate…), that is to say, data that can’t be easily edited. This type of data cannot be edited step by step and must be edited at once. The best way to construct such an object is to use a builder class.</p>
 <p>Builder often builds a Composite. Often, designs start out using Factory Method (less complicated, more customizable, subclasses proliferate) and evolve toward Abstract Factory, Prototype, or Builder (more flexible, more complex) as the designer discovers where more flexibility is needed. Sometimes creational patterns are complementary: Builder can use one of the other patterns to implement which components are built. Builders are good candidates for a fluent interface.</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/03/30/best practices/design pattern/Design-Pattern-Builder-Pattern/#more" rel="contents">
+            <a class="btn" href="/2016/03/30/best practices/design pattern/Design-Pattern-Builder-Pattern/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -844,7 +844,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/03/30/java/guava/Guava-Cache/" itemprop="url">
+                <a class="post-title-link" href="/2016/03/30/java/guava/Guava-Cache/" itemprop="url">
                   Guava - Cache
                 </a>
               
@@ -872,7 +872,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/java/" itemprop="url" rel="index">
+                  <a href="/categories/java/" itemprop="url" rel="index">
                     <span itemprop="name">java</span>
                   </a>
                 </span>
@@ -884,7 +884,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/java/guava/" itemprop="url" rel="index">
+                  <a href="/categories/java/guava/" itemprop="url" rel="index">
                     <span itemprop="name">guava</span>
                   </a>
                 </span>
@@ -900,7 +900,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/03/30/java/guava/Guava-Cache/#comments" itemprop="discussionUrl">
+                <a href="/2016/03/30/java/guava/Guava-Cache/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/30/java/guava/Guava-Cache/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -994,7 +994,7 @@
 </li>
 </ol>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/03/30/java/guava/Guava-Cache/#more" rel="contents">
+            <a class="btn" href="/2016/03/30/java/guava/Guava-Cache/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1045,7 +1045,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/03/28/tools/markdown/Markdown-Markdown-tutorial-how-to-write-in-Markdown/" itemprop="url">
+                <a class="post-title-link" href="/2016/03/28/tools/markdown/Markdown-Markdown-tutorial-how-to-write-in-Markdown/" itemprop="url">
                   Markdown - Markdown tutorial - how to write in Markdown
                 </a>
               
@@ -1073,7 +1073,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/tools/" itemprop="url" rel="index">
+                  <a href="/categories/tools/" itemprop="url" rel="index">
                     <span itemprop="name">tools</span>
                   </a>
                 </span>
@@ -1085,7 +1085,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/tools/markdown/" itemprop="url" rel="index">
+                  <a href="/categories/tools/markdown/" itemprop="url" rel="index">
                     <span itemprop="name">markdown</span>
                   </a>
                 </span>
@@ -1101,7 +1101,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/03/28/tools/markdown/Markdown-Markdown-tutorial-how-to-write-in-Markdown/#comments" itemprop="discussionUrl">
+                <a href="/2016/03/28/tools/markdown/Markdown-Markdown-tutorial-how-to-write-in-Markdown/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/28/tools/markdown/Markdown-Markdown-tutorial-how-to-write-in-Markdown/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -1228,7 +1228,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/03/27/system design/cache/Cache-Design-a-distributed-cache-system/" itemprop="url">
+                <a class="post-title-link" href="/2016/03/27/system design/cache/Cache-Design-a-distributed-cache-system/" itemprop="url">
                   Cache - Design a distributed cache system
                 </a>
               
@@ -1256,7 +1256,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/system-design/" itemprop="url" rel="index">
+                  <a href="/categories/system-design/" itemprop="url" rel="index">
                     <span itemprop="name">system design</span>
                   </a>
                 </span>
@@ -1268,7 +1268,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/system-design/cache/" itemprop="url" rel="index">
+                  <a href="/categories/system-design/cache/" itemprop="url" rel="index">
                     <span itemprop="name">cache</span>
                   </a>
                 </span>
@@ -1284,7 +1284,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/03/27/system design/cache/Cache-Design-a-distributed-cache-system/#comments" itemprop="discussionUrl">
+                <a href="/2016/03/27/system design/cache/Cache-Design-a-distributed-cache-system/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/27/system design/cache/Cache-Design-a-distributed-cache-system/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -1312,7 +1312,7 @@
           <p>Here’s <a href="http://jimwebber.org/2011/02/scaling-neo4j-with-cache-sharding-and-neo4j-ha/">A blog</a> talking about the cache sharding mechanism for Neo4j.</p>
 <p>The way that </p>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/03/27/system design/cache/Cache-Design-a-distributed-cache-system/#more" rel="contents">
+            <a class="btn" href="/2016/03/27/system design/cache/Cache-Design-a-distributed-cache-system/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1363,7 +1363,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/03/27/system design/cache/Cache-Best-Practices-to-design-cache-system-for-your-system/" itemprop="url">
+                <a class="post-title-link" href="/2016/03/27/system design/cache/Cache-Best-Practices-to-design-cache-system-for-your-system/" itemprop="url">
                   Cache - Best practices to design cache system for your system
                 </a>
               
@@ -1391,7 +1391,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/system-design/" itemprop="url" rel="index">
+                  <a href="/categories/system-design/" itemprop="url" rel="index">
                     <span itemprop="name">system design</span>
                   </a>
                 </span>
@@ -1403,7 +1403,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/system-design/cache/" itemprop="url" rel="index">
+                  <a href="/categories/system-design/cache/" itemprop="url" rel="index">
                     <span itemprop="name">cache</span>
                   </a>
                 </span>
@@ -1419,7 +1419,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/03/27/system design/cache/Cache-Best-Practices-to-design-cache-system-for-your-system/#comments" itemprop="discussionUrl">
+                <a href="/2016/03/27/system design/cache/Cache-Best-Practices-to-design-cache-system-for-your-system/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/27/system design/cache/Cache-Best-Practices-to-design-cache-system-for-your-system/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -1532,7 +1532,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/03/27/spring/Spring-Factory-Pattern/" itemprop="url">
+                <a class="post-title-link" href="/2016/03/27/spring/Spring-Factory-Pattern/" itemprop="url">
                   Spring - Factory Pattern
                 </a>
               
@@ -1560,7 +1560,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/spring/" itemprop="url" rel="index">
+                  <a href="/categories/spring/" itemprop="url" rel="index">
                     <span itemprop="name">spring</span>
                   </a>
                 </span>
@@ -1576,7 +1576,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/03/27/spring/Spring-Factory-Pattern/#comments" itemprop="discussionUrl">
+                <a href="/2016/03/27/spring/Spring-Factory-Pattern/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/27/spring/Spring-Factory-Pattern/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -1655,7 +1655,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/03/25/spring/Spring-Dynamic-Datasource/" itemprop="url">
+                <a class="post-title-link" href="/2016/03/25/spring/Spring-Dynamic-Datasource/" itemprop="url">
                   Spring - Dynamic DataSource
                 </a>
               
@@ -1683,7 +1683,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/spring/" itemprop="url" rel="index">
+                  <a href="/categories/spring/" itemprop="url" rel="index">
                     <span itemprop="name">spring</span>
                   </a>
                 </span>
@@ -1699,7 +1699,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/03/25/spring/Spring-Dynamic-Datasource/#comments" itemprop="discussionUrl">
+                <a href="/2016/03/25/spring/Spring-Dynamic-Datasource/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/25/spring/Spring-Dynamic-Datasource/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -1733,7 +1733,7 @@
 <p>Another interesting use-case is determination of the DataSource based on some attribute of the current user’s context.</p>
 </blockquote>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/03/25/spring/Spring-Dynamic-Datasource/#more" rel="contents">
+            <a class="btn" href="/2016/03/25/spring/Spring-Dynamic-Datasource/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1784,7 +1784,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/03/05/java/java 8/lambda/Java-8-Method-Reference/" itemprop="url">
+                <a class="post-title-link" href="/2016/03/05/java/java 8/lambda/Java-8-Method-Reference/" itemprop="url">
                   Java 8 Method Reference
                 </a>
               
@@ -1812,7 +1812,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/java/" itemprop="url" rel="index">
+                  <a href="/categories/java/" itemprop="url" rel="index">
                     <span itemprop="name">java</span>
                   </a>
                 </span>
@@ -1824,7 +1824,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/java/java-8/" itemprop="url" rel="index">
+                  <a href="/categories/java/java-8/" itemprop="url" rel="index">
                     <span itemprop="name">java 8</span>
                   </a>
                 </span>
@@ -1836,7 +1836,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/java/java-8/lambda/" itemprop="url" rel="index">
+                  <a href="/categories/java/java-8/lambda/" itemprop="url" rel="index">
                     <span itemprop="name">lambda</span>
                   </a>
                 </span>
@@ -1852,7 +1852,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/03/05/java/java 8/lambda/Java-8-Method-Reference/#comments" itemprop="discussionUrl">
+                <a href="/2016/03/05/java/java 8/lambda/Java-8-Method-Reference/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/05/java/java 8/lambda/Java-8-Method-Reference/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -1912,7 +1912,7 @@
 </tbody>
 </table>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/03/05/java/java 8/lambda/Java-8-Method-Reference/#more" rel="contents">
+            <a class="btn" href="/2016/03/05/java/java 8/lambda/Java-8-Method-Reference/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1963,7 +1963,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/02/16/distributed system/algorithems/Merkle-Tree-and-Anti-Entropy/" itemprop="url">
+                <a class="post-title-link" href="/2016/02/16/distributed system/algorithems/Merkle-Tree-and-Anti-Entropy/" itemprop="url">
                   Merkle Tree and Anti-Entropy
                 </a>
               
@@ -1991,7 +1991,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/distributed-system/" itemprop="url" rel="index">
+                  <a href="/categories/distributed-system/" itemprop="url" rel="index">
                     <span itemprop="name">distributed system</span>
                   </a>
                 </span>
@@ -2003,7 +2003,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/distributed-system/algorithms/" itemprop="url" rel="index">
+                  <a href="/categories/distributed-system/algorithms/" itemprop="url" rel="index">
                     <span itemprop="name">algorithms</span>
                   </a>
                 </span>
@@ -2019,7 +2019,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/02/16/distributed system/algorithems/Merkle-Tree-and-Anti-Entropy/#comments" itemprop="discussionUrl">
+                <a href="/2016/02/16/distributed system/algorithems/Merkle-Tree-and-Anti-Entropy/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/16/distributed system/algorithems/Merkle-Tree-and-Anti-Entropy/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -2061,7 +2061,7 @@
 <p>For example, consider a file made up of four segments, S1, S2, S3, and S4. Let H() be the hash function, and ‘+’ indicate concatenation. You could take the traditional hash value:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">VALUE=H(S1+S2+S3+S4)</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/02/16/distributed system/algorithems/Merkle-Tree-and-Anti-Entropy/#more" rel="contents">
+            <a class="btn" href="/2016/02/16/distributed system/algorithems/Merkle-Tree-and-Anti-Entropy/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -2112,7 +2112,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/02/10/distributed system/nosql/Cassandra-V-S-HBase/" itemprop="url">
+                <a class="post-title-link" href="/2016/02/10/distributed system/nosql/Cassandra-V-S-HBase/" itemprop="url">
                   Cassandra V.S. HBase
                 </a>
               
@@ -2140,7 +2140,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/distributed-system/" itemprop="url" rel="index">
+                  <a href="/categories/distributed-system/" itemprop="url" rel="index">
                     <span itemprop="name">distributed system</span>
                   </a>
                 </span>
@@ -2152,7 +2152,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/distributed-system/nosql/" itemprop="url" rel="index">
+                  <a href="/categories/distributed-system/nosql/" itemprop="url" rel="index">
                     <span itemprop="name">nosql</span>
                   </a>
                 </span>
@@ -2168,7 +2168,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/02/10/distributed system/nosql/Cassandra-V-S-HBase/#comments" itemprop="discussionUrl">
+                <a href="/2016/02/10/distributed system/nosql/Cassandra-V-S-HBase/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/10/distributed system/nosql/Cassandra-V-S-HBase/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -2257,7 +2257,7 @@
 </tbody>
 </table>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/02/10/distributed system/nosql/Cassandra-V-S-HBase/#more" rel="contents">
+            <a class="btn" href="/2016/02/10/distributed system/nosql/Cassandra-V-S-HBase/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -2308,7 +2308,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/02/08/distributed system/high availibility/Gossip-Protocol/" itemprop="url">
+                <a class="post-title-link" href="/2016/02/08/distributed system/high availibility/Gossip-Protocol/" itemprop="url">
                   Gossip Protocol
                 </a>
               
@@ -2336,7 +2336,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/distributed-system/" itemprop="url" rel="index">
+                  <a href="/categories/distributed-system/" itemprop="url" rel="index">
                     <span itemprop="name">distributed system</span>
                   </a>
                 </span>
@@ -2348,7 +2348,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/distributed-system/high-availability/" itemprop="url" rel="index">
+                  <a href="/categories/distributed-system/high-availability/" itemprop="url" rel="index">
                     <span itemprop="name">high availability</span>
                   </a>
                 </span>
@@ -2364,7 +2364,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/02/08/distributed system/high availibility/Gossip-Protocol/#comments" itemprop="discussionUrl">
+                <a href="/2016/02/08/distributed system/high availibility/Gossip-Protocol/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/08/distributed system/high availibility/Gossip-Protocol/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -2406,7 +2406,7 @@
 </ul>
 </blockquote>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/02/08/distributed system/high availibility/Gossip-Protocol/#more" rel="contents">
+            <a class="btn" href="/2016/02/08/distributed system/high availibility/Gossip-Protocol/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -2457,7 +2457,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/02/06/java/java 8/stream/Java-8-Stream/" itemprop="url">
+                <a class="post-title-link" href="/2016/02/06/java/java 8/stream/Java-8-Stream/" itemprop="url">
                   Java 8 Stream
                 </a>
               
@@ -2485,7 +2485,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/java/" itemprop="url" rel="index">
+                  <a href="/categories/java/" itemprop="url" rel="index">
                     <span itemprop="name">java</span>
                   </a>
                 </span>
@@ -2497,7 +2497,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/java/java-8/" itemprop="url" rel="index">
+                  <a href="/categories/java/java-8/" itemprop="url" rel="index">
                     <span itemprop="name">java 8</span>
                   </a>
                 </span>
@@ -2509,7 +2509,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/java/java-8/stream/" itemprop="url" rel="index">
+                  <a href="/categories/java/java-8/stream/" itemprop="url" rel="index">
                     <span itemprop="name">stream</span>
                   </a>
                 </span>
@@ -2525,7 +2525,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/02/06/java/java 8/stream/Java-8-Stream/#comments" itemprop="discussionUrl">
+                <a href="/2016/02/06/java/java 8/stream/Java-8-Stream/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/06/java/java 8/stream/Java-8-Stream/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -2564,7 +2564,7 @@
 <li><code>Consumable</code>. The elements of a stream are only visited once during the life of a stream. Like an Iterator, a new stream must be generated to revisit the same elements of the source.</li>
 </ul>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/02/06/java/java 8/stream/Java-8-Stream/#more" rel="contents">
+            <a class="btn" href="/2016/02/06/java/java 8/stream/Java-8-Stream/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -2615,7 +2615,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/02/04/java/Java-String-Formatting/" itemprop="url">
+                <a class="post-title-link" href="/2016/02/04/java/Java-String-Formatting/" itemprop="url">
                   Java - String Formatting
                 </a>
               
@@ -2643,7 +2643,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/java/" itemprop="url" rel="index">
+                  <a href="/categories/java/" itemprop="url" rel="index">
                     <span itemprop="name">java</span>
                   </a>
                 </span>
@@ -2659,7 +2659,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/02/04/java/Java-String-Formatting/#comments" itemprop="discussionUrl">
+                <a href="/2016/02/04/java/Java-String-Formatting/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/04/java/Java-String-Formatting/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -2686,7 +2686,7 @@
         
           <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">System.out.println(String.format(<span class="string">"Int: %d"</span>, <span class="number">100</span>));</div><div class="line">System.out.println(String.format(<span class="string">"Int: %08d"</span>, <span class="number">100</span>));  <span class="comment">// 00000100</span></div><div class="line"></div><div class="line">System.out.println(String.format(<span class="string">"Float: %f"</span>, <span class="number">100.111</span>));  <span class="comment">// 100.111000</span></div><div class="line">System.out.println(String.format(<span class="string">"Float: %.2f"</span>, <span class="number">100.111</span>));  <span class="comment">// 100.11</span></div><div class="line"></div><div class="line">System.out.println(String.format(<span class="string">"String: %s"</span>, <span class="string">"a string"</span>));</div><div class="line"></div><div class="line">Date today = <span class="keyword">new</span> Date();</div><div class="line">System.out.println(String.format(<span class="string">"Date: %tD"</span>, today));  <span class="comment">// Date: 04/06/15</span></div><div class="line">System.out.println(String.format(<span class="string">"Date mm/dd/yy: %tm/%td/%ty"</span>, today, today, today));  <span class="comment">// Date mm/dd/yy: 04/06/15</span></div><div class="line">System.out.println(String.format(<span class="string">"Date: %tc"</span>, today));  <span class="comment">// Date: Mon Apr 06 09:10:47 PDT 2015</span></div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/02/04/java/Java-String-Formatting/#more" rel="contents">
+            <a class="btn" href="/2016/02/04/java/Java-String-Formatting/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -2737,7 +2737,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/02/01/java/java 8/lambda/Java-8-Lambda-Expression/" itemprop="url">
+                <a class="post-title-link" href="/2016/02/01/java/java 8/lambda/Java-8-Lambda-Expression/" itemprop="url">
                   Java 8 Lambda Expression
                 </a>
               
@@ -2765,7 +2765,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/java/" itemprop="url" rel="index">
+                  <a href="/categories/java/" itemprop="url" rel="index">
                     <span itemprop="name">java</span>
                   </a>
                 </span>
@@ -2777,7 +2777,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/java/java-8/" itemprop="url" rel="index">
+                  <a href="/categories/java/java-8/" itemprop="url" rel="index">
                     <span itemprop="name">java 8</span>
                   </a>
                 </span>
@@ -2789,7 +2789,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/java/java-8/lambda/" itemprop="url" rel="index">
+                  <a href="/categories/java/java-8/lambda/" itemprop="url" rel="index">
                     <span itemprop="name">lambda</span>
                   </a>
                 </span>
@@ -2805,7 +2805,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/02/01/java/java 8/lambda/Java-8-Lambda-Expression/#comments" itemprop="discussionUrl">
+                <a href="/2016/02/01/java/java 8/lambda/Java-8-Lambda-Expression/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/01/java/java 8/lambda/Java-8-Lambda-Expression/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -2838,7 +2838,7 @@
 </blockquote>
 <p>Before, we used <code>anonymous inner classes</code> to instantiate objects of functional interfaces, with Lambdas, this can be simplified. It is possible to annotate these functional interfaces using the new annotation <code>@FunctionalInterface</code>.</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/02/01/java/java 8/lambda/Java-8-Lambda-Expression/#more" rel="contents">
+            <a class="btn" href="/2016/02/01/java/java 8/lambda/Java-8-Lambda-Expression/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -2889,7 +2889,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/02/01/java/java 8/lambda/Java-8-Functional-Interface/" itemprop="url">
+                <a class="post-title-link" href="/2016/02/01/java/java 8/lambda/Java-8-Functional-Interface/" itemprop="url">
                   Java 8 Functional Interface
                 </a>
               
@@ -2917,7 +2917,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/java/" itemprop="url" rel="index">
+                  <a href="/categories/java/" itemprop="url" rel="index">
                     <span itemprop="name">java</span>
                   </a>
                 </span>
@@ -2929,7 +2929,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/java/java-8/" itemprop="url" rel="index">
+                  <a href="/categories/java/java-8/" itemprop="url" rel="index">
                     <span itemprop="name">java 8</span>
                   </a>
                 </span>
@@ -2941,7 +2941,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/java/java-8/lambda/" itemprop="url" rel="index">
+                  <a href="/categories/java/java-8/lambda/" itemprop="url" rel="index">
                     <span itemprop="name">lambda</span>
                   </a>
                 </span>
@@ -2957,7 +2957,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/02/01/java/java 8/lambda/Java-8-Functional-Interface/#comments" itemprop="discussionUrl">
+                <a href="/2016/02/01/java/java 8/lambda/Java-8-Functional-Interface/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/01/java/java 8/lambda/Java-8-Functional-Interface/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -2992,7 +2992,7 @@
 <p>There is some common feature among the stated interfaces and that feature is they have <code>only one method declared in their interface definition</code>. There are lot more such interfaces in JDK and also lot more created by java developers. These interfaces are also called <code>Single Abstract Method interfaces (SAM Interfaces)</code>. And a popular way in which these are used is by creating Anonymous Inner classes using these interfaces, something like:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AnonymousInnerClassTest</span> </span>&#123;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">    <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</div><div class="line">      <span class="meta">@Override</span></div><div class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">        System.out.println(<span class="string">"A thread running ..."</span>);</div><div class="line">      &#125;</div><div class="line">    &#125;).start();</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/02/01/java/java 8/lambda/Java-8-Functional-Interface/#more" rel="contents">
+            <a class="btn" href="/2016/02/01/java/java 8/lambda/Java-8-Functional-Interface/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -3043,7 +3043,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Consumer-and-BiConsumber/" itemprop="url">
+                <a class="post-title-link" href="/2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Consumer-and-BiConsumber/" itemprop="url">
                   Java 8 Functional Interface - Consumer and BiConsumber
                 </a>
               
@@ -3071,7 +3071,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/java/" itemprop="url" rel="index">
+                  <a href="/categories/java/" itemprop="url" rel="index">
                     <span itemprop="name">java</span>
                   </a>
                 </span>
@@ -3083,7 +3083,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/java/java-8/" itemprop="url" rel="index">
+                  <a href="/categories/java/java-8/" itemprop="url" rel="index">
                     <span itemprop="name">java 8</span>
                   </a>
                 </span>
@@ -3095,7 +3095,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/java/java-8/lambda/" itemprop="url" rel="index">
+                  <a href="/categories/java/java-8/lambda/" itemprop="url" rel="index">
                     <span itemprop="name">lambda</span>
                   </a>
                 </span>
@@ -3111,7 +3111,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Consumer-and-BiConsumber/#comments" itemprop="discussionUrl">
+                <a href="/2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Consumer-and-BiConsumber/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Consumer-and-BiConsumber/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -3142,7 +3142,7 @@
 <p>This is a functional interface whose functional method is accept(Object).</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">accept</span><span class="params">(T t)</span> <span class="comment">// Performs this operation on the given argument.</span></span></div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Consumer-and-BiConsumber/#more" rel="contents">
+            <a class="btn" href="/2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Consumer-and-BiConsumber/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -3193,7 +3193,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Supplier/" itemprop="url">
+                <a class="post-title-link" href="/2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Supplier/" itemprop="url">
                   Java 8 Functional Interface - Supplier
                 </a>
               
@@ -3221,7 +3221,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/java/" itemprop="url" rel="index">
+                  <a href="/categories/java/" itemprop="url" rel="index">
                     <span itemprop="name">java</span>
                   </a>
                 </span>
@@ -3233,7 +3233,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/java/java-8/" itemprop="url" rel="index">
+                  <a href="/categories/java/java-8/" itemprop="url" rel="index">
                     <span itemprop="name">java 8</span>
                   </a>
                 </span>
@@ -3245,7 +3245,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/java/java-8/lambda/" itemprop="url" rel="index">
+                  <a href="/categories/java/java-8/lambda/" itemprop="url" rel="index">
                     <span itemprop="name">lambda</span>
                   </a>
                 </span>
@@ -3261,7 +3261,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Supplier/#comments" itemprop="discussionUrl">
+                <a href="/2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Supplier/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Supplier/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -3291,7 +3291,7 @@
 <p>This is a functional interface whose functional method is <code>get()</code>.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function">T <span class="title">get</span><span class="params">()</span> <span class="comment">//Gets a result.</span></span></div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Supplier/#more" rel="contents">
+            <a class="btn" href="/2016/01/31/java/java 8/lambda/Java-8-Functional-Interface-Supplier/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -3325,7 +3325,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="https:/phoenixjiangnan.github.io/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="https:/phoenixjiangnan.github.io/">1</a><span class="space">&hellip;</span><a class="page-number" href="https:/phoenixjiangnan.github.io/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="https:/phoenixjiangnan.github.io/page/6/">6</a><a class="extend next" rel="next" href="https:/phoenixjiangnan.github.io/page/6/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -3358,7 +3358,7 @@
       <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="https:/phoenixjiangnan.github.io/avatar/avatar.jpg"
+               src="/avatar/avatar.jpg"
                alt="Bowen" />
           <p class="site-author-name" itemprop="name">Bowen</p>
           <p class="site-description motion-element" itemprop="description">keep learning - learning notes and blogs</p>
@@ -3393,7 +3393,7 @@
 
         
           <div class="feed-link motion-element">
-            <a href="https:/phoenixjiangnan.github.io/atom.xml" rel="alternate">
+            <a href="/atom.xml" rel="alternate">
               <i class="fa fa-rss"></i>
               RSS
             </a>
@@ -3477,42 +3477,42 @@
 
 
   
-  <script type="text/javascript" src="https:/phoenixjiangnan.github.io/vendors/jquery/index.js?v=2.1.3"></script>
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
-  <script type="text/javascript" src="https:/phoenixjiangnan.github.io/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
-  <script type="text/javascript" src="https:/phoenixjiangnan.github.io/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-  <script type="text/javascript" src="https:/phoenixjiangnan.github.io/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="https:/phoenixjiangnan.github.io/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="https:/phoenixjiangnan.github.io/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
-
-  
-
-
-  <script type="text/javascript" src="https:/phoenixjiangnan.github.io/js/src/utils.js?v=5.0.1"></script>
-
-  <script type="text/javascript" src="https:/phoenixjiangnan.github.io/js/src/motion.js?v=5.0.1"></script>
-
-
-
-  
-  
-
-  
 
   
 
 
-  <script type="text/javascript" src="https:/phoenixjiangnan.github.io/js/src/bootstrap.js?v=5.0.1"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
 
 
 
@@ -3554,7 +3554,7 @@
     if (search_path.length == 0) {
        search_path = "search.xml";
     }
-    var path = "https://phoenixjiangnan.github.io/" + search_path;
+    var path = "/" + search_path;
     // monitor main search box;
 
     function proceedsearch() {

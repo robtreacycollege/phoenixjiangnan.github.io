@@ -29,7 +29,7 @@
 
   
   
-  <link href="https:/phoenixjiangnan.github.io/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -63,9 +63,9 @@
 
 
 
-<link href="https:/phoenixjiangnan.github.io/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="https:/phoenixjiangnan.github.io/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Hexo, welcome to Bowen's blog" />
@@ -74,12 +74,12 @@
 
 
 
-  <link rel="alternate" href="https:/phoenixjiangnan.github.io/atom.xml" title="Bowen's blog" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="Bowen's blog" type="application/atom+xml" />
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="https:/phoenixjiangnan.github.io/favicon.ico?v=5.0.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
 
 
@@ -148,7 +148,7 @@
   
 
   <div class="custom-logo-site-title">
-    <a href="https://phoenixjiangnan.github.io/"  class="brand" rel="start">
+    <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">Bowen's blog</span>
       <span class="logo-line-after"><i></i></span>
@@ -175,7 +175,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="https:/phoenixjiangnan.github.io/" rel="section">
+          <a href="/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -285,7 +285,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/10/06/distributed system/kafka/Apache-Kafka-Samza-and-the-Unix-Philosopy-of-Distributed-Data/" itemprop="url">
+                <a class="post-title-link" href="/2016/10/06/distributed system/kafka/Apache-Kafka-Samza-and-the-Unix-Philosopy-of-Distributed-Data/" itemprop="url">
                   Apache Kafka, Samza, and the Unix Philosopy of Distributed Data
                 </a>
               
@@ -313,7 +313,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/distributed-system/" itemprop="url" rel="index">
+                  <a href="/categories/distributed-system/" itemprop="url" rel="index">
                     <span itemprop="name">distributed system</span>
                   </a>
                 </span>
@@ -325,7 +325,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/distributed-system/kafka/" itemprop="url" rel="index">
+                  <a href="/categories/distributed-system/kafka/" itemprop="url" rel="index">
                     <span itemprop="name">kafka</span>
                   </a>
                 </span>
@@ -341,7 +341,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/10/06/distributed system/kafka/Apache-Kafka-Samza-and-the-Unix-Philosopy-of-Distributed-Data/#comments" itemprop="discussionUrl">
+                <a href="/2016/10/06/distributed system/kafka/Apache-Kafka-Samza-and-the-Unix-Philosopy-of-Distributed-Data/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/06/distributed system/kafka/Apache-Kafka-Samza-and-the-Unix-Philosopy-of-Distributed-Data/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -377,7 +377,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">216.58.210.78 - - [27/Feb/2015:17:55:11 +0000] &quot;GET /css/typography.css HTTP/1.1&quot; 200 3377 &quot;http://martin.kleppmann.com/&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36&quot;</div></pre></td></tr></table></figure>
 <p>(That is actually one line, it’s only broken up into multiple lines here for readability.) This line of the log indicates that on 27 February 2015 at 17:55:11 UTC, the server received a request for the file /css/typography.css from the client IP address 216.58.210.78. It then goes on to note various other details, including the browser’s user-agent string. Various tools can take these log files and produce pretty reports about your website traffic, but for the sake of the exercise, let’s build our own, using basic Unix tools. Let’s determine the 5 most popular URLs on our website. To start with, we need to extract the path of the URL that was requested, for which we can use <code>awk</code>. <code>awk</code> doesn’t know about the format of nginx logs – it just treats the log file as text. By default, <code>awk</code> takes one line of input at a time, splits it by whitespace, and makes the whitespace-separated components available as variables <code>$1</code>, <code>$2</code>, etc. In the nginx log example, the requested URL path is the seventh whitespace-separated component: </p>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/10/06/distributed system/kafka/Apache-Kafka-Samza-and-the-Unix-Philosopy-of-Distributed-Data/#more" rel="contents">
+            <a class="btn" href="/2016/10/06/distributed system/kafka/Apache-Kafka-Samza-and-the-Unix-Philosopy-of-Distributed-Data/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -428,7 +428,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/10/05/system design/Throttling-and-Traffic-Shaping/" itemprop="url">
+                <a class="post-title-link" href="/2016/10/05/system design/Throttling-and-Traffic-Shaping/" itemprop="url">
                   Throttling and Traffic Shaping
                 </a>
               
@@ -456,7 +456,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/system-design/" itemprop="url" rel="index">
+                  <a href="/categories/system-design/" itemprop="url" rel="index">
                     <span itemprop="name">system design</span>
                   </a>
                 </span>
@@ -472,7 +472,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/10/05/system design/Throttling-and-Traffic-Shaping/#comments" itemprop="discussionUrl">
+                <a href="/2016/10/05/system design/Throttling-and-Traffic-Shaping/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/05/system design/Throttling-and-Traffic-Shaping/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -655,7 +655,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/10/03/distributed system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-2/" itemprop="url">
+                <a class="post-title-link" href="/2016/10/03/distributed system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-2/" itemprop="url">
                   Putting Apache Kafka To Use: A Practical Guide to Building a Stream Data Platform (Part 2)
                 </a>
               
@@ -683,7 +683,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/distributed-system/" itemprop="url" rel="index">
+                  <a href="/categories/distributed-system/" itemprop="url" rel="index">
                     <span itemprop="name">distributed system</span>
                   </a>
                 </span>
@@ -695,7 +695,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/distributed-system/kafka/" itemprop="url" rel="index">
+                  <a href="/categories/distributed-system/kafka/" itemprop="url" rel="index">
                     <span itemprop="name">kafka</span>
                   </a>
                 </span>
@@ -711,7 +711,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/10/03/distributed system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-2/#comments" itemprop="discussionUrl">
+                <a href="/2016/10/03/distributed system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-2/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/03/distributed system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-2/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -757,7 +757,7 @@
 <h2 id="Recommendations"><a href="#Recommendations" class="headerlink" title="Recommendations"></a>Recommendations</h2><p>I’ll give a set of general recommendations for streaming data and Kafka and then discuss some specifics of different types of data.</p>
 <h3 id="1-Limit-The-Number-of-Clusters"><a href="#1-Limit-The-Number-of-Clusters" class="headerlink" title="1. Limit The Number of Clusters"></a>1. Limit The Number of Clusters</h3><p>In early experimentation phases it is normal to end up with a few different Kafka clusters as adoption occurs organically in different parts of the organization.</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/10/03/distributed system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-2/#more" rel="contents">
+            <a class="btn" href="/2016/10/03/distributed system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-2/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -808,7 +808,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/10/03/distributed system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-1/" itemprop="url">
+                <a class="post-title-link" href="/2016/10/03/distributed system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-1/" itemprop="url">
                   Putting Apache Kafka To Use - A Practical Guide to Building a Stream Data Platform (Part 1)
                 </a>
               
@@ -836,7 +836,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/distributed-system/" itemprop="url" rel="index">
+                  <a href="/categories/distributed-system/" itemprop="url" rel="index">
                     <span itemprop="name">distributed system</span>
                   </a>
                 </span>
@@ -848,7 +848,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/distributed-system/kafka/" itemprop="url" rel="index">
+                  <a href="/categories/distributed-system/kafka/" itemprop="url" rel="index">
                     <span itemprop="name">kafka</span>
                   </a>
                 </span>
@@ -864,7 +864,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/10/03/distributed system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-1/#comments" itemprop="discussionUrl">
+                <a href="/2016/10/03/distributed system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-1/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/03/distributed system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-1/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -911,7 +911,7 @@
 <p>The first problem was how to transport data between systems. We had lots of data systems: relational OLTP databases, Hadoop, Teradata, a search system, monitoring systems, OLAP stores, and derived key-value stores. Each of these needed reliable feeds of data in a geographically distributed environment. I’ll call this problem <code>data integration</code>, though we could also call it <code>ETL</code>.</p>
 <p>The second part of this problem was the need to do richer analytical data processing—the kind of thing that would normally happen in a data warehouse or Hadoop cluster—but with very low latency. I call this “stream processing” though others might call it “messaging” or CEP or something similar.</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/10/03/distributed system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-1/#more" rel="contents">
+            <a class="btn" href="/2016/10/03/distributed system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-1/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -962,7 +962,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/09/30/spring/spring boot/Spring-Boot-Introduction-to-Spring-Boot/" itemprop="url">
+                <a class="post-title-link" href="/2016/09/30/spring/spring boot/Spring-Boot-Introduction-to-Spring-Boot/" itemprop="url">
                   Spring Boot - Introduction to Spring Boot
                 </a>
               
@@ -990,7 +990,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/spring/" itemprop="url" rel="index">
+                  <a href="/categories/spring/" itemprop="url" rel="index">
                     <span itemprop="name">spring</span>
                   </a>
                 </span>
@@ -1002,7 +1002,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/spring/spring-boot/" itemprop="url" rel="index">
+                  <a href="/categories/spring/spring-boot/" itemprop="url" rel="index">
                     <span itemprop="name">spring boot</span>
                   </a>
                 </span>
@@ -1018,7 +1018,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/09/30/spring/spring boot/Spring-Boot-Introduction-to-Spring-Boot/#comments" itemprop="discussionUrl">
+                <a href="/2016/09/30/spring/spring boot/Spring-Boot-Introduction-to-Spring-Boot/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/09/30/spring/spring boot/Spring-Boot-Introduction-to-Spring-Boot/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -1079,7 +1079,7 @@
 </ul>
 </blockquote>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/09/30/spring/spring boot/Spring-Boot-Introduction-to-Spring-Boot/#more" rel="contents">
+            <a class="btn" href="/2016/09/30/spring/spring boot/Spring-Boot-Introduction-to-Spring-Boot/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1130,7 +1130,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/09/29/hexo/Hexo-How-to-backup-configs-and-blogs-of-Github-Pages-in-a-Github-repository/" itemprop="url">
+                <a class="post-title-link" href="/2016/09/29/hexo/Hexo-How-to-backup-configs-and-blogs-of-Github-Pages-in-a-Github-repository/" itemprop="url">
                   Hexo - How to backup configs and blogs of Github Pages in a Github repository
                 </a>
               
@@ -1158,7 +1158,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/hexo/" itemprop="url" rel="index">
+                  <a href="/categories/hexo/" itemprop="url" rel="index">
                     <span itemprop="name">hexo</span>
                   </a>
                 </span>
@@ -1174,7 +1174,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/09/29/hexo/Hexo-How-to-backup-configs-and-blogs-of-Github-Pages-in-a-Github-repository/#comments" itemprop="discussionUrl">
+                <a href="/2016/09/29/hexo/Hexo-How-to-backup-configs-and-blogs-of-Github-Pages-in-a-Github-repository/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/09/29/hexo/Hexo-How-to-backup-configs-and-blogs-of-Github-Pages-in-a-Github-repository/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -1213,7 +1213,7 @@
 </li>
 </ul>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/09/29/hexo/Hexo-How-to-backup-configs-and-blogs-of-Github-Pages-in-a-Github-repository/#more" rel="contents">
+            <a class="btn" href="/2016/09/29/hexo/Hexo-How-to-backup-configs-and-blogs-of-Github-Pages-in-a-Github-repository/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1264,7 +1264,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/09/21/career and leadership/Repost-Farewell-App-Academy-Hello-Airbnb-Part-II/" itemprop="url">
+                <a class="post-title-link" href="/2016/09/21/career and leadership/Repost-Farewell-App-Academy-Hello-Airbnb-Part-II/" itemprop="url">
                   Repost - "Farewell, App Academy. Hello, Airbnb. (Part II)"
                 </a>
               
@@ -1292,7 +1292,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/career-and-leadership/" itemprop="url" rel="index">
+                  <a href="/categories/career-and-leadership/" itemprop="url" rel="index">
                     <span itemprop="name">career and leadership</span>
                   </a>
                 </span>
@@ -1308,7 +1308,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/09/21/career and leadership/Repost-Farewell-App-Academy-Hello-Airbnb-Part-II/#comments" itemprop="discussionUrl">
+                <a href="/2016/09/21/career and leadership/Repost-Farewell-App-Academy-Hello-Airbnb-Part-II/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/09/21/career and leadership/Repost-Farewell-App-Academy-Hello-Airbnb-Part-II/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -1352,7 +1352,7 @@
 <p>Well, as it turned out, those companies weren’t really looking for someone like me. Since TripleByte is a two-sided process, they matched me up with companies for which there was a good mutual fit—Stripe, Twitch, or Airbnb were nowhere on that list. However, one of the companies they matched me with was Gusto, formerly Zenpayroll (and now a timely Zenefits competitor). I’d previously had my eye on them, so I was excited to see them matched up with me. They also lined up an onsite at a small YC startup called Flexport.</p>
 <p>TripleByte had gotten things moving. But even more importantly, they had given me back some confidence. TripleByte wanting to work with me was a small affirmation, to be sure—it wasn’t even a job offer yet. But it felt like I’d finally pierced the membrane. If these guys thought I was good… I must have it. I just gotta prove that to everyone else now.</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/09/21/career and leadership/Repost-Farewell-App-Academy-Hello-Airbnb-Part-II/#more" rel="contents">
+            <a class="btn" href="/2016/09/21/career and leadership/Repost-Farewell-App-Academy-Hello-Airbnb-Part-II/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1403,7 +1403,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/09/19/java/network/Java-Network-TCP-and-Socket/" itemprop="url">
+                <a class="post-title-link" href="/2016/09/19/java/network/Java-Network-TCP-and-Socket/" itemprop="url">
                   Java Network - TCP and Socket
                 </a>
               
@@ -1431,7 +1431,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/java/" itemprop="url" rel="index">
+                  <a href="/categories/java/" itemprop="url" rel="index">
                     <span itemprop="name">java</span>
                   </a>
                 </span>
@@ -1443,7 +1443,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/java/network/" itemprop="url" rel="index">
+                  <a href="/categories/java/network/" itemprop="url" rel="index">
                     <span itemprop="name">network</span>
                   </a>
                 </span>
@@ -1459,7 +1459,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/09/19/java/network/Java-Network-TCP-and-Socket/#comments" itemprop="discussionUrl">
+                <a href="/2016/09/19/java/network/Java-Network-TCP-and-Socket/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/09/19/java/network/Java-Network-TCP-and-Socket/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -1522,7 +1522,7 @@
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Server End</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ServerDemo</span> </span>&#123;</div><div class="line">    <span class="comment">/**</div><div class="line">        Get the data from client, and print on console</div><div class="line">    */</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> UnknownHostException, IOException</span>&#123;</div><div class="line">        <span class="comment">// 1. Create server side socket service by creating `ServerSocket` object</span></div><div class="line">        <span class="comment">// 2. `ServerSocket` must provide a `port` for client to connect to</span></div><div class="line">        ServerSocket ss = <span class="keyword">new</span> ServerSocket(<span class="number">10002</span>);</div><div class="line">         </div><div class="line">        <span class="comment">// 3. Get the socket object that tries to connect</span></div><div class="line">        Socket s = ss.accept();</div><div class="line">        String ip = s.getInetAddress().getHostAddress();</div><div class="line">         </div><div class="line">        <span class="comment">// 4. Read data from client via the socket object's stream</span></div><div class="line">        InputStream in = s.getInputStream();</div><div class="line">        <span class="keyword">byte</span>[] buf = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];</div><div class="line">        <span class="keyword">int</span> len = in.read(buf);</div><div class="line">        </div><div class="line">        String text = <span class="keyword">new</span> String(buf, <span class="number">0</span>, len);</div><div class="line">        System.out.println(ip + <span class="string">" Server: "</span> + text);</div><div class="line">        </div><div class="line">        <span class="number">5</span>. Close resources</div><div class="line">        s.close();</div><div class="line">        ss.close();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/09/19/java/network/Java-Network-TCP-and-Socket/#more" rel="contents">
+            <a class="btn" href="/2016/09/19/java/network/Java-Network-TCP-and-Socket/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1573,7 +1573,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/09/17/java/concurrency/Java-Concurrency-wait-notify-and-notifyAll/" itemprop="url">
+                <a class="post-title-link" href="/2016/09/17/java/concurrency/Java-Concurrency-wait-notify-and-notifyAll/" itemprop="url">
                   Java Concurrency - wait(), notify(), and notifyAll()
                 </a>
               
@@ -1598,7 +1598,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/09/17/java/concurrency/Java-Concurrency-wait-notify-and-notifyAll/#comments" itemprop="discussionUrl">
+                <a href="/2016/09/17/java/concurrency/Java-Concurrency-wait-notify-and-notifyAll/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/09/17/java/concurrency/Java-Concurrency-wait-notify-and-notifyAll/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -1664,7 +1664,7 @@
 </li>
 </ul>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/09/17/java/concurrency/Java-Concurrency-wait-notify-and-notifyAll/#more" rel="contents">
+            <a class="btn" href="/2016/09/17/java/concurrency/Java-Concurrency-wait-notify-and-notifyAll/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1715,7 +1715,7 @@
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/09/16/distributed system/thrift/Apache-Thrift-Introduction/" itemprop="url">
+                <a class="post-title-link" href="/2016/09/16/distributed system/thrift/Apache-Thrift-Introduction/" itemprop="url">
                   Apache Thrift - Introduction
                 </a>
               
@@ -1743,7 +1743,7 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/distributed-system/" itemprop="url" rel="index">
+                  <a href="/categories/distributed-system/" itemprop="url" rel="index">
                     <span itemprop="name">distributed system</span>
                   </a>
                 </span>
@@ -1755,7 +1755,7 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/distributed-system/thrift/" itemprop="url" rel="index">
+                  <a href="/categories/distributed-system/thrift/" itemprop="url" rel="index">
                     <span itemprop="name">thrift</span>
                   </a>
                 </span>
@@ -1771,7 +1771,7 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/09/16/distributed system/thrift/Apache-Thrift-Introduction/#comments" itemprop="discussionUrl">
+                <a href="/2016/09/16/distributed system/thrift/Apache-Thrift-Introduction/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/09/16/distributed system/thrift/Apache-Thrift-Introduction/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -1883,7 +1883,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/09/15/distributed system/zookeeper/ZooKeeper-Sessions-and-Session-Management/" itemprop="url">
+                <a class="post-title-link" href="/2016/09/15/distributed system/zookeeper/ZooKeeper-Sessions-and-Session-Management/" itemprop="url">
                   ZooKeeper - Sessions and Session Management
                 </a>
               
@@ -1911,7 +1911,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/distributed-system/" itemprop="url" rel="index">
+                  <a href="/categories/distributed-system/" itemprop="url" rel="index">
                     <span itemprop="name">distributed system</span>
                   </a>
                 </span>
@@ -1923,7 +1923,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/distributed-system/zookeeper/" itemprop="url" rel="index">
+                  <a href="/categories/distributed-system/zookeeper/" itemprop="url" rel="index">
                     <span itemprop="name">zookeeper</span>
                   </a>
                 </span>
@@ -1939,7 +1939,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/09/15/distributed system/zookeeper/ZooKeeper-Sessions-and-Session-Management/#comments" itemprop="discussionUrl">
+                <a href="/2016/09/15/distributed system/zookeeper/ZooKeeper-Sessions-and-Session-Management/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/09/15/distributed system/zookeeper/ZooKeeper-Sessions-and-Session-Management/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -1980,7 +1980,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
 <h3 id="Server-creates-password-and-send-it-to-client"><a href="#Server-creates-password-and-send-it-to-client" class="headerlink" title="Server creates password and send it to client"></a>Server creates <code>password</code> and send it to client</h3><p>If the client connects to a different ZooKeeper server, it will send the <code>session id</code> as a part of the connection handshake. As a security measure, the server creates a <code>password</code> for the <code>session id</code> that any ZooKeeper server can validate.The password is sent to the client with the session id when the client establishes the session. The client sends this password with the session id whenever it reestablishes the session with a new server.</p>
 <h3 id="Client-specifies-timeout"><a href="#Client-specifies-timeout" class="headerlink" title="Client specifies timeout"></a>Client specifies timeout</h3><p>One of the parameters to the ZooKeeper client library call to create a ZooKeeper session is <code>the session timeout in milliseconds</code>. The client sends a requested timeout, the server responds with the timeout that it can give the client. The current implementation requires that the timeout be <code>a minimum of 2 times the tickTime</code> (as set in the server configuration) and <code>a maximum of 20 times the tickTime</code>.</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/09/15/distributed system/zookeeper/ZooKeeper-Sessions-and-Session-Management/#more" rel="contents">
+            <a class="btn" href="/2016/09/15/distributed system/zookeeper/ZooKeeper-Sessions-and-Session-Management/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -2031,7 +2031,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/09/14/system design/project experience/How-did-I-develop-a-crypto-service-for-Tableau-Server/" itemprop="url">
+                <a class="post-title-link" href="/2016/09/14/system design/project experience/How-did-I-develop-a-crypto-service-for-Tableau-Server/" itemprop="url">
                   How did I develop a crypto service for Tableau Server
                 </a>
               
@@ -2059,7 +2059,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/system-design/" itemprop="url" rel="index">
+                  <a href="/categories/system-design/" itemprop="url" rel="index">
                     <span itemprop="name">system design</span>
                   </a>
                 </span>
@@ -2071,7 +2071,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/system-design/project-experience/" itemprop="url" rel="index">
+                  <a href="/categories/system-design/project-experience/" itemprop="url" rel="index">
                     <span itemprop="name">project experience</span>
                   </a>
                 </span>
@@ -2087,7 +2087,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/09/14/system design/project experience/How-did-I-develop-a-crypto-service-for-Tableau-Server/#comments" itemprop="discussionUrl">
+                <a href="/2016/09/14/system design/project experience/How-did-I-develop-a-crypto-service-for-Tableau-Server/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/09/14/system design/project experience/How-did-I-develop-a-crypto-service-for-Tableau-Server/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -2140,7 +2140,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
 <p>The project is about developing a crypto service that encrypts passwords before persisting them somewhere, and decrypts passwords into memory when server uses them, so that no more clear text secrets live in Tableau Server. The new service should support both our old monolith JRuby app and our new service-oriented server architecture.</p>
 </blockquote>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/09/14/system design/project experience/How-did-I-develop-a-crypto-service-for-Tableau-Server/#more" rel="contents">
+            <a class="btn" href="/2016/09/14/system design/project experience/How-did-I-develop-a-crypto-service-for-Tableau-Server/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -2191,7 +2191,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/08/27/best practices/How-to-compare-float-numbers/" itemprop="url">
+                <a class="post-title-link" href="/2016/08/27/best practices/How-to-compare-float-numbers/" itemprop="url">
                   How to compare float numbers
                 </a>
               
@@ -2216,7 +2216,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/08/27/best practices/How-to-compare-float-numbers/#comments" itemprop="discussionUrl">
+                <a href="/2016/08/27/best practices/How-to-compare-float-numbers/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/27/best practices/How-to-compare-float-numbers/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -2256,7 +2256,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
 <p>Here are the exact values for 0.1, float(0.1), and double(0.1):</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Number	    Value</div><div class="line">0.1	        0.1 (of course)</div><div class="line">float(.1)	0.100000001490116119384765625</div><div class="line">double(.1)	0.1000000000000000055511151231257827021181583404541015625</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/08/27/best practices/How-to-compare-float-numbers/#more" rel="contents">
+            <a class="btn" href="/2016/08/27/best practices/How-to-compare-float-numbers/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -2307,7 +2307,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/08/26/data structures and algorithms/probability/How-to-test-a-program-involving-probability-take-an-algorithm-that-shuffles-array-as-example/" itemprop="url">
+                <a class="post-title-link" href="/2016/08/26/data structures and algorithms/probability/How-to-test-a-program-involving-probability-take-an-algorithm-that-shuffles-array-as-example/" itemprop="url">
                   How to test a program involving probability - take an algorithm that shuffles array as example
                 </a>
               
@@ -2335,7 +2335,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/data-structures-and-algorithms/" itemprop="url" rel="index">
+                  <a href="/categories/data-structures-and-algorithms/" itemprop="url" rel="index">
                     <span itemprop="name">data structures and algorithms</span>
                   </a>
                 </span>
@@ -2347,7 +2347,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/data-structures-and-algorithms/probability/" itemprop="url" rel="index">
+                  <a href="/categories/data-structures-and-algorithms/probability/" itemprop="url" rel="index">
                     <span itemprop="name">probability</span>
                   </a>
                 </span>
@@ -2363,7 +2363,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/08/26/data structures and algorithms/probability/How-to-test-a-program-involving-probability-take-an-algorithm-that-shuffles-array-as-example/#comments" itemprop="discussionUrl">
+                <a href="/2016/08/26/data structures and algorithms/probability/How-to-test-a-program-involving-probability-take-an-algorithm-that-shuffles-array-as-example/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/26/data structures and algorithms/probability/How-to-test-a-program-involving-probability-take-an-algorithm-that-shuffles-array-as-example/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -2409,7 +2409,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
 <p>(From my point of view, there’s actually another way if the function given to you is not in a black box - you are able to give out the math probability equation)</p>
 </blockquote>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/08/26/data structures and algorithms/probability/How-to-test-a-program-involving-probability-take-an-algorithm-that-shuffles-array-as-example/#more" rel="contents">
+            <a class="btn" href="/2016/08/26/data structures and algorithms/probability/How-to-test-a-program-involving-probability-take-an-algorithm-that-shuffles-array-as-example/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -2460,7 +2460,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/08/26/data structures and algorithms/interview/Facebook-User-Group-and-Bipartite-Graph/" itemprop="url">
+                <a class="post-title-link" href="/2016/08/26/data structures and algorithms/interview/Facebook-User-Group-and-Bipartite-Graph/" itemprop="url">
                   Facebook User Group and Bipartite Graph
                 </a>
               
@@ -2488,7 +2488,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/data-structures-and-algorithms/" itemprop="url" rel="index">
+                  <a href="/categories/data-structures-and-algorithms/" itemprop="url" rel="index">
                     <span itemprop="name">data structures and algorithms</span>
                   </a>
                 </span>
@@ -2500,7 +2500,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/data-structures-and-algorithms/interview/" itemprop="url" rel="index">
+                  <a href="/categories/data-structures-and-algorithms/interview/" itemprop="url" rel="index">
                     <span itemprop="name">interview</span>
                   </a>
                 </span>
@@ -2516,7 +2516,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/08/26/data structures and algorithms/interview/Facebook-User-Group-and-Bipartite-Graph/#comments" itemprop="discussionUrl">
+                <a href="/2016/08/26/data structures and algorithms/interview/Facebook-User-Group-and-Bipartite-Graph/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/26/data structures and algorithms/interview/Facebook-User-Group-and-Bipartite-Graph/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -2553,7 +2553,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
 <p>根据二分图的特性，一条边上的两个点，肯定是属于不同的组。如果它们出现在同一个组中，肯定就不是二分图了。怎么判断，一条边上的两个点，分属于不同的组呢？我们需要遍历图，如果找到一条边，两个节点，都在同一组，则不是二分图；如果图遍历完成之后，没有找到这样的边，则是二分图。我们在遍历的过程中，我们需要区分，一条边的两个节点分属于不同的组，这里我们用到了染色法。核心思想如下：</p>
 <p>从某一个点开始，将这个节点染色为白色，并且开始广度优先遍历，找到与其相邻的节点，如果是二分图，相邻节点的颜色都应该不同。如果是黑色，则不变；如果是无色，则染成黑色；如果是白色，也就是同色，程序退出。当图遍历完毕时，没有相邻节点同色的，则是二分图，标记为白色和黑色的两组就是一个划分。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/08/26/data structures and algorithms/interview/Facebook-User-Group-and-Bipartite-Graph/#more" rel="contents">
+            <a class="btn" href="/2016/08/26/data structures and algorithms/interview/Facebook-User-Group-and-Bipartite-Graph/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -2604,7 +2604,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/08/23/java/concurrency/Java-Concurrency-Multi-Thread-1-Implements-Runnable-or-Extends-Thread/" itemprop="url">
+                <a class="post-title-link" href="/2016/08/23/java/concurrency/Java-Concurrency-Multi-Thread-1-Implements-Runnable-or-Extends-Thread/" itemprop="url">
                   Java - Concurrency - Multi-Thread 1 - Implements Runnable or Extends Thread
                 </a>
               
@@ -2632,7 +2632,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/java/" itemprop="url" rel="index">
+                  <a href="/categories/java/" itemprop="url" rel="index">
                     <span itemprop="name">java</span>
                   </a>
                 </span>
@@ -2644,7 +2644,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/java/concurrency/" itemprop="url" rel="index">
+                  <a href="/categories/java/concurrency/" itemprop="url" rel="index">
                     <span itemprop="name">concurrency</span>
                   </a>
                 </span>
@@ -2660,7 +2660,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/08/23/java/concurrency/Java-Concurrency-Multi-Thread-1-Implements-Runnable-or-Extends-Thread/#comments" itemprop="discussionUrl">
+                <a href="/2016/08/23/java/concurrency/Java-Concurrency-Multi-Thread-1-Implements-Runnable-or-Extends-Thread/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/23/java/concurrency/Java-Concurrency-Multi-Thread-1-Implements-Runnable-or-Extends-Thread/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -2701,7 +2701,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Subobj</span> <span class="keyword">extends</span> <span class="title">Object</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">finalize</span><span class="params">()</span></span>&#123;</div><div class="line">        sop(<span class="string">"subobj destroyed"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</div><div class="line">        <span class="keyword">new</span> Subobj();</div><div class="line">        <span class="keyword">new</span> Subobj();</div><div class="line"></div><div class="line">        System.gc();  <span class="comment">//启动系统垃圾回收器</span></div><div class="line"></div><div class="line">        <span class="keyword">new</span> Subobj();</div><div class="line">        sop(<span class="string">"Hello World!"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/08/23/java/concurrency/Java-Concurrency-Multi-Thread-1-Implements-Runnable-or-Extends-Thread/#more" rel="contents">
+            <a class="btn" href="/2016/08/23/java/concurrency/Java-Concurrency-Multi-Thread-1-Implements-Runnable-or-Extends-Thread/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -2752,7 +2752,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/08/21/spring/Spring-What-is-dependency-injection-and-how-it-works-in-Spring/" itemprop="url">
+                <a class="post-title-link" href="/2016/08/21/spring/Spring-What-is-dependency-injection-and-how-it-works-in-Spring/" itemprop="url">
                   Spring - What is dependency injection and how it works in Spring
                 </a>
               
@@ -2780,7 +2780,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/spring/" itemprop="url" rel="index">
+                  <a href="/categories/spring/" itemprop="url" rel="index">
                     <span itemprop="name">spring</span>
                   </a>
                 </span>
@@ -2796,7 +2796,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/08/21/spring/Spring-What-is-dependency-injection-and-how-it-works-in-Spring/#comments" itemprop="discussionUrl">
+                <a href="/2016/08/21/spring/Spring-What-is-dependency-injection-and-how-it-works-in-Spring/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/21/spring/Spring-What-is-dependency-injection-and-how-it-works-in-Spring/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -2890,7 +2890,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/08/16/system design/project experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/" itemprop="url">
+                <a class="post-title-link" href="/2016/08/16/system design/project experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/" itemprop="url">
                   How did I build a custom dynamic ZooKeeper management and migration framework and an asynchronous job framework for Tableau Server 11
                 </a>
               
@@ -2918,7 +2918,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/system-design/" itemprop="url" rel="index">
+                  <a href="/categories/system-design/" itemprop="url" rel="index">
                     <span itemprop="name">system design</span>
                   </a>
                 </span>
@@ -2930,7 +2930,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/system-design/project-experience/" itemprop="url" rel="index">
+                  <a href="/categories/system-design/project-experience/" itemprop="url" rel="index">
                     <span itemprop="name">project experience</span>
                   </a>
                 </span>
@@ -2946,7 +2946,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/08/16/system design/project experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/#comments" itemprop="discussionUrl">
+                <a href="/2016/08/16/system design/project experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/16/system design/project experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -2982,7 +2982,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
 <p>Say we start with a single Tableau Server node A, which has a single node ZK cluster runs on it. Then we want to expand the Tableau Server cluster from 1 node (A) to 3 nodes (A, B, C), as well as the ZK cluster runs on top of it. How to achieve that?</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(A) -&gt; (A, B, C)</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/08/16/system design/project experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/#more" rel="contents">
+            <a class="btn" href="/2016/08/16/system design/project experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -3033,7 +3033,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/08/10/system design/project experience/How-did-I-build-a-Facebook-Messenger-chatbot-for-Tableau-s-VizOfTheDay-feed/" itemprop="url">
+                <a class="post-title-link" href="/2016/08/10/system design/project experience/How-did-I-build-a-Facebook-Messenger-chatbot-for-Tableau-s-VizOfTheDay-feed/" itemprop="url">
                   How did I build a Facebook Messenger chatbot for Tableau's 'VizOfTheDay' feed
                 </a>
               
@@ -3061,7 +3061,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/system-design/" itemprop="url" rel="index">
+                  <a href="/categories/system-design/" itemprop="url" rel="index">
                     <span itemprop="name">system design</span>
                   </a>
                 </span>
@@ -3073,7 +3073,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/system-design/project-experience/" itemprop="url" rel="index">
+                  <a href="/categories/system-design/project-experience/" itemprop="url" rel="index">
                     <span itemprop="name">project experience</span>
                   </a>
                 </span>
@@ -3089,7 +3089,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/08/10/system design/project experience/How-did-I-build-a-Facebook-Messenger-chatbot-for-Tableau-s-VizOfTheDay-feed/#comments" itemprop="discussionUrl">
+                <a href="/2016/08/10/system design/project experience/How-did-I-build-a-Facebook-Messenger-chatbot-for-Tableau-s-VizOfTheDay-feed/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/10/system design/project experience/How-did-I-build-a-Facebook-Messenger-chatbot-for-Tableau-s-VizOfTheDay-feed/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -3162,7 +3162,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">            Facebook Messenger API</div><div class="line">                    |</div><div class="line">                    |</div><div class="line">                 AWS ELB</div><div class="line">                    |</div><div class="line">                    |</div><div class="line">                 AWS EC2</div><div class="line">                    |</div><div class="line">                    |      for interpretation</div><div class="line">                Controller ----------- wit.ai</div><div class="line">                    |                   |</div><div class="line">                    |                   |</div><div class="line">                ------------------------|</div><div class="line">     enqueue id |                       |</div><div class="line">                |                       |</div><div class="line">                |                       |</div><div class="line">DynamoDB -- User Service  ------  Response Service</div><div class="line">                |            |                |</div><div class="line">                |            |                |</div><div class="line">Profile Querying Serivce     |                |</div><div class="line">                             |                |</div><div class="line">                        Push Notifier         |</div><div class="line">                             |                |</div><div class="line">                             |                |</div><div class="line">                             |                |</div><div class="line">                       Feed Processor----------</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/08/10/system design/project experience/How-did-I-build-a-Facebook-Messenger-chatbot-for-Tableau-s-VizOfTheDay-feed/#more" rel="contents">
+            <a class="btn" href="/2016/08/10/system design/project experience/How-did-I-build-a-Facebook-Messenger-chatbot-for-Tableau-s-VizOfTheDay-feed/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -3213,7 +3213,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
             
               
                 
-                <a class="post-title-link" href="https:/phoenixjiangnan.github.io/2016/08/10/machine learning/Inverted-Index/" itemprop="url">
+                <a class="post-title-link" href="/2016/08/10/machine learning/Inverted-Index/" itemprop="url">
                   Inverted Index
                 </a>
               
@@ -3241,7 +3241,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="https:/phoenixjiangnan.github.io/categories/machine-learning/" itemprop="url" rel="index">
+                  <a href="/categories/machine-learning/" itemprop="url" rel="index">
                     <span itemprop="name">machine learning</span>
                   </a>
                 </span>
@@ -3257,7 +3257,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="https:/phoenixjiangnan.github.io/2016/08/10/machine learning/Inverted-Index/#comments" itemprop="discussionUrl">
+                <a href="/2016/08/10/machine learning/Inverted-Index/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/10/machine learning/Inverted-Index/" itemprop="commentsCount"></span>
                 </a>
               </span>
@@ -3391,7 +3391,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
 </tbody>
 </table>
           <div class="post-more-link text-center">
-            <a class="btn" href="https:/phoenixjiangnan.github.io/2016/08/10/machine learning/Inverted-Index/#more" rel="contents">
+            <a class="btn" href="/2016/08/10/machine learning/Inverted-Index/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -3425,7 +3425,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="https:/phoenixjiangnan.github.io/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="https:/phoenixjiangnan.github.io/page/6/">6</a><a class="extend next" rel="next" href="https:/phoenixjiangnan.github.io/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -3458,7 +3458,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
       <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="https:/phoenixjiangnan.github.io/avatar/avatar.jpg"
+               src="/avatar/avatar.jpg"
                alt="Bowen" />
           <p class="site-author-name" itemprop="name">Bowen</p>
           <p class="site-description motion-element" itemprop="description">keep learning - learning notes and blogs</p>
@@ -3493,7 +3493,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
 
         
           <div class="feed-link motion-element">
-            <a href="https:/phoenixjiangnan.github.io/atom.xml" rel="alternate">
+            <a href="/atom.xml" rel="alternate">
               <i class="fa fa-rss"></i>
               RSS
             </a>
@@ -3577,42 +3577,42 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
 
 
   
-  <script type="text/javascript" src="https:/phoenixjiangnan.github.io/vendors/jquery/index.js?v=2.1.3"></script>
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
-  <script type="text/javascript" src="https:/phoenixjiangnan.github.io/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
-  <script type="text/javascript" src="https:/phoenixjiangnan.github.io/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-  <script type="text/javascript" src="https:/phoenixjiangnan.github.io/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="https:/phoenixjiangnan.github.io/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="https:/phoenixjiangnan.github.io/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
-
-  
-
-
-  <script type="text/javascript" src="https:/phoenixjiangnan.github.io/js/src/utils.js?v=5.0.1"></script>
-
-  <script type="text/javascript" src="https:/phoenixjiangnan.github.io/js/src/motion.js?v=5.0.1"></script>
-
-
-
-  
-  
-
-  
 
   
 
 
-  <script type="text/javascript" src="https:/phoenixjiangnan.github.io/js/src/bootstrap.js?v=5.0.1"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
 
 
 
@@ -3654,7 +3654,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     if (search_path.length == 0) {
        search_path = "search.xml";
     }
-    var path = "https://phoenixjiangnan.github.io/" + search_path;
+    var path = "/" + search_path;
     // monitor main search box;
 
     function proceedsearch() {
