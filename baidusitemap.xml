@@ -5,14 +5,24 @@
     
   <url>
     <loc>https://phoenixjiangnan.github.io/2016/10/06/distributed%20system/kafka/Apache-Kafka-Samza-and-the-Unix-Philosopy-of-Distributed-Data/</loc>
-    <lastmod>2016-10-06T11:55:32.000Z</lastmod>
+    <lastmod>2016-10-06T11:56:47.000Z</lastmod>
     <data>
         <display>
         <title>Apache Kafka, Samza, and the Unix Philosopy of Distributed Data</title>
         <pubTime>2016-10-06T11:55:32.000Z</pubTime>
         
+        <tag>kafka</tag>
+         
+        <tag>unix pipeline</tag>
+         
          
            
+             
+              <breadCrumb title="distributed system" url="https://phoenixjiangnan.github.io/categories/distributed-system/"/>
+          
+             
+              <breadCrumb title="kafka" url="https://phoenixjiangnan.github.io/categories/distributed-system/kafka/"/>
+          
         </display>
     </data>
     </url>
