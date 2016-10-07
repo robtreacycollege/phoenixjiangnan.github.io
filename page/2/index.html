@@ -285,6 +285,235 @@
             
               
                 
+                <a class="post-title-link" href="/2016/08/10/machine learning/Inverted-Index/" itemprop="url">
+                  Inverted Index
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-10T00:04:07+08:00" content="2016-08-10">
+              2016-08-10
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/machine-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">machine learning</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/10/machine learning/Inverted-Index/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/10/machine learning/Inverted-Index/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="Application"><a href="#Application" class="headerlink" title="Application"></a>Application</h2><p>In computer science, an <code>inverted index</code> (also referred to as postings file or inverted file) is an index data structure storing a mapping from content, such as words or numbers, to its locations in a database file, or in a document or a set of documents (named in contrast to a Forward Index, which maps from documents to content). </p>
+<p>The purpose of an inverted index is to allow fast full text searches, at a cost of increased processing when a document is added to the database. The inverted file may be the database file itself, rather than its index. It is the most popular data structure used in document retrieval systems, used on a large scale for example in search engines. Additionally, several significant general-purpose mainframe-based database management systems have used inverted list architectures.</p>
+<blockquote>
+<p>The inverted index data structure is a central component of a typical search engine indexing algorithm. A goal of a search engine implementation is to optimize the speed of the query: <code>find the documents where word X occurs</code>. </p>
+</blockquote>
+<p>Once a forward index is developed, which stores lists of words per document, it is next inverted to develop an inverted index. Querying the forward index would require sequential iteration through each document and to each word to verify a matching document. The time, memory, and processing resources to perform such a query are not always technically realistic. Instead of listing the words per document in the forward index, the inverted index data structure is developed which lists the documents per word.</p>
+<p>With the inverted index created, the query can now be resolved by jumping to the word id (via random access) in the inverted index.</p>
+<h2 id="Core-Concept-Explained"><a href="#Core-Concept-Explained" class="headerlink" title="Core Concept Explained"></a>Core Concept Explained</h2><blockquote>
+<p><code>Inverted Index</code> is designed to allow very fast full-text searches. </p>
+</blockquote>
+<p>An <code>inverted index</code> consists of </p>
+<blockquote>
+<ul>
+<li>a list of all the unique words that appear in any document, and</li>
+<li>for each word, a list of the documents in which it appears.</li>
+</ul>
+</blockquote>
+<p>For example, let’s say we have two documents, each with a <code>content</code> field containing the following:</p>
+<ul>
+<li>The quick brown fox jumped over the lazy dog</li>
+<li>Quick brown foxes leap over lazy dogs in summer</li>
+</ul>
+<p>To create an inverted index, we first split the <code>content</code> field of each document into separate words (which we call terms, or tokens), create a sorted list of all the unique terms, and then list in which document each term appears. The result looks something like this:</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Doc_1</th>
+<th>Doc_2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Quick</td>
+<td></td>
+<td>X</td>
+</tr>
+<tr>
+<td>The</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>brown</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td>dog</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>dogs</td>
+<td></td>
+<td>X</td>
+</tr>
+<tr>
+<td>fox</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>foxes</td>
+<td></td>
+<td>X</td>
+</tr>
+<tr>
+<td>in</td>
+<td></td>
+<td>X</td>
+</tr>
+<tr>
+<td>jumped</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>lazy</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td>leap</td>
+<td></td>
+<td>X</td>
+</tr>
+<tr>
+<td>over</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td>quick</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>summer</td>
+<td></td>
+<td>X</td>
+</tr>
+<tr>
+<td>the</td>
+<td>X</td>
+</tr>
+</tbody>
+</table>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/10/machine learning/Inverted-Index/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/07/26/system design/project experience/How-did-I-reduce-Tableau-Server-s-downtime-in-a-Postgres-failover-from-3-min-to-1-sec/" itemprop="url">
                   How did I reduce Tableau Server's downtime in a Postgres failover from 3 min to 1 sec
                 </a>
@@ -3018,157 +3247,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/28/web development/json/jackson/Jackson-How-to-use-Jackson-to-parse-basic-Json-to-Java-POJO/" itemprop="url">
-                  Jackson - How to use Jackson to parse basic Json to Java POJO
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-06-28T16:55:03+08:00" content="2016-06-28">
-              2016-06-28
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/web-development/" itemprop="url" rel="index">
-                    <span itemprop="name">web development</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/web-development/json/" itemprop="url" rel="index">
-                    <span itemprop="name">json</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/web-development/json/jackson/" itemprop="url" rel="index">
-                    <span itemprop="name">jackson</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/28/web development/json/jackson/Jackson-How-to-use-Jackson-to-parse-basic-Json-to-Java-POJO/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/06/28/web development/json/jackson/Jackson-How-to-use-Jackson-to-parse-basic-Json-to-Java-POJO/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="The-Problem"><a href="#The-Problem" class="headerlink" title="The Problem"></a>The Problem</h2><p>We are trying to map or parse a json block to a POJO object.</p>
-<p>The sample json block is:</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"hosts"</span>:[</div><div class="line">                &#123;<span class="attr">"identifier"</span>:<span class="string">"host0"</span>&#125;,</div><div class="line">                &#123;<span class="attr">"identifier"</span>:<span class="string">"host1"</span>&#125;,</div><div class="line">                &#123;<span class="attr">"identifier"</span>:<span class="string">"host2"</span>&#125;</div><div class="line">            ],</div><div class="line">    <span class="attr">"targetId"</span>:<span class="number">0</span>,</div><div class="line">    <span class="attr">"sourceId"</span>:<span class="number">1</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>First, we came up with java classes as the following:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Host</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String m_identifier;</div><div class="line"></div><div class="line">    <span class="comment">// No Constructor</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConfigParams</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> Set&lt;Host&gt; m_hosts;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> m_targetId;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> m_currentId;</div><div class="line"></div><div class="line">    <span class="comment">// No constructor</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/06/28/web development/json/jackson/Jackson-How-to-use-Jackson-to-parse-basic-Json-to-Java-POJO/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3214,7 +3292,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives/">
-              <span class="site-state-item-count">107</span>
+              <span class="site-state-item-count">108</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -3222,7 +3300,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories/">
-                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-count">49</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -3231,7 +3309,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags/">
-                <span class="site-state-item-count">255</span>
+                <span class="site-state-item-count">256</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

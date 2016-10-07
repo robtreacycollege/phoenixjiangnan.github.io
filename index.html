@@ -285,6 +285,203 @@
             
               
                 
+                <a class="post-title-link" href="/2016/10/07/data structures and algorithms/bloom filter/Bloom-Filter-Introduction/" itemprop="url">
+                  Bloom Filter - Introduction
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-10-07T11:50:33+08:00" content="2016-10-07">
+              2016-10-07
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/data-structures-and-algorithms/" itemprop="url" rel="index">
+                    <span itemprop="name">data structures and algorithms</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/data-structures-and-algorithms/bloom-filter/" itemprop="url" rel="index">
+                    <span itemprop="name">bloom filter</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/07/data structures and algorithms/bloom filter/Bloom-Filter-Introduction/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/07/data structures and algorithms/bloom filter/Bloom-Filter-Introduction/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Bloom Filter has become a hot topic in interviewing.</p>
+<blockquote>
+<p>A bloom filter is a space-efficient probabilistic data structure designed to tell you an element either <code>possibly in set</code> or <code>definitely not in set</code>. That’s saying, <code>false positive matches are possible</code>, but <code>false negatives are not</code>. Elements can be added to the set, but not removed (though this can be addressed with a <code>counting filter</code>). The more elements that are added to the set, the larger the probability of false positives.</p>
+</blockquote>
+<h2 id="How-to-store-a-value"><a href="#How-to-store-a-value" class="headerlink" title="How to store a value"></a>How to store a value</h2><blockquote>
+<p>An empty <code>Bloom Filter</code> is <code>an bit array of m bits</code>, all set to 0. </p>
+</blockquote>
+<p>To store a value, there must also be either </p>
+<ul>
+<li><p><code>k different hash functions</code> defined, each of which maps or hashes some set element to one of the m array positions with a uniform random distribution.</p>
+<p>  Typically, <code>k</code> is a constant, much smaller than <code>m</code> (<code>k</code> &lt;&lt; <code>m</code>), which is proportional to the number of elements to be added; the precise choice of <code>k</code> and the constant of proportionality of m are determined by the intended false positive rate of the filter. Feed the value to each of the <code>k</code> hash functions to get <code>k</code> array positions.</p>
+</li>
+<li><p>or one hash function which hashes bits of the value and returns <code>k</code> array positions.</p>
+<ul>
+<li>there’re several ways to achieve this, we’ll talk about this later</li>
+</ul>
+</li>
+</ul>
+<p>To add an element,  Set the bits at all these positions to <code>1</code>.</p>
+<h2 id="How-to-query-a-value"><a href="#How-to-query-a-value" class="headerlink" title="How to query a value"></a>How to query a value</h2><p>To query for an element (test whether it is in the set), get the <code>k</code> array positions by either</p>
+<ul>
+<li>feeding it to each of the <code>k</code> hash functions </li>
+<li>or that single hash function which returns <code>k</code> positions.</li>
+</ul>
+<p>If any of the bits at these positions is <code>0</code>, the element is definitely not in the set – if it were, then all the bits would have been set to <code>1</code> when it was inserted.</p>
+<p>If all are <code>1</code>, then either the element is in the set, or the bits have by chance been set to <code>1</code> during the insertion of other elements, resulting in a false positive. In a simple Bloom Filter, there is no way to distinguish between the two cases, but more advanced techniques can address this problem.</p>
+<h2 id="Space-and-Time-Advantage"><a href="#Space-and-Time-Advantage" class="headerlink" title="Space and Time Advantage"></a>Space and Time Advantage</h2><h3 id="Space"><a href="#Space" class="headerlink" title="Space"></a>Space</h3><p>While risking false positives, <code>Bloom Filter</code> has a strong space advantage over other data structures for representing sets, such as self-balancing binary search trees, tries, hash tables, or simple arrays or linked lists of the entries. Most of those require storing at least the data items themselves, which can require anywhere from a small number of bits, for small integers, to an arbitrary number of bits, such as for strings (tries are an exception, since they can share storage between elements with equal prefixes). </p>
+<p>However, Bloom Filter does not store the data items at all, and a separate solution must be provided for the actual storage. Linked structures incur an additional linear space overhead for pointers. A Bloom Filter with <code>1%</code> error and an optimal value of <code>k</code>, in contrast, requires only about <code>9.6</code> bits per element, regardless of the size of the elements. This advantage comes partly from its compactness, inherited from arrays, and partly from its probabilistic nature. The <code>1%</code> false-positive rate can be reduced by a factor of ten by adding only about <code>4.8</code> bits per element.</p>
+<p>However, if the number of potential values is small and many of them can be in the set, the Bloom Filter is easily surpassed by the deterministic bit array, which requires only one bit for each potential element. Note also that hash tables gain a space and time advantage if they begin ignoring collisions and store only whether each bucket contains an entry; in this case, they have effectively become Bloom Filters with <code>k = 1</code></p>
+<h3 id="Time"><a href="#Time" class="headerlink" title="Time"></a>Time</h3><p>Bloom Filters also have the unusual property that the time needed either to add items or to check whether an item is in the set is a fixed constant, <code>O(k)</code>, completely independent of the number of items already in the set. </p>
+<hr>
+<p>No other constant-space set data structure has this property, but the average access time of sparse hash tables can make them faster in practice than some Bloom Filters. In a hardware implementation, however, the Bloom Filter shines because its <code>k</code> lookups are independent and can be parallelized.</p>
+<p>To understand its space efficiency, it is instructive to compare the general Bloom Filter with its special case when <code>k = 1</code>. If <code>k = 1</code>, then in order to keep the false positive rate sufficiently low, a small fraction of bits should be set, which means the array must be very large and contain long runs of zeros. The information content of the array relative to its size is low. The generalized Bloom filter (when <code>k &gt; 1</code>) allows many more bits to be set while still maintaining a low false positive rate; if the parameters (<code>k</code> and <code>m</code>) are chosen well, about half of the bits will be set, and these will be apparently random, minimizing redundancy and maximizing information content.</p>
+<h2 id="Application"><a href="#Application" class="headerlink" title="Application"></a>Application</h2><p>I’ll discuss the implementation details of these Bloom Filters later.</p>
+<h3 id="Hadoop"><a href="#Hadoop" class="headerlink" title="Hadoop"></a>Hadoop</h3><p><a href="https://github.com/apache/hadoop/tree/f67237cbe7bc48a1b9088e990800b37529f1db2a/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/util/bloom" target="_blank" rel="external">Hadoop Github Mirror</a></p>
+<ul>
+<li><p><a href="https://github.com/apache/hadoop/blob/f67237cbe7bc48a1b9088e990800b37529f1db2a/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/util/bloom/BloomFilter.java" target="_blank" rel="external">Bloom Filter</a></p>
+</li>
+<li><p><a href="https://github.com/apache/hadoop/blob/f67237cbe7bc48a1b9088e990800b37529f1db2a/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/util/bloom/CountingBloomFilter.java" target="_blank" rel="external">Counting Bloom Filter</a></p>
+</li>
+<li><p><a href="https://github.com/apache/hadoop/blob/f67237cbe7bc48a1b9088e990800b37529f1db2a/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/util/bloom/DynamicBloomFilter.java" target="_blank" rel="external">Dynamic Bloom Filter</a></p>
+</li>
+<li><p><a href="https://github.com/apache/hadoop/blob/f67237cbe7bc48a1b9088e990800b37529f1db2a/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/util/bloom/RetouchedBloomFilter.java" target="_blank" rel="external">Retouched Bloom Filter</a></p>
+</li>
+<li><p><a href="https://github.com/apache/hadoop/blob/f67237cbe7bc48a1b9088e990800b37529f1db2a/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/util/bloom/TestBloomFilters.java" target="_blank" rel="external">Test Bloom Filter</a></p>
+</li>
+<li><p><a href="https://github.com/apache/hadoop/blob/f67237cbe7bc48a1b9088e990800b37529f1db2a/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/util/bloom/BloomFilterCommonTester.java" target="_blank" rel="external">BloomFilterCommonTester</a></p>
+</li>
+</ul>
+<h3 id="Cassandra"><a href="#Cassandra" class="headerlink" title="Cassandra"></a>Cassandra</h3><ul>
+<li><a href="https://github.com/apache/cassandra/blob/trunk/src/java/org/apache/cassandra/utils/BloomFilter.java" target="_blank" rel="external">https://github.com/apache/cassandra/blob/trunk/src/java/org/apache/cassandra/utils/BloomFilter.java</a></li>
+</ul>
+<hr>
+<p>Reference:</p>
+<ul>
+<li><p><a href="https://en.wikipedia.org/wiki/Bloom_filter" target="_blank" rel="external">https://en.wikipedia.org/wiki/Bloom_filter</a></p>
+</li>
+<li><p><a href="http://stackoverflow.com/questions/6533582/advantage-of-using-0x01-instead-of-1-for-an-integer-variable" target="_blank" rel="external">http://stackoverflow.com/questions/6533582/advantage-of-using-0x01-instead-of-1-for-an-integer-variable</a></p>
+</li>
+<li><p><a href="http://billmill.org/bloomfilter-tutorial/" target="_blank" rel="external">http://billmill.org/bloomfilter-tutorial/</a></p>
+</li>
+<li><p><a href="http://www.javamex.com/tutorials/collections/bloom_filter_java.shtml" target="_blank" rel="external">http://www.javamex.com/tutorials/collections/bloom_filter_java.shtml</a></p>
+</li>
+<li><p><a href="http://www.sanfoundry.com/java-program-implement-bloom-filter/" target="_blank" rel="external">http://www.sanfoundry.com/java-program-implement-bloom-filter/</a></p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/10/06/distributed system/kafka/Apache-Kafka-Samza-and-the-Unix-Philosopy-of-Distributed-Data/" itemprop="url">
                   Apache Kafka, Samza, and the Unix Philosopy of Distributed Data
                 </a>
@@ -497,117 +694,39 @@
 
       
         
-          
-            <h2 id="Throttling-and-Traffic-Shaping"><a href="#Throttling-and-Traffic-Shaping" class="headerlink" title="Throttling and Traffic Shaping"></a>Throttling and Traffic Shaping</h2><blockquote>
+          <h2 id="Throttling-and-Traffic-Shaping"><a href="#Throttling-and-Traffic-Shaping" class="headerlink" title="Throttling and Traffic Shaping"></a>Throttling and Traffic Shaping</h2><blockquote>
 <p>Throttling is, to control the consumption of resources used by an instance of an application, an individual tenant, or an entire service. </p>
 </blockquote>
 <p>Throttling can allow the system to continue to function and meet service level agreements, even when an increase in demand places an extreme load on resources.</p>
 <p>The system could implement several throttling strategies, including:</p>
 <ul>
-<li><code>Service Metering</code> - that is, rejecting requests from an individual user who has already accessed system APIs more than n times per second over a given period of time. This requires that the system meters the use of resources for each tenant or user running an application.</li>
-<li><code>Leaky bucket as a queue</code> - that is, using load leveling to smooth the volume of activity (also called <code>Queue-based Load Leveling pattern</code>). </li>
-<li><code>Leaky bucket as a priority queue</code> - in a multitenant environment, <code>Leaky bucket as a queue</code> will reduce the performance for every tenant. <ul>
-<li>If the system must support a mix of tenants with different SLAs, the work for high-value tenants might be performed immediately. </li>
-<li>Requests for other tenants can be held back, and handled when the backlog has eased. Deferring operations being performed on behalf of lower priority applications or tenants. These operations can be suspended or curtailed, with an exception generated to inform the tenant that the system is busy and that the operation should be retried later.</li>
+<li><p><code>Service Metering</code> - that is, rejecting requests from an individual user who has already accessed system APIs more than n times per second over a given period of time. This requires that the system meters the use of resources for each tenant or user running an application.</p>
+</li>
+<li><p><code>Leaky bucket as a queue</code> - that is, using load leveling to smooth the volume of activity (also called <code>Queue-based Load Leveling pattern</code>). </p>
+</li>
+<li><p><code>Leaky bucket as a priority queue</code> - in a multitenant environment, <code>Leaky bucket as a queue</code> will reduce the performance for every tenant. </p>
+<ul>
+<li><p>If the system must support a mix of tenants with different SLAs, the work for high-value tenants might be performed immediately. </p>
+</li>
+<li><p>Requests for other tenants can be held back, and handled when the backlog has eased. Deferring operations being performed on behalf of lower priority applications or tenants. These operations can be suspended or curtailed, with an exception generated to inform the tenant that the system is busy and that the operation should be retried later.</p>
+</li>
 </ul>
 </li>
-<li><code>Token bucket</code> - that is, using tokens to limit the volume of activity</li>
-<li><code>Disable non-critical services</code> Disabling or degrading the functionality of selected nonessential services so that essential services can run unimpeded with sufficient resources. For example, if the application is streaming video output, it could switch to a lower resolution.</li>
+<li><p><code>Token bucket</code> - that is, using tokens to limit the volume of activity</p>
+</li>
+<li><p><code>Disable non-critical services</code> Disabling or degrading the functionality of selected nonessential services so that essential services can run unimpeded with sufficient resources. For example, if the application is streaming video output, it could switch to a lower resolution.</p>
+</li>
 </ul>
 <p>There are two most commonly used algorithms:</p>
 <ol>
 <li>Leaky Bucket for rate controll</li>
 <li>Token Bucket for concurrency control</li>
 </ol>
-<h2 id="Leaky-Bucket-Algorithm"><a href="#Leaky-Bucket-Algorithm" class="headerlink" title="Leaky Bucket Algorithm"></a>Leaky Bucket Algorithm</h2><blockquote>
-<p>Leaky Bucket Algorithm as a Queue, a.k.a Queue-Based Load Leveling Pattern</p>
-</blockquote>
-<h3 id="Statistics"><a href="#Statistics" class="headerlink" title="Statistics"></a>Statistics</h3><ul>
-<li>What’s the max latency time a request can experience:<ul>
-<li>V/(T - O) : V - the bucket’s volume, T - the request input rate, O - the output rate to process requests </li>
-</ul>
-</li>
-</ul>
-<h3 id="Pros"><a href="#Pros" class="headerlink" title="Pros:"></a>Pros:</h3><ul>
-<li>Easy to implement</li>
-<li>Best used to control processing rate</li>
-</ul>
-<h3 id="Cons"><a href="#Cons" class="headerlink" title="Cons:"></a>Cons:</h3><ul>
-<li>Leaky bucket algorithms cannot effectively take advantages of resources. The leaking rate is fixed, so it cannot process a bulky traffic that exceeds its threshold even though there are plenty of resources. (Token Bucket Algorithm can do that)</li>
-</ul>
-<h3 id="Use-Case"><a href="#Use-Case" class="headerlink" title="Use Case:"></a>Use Case:</h3><ul>
-<li>To address system callback flood</li>
-</ul>
-<h2 id="Token-Bucket-Algorithm"><a href="#Token-Bucket-Algorithm" class="headerlink" title="Token Bucket Algorithm"></a>Token Bucket Algorithm</h2><blockquote>
-<p>What a token bucket limits is the traffic within a predefined time window. From the API level, the traffic that we always talk about is <code>QPS (Queries per sec)</code> and <code>TPS (Transactions per sec)</code>, and they are just the traffic in a 1-sec time window.</p>
-</blockquote>
-<p>The token bucket algorithm can be conceptually understood as follows:</p>
-<ul>
-<li>A token is added to the bucket every <code>1/r</code>  seconds.</li>
-<li>The current number of tokens in the bucket is <code>c</code>. <ul>
-<li>Strategy 1: The bucket can hold at the most <code>b</code> tokens. <code>c</code> &lt;= <code>b</code>. If a token arrives when the bucket is full, it is discarded.</li>
-<li>Strategy 2: The bucket can hold unlimited tokens</li>
-</ul>
-</li>
-<li>When n bytes/requests arrive, n tokens will be removed from the bucket, and the bytes/requests are sent to the network.</li>
-</ul>
-<p>There are four strategies for situations when <code>n</code> &gt; <code>c</code>.</p>
-<ol>
-<li>(simple and rudimentary) Consider the packet to be non-conformant, and discard the packet for now (availiable for request resubmit)</li>
-<li>(naive and impractical) Have the packet wait until enough tokens accumulated<ul>
-<li>simple waiting may block the workflow</li>
-<li>maybe lower the priority of the packet, but it still possibily will not be processed forever</li>
-</ul>
-</li>
-<li>(good for batch processing) Break the packet into smaller ones</li>
-<li>(google guava supports) Grant the packet <code>n</code> tokens for now, but will have to delay its further requests in order to make it up. This requires a service metering to keep track of hosts’ token usage. Google Guava <code>RateLimiter</code> supports this feature.</li>
-</ol>
-<h3 id="Statistics-1"><a href="#Statistics-1" class="headerlink" title="Statistics"></a>Statistics</h3><ul>
-<li>What’s the average allowed hit rate<ul>
-<li>the rate to issue tokens <code>r</code></li>
-</ul>
-</li>
-<li>How much is the max tolerable flood peak<ul>
-<li>if the flood peak comes when the token buckets are full, the volume of max tolerable flood peak = V + r. V - token bucket size, r - the rate to issue tokens</li>
-</ul>
-</li>
-</ul>
-<h3 id="Pros-1"><a href="#Pros-1" class="headerlink" title="Pros:"></a>Pros:</h3><ul>
-<li>Best used to control max concurrency</li>
-</ul>
-<h3 id="Cons-1"><a href="#Cons-1" class="headerlink" title="Cons:"></a>Cons:</h3><ul>
-<li>It really depends on which above strategy you choose</li>
-</ul>
-<h3 id="Use-Case-1"><a href="#Use-Case-1" class="headerlink" title="Use Case:"></a>Use Case:</h3><ul>
-<li>To address user requests flood</li>
-</ul>
-<h2 id="Difference-between-Leaky-Bucket-and-Token-Bucket"><a href="#Difference-between-Leaky-Bucket-and-Token-Bucket" class="headerlink" title="Difference between Leaky Bucket and Token Bucket"></a>Difference between Leaky Bucket and Token Bucket</h2><blockquote>
-<p>Leaky bucket strictly forces a fixed maximum rate of processing. In some circumstances, leaky bucket cannot effectively use the internet resources, because it only grants fixed rate of processing and thus cannot handle traffic floods.</p>
-<p>While token bucket not only limit the average rate of processing, it also allows systems to handle sudden flood peaks.</p>
-</blockquote>
-<p>Pratically, leaky bucket and token bucket algorithms are put together to provide a more powerful yet more flexible control over web traffic.</p>
-<hr>
-<p>References:</p>
-<ul>
-<li><p><a href="http://jm.taobao.org/2016/05/19/how-to-withstand-the-world-s-largest-traffic/" target="_blank" rel="external">http://jm.taobao.org/2016/05/19/how-to-withstand-the-world-s-largest-traffic/</a></p>
-</li>
-<li><p><a href="https://msdn.microsoft.com/en-us/library/dn589798.aspx" target="_blank" rel="external">https://msdn.microsoft.com/en-us/library/dn589798.aspx</a></p>
-</li>
-<li><p><a href="http://www.cnblogs.com/LBSer/p/4083131.html" target="_blank" rel="external">http://www.cnblogs.com/LBSer/p/4083131.html</a></p>
-</li>
-</ul>
-<ul>
-<li><a href="https://blog.jamespan.me/2015/10/19/traffic-shaping-with-token-bucket/" target="_blank" rel="external">https://blog.jamespan.me/2015/10/19/traffic-shaping-with-token-bucket/</a></li>
-</ul>
-<ul>
-<li><a href="https://msdn.microsoft.com/en-us/library/dn589783.aspx" target="_blank" rel="external">https://msdn.microsoft.com/en-us/library/dn589783.aspx</a></li>
-</ul>
-<ul>
-<li><a href="https://github.com/google/guava/blob/v18.0/guava/src/com/google/common/util/concurrent/RateLimiter.java" target="_blank" rel="external">https://github.com/google/guava/blob/v18.0/guava/src/com/google/common/util/concurrent/RateLimiter.java</a></li>
-<li><a href="https://github.com/google/guava/blob/v18.0/guava/src/com/google/common/util/concurrent/SmoothRateLimiter.java" target="_blank" rel="external">https://github.com/google/guava/blob/v18.0/guava/src/com/google/common/util/concurrent/SmoothRateLimiter.java</a></li>
-</ul>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/05/system design/Throttling-and-Traffic-Shaping/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -3192,235 +3311,6 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/10/machine learning/Inverted-Index/" itemprop="url">
-                  Inverted Index
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-08-10T00:04:07+08:00" content="2016-08-10">
-              2016-08-10
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/machine-learning/" itemprop="url" rel="index">
-                    <span itemprop="name">machine learning</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/10/machine learning/Inverted-Index/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/10/machine learning/Inverted-Index/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Application"><a href="#Application" class="headerlink" title="Application"></a>Application</h2><p>In computer science, an <code>inverted index</code> (also referred to as postings file or inverted file) is an index data structure storing a mapping from content, such as words or numbers, to its locations in a database file, or in a document or a set of documents (named in contrast to a Forward Index, which maps from documents to content). </p>
-<p>The purpose of an inverted index is to allow fast full text searches, at a cost of increased processing when a document is added to the database. The inverted file may be the database file itself, rather than its index. It is the most popular data structure used in document retrieval systems, used on a large scale for example in search engines. Additionally, several significant general-purpose mainframe-based database management systems have used inverted list architectures.</p>
-<blockquote>
-<p>The inverted index data structure is a central component of a typical search engine indexing algorithm. A goal of a search engine implementation is to optimize the speed of the query: <code>find the documents where word X occurs</code>. </p>
-</blockquote>
-<p>Once a forward index is developed, which stores lists of words per document, it is next inverted to develop an inverted index. Querying the forward index would require sequential iteration through each document and to each word to verify a matching document. The time, memory, and processing resources to perform such a query are not always technically realistic. Instead of listing the words per document in the forward index, the inverted index data structure is developed which lists the documents per word.</p>
-<p>With the inverted index created, the query can now be resolved by jumping to the word id (via random access) in the inverted index.</p>
-<h2 id="Core-Concept-Explained"><a href="#Core-Concept-Explained" class="headerlink" title="Core Concept Explained"></a>Core Concept Explained</h2><blockquote>
-<p><code>Inverted Index</code> is designed to allow very fast full-text searches. </p>
-</blockquote>
-<p>An <code>inverted index</code> consists of </p>
-<blockquote>
-<ul>
-<li>a list of all the unique words that appear in any document, and</li>
-<li>for each word, a list of the documents in which it appears.</li>
-</ul>
-</blockquote>
-<p>For example, let’s say we have two documents, each with a <code>content</code> field containing the following:</p>
-<ul>
-<li>The quick brown fox jumped over the lazy dog</li>
-<li>Quick brown foxes leap over lazy dogs in summer</li>
-</ul>
-<p>To create an inverted index, we first split the <code>content</code> field of each document into separate words (which we call terms, or tokens), create a sorted list of all the unique terms, and then list in which document each term appears. The result looks something like this:</p>
-<table>
-<thead>
-<tr>
-<th>Term</th>
-<th>Doc_1</th>
-<th>Doc_2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Quick</td>
-<td></td>
-<td>X</td>
-</tr>
-<tr>
-<td>The</td>
-<td>X</td>
-<td></td>
-</tr>
-<tr>
-<td>brown</td>
-<td>X</td>
-<td>X</td>
-</tr>
-<tr>
-<td>dog</td>
-<td>X</td>
-<td></td>
-</tr>
-<tr>
-<td>dogs</td>
-<td></td>
-<td>X</td>
-</tr>
-<tr>
-<td>fox</td>
-<td>X</td>
-<td></td>
-</tr>
-<tr>
-<td>foxes</td>
-<td></td>
-<td>X</td>
-</tr>
-<tr>
-<td>in</td>
-<td></td>
-<td>X</td>
-</tr>
-<tr>
-<td>jumped</td>
-<td>X</td>
-<td></td>
-</tr>
-<tr>
-<td>lazy</td>
-<td>X</td>
-<td>X</td>
-</tr>
-<tr>
-<td>leap</td>
-<td></td>
-<td>X</td>
-</tr>
-<tr>
-<td>over</td>
-<td>X</td>
-<td>X</td>
-</tr>
-<tr>
-<td>quick</td>
-<td>X</td>
-<td></td>
-</tr>
-<tr>
-<td>summer</td>
-<td></td>
-<td>X</td>
-</tr>
-<tr>
-<td>the</td>
-<td>X</td>
-</tr>
-</tbody>
-</table>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/10/machine learning/Inverted-Index/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3466,7 +3356,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives/">
-              <span class="site-state-item-count">107</span>
+              <span class="site-state-item-count">108</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -3474,7 +3364,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
           
             <div class="site-state-item site-state-categories">
               <a href="/categories/">
-                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-count">49</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -3483,7 +3373,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
           
             <div class="site-state-item site-state-tags">
               <a href="/tags/">
-                <span class="site-state-item-count">255</span>
+                <span class="site-state-item-count">256</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

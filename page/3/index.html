@@ -285,6 +285,157 @@
             
               
                 
+                <a class="post-title-link" href="/2016/06/28/web development/json/jackson/Jackson-How-to-use-Jackson-to-parse-basic-Json-to-Java-POJO/" itemprop="url">
+                  Jackson - How to use Jackson to parse basic Json to Java POJO
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-06-28T16:55:03+08:00" content="2016-06-28">
+              2016-06-28
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/web-development/" itemprop="url" rel="index">
+                    <span itemprop="name">web development</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/web-development/json/" itemprop="url" rel="index">
+                    <span itemprop="name">json</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/web-development/json/jackson/" itemprop="url" rel="index">
+                    <span itemprop="name">jackson</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/28/web development/json/jackson/Jackson-How-to-use-Jackson-to-parse-basic-Json-to-Java-POJO/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/06/28/web development/json/jackson/Jackson-How-to-use-Jackson-to-parse-basic-Json-to-Java-POJO/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="The-Problem"><a href="#The-Problem" class="headerlink" title="The Problem"></a>The Problem</h2><p>We are trying to map or parse a json block to a POJO object.</p>
+<p>The sample json block is:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"hosts"</span>:[</div><div class="line">                &#123;<span class="attr">"identifier"</span>:<span class="string">"host0"</span>&#125;,</div><div class="line">                &#123;<span class="attr">"identifier"</span>:<span class="string">"host1"</span>&#125;,</div><div class="line">                &#123;<span class="attr">"identifier"</span>:<span class="string">"host2"</span>&#125;</div><div class="line">            ],</div><div class="line">    <span class="attr">"targetId"</span>:<span class="number">0</span>,</div><div class="line">    <span class="attr">"sourceId"</span>:<span class="number">1</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>First, we came up with java classes as the following:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Host</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String m_identifier;</div><div class="line"></div><div class="line">    <span class="comment">// No Constructor</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConfigParams</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> Set&lt;Host&gt; m_hosts;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> m_targetId;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> m_currentId;</div><div class="line"></div><div class="line">    <span class="comment">// No constructor</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/06/28/web development/json/jackson/Jackson-How-to-use-Jackson-to-parse-basic-Json-to-Java-POJO/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/06/21/ruby/Ruby-Methods-in-Ruby/" itemprop="url">
                   Ruby - Methods in Ruby
                 </a>
@@ -2925,148 +3076,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/20/java/concurrency/Java-Concurrency-Callable-Future-and-FutureTask/" itemprop="url">
-                  Java Concurrency - Callable, Future, and FutureTask
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-20T21:51:31+08:00" content="2016-04-20">
-              2016-04-20
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index">
-                    <span itemprop="name">java</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/java/concurrency/" itemprop="url" rel="index">
-                    <span itemprop="name">concurrency</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/20/java/concurrency/Java-Concurrency-Callable-Future-and-FutureTask/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/20/java/concurrency/Java-Concurrency-Callable-Future-and-FutureTask/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="1-Motivation-Drawbacks-of-Thread-and-Runnable"><a href="#1-Motivation-Drawbacks-of-Thread-and-Runnable" class="headerlink" title="1 Motivation: Drawbacks of Thread and Runnable"></a>1 Motivation: Drawbacks of Thread and Runnable</h1><p>One of the beautiful things about Java from its very first release was the ease with which we could write multi-threaded programs and introduce asynchronous processing into our designs. The <code>Thread</code> class and <code>Runnable</code> interface combined with Java’s memory management model meant for straightforward thread programming.</p>
-<blockquote>
-<p>But neither the <code>Thread</code> class nor the <code>Runnable</code> interface allowed for thrown Exceptions or returned values. The lack of returned values was mildly annoying.</p>
-</blockquote>
-<p>The lack of thrown checked exceptions was a little more serious. The contract was <code>public void run()</code> which meant you had to catch checked exceptions and do something with them. Even if you were careful and you stored these for later verification, you couldn’t force all uses of the class to check the exception. You could go through all your getters and throw the <code>Exception</code> if it existed on each one. Besides being cumbersome, even that wasn’t foolproof. You couldn’t enforce calls to any of these. Thread programmers would correctly call <code>join()</code> to wait for it complete and may then have gone on their merry way.</p>
-<p>With the introduction of the <code>Callable</code> and <code>Future</code> interfaces and their support in the thread pools, both of these issues have been addressed quite elegantly.</p>
-<h1 id="2-Callable-lt-V-gt-interface"><a href="#2-Callable-lt-V-gt-interface" class="headerlink" title="2 Callable&lt;V&gt; interface"></a>2 <code>Callable&lt;V&gt;</code> interface</h1><p>A task that returns a result and may throw an exception. Implementors define a single method with no arguments called <code>public T call() throws Exception</code>. Now we can return a result, have it strongly typed as declared in our implementation and even throw <code>Exceptions</code>. </p>
-<p>The <code>Callable</code> interface is similar to <code>Runnable</code>, in that both are designed for classes whose instances are potentially executed by another thread. A <code>Runnable</code>, however, does not return a result and cannot throw a checked exception.</p>
-<p>The <code>Executors</code> class contains utility methods to convert from other common forms (like <code>Runnable</code>) to <code>Callable</code> classes, however you would do well to review your current implementations of <code>Runnable</code> or subclasses of <code>Thread</code>. Why bother? Primarily to double check and remove the workaround you may have implemented to address the lack of support for thrown <code>Exceptions</code>. At the same time, you may wish to make use of the ability to return results right in the execution method eliminating any need to cast to retrieve values.</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/20/java/concurrency/Java-Concurrency-Callable-Future-and-FutureTask/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3112,7 +3121,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives/">
-              <span class="site-state-item-count">107</span>
+              <span class="site-state-item-count">108</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -3120,7 +3129,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories/">
-                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-count">49</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -3129,7 +3138,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags/">
-                <span class="site-state-item-count">255</span>
+                <span class="site-state-item-count">256</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
