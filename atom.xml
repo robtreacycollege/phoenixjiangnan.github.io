@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://phoenixjiangnan.github.io/"/>
-  <updated>2016-10-07T03:53:09.000Z</updated>
+  <updated>2016-10-07T03:56:42.000Z</updated>
   <id>https://phoenixjiangnan.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://phoenixjiangnan.github.io/2016/10/07/data%20structures%20and%20algorithms/bloom%20filter/Bloom-Filter-Introduction/"/>
     <id>https://phoenixjiangnan.github.io/2016/10/07/data structures and algorithms/bloom filter/Bloom-Filter-Introduction/</id>
     <published>2016-10-07T03:50:33.000Z</published>
-    <updated>2016-10-07T03:53:09.000Z</updated>
+    <updated>2016-10-07T03:56:42.000Z</updated>
     
     <content type="html"><![CDATA[<p>Bloom Filter has become a hot topic in interviewing.</p>
 <blockquote>
@@ -48,6 +48,7 @@
 </ul>
 <p>If any of the bits at these positions is <code>0</code>, the element is definitely not in the set – if it were, then all the bits would have been set to <code>1</code> when it was inserted.</p>
 <p>If all are <code>1</code>, then either the element is in the set, or the bits have by chance been set to <code>1</code> during the insertion of other elements, resulting in a false positive. In a simple Bloom Filter, there is no way to distinguish between the two cases, but more advanced techniques can address this problem.</p>
+<a id="more"></a>
 <h2 id="Space-and-Time-Advantage"><a href="#Space-and-Time-Advantage" class="headerlink" title="Space and Time Advantage"></a>Space and Time Advantage</h2><h3 id="Space"><a href="#Space" class="headerlink" title="Space"></a>Space</h3><p>While risking false positives, <code>Bloom Filter</code> has a strong space advantage over other data structures for representing sets, such as self-balancing binary search trees, tries, hash tables, or simple arrays or linked lists of the entries. Most of those require storing at least the data items themselves, which can require anywhere from a small number of bits, for small integers, to an arbitrary number of bits, such as for strings (tries are an exception, since they can share storage between elements with equal prefixes). </p>
 <p>However, Bloom Filter does not store the data items at all, and a separate solution must be provided for the actual storage. Linked structures incur an additional linear space overhead for pointers. A Bloom Filter with <code>1%</code> error and an optimal value of <code>k</code>, in contrast, requires only about <code>9.6</code> bits per element, regardless of the size of the elements. This advantage comes partly from its compactness, inherited from arrays, and partly from its probabilistic nature. The <code>1%</code> false-positive rate can be reduced by a factor of ten by adding only about <code>4.8</code> bits per element.</p>
 <p>However, if the number of potential values is small and many of them can be in the set, the Bloom Filter is easily surpassed by the deterministic bit array, which requires only one bit for each potential element. Note also that hash tables gain a space and time advantage if they begin ignoring collisions and store only whether each bucket contains an entry; in this case, they have effectively become Bloom Filters with <code>k = 1</code></p>
@@ -94,7 +95,30 @@
     
       &lt;p&gt;Bloom Filter has become a hot topic in interviewing.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;A bloom filter is a space-efficient probabilistic data structure
+&lt;p&gt;A bloom filter is a space-efficient probabilistic data structure designed to tell you an element either &lt;code&gt;possibly in set&lt;/code&gt; or &lt;code&gt;definitely not in set&lt;/code&gt;. That’s saying, &lt;code&gt;false positive matches are possible&lt;/code&gt;, but &lt;code&gt;false negatives are not&lt;/code&gt;. Elements can be added to the set, but not removed (though this can be addressed with a &lt;code&gt;counting filter&lt;/code&gt;). The more elements that are added to the set, the larger the probability of false positives.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;How-to-store-a-value&quot;&gt;&lt;a href=&quot;#How-to-store-a-value&quot; class=&quot;headerlink&quot; title=&quot;How to store a value&quot;&gt;&lt;/a&gt;How to store a value&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;An empty &lt;code&gt;Bloom Filter&lt;/code&gt; is &lt;code&gt;an bit array of m bits&lt;/code&gt;, all set to 0. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;To store a value, there must also be either &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;k different hash functions&lt;/code&gt; defined, each of which maps or hashes some set element to one of the m array positions with a uniform random distribution.&lt;/p&gt;
+&lt;p&gt;  Typically, &lt;code&gt;k&lt;/code&gt; is a constant, much smaller than &lt;code&gt;m&lt;/code&gt; (&lt;code&gt;k&lt;/code&gt; &amp;lt;&amp;lt; &lt;code&gt;m&lt;/code&gt;), which is proportional to the number of elements to be added; the precise choice of &lt;code&gt;k&lt;/code&gt; and the constant of proportionality of m are determined by the intended false positive rate of the filter. Feed the value to each of the &lt;code&gt;k&lt;/code&gt; hash functions to get &lt;code&gt;k&lt;/code&gt; array positions.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;or one hash function which hashes bits of the value and returns &lt;code&gt;k&lt;/code&gt; array positions.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;there’re several ways to achieve this, we’ll talk about this later&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To add an element,  Set the bits at all these positions to &lt;code&gt;1&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;How-to-query-a-value&quot;&gt;&lt;a href=&quot;#How-to-query-a-value&quot; class=&quot;headerlink&quot; title=&quot;How to query a value&quot;&gt;&lt;/a&gt;How to query a value&lt;/h2&gt;&lt;p&gt;To query for an element (test whether it is in the set), get the &lt;code&gt;k&lt;/code&gt; array positions by either&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;feeding it to each of the &lt;code&gt;k&lt;/code&gt; hash functions &lt;/li&gt;
+&lt;li&gt;or that single hash function which returns &lt;code&gt;k&lt;/code&gt; positions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If any of the bits at these positions is &lt;code&gt;0&lt;/code&gt;, the element is definitely not in the set – if it were, then all the bits would have been set to &lt;code&gt;1&lt;/code&gt; when it was inserted.&lt;/p&gt;
+&lt;p&gt;If all are &lt;code&gt;1&lt;/code&gt;, then either the element is in the set, or the bits have by chance been set to &lt;code&gt;1&lt;/code&gt; during the insertion of other elements, resulting in a false positive. In a simple Bloom Filter, there is no way to distinguish between the two cases, but more advanced techniques can address this problem.&lt;/p&gt;
     
     </summary>
     

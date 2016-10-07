@@ -366,8 +366,7 @@
 
       
         
-          
-            <p>Bloom Filter has become a hot topic in interviewing.</p>
+          <p>Bloom Filter has become a hot topic in interviewing.</p>
 <blockquote>
 <p>A bloom filter is a space-efficient probabilistic data structure designed to tell you an element either <code>possibly in set</code> or <code>definitely not in set</code>. That’s saying, <code>false positive matches are possible</code>, but <code>false negatives are not</code>. Elements can be added to the set, but not removed (though this can be addressed with a <code>counting filter</code>). The more elements that are added to the set, the larger the probability of false positives.</p>
 </blockquote>
@@ -393,48 +392,11 @@
 </ul>
 <p>If any of the bits at these positions is <code>0</code>, the element is definitely not in the set – if it were, then all the bits would have been set to <code>1</code> when it was inserted.</p>
 <p>If all are <code>1</code>, then either the element is in the set, or the bits have by chance been set to <code>1</code> during the insertion of other elements, resulting in a false positive. In a simple Bloom Filter, there is no way to distinguish between the two cases, but more advanced techniques can address this problem.</p>
-<h2 id="Space-and-Time-Advantage"><a href="#Space-and-Time-Advantage" class="headerlink" title="Space and Time Advantage"></a>Space and Time Advantage</h2><h3 id="Space"><a href="#Space" class="headerlink" title="Space"></a>Space</h3><p>While risking false positives, <code>Bloom Filter</code> has a strong space advantage over other data structures for representing sets, such as self-balancing binary search trees, tries, hash tables, or simple arrays or linked lists of the entries. Most of those require storing at least the data items themselves, which can require anywhere from a small number of bits, for small integers, to an arbitrary number of bits, such as for strings (tries are an exception, since they can share storage between elements with equal prefixes). </p>
-<p>However, Bloom Filter does not store the data items at all, and a separate solution must be provided for the actual storage. Linked structures incur an additional linear space overhead for pointers. A Bloom Filter with <code>1%</code> error and an optimal value of <code>k</code>, in contrast, requires only about <code>9.6</code> bits per element, regardless of the size of the elements. This advantage comes partly from its compactness, inherited from arrays, and partly from its probabilistic nature. The <code>1%</code> false-positive rate can be reduced by a factor of ten by adding only about <code>4.8</code> bits per element.</p>
-<p>However, if the number of potential values is small and many of them can be in the set, the Bloom Filter is easily surpassed by the deterministic bit array, which requires only one bit for each potential element. Note also that hash tables gain a space and time advantage if they begin ignoring collisions and store only whether each bucket contains an entry; in this case, they have effectively become Bloom Filters with <code>k = 1</code></p>
-<h3 id="Time"><a href="#Time" class="headerlink" title="Time"></a>Time</h3><p>Bloom Filters also have the unusual property that the time needed either to add items or to check whether an item is in the set is a fixed constant, <code>O(k)</code>, completely independent of the number of items already in the set. </p>
-<hr>
-<p>No other constant-space set data structure has this property, but the average access time of sparse hash tables can make them faster in practice than some Bloom Filters. In a hardware implementation, however, the Bloom Filter shines because its <code>k</code> lookups are independent and can be parallelized.</p>
-<p>To understand its space efficiency, it is instructive to compare the general Bloom Filter with its special case when <code>k = 1</code>. If <code>k = 1</code>, then in order to keep the false positive rate sufficiently low, a small fraction of bits should be set, which means the array must be very large and contain long runs of zeros. The information content of the array relative to its size is low. The generalized Bloom filter (when <code>k &gt; 1</code>) allows many more bits to be set while still maintaining a low false positive rate; if the parameters (<code>k</code> and <code>m</code>) are chosen well, about half of the bits will be set, and these will be apparently random, minimizing redundancy and maximizing information content.</p>
-<h2 id="Application"><a href="#Application" class="headerlink" title="Application"></a>Application</h2><p>I’ll discuss the implementation details of these Bloom Filters later.</p>
-<h3 id="Hadoop"><a href="#Hadoop" class="headerlink" title="Hadoop"></a>Hadoop</h3><p><a href="https://github.com/apache/hadoop/tree/f67237cbe7bc48a1b9088e990800b37529f1db2a/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/util/bloom" target="_blank" rel="external">Hadoop Github Mirror</a></p>
-<ul>
-<li><p><a href="https://github.com/apache/hadoop/blob/f67237cbe7bc48a1b9088e990800b37529f1db2a/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/util/bloom/BloomFilter.java" target="_blank" rel="external">Bloom Filter</a></p>
-</li>
-<li><p><a href="https://github.com/apache/hadoop/blob/f67237cbe7bc48a1b9088e990800b37529f1db2a/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/util/bloom/CountingBloomFilter.java" target="_blank" rel="external">Counting Bloom Filter</a></p>
-</li>
-<li><p><a href="https://github.com/apache/hadoop/blob/f67237cbe7bc48a1b9088e990800b37529f1db2a/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/util/bloom/DynamicBloomFilter.java" target="_blank" rel="external">Dynamic Bloom Filter</a></p>
-</li>
-<li><p><a href="https://github.com/apache/hadoop/blob/f67237cbe7bc48a1b9088e990800b37529f1db2a/hadoop-common-project/hadoop-common/src/main/java/org/apache/hadoop/util/bloom/RetouchedBloomFilter.java" target="_blank" rel="external">Retouched Bloom Filter</a></p>
-</li>
-<li><p><a href="https://github.com/apache/hadoop/blob/f67237cbe7bc48a1b9088e990800b37529f1db2a/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/util/bloom/TestBloomFilters.java" target="_blank" rel="external">Test Bloom Filter</a></p>
-</li>
-<li><p><a href="https://github.com/apache/hadoop/blob/f67237cbe7bc48a1b9088e990800b37529f1db2a/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/util/bloom/BloomFilterCommonTester.java" target="_blank" rel="external">BloomFilterCommonTester</a></p>
-</li>
-</ul>
-<h3 id="Cassandra"><a href="#Cassandra" class="headerlink" title="Cassandra"></a>Cassandra</h3><ul>
-<li><a href="https://github.com/apache/cassandra/blob/trunk/src/java/org/apache/cassandra/utils/BloomFilter.java" target="_blank" rel="external">https://github.com/apache/cassandra/blob/trunk/src/java/org/apache/cassandra/utils/BloomFilter.java</a></li>
-</ul>
-<hr>
-<p>Reference:</p>
-<ul>
-<li><p><a href="https://en.wikipedia.org/wiki/Bloom_filter" target="_blank" rel="external">https://en.wikipedia.org/wiki/Bloom_filter</a></p>
-</li>
-<li><p><a href="http://stackoverflow.com/questions/6533582/advantage-of-using-0x01-instead-of-1-for-an-integer-variable" target="_blank" rel="external">http://stackoverflow.com/questions/6533582/advantage-of-using-0x01-instead-of-1-for-an-integer-variable</a></p>
-</li>
-<li><p><a href="http://billmill.org/bloomfilter-tutorial/" target="_blank" rel="external">http://billmill.org/bloomfilter-tutorial/</a></p>
-</li>
-<li><p><a href="http://www.javamex.com/tutorials/collections/bloom_filter_java.shtml" target="_blank" rel="external">http://www.javamex.com/tutorials/collections/bloom_filter_java.shtml</a></p>
-</li>
-<li><p><a href="http://www.sanfoundry.com/java-program-implement-bloom-filter/" target="_blank" rel="external">http://www.sanfoundry.com/java-program-implement-bloom-filter/</a></p>
-</li>
-</ul>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/07/data structures and algorithms/bloom filter/Bloom-Filter-Introduction/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
         
       
     </div>
