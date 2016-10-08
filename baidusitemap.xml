@@ -4,6 +4,68 @@
 
     
   <url>
+    <loc>https://phoenixjiangnan.github.io/2016/10/08/system%20design/cache/Cache-Cache-Design-Patterns/</loc>
+    <lastmod>2016-10-08T02:56:29.000Z</lastmod>
+    <data>
+        <display>
+        <title>Cache - Cache Design Patterns</title>
+        <pubTime>2016-10-08T02:54:44.000Z</pubTime>
+        
+        <tag>cache design patterns</tag>
+         
+        <tag>read through</tag>
+         
+        <tag>write through</tag>
+         
+        <tag>cache aside</tag>
+         
+        <tag>write back</tag>
+         
+        <tag>write behind</tag>
+         
+         
+           
+             
+              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
+          
+             
+              <breadCrumb title="cache" url="https://phoenixjiangnan.github.io/categories/system-design/cache/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/03/27/system%20design/cache/Cache-Best-Practices-to-design-cache-system-for-your-system/</loc>
+    <lastmod>2016-10-08T02:52:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>Cache - Best practices to design cache system for your system</title>
+        <pubTime>2016-03-27T14:44:21.000Z</pubTime>
+        
+        <tag>system design</tag>
+         
+        <tag>cache design</tag>
+         
+        <tag>design cache</tag>
+         
+        <tag>cache design best practice</tag>
+         
+         
+           
+             
+              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
+          
+             
+              <breadCrumb title="cache" url="https://phoenixjiangnan.github.io/categories/system-design/cache/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://phoenixjiangnan.github.io/2016/10/07/data%20structures%20and%20algorithms/bloom%20filter/Bloom-Filter-Introduction/</loc>
     <lastmod>2016-10-07T03:56:42.000Z</lastmod>
     <data>
@@ -219,16 +281,16 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/09/14/system%20design/project%20experience/How-did-I-develop-a-crypto-service-for-Tableau-Server/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/07/26/system%20design/project%20experience/How-did-I-reduce-Tableau-Server-s-downtime-in-a-Postgres-failover-from-3-min-to-1-sec/</loc>
     <lastmod>2016-09-30T06:52:58.000Z</lastmod>
     <data>
         <display>
-        <title>How did I develop a crypto service for Tableau Server</title>
-        <pubTime>2016-09-14T14:23:35.000Z</pubTime>
+        <title>How did I reduce Tableau Server's downtime in a Postgres failover from 3 min to 1 sec</title>
+        <pubTime>2016-07-26T14:51:35.000Z</pubTime>
         
         <tag>tableau server</tag>
          
-        <tag>crypto service</tag>
+        <tag>failover</tag>
          
          
            
@@ -244,16 +306,16 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/07/26/system%20design/project%20experience/How-did-I-reduce-Tableau-Server-s-downtime-in-a-Postgres-failover-from-3-min-to-1-sec/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/09/14/system%20design/project%20experience/How-did-I-develop-a-crypto-service-for-Tableau-Server/</loc>
     <lastmod>2016-09-30T06:52:58.000Z</lastmod>
     <data>
         <display>
-        <title>How did I reduce Tableau Server's downtime in a Postgres failover from 3 min to 1 sec</title>
-        <pubTime>2016-07-26T14:51:35.000Z</pubTime>
+        <title>How did I develop a crypto service for Tableau Server</title>
+        <pubTime>2016-09-14T14:23:35.000Z</pubTime>
         
         <tag>tableau server</tag>
          
-        <tag>failover</tag>
+        <tag>crypto service</tag>
          
          
            
@@ -1324,6 +1386,26 @@
 
     
   <url>
+    <loc>https://phoenixjiangnan.github.io/2016/07/09/spring/Spring-Wiring-Beans/</loc>
+    <lastmod>2016-07-10T06:16:13.000Z</lastmod>
+    <data>
+        <display>
+        <title>Spring - Wiring Beans</title>
+        <pubTime>2016-07-09T15:14:21.000Z</pubTime>
+        
+        <tag>spring bean wiring</tag>
+         
+         
+           
+             
+              <breadCrumb title="spring" url="https://phoenixjiangnan.github.io/categories/spring/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://phoenixjiangnan.github.io/2016/04/06/test/jmockit/Unit-Test-JMockit-What-are-the-differences-between-Mocked-and-Injectable-in-JMockit-and-when-to-use-Injectable-rather-than-Mocked/</loc>
     <lastmod>2016-07-10T06:16:13.000Z</lastmod>
     <data>
@@ -1354,26 +1436,6 @@
           
              
               <breadCrumb title="jmockit" url="https://phoenixjiangnan.github.io/categories/test/jmockit/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/07/09/spring/Spring-Wiring-Beans/</loc>
-    <lastmod>2016-07-10T06:16:13.000Z</lastmod>
-    <data>
-        <display>
-        <title>Spring - Wiring Beans</title>
-        <pubTime>2016-07-09T15:14:21.000Z</pubTime>
-        
-        <tag>spring bean wiring</tag>
-         
-         
-           
-             
-              <breadCrumb title="spring" url="https://phoenixjiangnan.github.io/categories/spring/"/>
           
         </display>
     </data>
@@ -1501,116 +1563,6 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/20/java/concurrency/Java-Concurrency-Callable-Future-and-FutureTask/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Java Concurrency - Callable, Future, and FutureTask</title>
-        <pubTime>2016-04-20T13:51:31.000Z</pubTime>
-        
-        <tag>java concurrency</tag>
-         
-        <tag>java callable</tag>
-         
-        <tag>callable</tag>
-         
-        <tag>future</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
-          
-             
-              <breadCrumb title="concurrency" url="https://phoenixjiangnan.github.io/categories/java/concurrency/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/20/java/concurrency/Java-Concurrency-BlockingQueue/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Java Concurrency - BlockingQueue</title>
-        <pubTime>2016-04-20T08:51:31.000Z</pubTime>
-        
-        <tag>java concurrency</tag>
-         
-        <tag>java blockingqueue</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
-          
-             
-              <breadCrumb title="concurrency" url="https://phoenixjiangnan.github.io/categories/java/concurrency/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/03/java/concurrency/Java-Concurrency-CountDownLatch/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Java Concurrency - CountDownLatch</title>
-        <pubTime>2016-04-03T15:51:49.000Z</pubTime>
-        
-        <tag>java concurrency</tag>
-         
-        <tag>java countdownlatch</tag>
-         
-        <tag>latch priciple</tag>
-         
-        <tag>countdownlatch tutorial</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
-          
-             
-              <breadCrumb title="concurrency" url="https://phoenixjiangnan.github.io/categories/java/concurrency/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/03/java/concurrency/Java-Concurrency-Executor-and-Thread-Pools/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Java Concurrency - Executor and Thread Pools</title>
-        <pubTime>2016-04-03T15:56:13.000Z</pubTime>
-        
-        <tag>java concurrency</tag>
-         
-        <tag>java executor</tag>
-         
-        <tag>thread pools</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
-          
-             
-              <breadCrumb title="concurrency" url="https://phoenixjiangnan.github.io/categories/java/concurrency/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://phoenixjiangnan.github.io/2016/04/20/java/concurrency/Java-Concurrency-ReentrantLock/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
@@ -1629,26 +1581,6 @@
           
              
               <breadCrumb title="concurrency" url="https://phoenixjiangnan.github.io/categories/java/concurrency/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/06/28/system%20design/SNAKE-System-Design-Principles-to-crack-a-system-design-in-5-steps/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>SNAKE - System Design Principles to crack a system design in 5 steps</title>
-        <pubTime>2016-06-28T15:07:46.000Z</pubTime>
-        
-        <tag>SNAKE principles of system design</tag>
-         
-         
-           
-             
-              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
           
         </display>
     </data>
@@ -1678,30 +1610,29 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/03/java/concurrency/Java-Concurrency-java-util-concurrent-atomic-package/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/04/03/spring/Spring-Spring-configuration-styles/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Java Concurrency - java.util.concurrent.atomic package</title>
-        <pubTime>2016-04-03T15:55:46.000Z</pubTime>
+        <title>Spring - Spring configuration styles</title>
+        <pubTime>2016-04-03T15:37:39.000Z</pubTime>
         
-        <tag>java concurrency</tag>
+        <tag>spring configuration</tag>
          
-        <tag>java atomic</tag>
+        <tag>spring config</tag>
          
-        <tag>atomicboolean</tag>
+        <tag>spring java config</tag>
          
-        <tag>atomicinteger</tag>
+        <tag>spring xml config</tag>
          
-        <tag>java atomic actions</tag>
+        <tag>spring combining config</tag>
+         
+        <tag>spring config styles</tag>
          
          
            
              
-              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
-          
-             
-              <breadCrumb title="concurrency" url="https://phoenixjiangnan.github.io/categories/java/concurrency/"/>
+              <breadCrumb title="spring" url="https://phoenixjiangnan.github.io/categories/spring/"/>
           
         </display>
     </data>
@@ -1709,112 +1640,21 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2015/04/08/data%20structures%20and%20algorithms/Array/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/06/21/ruby/Ruby-Variables-in-Ruby/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Data Strucutre - Array</title>
-        <pubTime>2015-04-08T14:17:38.000Z</pubTime>
+        <title>Ruby - Variables and Constant in Ruby</title>
+        <pubTime>2016-06-21T14:49:27.000Z</pubTime>
         
-        <tag>data structures and algorithms</tag>
+        <tag>ruby variables</tag>
          
-        <tag>array</tag>
-         
-        <tag>1d array</tag>
-         
-        <tag>2d array</tag>
+        <tag>ruby variable types</tag>
          
          
            
              
-              <breadCrumb title="data structures and algorithms" url="https://phoenixjiangnan.github.io/categories/data-structures-and-algorithms/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/28/database/hibernate/Hibernate-Hibernate-Enum-and-Decoupling-Java-Class-with-Database-Record/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hibernate - Hibernate Enum and Decoupling Java Class with Database Record</title>
-        <pubTime>2016-04-28T07:34:59.000Z</pubTime>
-        
-        <tag>hibernate enum</tag>
-         
-        <tag>enum in database</tag>
-         
-        <tag>decouple enum with database data</tag>
-         
-         
-           
-             
-              <breadCrumb title="database" url="https://phoenixjiangnan.github.io/categories/database/"/>
-          
-             
-              <breadCrumb title="hibernate" url="https://phoenixjiangnan.github.io/categories/database/hibernate/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/03/30/java/guava/Guava-Cache/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Guava - Cache</title>
-        <pubTime>2016-03-30T07:47:22.000Z</pubTime>
-        
-        <tag>guava</tag>
-         
-        <tag>guava cache</tag>
-         
-        <tag>cache design</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
-          
-             
-              <breadCrumb title="guava" url="https://phoenixjiangnan.github.io/categories/java/guava/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/01/29/java/guava/Guava-EventBus/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Google Guava EventBus - an Easy and Elegant Way for Your Publisher - Subscriber Use Cases</title>
-        <pubTime>2016-01-29T14:46:21.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>guava</tag>
-         
-        <tag>eventbus</tag>
-         
-        <tag>guava eventbus</tag>
-         
-        <tag>google guava</tag>
-         
-        <tag>google eventbus</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
-          
-             
-              <breadCrumb title="guava" url="https://phoenixjiangnan.github.io/categories/java/guava/"/>
+              <breadCrumb title="ruby" url="https://phoenixjiangnan.github.io/categories/ruby/"/>
           
         </display>
     </data>
@@ -1884,6 +1724,37 @@
 
     
   <url>
+    <loc>https://phoenixjiangnan.github.io/2016/04/03/java/concurrency/Java-Concurrency-java-util-concurrent-atomic-package/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Java Concurrency - java.util.concurrent.atomic package</title>
+        <pubTime>2016-04-03T15:55:46.000Z</pubTime>
+        
+        <tag>java concurrency</tag>
+         
+        <tag>java atomic</tag>
+         
+        <tag>atomicboolean</tag>
+         
+        <tag>atomicinteger</tag>
+         
+        <tag>java atomic actions</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
+          
+             
+              <breadCrumb title="concurrency" url="https://phoenixjiangnan.github.io/categories/java/concurrency/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://phoenixjiangnan.github.io/2016/02/08/distributed%20system/high%20availibility/Gossip-Protocol/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
@@ -1918,6 +1789,98 @@
     </url>
 
     
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/02/10/distributed%20system/nosql/Cassandra-V-S-HBase/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Cassandra V.S. HBase</title>
+        <pubTime>2016-02-10T08:52:37.000Z</pubTime>
+        
+        <tag>cassandra</tag>
+         
+        <tag>apache cassandra</tag>
+         
+        <tag>nosql</tag>
+         
+        <tag>no sql</tag>
+         
+        <tag>hbase</tag>
+         
+        <tag>apache hbase</tag>
+         
+         
+           
+             
+              <breadCrumb title="distributed system" url="https://phoenixjiangnan.github.io/categories/distributed-system/"/>
+          
+             
+              <breadCrumb title="nosql" url="https://phoenixjiangnan.github.io/categories/distributed-system/nosql/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/03/30/java/guava/Guava-Cache/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Guava - Cache</title>
+        <pubTime>2016-03-30T07:47:22.000Z</pubTime>
+        
+        <tag>guava</tag>
+         
+        <tag>guava cache</tag>
+         
+        <tag>cache design</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
+          
+             
+              <breadCrumb title="guava" url="https://phoenixjiangnan.github.io/categories/java/guava/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/01/29/java/guava/Guava-EventBus/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Google Guava EventBus - an Easy and Elegant Way for Your Publisher - Subscriber Use Cases</title>
+        <pubTime>2016-01-29T14:46:21.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>guava</tag>
+         
+        <tag>eventbus</tag>
+         
+        <tag>guava eventbus</tag>
+         
+        <tag>google guava</tag>
+         
+        <tag>google eventbus</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
+          
+             
+              <breadCrumb title="guava" url="https://phoenixjiangnan.github.io/categories/java/guava/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>https://phoenixjiangnan.github.io/2016/06/21/ruby/Ruby-Methods-in-Ruby/</loc>
@@ -1933,142 +1896,6 @@
            
              
               <breadCrumb title="ruby" url="https://phoenixjiangnan.github.io/categories/ruby/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/03/27/system%20design/cache/Cache-Best-Practices-to-design-cache-system-for-your-system/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Cache - Best practices to design cache system for your system</title>
-        <pubTime>2016-03-27T14:44:21.000Z</pubTime>
-        
-        <tag>cache design</tag>
-         
-        <tag>system design</tag>
-         
-        <tag>design cache</tag>
-         
-        <tag>cache design best practice</tag>
-         
-         
-           
-             
-              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
-          
-             
-              <breadCrumb title="cache" url="https://phoenixjiangnan.github.io/categories/system-design/cache/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/14/system%20design/cache/Cache-Design-a-cache-with-inspiration-from-Guava-Cache/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Cache - Design a cache with inspiration from Guava Cache</title>
-        <pubTime>2016-04-14T06:48:01.000Z</pubTime>
-        
-        <tag>cache design</tag>
-         
-        <tag>design cache</tag>
-         
-        <tag>cache design best practice</tag>
-         
-        <tag>system deisng</tag>
-         
-         
-           
-             
-              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
-          
-             
-              <breadCrumb title="cache" url="https://phoenixjiangnan.github.io/categories/system-design/cache/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/03/27/system%20design/cache/Cache-Design-a-distributed-cache-system/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Cache - Design a distributed cache system</title>
-        <pubTime>2016-03-27T15:47:18.000Z</pubTime>
-        
-        <tag>system design</tag>
-         
-        <tag>cache</tag>
-         
-        <tag>distributed cache</tag>
-         
-        <tag>cache sharding</tag>
-         
-         
-           
-             
-              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
-          
-             
-              <breadCrumb title="cache" url="https://phoenixjiangnan.github.io/categories/system-design/cache/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/05/20/system%20design/messaging/System-Design-When-to-use-Push-and-Pull-mechanism-in-a-messaging-app-or-the-timeline-of-a-social-app/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>System Design - When to use Push and Pull mechanism in a messaging app or the timeline of a social app</title>
-        <pubTime>2016-05-20T09:57:53.000Z</pubTime>
-        
-        <tag>pull</tag>
-         
-        <tag>push</tag>
-         
-        <tag>pull or push</tag>
-         
-         
-           
-             
-              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
-          
-             
-              <breadCrumb title="messaging" url="https://phoenixjiangnan.github.io/categories/system-design/messaging/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/06/07/spring/Spring-Conditional-Annotation-and-Condition-Interface-in-Action/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Spring - @Conditional Annotation and Condition Interface in Action</title>
-        <pubTime>2016-06-07T08:03:09.000Z</pubTime>
-        
-        <tag>spring condition</tag>
-         
-        <tag>spring conditional</tag>
-         
-         
-           
-             
-              <breadCrumb title="spring" url="https://phoenixjiangnan.github.io/categories/spring/"/>
           
         </display>
     </data>
@@ -2108,23 +1935,41 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/03/27/spring/Spring-Factory-Pattern/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/06/07/spring/Spring-Conditional-Annotation-and-Condition-Interface-in-Action/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Spring - Factory Pattern</title>
-        <pubTime>2016-03-27T08:01:17.000Z</pubTime>
+        <title>Spring - @Conditional Annotation and Condition Interface in Action</title>
+        <pubTime>2016-06-07T08:03:09.000Z</pubTime>
         
-        <tag>spring</tag>
+        <tag>spring condition</tag>
          
-        <tag>spring factory</tag>
-         
-        <tag>spring factory pattern</tag>
+        <tag>spring conditional</tag>
          
          
            
              
               <breadCrumb title="spring" url="https://phoenixjiangnan.github.io/categories/spring/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/06/28/system%20design/SNAKE-System-Design-Principles-to-crack-a-system-design-in-5-steps/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>SNAKE - System Design Principles to crack a system design in 5 steps</title>
+        <pubTime>2016-06-28T15:07:46.000Z</pubTime>
+        
+        <tag>SNAKE principles of system design</tag>
+         
+         
+           
+             
+              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
           
         </display>
     </data>
@@ -2147,30 +1992,6 @@
            
              
               <breadCrumb title="best practices" url="https://phoenixjiangnan.github.io/categories/best-practices/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/05/02/spring/Spring-Primary-annotation/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Spring - @Primary annotation</title>
-        <pubTime>2016-05-02T13:19:54.000Z</pubTime>
-        
-        <tag>spring primary</tag>
-         
-        <tag>primary annotation</tag>
-         
-        <tag>primary bean</tag>
-         
-         
-           
-             
-              <breadCrumb title="spring" url="https://phoenixjiangnan.github.io/categories/spring/"/>
           
         </display>
     </data>
@@ -2202,24 +2023,47 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/03/spring/Spring-Spring-configuration-styles/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/04/14/system%20design/cache/Cache-Design-a-cache-with-inspiration-from-Guava-Cache/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Spring - Spring configuration styles</title>
-        <pubTime>2016-04-03T15:37:39.000Z</pubTime>
+        <title>Cache - Design a cache with inspiration from Guava Cache</title>
+        <pubTime>2016-04-14T06:48:01.000Z</pubTime>
         
-        <tag>spring configuration</tag>
+        <tag>cache design</tag>
          
-        <tag>spring config</tag>
+        <tag>design cache</tag>
          
-        <tag>spring java config</tag>
+        <tag>cache design best practice</tag>
          
-        <tag>spring xml config</tag>
+        <tag>system deisng</tag>
          
-        <tag>spring combining config</tag>
          
-        <tag>spring config styles</tag>
+           
+             
+              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
+          
+             
+              <breadCrumb title="cache" url="https://phoenixjiangnan.github.io/categories/system-design/cache/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/03/27/spring/Spring-Factory-Pattern/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Spring - Factory Pattern</title>
+        <pubTime>2016-03-27T08:01:17.000Z</pubTime>
+        
+        <tag>spring</tag>
+         
+        <tag>spring factory</tag>
+         
+        <tag>spring factory pattern</tag>
          
          
            
@@ -2232,28 +2076,23 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/03/28/tools/markdown/Markdown-Markdown-tutorial-how-to-write-in-Markdown/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/05/02/spring/Spring-Primary-annotation/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Markdown - Markdown tutorial - how to write in Markdown</title>
-        <pubTime>2016-03-28T07:40:34.000Z</pubTime>
+        <title>Spring - @Primary annotation</title>
+        <pubTime>2016-05-02T13:19:54.000Z</pubTime>
         
-        <tag>markdown toturial</tag>
+        <tag>spring primary</tag>
          
-        <tag>markdown grammer</tag>
+        <tag>primary annotation</tag>
          
-        <tag>markdown</tag>
-         
-        <tag>how to write in markdown</tag>
+        <tag>primary bean</tag>
          
          
            
              
-              <breadCrumb title="tools" url="https://phoenixjiangnan.github.io/categories/tools/"/>
-          
-             
-              <breadCrumb title="markdown" url="https://phoenixjiangnan.github.io/categories/tools/markdown/"/>
+              <breadCrumb title="spring" url="https://phoenixjiangnan.github.io/categories/spring/"/>
           
         </display>
     </data>
@@ -2261,24 +2100,155 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/15/tools/rake/Rake-Introduction-to-Rake/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/01/24/hexo/Hexo-Hexo-commands/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Rake - Introduction to Rake</title>
-        <pubTime>2016-04-15T05:58:30.000Z</pubTime>
+        <title>Hexo - Hexo commands</title>
+        <pubTime>2016-01-24T15:00:37.000Z</pubTime>
         
-        <tag>rake</tag>
+        <tag>hexo</tag>
          
-        <tag>rake build</tag>
+        <tag>hexo commands</tag>
+         
+        <tag>hexo and github pages</tag>
+         
+        <tag>hexo on mac</tag>
          
          
            
              
-              <breadCrumb title="tools" url="https://phoenixjiangnan.github.io/categories/tools/"/>
+              <breadCrumb title="hexo" url="https://phoenixjiangnan.github.io/categories/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/04/28/database/hibernate/Hibernate-Hibernate-Enum-and-Decoupling-Java-Class-with-Database-Record/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hibernate - Hibernate Enum and Decoupling Java Class with Database Record</title>
+        <pubTime>2016-04-28T07:34:59.000Z</pubTime>
+        
+        <tag>hibernate enum</tag>
+         
+        <tag>enum in database</tag>
+         
+        <tag>decouple enum with database data</tag>
+         
+         
+           
+             
+              <breadCrumb title="database" url="https://phoenixjiangnan.github.io/categories/database/"/>
           
              
-              <breadCrumb title="rake" url="https://phoenixjiangnan.github.io/categories/tools/rake/"/>
+              <breadCrumb title="hibernate" url="https://phoenixjiangnan.github.io/categories/database/hibernate/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/04/20/java/concurrency/Java-Concurrency-BlockingQueue/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Java Concurrency - BlockingQueue</title>
+        <pubTime>2016-04-20T08:51:31.000Z</pubTime>
+        
+        <tag>java concurrency</tag>
+         
+        <tag>java blockingqueue</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
+          
+             
+              <breadCrumb title="concurrency" url="https://phoenixjiangnan.github.io/categories/java/concurrency/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/04/20/java/concurrency/Java-Concurrency-Callable-Future-and-FutureTask/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Java Concurrency - Callable, Future, and FutureTask</title>
+        <pubTime>2016-04-20T13:51:31.000Z</pubTime>
+        
+        <tag>java concurrency</tag>
+         
+        <tag>java callable</tag>
+         
+        <tag>callable</tag>
+         
+        <tag>future</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
+          
+             
+              <breadCrumb title="concurrency" url="https://phoenixjiangnan.github.io/categories/java/concurrency/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/05/20/system%20design/messaging/System-Design-When-to-use-Push-and-Pull-mechanism-in-a-messaging-app-or-the-timeline-of-a-social-app/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>System Design - When to use Push and Pull mechanism in a messaging app or the timeline of a social app</title>
+        <pubTime>2016-05-20T09:57:53.000Z</pubTime>
+        
+        <tag>pull</tag>
+         
+        <tag>push</tag>
+         
+        <tag>pull or push</tag>
+         
+         
+           
+             
+              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
+          
+             
+              <breadCrumb title="messaging" url="https://phoenixjiangnan.github.io/categories/system-design/messaging/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/04/25/database/The-N-1-Query-Problem/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>The N + 1 Query Problem</title>
+        <pubTime>2016-04-25T14:49:59.000Z</pubTime>
+        
+        <tag>n+1 query</tag>
+         
+        <tag>n+1 query problem</tag>
+         
+         
+           
+             
+              <breadCrumb title="database" url="https://phoenixjiangnan.github.io/categories/database/"/>
           
         </display>
     </data>
@@ -2350,21 +2320,109 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/25/database/The-N-1-Query-Problem/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/04/03/java/concurrency/Java-Concurrency-CountDownLatch/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>The N + 1 Query Problem</title>
-        <pubTime>2016-04-25T14:49:59.000Z</pubTime>
+        <title>Java Concurrency - CountDownLatch</title>
+        <pubTime>2016-04-03T15:51:49.000Z</pubTime>
         
-        <tag>n+1 query</tag>
+        <tag>java concurrency</tag>
          
-        <tag>n+1 query problem</tag>
+        <tag>java countdownlatch</tag>
+         
+        <tag>latch priciple</tag>
+         
+        <tag>countdownlatch tutorial</tag>
          
          
            
              
-              <breadCrumb title="database" url="https://phoenixjiangnan.github.io/categories/database/"/>
+              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
+          
+             
+              <breadCrumb title="concurrency" url="https://phoenixjiangnan.github.io/categories/java/concurrency/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/03/28/tools/markdown/Markdown-Markdown-tutorial-how-to-write-in-Markdown/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Markdown - Markdown tutorial - how to write in Markdown</title>
+        <pubTime>2016-03-28T07:40:34.000Z</pubTime>
+        
+        <tag>markdown toturial</tag>
+         
+        <tag>markdown grammer</tag>
+         
+        <tag>markdown</tag>
+         
+        <tag>how to write in markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="tools" url="https://phoenixjiangnan.github.io/categories/tools/"/>
+          
+             
+              <breadCrumb title="markdown" url="https://phoenixjiangnan.github.io/categories/tools/markdown/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/04/15/tools/rake/Rake-Introduction-to-Rake/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Rake - Introduction to Rake</title>
+        <pubTime>2016-04-15T05:58:30.000Z</pubTime>
+        
+        <tag>rake</tag>
+         
+        <tag>rake build</tag>
+         
+         
+           
+             
+              <breadCrumb title="tools" url="https://phoenixjiangnan.github.io/categories/tools/"/>
+          
+             
+              <breadCrumb title="rake" url="https://phoenixjiangnan.github.io/categories/tools/rake/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/04/03/java/concurrency/Java-Concurrency-Executor-and-Thread-Pools/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Java Concurrency - Executor and Thread Pools</title>
+        <pubTime>2016-04-03T15:56:13.000Z</pubTime>
+        
+        <tag>java concurrency</tag>
+         
+        <tag>java executor</tag>
+         
+        <tag>thread pools</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
+          
+             
+              <breadCrumb title="concurrency" url="https://phoenixjiangnan.github.io/categories/java/concurrency/"/>
           
         </display>
     </data>
@@ -2390,32 +2448,6 @@
           
              
               <breadCrumb title="rest" url="https://phoenixjiangnan.github.io/categories/web-development/rest/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/01/24/hexo/Hexo-Hexo-commands/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo - Hexo commands</title>
-        <pubTime>2016-01-24T15:00:37.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>hexo commands</tag>
-         
-        <tag>hexo and github pages</tag>
-         
-        <tag>hexo on mac</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="https://phoenixjiangnan.github.io/categories/hexo/"/>
           
         </display>
     </data>
@@ -2518,38 +2550,6 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/02/01/java/java%208/lambda/Java-8-Functional-Interface/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Java 8 Functional Interface</title>
-        <pubTime>2016-02-01T09:00:03.000Z</pubTime>
-        
-        <tag>java lambda</tag>
-         
-        <tag>lambda</tag>
-         
-        <tag>functional interface</tag>
-         
-        <tag>java 8</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
-          
-             
-              <breadCrumb title="java 8" url="https://phoenixjiangnan.github.io/categories/java/java-8/"/>
-          
-             
-              <breadCrumb title="lambda" url="https://phoenixjiangnan.github.io/categories/java/java-8/lambda/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Supplier/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
@@ -2598,6 +2598,38 @@
         <tag>predicate</tag>
          
         <tag>bipredicate</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
+          
+             
+              <breadCrumb title="java 8" url="https://phoenixjiangnan.github.io/categories/java/java-8/"/>
+          
+             
+              <breadCrumb title="lambda" url="https://phoenixjiangnan.github.io/categories/java/java-8/lambda/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/02/01/java/java%208/lambda/Java-8-Functional-Interface/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Java 8 Functional Interface</title>
+        <pubTime>2016-02-01T09:00:03.000Z</pubTime>
+        
+        <tag>java lambda</tag>
+         
+        <tag>lambda</tag>
+         
+        <tag>functional interface</tag>
+         
+        <tag>java 8</tag>
          
          
            
@@ -2718,34 +2750,6 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/06/28/web%20development/json/jackson/Jackson-How-to-use-Jackson-to-parse-basic-Json-to-Java-POJO/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Jackson - How to use Jackson to parse basic Json to Java POJO</title>
-        <pubTime>2016-06-28T08:55:03.000Z</pubTime>
-        
-        <tag>parse json</tag>
-         
-        <tag>using jackson to parse json</tag>
-         
-         
-           
-             
-              <breadCrumb title="web development" url="https://phoenixjiangnan.github.io/categories/web-development/"/>
-          
-             
-              <breadCrumb title="json" url="https://phoenixjiangnan.github.io/categories/web-development/json/"/>
-          
-             
-              <breadCrumb title="jackson" url="https://phoenixjiangnan.github.io/categories/web-development/json/jackson/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://phoenixjiangnan.github.io/2016/05/15/web%20development/json/jackson/Jackson-How-does-Jackson-deserialize-json-to-complex-objects/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
@@ -2780,58 +2784,58 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/06/21/ruby/Ruby-Variables-in-Ruby/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/06/28/web%20development/json/jackson/Jackson-How-to-use-Jackson-to-parse-basic-Json-to-Java-POJO/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Ruby - Variables and Constant in Ruby</title>
-        <pubTime>2016-06-21T14:49:27.000Z</pubTime>
+        <title>Jackson - How to use Jackson to parse basic Json to Java POJO</title>
+        <pubTime>2016-06-28T08:55:03.000Z</pubTime>
         
-        <tag>ruby variables</tag>
+        <tag>parse json</tag>
          
-        <tag>ruby variable types</tag>
+        <tag>using jackson to parse json</tag>
          
          
            
              
-              <breadCrumb title="ruby" url="https://phoenixjiangnan.github.io/categories/ruby/"/>
+              <breadCrumb title="web development" url="https://phoenixjiangnan.github.io/categories/web-development/"/>
+          
+             
+              <breadCrumb title="json" url="https://phoenixjiangnan.github.io/categories/web-development/json/"/>
+          
+             
+              <breadCrumb title="jackson" url="https://phoenixjiangnan.github.io/categories/web-development/json/jackson/"/>
           
         </display>
     </data>
     </url>
 
-    
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/02/10/distributed%20system/nosql/Cassandra-V-S-HBase/</loc>
+    <loc>https://phoenixjiangnan.github.io/2015/04/08/data%20structures%20and%20algorithms/Array/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Cassandra V.S. HBase</title>
-        <pubTime>2016-02-10T08:52:37.000Z</pubTime>
+        <title>Data Strucutre - Array</title>
+        <pubTime>2015-04-08T14:17:38.000Z</pubTime>
         
-        <tag>cassandra</tag>
+        <tag>data structures and algorithms</tag>
          
-        <tag>apache cassandra</tag>
+        <tag>array</tag>
          
-        <tag>nosql</tag>
+        <tag>1d array</tag>
          
-        <tag>no sql</tag>
-         
-        <tag>hbase</tag>
-         
-        <tag>apache hbase</tag>
+        <tag>2d array</tag>
          
          
            
              
-              <breadCrumb title="distributed system" url="https://phoenixjiangnan.github.io/categories/distributed-system/"/>
-          
-             
-              <breadCrumb title="nosql" url="https://phoenixjiangnan.github.io/categories/distributed-system/nosql/"/>
+              <breadCrumb title="data structures and algorithms" url="https://phoenixjiangnan.github.io/categories/data-structures-and-algorithms/"/>
           
         </display>
     </data>
     </url>
 
+    
+    
 </urlset>

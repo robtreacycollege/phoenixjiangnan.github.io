@@ -304,6 +304,152 @@
             
               
                 
+                <a class="post-title-link" href="/2016/10/08/system design/cache/Cache-Cache-Design-Patterns/" itemprop="url">
+                  Cache - Cache Design Patterns
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-10-08T10:54:44+08:00" content="2016-10-08">
+              2016-10-08
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/system-design/" itemprop="url" rel="index">
+                    <span itemprop="name">system design</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/system-design/cache/" itemprop="url" rel="index">
+                    <span itemprop="name">cache</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/08/system design/cache/Cache-Cache-Design-Patterns/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/08/system design/cache/Cache-Cache-Design-Patterns/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>I read a blog a couple months ago talking about four most common cache design patterns, and want to summarize that post and add my understandings here.</p>
+<h2 id="Naive-Approach"><a href="#Naive-Approach" class="headerlink" title="Naive Approach"></a>Naive Approach</h2><p>The naive approach is, when update data in cache service, first remove cached data, update data source, and then reload data from data source to cache.</p>
+<p>However, the logic is wrong!</p>
+<p>For example, there are two concurrent operation, one being update operation and the other being query operation. After update operation removed cached data, query operation doesn’t hit the target and triggers a reload of outdated data from data store, and then the update operation modifies data store. Thus, the cache now contains dirty/expired data, and will continue to hold such dirty data.</p>
+<p>I’m gonna discuss four caching strategies/design patterns today.</p>
+<ul>
+<li>Read Through</li>
+<li>Write Through</li>
+<li>Cache Aside</li>
+<li>Write Behind Caching</li>
+</ul>
+<p>Note that they’re design patterns, neither mechanisms of databases like MySQL or Postgres, nor how Memcache or Redis works.</p>
+<h2 id="Read-Write-Through"><a href="#Read-Write-Through" class="headerlink" title="Read / Write Through"></a>Read / Write Through</h2><p>This is where the application treats cache as the main data store and reads data from it and writes data to it. The cache is responsible for reading and writing this data to the database, thereby relieving the application of this responsibility.</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/08/system design/cache/Cache-Cache-Design-Patterns/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/10/07/data structures and algorithms/bloom filter/Bloom-Filter-Introduction/" itemprop="url">
                   Bloom Filter - Introduction
                 </a>
@@ -3112,186 +3258,6 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/10/system design/project experience/How-did-I-build-a-Facebook-Messenger-chatbot-for-Tableau-s-VizOfTheDay-feed/" itemprop="url">
-                  How did I build a Facebook Messenger chatbot for Tableau's 'VizOfTheDay' feed
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-08-10T23:35:25+08:00" content="2016-08-10">
-              2016-08-10
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/system-design/" itemprop="url" rel="index">
-                    <span itemprop="name">system design</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/system-design/project-experience/" itemprop="url" rel="index">
-                    <span itemprop="name">project experience</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/10/system design/project experience/How-did-I-build-a-Facebook-Messenger-chatbot-for-Tableau-s-VizOfTheDay-feed/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/10/system design/project experience/How-did-I-build-a-Facebook-Messenger-chatbot-for-Tableau-s-VizOfTheDay-feed/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="What-is-Viz-Of-The-Day"><a href="#What-is-Viz-Of-The-Day" class="headerlink" title="What is Viz Of The Day"></a>What is <em>Viz Of The Day</em></h2><p>It’s a Tableau Public product used mainly for promoting Tableau as a brand.</p>
-<p><a href="https://public.tableau.com/s/gallery">https://public.tableau.com/s/gallery</a></p>
-<h2 id="What-is-Facebook-Messenger-chatbot"><a href="#What-is-Facebook-Messenger-chatbot" class="headerlink" title="What is Facebook Messenger chatbot"></a>What is Facebook Messenger chatbot</h2><p><a href="https://developers.facebook.com/blog/post/2016/04/12/bots-for-messenger/">https://developers.facebook.com/blog/post/2016/04/12/bots-for-messenger/</a></p>
-<h2 id="What-can-my-bot-do"><a href="#What-can-my-bot-do" class="headerlink" title="What can my bot do?"></a>What can my bot do?</h2><ul>
-<li>Users can query VizOfTheDay on any date through either a hardcoded format, or natural language (which will be processed by wit.ai). If the bot doesn’t find that or cannot recognize the message, it will return a random one for users.</li>
-<li>Users can subscribe to VizOfTheDay, so that when a new viz is published on Tableau Public, users will be notified on Messenger App by a push notification. Of course, they can also unsubscribe it.</li>
-</ul>
-<h2 id="How-does-the-system-look-like"><a href="#How-does-the-system-look-like" class="headerlink" title="How does the system look like"></a>How does the system look like</h2><ul>
-<li>Backend running on a single AWS EC2</li>
-<li>ELB as gateway, to bind a domain name for https</li>
-<li>Using DynamoDB for storage</li>
-<li>Calling Facebook Messenger API to create UI</li>
-<li>Taking advantages of wit.ai for some natural language processing</li>
-</ul>
-<h2 id="Modules-and-their-Responsibilities"><a href="#Modules-and-their-Responsibilities" class="headerlink" title="Modules and their Responsibilities:"></a>Modules and their Responsibilities:</h2><ul>
-<li>FeedProcessor<ul>
-<li>periodically retrieves VizOfTheDay from a Tableau Public endpoint</li>
-<li>serves queries of viz on a specified date (can be today or any date before)</li>
-</ul>
-</li>
-<li>Controller<ul>
-<li>receives, processes, and interprets requests from Facebook Messenger</li>
-<li>distributes interpretted requests to corresponding services</li>
-</ul>
-</li>
-<li>Response Service<ul>
-<li>Takes responsibilities of replying requests</li>
-<li>Supports different kind of templates, from pure text, pure thumbnails, to a combination of text thumbnails, and multiple tabs</li>
-</ul>
-</li>
-<li>User Service<ul>
-<li>Stores and serves queries on users’ meta data (id, first and last name, etc) and subscription options (subscribed or not)</li>
-<li>Data is cached in memory for faster access to properties like first name and subscription option</li>
-<li>Data is persisted in DynamoDB</li>
-</ul>
-</li>
-<li>Profile Querying Service<ul>
-<li>Takes a user id and query its meta data against Facebook Graph API</li>
-</ul>
-</li>
-<li>Push Notifier Service<ul>
-<li>Runs daily</li>
-<li>Once detects a new viz from FeedProcessor, push it to all subscribed users by getting users from User Service</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">            Facebook Messenger API</div><div class="line">                    |</div><div class="line">                    |</div><div class="line">                 AWS ELB</div><div class="line">                    |</div><div class="line">                    |</div><div class="line">                 AWS EC2</div><div class="line">                    |</div><div class="line">                    |      for interpretation</div><div class="line">                Controller ----------- wit.ai</div><div class="line">                    |                   |</div><div class="line">                    |                   |</div><div class="line">                ------------------------|</div><div class="line">     enqueue id |                       |</div><div class="line">                |                       |</div><div class="line">                |                       |</div><div class="line">DynamoDB -- User Service  ------  Response Service</div><div class="line">                |            |                |</div><div class="line">                |            |                |</div><div class="line">Profile Querying Serivce     |                |</div><div class="line">                             |                |</div><div class="line">                        Push Notifier         |</div><div class="line">                             |                |</div><div class="line">                             |                |</div><div class="line">                             |                |</div><div class="line">                       Feed Processor----------</div></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/10/system design/project experience/How-did-I-build-a-Facebook-Messenger-chatbot-for-Tableau-s-VizOfTheDay-feed/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3354,7 +3320,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
           
             <div class="site-state-item site-state-tags">
               <a href="/tags/">
-                <span class="site-state-item-count">256</span>
+                <span class="site-state-item-count">259</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
