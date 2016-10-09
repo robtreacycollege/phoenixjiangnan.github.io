@@ -4,6 +4,23 @@
   
     
     <entry>
+      <title><![CDATA[Repost - Job-Hopping and Salary Raise 跳槽加薪]]></title>
+      <url>https://phoenixjiangnan.github.io/2016/10/10/career%20and%20leadership/Repost-Job-Hopping-and-Salary-Raise-%E8%B7%B3%E6%A7%BD%E5%8A%A0%E8%96%AA/</url>
+      <content type="html"><![CDATA[<hr>
+<p>From <a href="http://weibo.com/1134424202/E50IpFN45?from=page_1005051134424202_profile&amp;wvr=6&amp;mod=weibotime&amp;type=comment" target="_blank" rel="external">http://weibo.com/1134424202/E50IpFN45?from=page_1005051134424202_profile&amp;wvr=6&amp;mod=weibotime&amp;type=comment</a></p>
+<hr>
+<p>互联网行业“跳槽加薪”这件事，除了常见解释，还有一个隐性的理由。</p>
+<p>对于公司内部，加薪体系通常是线性的，类似于每年+10-20%这样。但是在人才市场上存在非线性的涨幅。</p>
+<p>举例来说，一位1年经验，资历尚浅的普通程序员，薪水12-15K是可以接受的。进入公司工作了两年，每年+20%，薪水18-22K。两年后，他已经从普通程序员成长为能独当一面的优秀程序员，而这个位置的市场价格是25-35K。</p>
+<p>然后他跳个槽，30K，比公司给出的加薪幅度高10K。</p>
+<p>公司只好招聘新人来弥补这个位置，顶替缺口的是另一位独当一面的优秀程序员，薪水同样是30K。这时围观群众纷纷嘲笑HR是傻逼，老板是臭傻逼。</p>
+<p>之所以出现这种情况，是因为管理者不容易精准地动态判断，一个人什么时候该线性加薪，什么时候该非线性加薪，哪里是员工市场价出现跳跃式增长的时间点。如果不考虑这个时间点的话，每年+10%-20%已经是很不错的待遇了。而每个人每年来一次非线性加薪也是不合理的，公司分分钟破产。</p>
+<p>大家都知道，跳个槽加薪多，原地不动加薪少。老板个个都是臭傻逼。但“老板个个都是臭傻逼”这件事其实不符合常识，毕竟很多“老板”其实也只是高级经理人，掏钱发工资的又不是他，得力下属都跑掉了，并不符合他的利益。</p>
+<p>从结果上来说，当管理者不能判断非线性加薪的时间点时，跳个槽，由市场决定自己的新身价，是最合理的解决方案。</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Cache - Cache Design Patterns]]></title>
       <url>https://phoenixjiangnan.github.io/2016/10/08/system%20design/cache/Cache-Cache-Design-Patterns/</url>
       <content type="html"><![CDATA[<p>I read a blog a couple months ago talking about four most common cache design patterns, and want to summarize that post and add my understandings here.</p>

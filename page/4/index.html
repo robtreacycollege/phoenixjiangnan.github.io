@@ -304,6 +304,155 @@
             
               
                 
+                <a class="post-title-link" href="/2016/04/25/test/jmockit/Unit-Test-JMockit-Difference-between-Expectations-NonStrictExpectations-and-StrictExpectations/" itemprop="url">
+                  Unit Test - JMockit - Difference between Expectations, NonStrictExpectations, and StrictExpectations
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-04-25T16:22:09+08:00" content="2016-04-25">
+              2016-04-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/test/" itemprop="url" rel="index">
+                    <span itemprop="name">test</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/test/jmockit/" itemprop="url" rel="index">
+                    <span itemprop="name">jmockit</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/25/test/jmockit/Unit-Test-JMockit-Difference-between-Expectations-NonStrictExpectations-and-StrictExpectations/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/25/test/jmockit/Unit-Test-JMockit-Difference-between-Expectations-NonStrictExpectations-and-StrictExpectations/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="NonStrictExpectations-is-deprecated-now"><a href="#NonStrictExpectations-is-deprecated-now" class="headerlink" title="NonStrictExpectations is deprecated now!"></a>NonStrictExpectations is deprecated now!</h2><p>Before V1.23, <code>Expectations</code> equals <code>StrictExpectations</code>. From V1.23, JMockit has dropped <code>NonStrictExpectations</code>, and replace it with <code>Expectations</code>.</p>
+<p>Here’s the release note from JMockit</p>
+<blockquote>
+<p>Version 1.23 (Apr 24, 2016):</p>
+<ul>
+<li>Dropped support for the mocking of private methods/constructors when using the <code>Expectations</code> API, to prevent misuse. If still needed, they can be mocked or stubbed out with the application of a <code>MockUp&lt;T&gt;</code>.</li>
+<li>Deprecated the <code>NonStrictExpectations</code> class. Existing tests should use <code>Expectations</code> instead.</li>
+<li>Added support for JDK 9 (tested with builds 112 to 114).</li>
+</ul>
+</blockquote>
+<h2 id="Regular-versus-strict-expectations"><a href="#Regular-versus-strict-expectations" class="headerlink" title="Regular versus strict expectations"></a>Regular versus strict expectations</h2><p>Expectations recorded inside a <code>new Expectations() {...}</code> block are the regular ones. What this means is that:</p>
+<ul>
+<li>the invocations they specify are expected to occur at least once during the replay phase</li>
+<li>they may occur more than once, though, and in a different order relative to other recorded expectations</li>
+<li>additionally, invocations that don’t match any recorded expectation are allowed to occur in any number and in any order. </li>
+</ul>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/04/25/test/jmockit/Unit-Test-JMockit-Difference-between-Expectations-NonStrictExpectations-and-StrictExpectations/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/20/java/concurrency/Java-Concurrency-ReentrantLock/" itemprop="url">
                   Java Concurrency - ReentrantLock
                 </a>
@@ -3325,153 +3474,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/03/java/concurrency/Java-Concurrency-CountDownLatch/" itemprop="url">
-                  Java Concurrency - CountDownLatch
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-03T23:51:49+08:00" content="2016-04-03">
-              2016-04-03
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index">
-                    <span itemprop="name">java</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/java/concurrency/" itemprop="url" rel="index">
-                    <span itemprop="name">concurrency</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/03/java/concurrency/Java-Concurrency-CountDownLatch/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/03/java/concurrency/Java-Concurrency-CountDownLatch/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>#java.util.concurrent.CountDownLatch – a more general wait/notify mechanism</p>
-<blockquote>
-<p>A synchronization aid that allows one or more threads to wait until a<br>set of operations being performed in other threads completes.</p>
-</blockquote>
-<p>A <code>CountDownLatch</code> is <code>initialized with a given count</code>. </p>
-<blockquote>
-<p>The await methods block until the current count reaches zero due to<br>invocations of the countDown() method, after which all waiting threads<br>are released and any subsequent invocations of await return<br>immediately.</p>
-</blockquote>
-<p> This is a one-shot phenomenon – the count cannot be reset. If you need a version that resets the count, consider using a <code>CyclicBarrier</code>.</p>
-<p>A CountDownLatch is a versatile synchronization tool and can be used for a number of purposes. </p>
-<ul>
-<li>A CountDownLatch initialized with a count of one serves as a simple on/off latch, or gate: all threads invoking await wait at the gate until it is opened by a thread invoking countDown().</li>
-<li>A CountDownLatch initialized to N can be used to make one thread wait until N threads have completed some action, or some action has been completed N times.</li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/03/java/concurrency/Java-Concurrency-CountDownLatch/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3517,7 +3519,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives/">
-              <span class="site-state-item-count">108</span>
+              <span class="site-state-item-count">109</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -3534,7 +3536,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags/">
-                <span class="site-state-item-count">259</span>
+                <span class="site-state-item-count">261</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

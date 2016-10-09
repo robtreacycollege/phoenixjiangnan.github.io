@@ -304,6 +304,149 @@
             
               
                 
+                <a class="post-title-link" href="/2016/08/16/system design/project experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/" itemprop="url">
+                  How did I build a custom dynamic ZooKeeper management and migration framework and an asynchronous job framework for Tableau Server 11
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-16T13:45:18+08:00" content="2016-08-16">
+              2016-08-16
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/system-design/" itemprop="url" rel="index">
+                    <span itemprop="name">system design</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/system-design/project-experience/" itemprop="url" rel="index">
+                    <span itemprop="name">project experience</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/16/system design/project experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/16/system design/project experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>First of all, Tableau Server 11 is not out yet. Tableau Server 10 is just released yesterday.</p>
+<h2 id="Product-Strategy-Overview"><a href="#Product-Strategy-Overview" class="headerlink" title="Product Strategy Overview"></a>Product Strategy Overview</h2><p>Tableau Server is an enterpise data analytics and visualization platform, and our customers are business people. In order to make the project usage experience as smooth as possible, we believe we should enable business people to manage Tableau Server on their own without any help from enterprise IT. </p>
+<p>Therefore, one of the most critical goals for developing Tableau Server is that Tableau will provide GUIs and built-in workflows to automate as many managing processes as possible.  </p>
+<h2 id="Project-and-Feature-Requirements"><a href="#Project-and-Feature-Requirements" class="headerlink" title="Project and Feature Requirements"></a>Project and Feature Requirements</h2><p>Tableau core server team is building a new Java-based Tableau Server architecutre for Tableau Server 11 (target release, might change in the future) to replace the old jruby one.</p>
+<p>Notably, old jruby Tabadmin persisting cluster-wide configuration and topology information in a local file (workgroup.yml). The role of ZooKeeper (referenced as ZK) is only used a distributed lock and a temp data store - it keeps some vilatile data that can be lost or wiped out and no one cares about it. This characteristic also makes managing and migrating ZooKeeper very very easy - you only need to clean up all data in existing ZooKeeper nodes, deploy the ZooKeeper bits to new nodes, and bring the new cluster up. </p>
+<p>Unlike the old world, new Tabadmin will persist all essential configuration and topology data in ZK as a single source of truth, which makes managing, expanding, and migrating ZK much harder than before. </p>
+<h2 id="The-Problem"><a href="#The-Problem" class="headerlink" title="The Problem"></a>The Problem</h2><p>The problem we are facing is how to maintain ZK’s data and expand/shrink ZK cluster, as well as making this process super reliable and easy for users.</p>
+<p>Let’s elaborate more about the problem.</p>
+<p>Say we start with a single Tableau Server node A, which has a single node ZK cluster runs on it. Then we want to expand the Tableau Server cluster from 1 node (A) to 3 nodes (A, B, C), as well as the ZK cluster runs on top of it. How to achieve that?</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(A) -&gt; (A, B, C)</div></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/16/system design/project experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/08/10/system design/project experience/How-did-I-build-a-Facebook-Messenger-chatbot-for-Tableau-s-VizOfTheDay-feed/" itemprop="url">
                   How did I build a Facebook Messenger chatbot for Tableau's 'VizOfTheDay' feed
                 </a>
@@ -3150,144 +3293,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/01/distributed system/zookeeper/ZooKeeper-Security-and-ACL-Access-Control-List/" itemprop="url">
-                  ZooKeeper - Security and ACL (Access Control List)
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-07-01T20:57:43+08:00" content="2016-07-01">
-              2016-07-01
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/distributed-system/" itemprop="url" rel="index">
-                    <span itemprop="name">distributed system</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/distributed-system/zookeeper/" itemprop="url" rel="index">
-                    <span itemprop="name">zookeeper</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/07/01/distributed system/zookeeper/ZooKeeper-Security-and-ACL-Access-Control-List/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/01/distributed system/zookeeper/ZooKeeper-Security-and-ACL-Access-Control-List/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>ZooKeeper uses ACLs (Access Control List) to control access to its znodes (the data nodes of a ZooKeeper data tree).</p>
-<p>The ACL implementation is quite similar to <code>UNIX</code> file access permissions: it employs permission bits to allow/disallow various operations against a node and the scope to which the bits apply.</p>
-<p>Unlike standard UNIX permissions, a ZooKeeper node is not limited by the three standard scopes for user (owner of the file), group, and world (other). ZooKeeper does not have a notion of an owner of a znode. Instead, an ACL specifies sets of ids and permissions that are associated with those ids.</p>
-<p>ZooKeeper supports pluggable authentication schemes. Ids are specified using the form <code>scheme:id</code>, where scheme is a the authentication scheme that the id corresponds to. For example, <code>hostId:host.corp.com</code> is an id for a host named <code>host.corp.com</code>.</p>
-<p>When a client connects to ZooKeeper and authenticates itself, ZooKeeper associates all the ids that correspond to a client with the clients connection. These ids are checked against the ACLs of znodes when a clients tries to access a node. ACLs are made up of pairs of (scheme:expression, perms). The format of the expression is specific to the scheme. For example, the pair (ip:19.22.0.0/16, READ) gives the READ permission to any clients with an IP address that starts with 19.22.</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/01/distributed system/zookeeper/ZooKeeper-Security-and-ACL-Access-Control-List/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3333,7 +3338,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives/">
-              <span class="site-state-item-count">108</span>
+              <span class="site-state-item-count">109</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -3350,7 +3355,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags/">
-                <span class="site-state-item-count">259</span>
+                <span class="site-state-item-count">261</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

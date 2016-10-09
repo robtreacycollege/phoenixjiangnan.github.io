@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://phoenixjiangnan.github.io/2016/10/10/career%20and%20leadership/Repost-Job-Hopping-and-Salary-Raise-%E8%B7%B3%E6%A7%BD%E5%8A%A0%E8%96%AA/</loc>
+    <lastmod>2016-10-09T16:15:31.000Z</lastmod>
+    <data>
+        <display>
+        <title>Repost - Job-Hopping and Salary Raise 跳槽加薪</title>
+        <pubTime>2016-10-09T16:13:13.000Z</pubTime>
+        
+        <tag>job hopping</tag>
+         
+        <tag>跳槽加薪</tag>
+         
+         
+           
+             
+              <breadCrumb title="career and leadership" url="https://phoenixjiangnan.github.io/categories/career-and-leadership/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://phoenixjiangnan.github.io/2016/10/08/system%20design/cache/Cache-Cache-Design-Patterns/</loc>
     <lastmod>2016-10-08T02:56:29.000Z</lastmod>
     <data>
@@ -281,16 +303,16 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/07/26/system%20design/project%20experience/How-did-I-reduce-Tableau-Server-s-downtime-in-a-Postgres-failover-from-3-min-to-1-sec/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/09/14/system%20design/project%20experience/How-did-I-develop-a-crypto-service-for-Tableau-Server/</loc>
     <lastmod>2016-09-30T06:52:58.000Z</lastmod>
     <data>
         <display>
-        <title>How did I reduce Tableau Server's downtime in a Postgres failover from 3 min to 1 sec</title>
-        <pubTime>2016-07-26T14:51:35.000Z</pubTime>
+        <title>How did I develop a crypto service for Tableau Server</title>
+        <pubTime>2016-09-14T14:23:35.000Z</pubTime>
         
         <tag>tableau server</tag>
          
-        <tag>failover</tag>
+        <tag>crypto service</tag>
          
          
            
@@ -306,16 +328,16 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/09/14/system%20design/project%20experience/How-did-I-develop-a-crypto-service-for-Tableau-Server/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/07/26/system%20design/project%20experience/How-did-I-reduce-Tableau-Server-s-downtime-in-a-Postgres-failover-from-3-min-to-1-sec/</loc>
     <lastmod>2016-09-30T06:52:58.000Z</lastmod>
     <data>
         <display>
-        <title>How did I develop a crypto service for Tableau Server</title>
-        <pubTime>2016-09-14T14:23:35.000Z</pubTime>
+        <title>How did I reduce Tableau Server's downtime in a Postgres failover from 3 min to 1 sec</title>
+        <pubTime>2016-07-26T14:51:35.000Z</pubTime>
         
         <tag>tableau server</tag>
          
-        <tag>crypto service</tag>
+        <tag>failover</tag>
          
          
            
@@ -1386,26 +1408,6 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/07/09/spring/Spring-Wiring-Beans/</loc>
-    <lastmod>2016-07-10T06:16:13.000Z</lastmod>
-    <data>
-        <display>
-        <title>Spring - Wiring Beans</title>
-        <pubTime>2016-07-09T15:14:21.000Z</pubTime>
-        
-        <tag>spring bean wiring</tag>
-         
-         
-           
-             
-              <breadCrumb title="spring" url="https://phoenixjiangnan.github.io/categories/spring/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://phoenixjiangnan.github.io/2016/04/06/test/jmockit/Unit-Test-JMockit-What-are-the-differences-between-Mocked-and-Injectable-in-JMockit-and-when-to-use-Injectable-rather-than-Mocked/</loc>
     <lastmod>2016-07-10T06:16:13.000Z</lastmod>
     <data>
@@ -1436,6 +1438,26 @@
           
              
               <breadCrumb title="jmockit" url="https://phoenixjiangnan.github.io/categories/test/jmockit/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/07/09/spring/Spring-Wiring-Beans/</loc>
+    <lastmod>2016-07-10T06:16:13.000Z</lastmod>
+    <data>
+        <display>
+        <title>Spring - Wiring Beans</title>
+        <pubTime>2016-07-09T15:14:21.000Z</pubTime>
+        
+        <tag>spring bean wiring</tag>
+         
+         
+           
+             
+              <breadCrumb title="spring" url="https://phoenixjiangnan.github.io/categories/spring/"/>
           
         </display>
     </data>
@@ -1563,6 +1585,109 @@
 
     
   <url>
+    <loc>https://phoenixjiangnan.github.io/2016/04/20/java/concurrency/Java-Concurrency-BlockingQueue/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Java Concurrency - BlockingQueue</title>
+        <pubTime>2016-04-20T08:51:31.000Z</pubTime>
+        
+        <tag>java concurrency</tag>
+         
+        <tag>java blockingqueue</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
+          
+             
+              <breadCrumb title="concurrency" url="https://phoenixjiangnan.github.io/categories/java/concurrency/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/04/03/java/concurrency/Java-Concurrency-CountDownLatch/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Java Concurrency - CountDownLatch</title>
+        <pubTime>2016-04-03T15:51:49.000Z</pubTime>
+        
+        <tag>java concurrency</tag>
+         
+        <tag>java countdownlatch</tag>
+         
+        <tag>latch priciple</tag>
+         
+        <tag>countdownlatch tutorial</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
+          
+             
+              <breadCrumb title="concurrency" url="https://phoenixjiangnan.github.io/categories/java/concurrency/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/04/03/java/concurrency/Java-Concurrency-Executor-and-Thread-Pools/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Java Concurrency - Executor and Thread Pools</title>
+        <pubTime>2016-04-03T15:56:13.000Z</pubTime>
+        
+        <tag>java concurrency</tag>
+         
+        <tag>java executor</tag>
+         
+        <tag>thread pools</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
+          
+             
+              <breadCrumb title="concurrency" url="https://phoenixjiangnan.github.io/categories/java/concurrency/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/01/26/best%20practices/Logging/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Logging</title>
+        <pubTime>2016-01-26T13:45:22.000Z</pubTime>
+        
+        <tag>best practices</tag>
+         
+        <tag>logging best practices</tag>
+         
+         
+           
+             
+              <breadCrumb title="best practices" url="https://phoenixjiangnan.github.io/categories/best-practices/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://phoenixjiangnan.github.io/2016/04/20/java/concurrency/Java-Concurrency-ReentrantLock/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
@@ -1588,21 +1713,19 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/06/20/ruby/Ruby-attr-accessor-attr-reader-and-attr-writer/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/06/28/system%20design/SNAKE-System-Design-Principles-to-crack-a-system-design-in-5-steps/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Ruby - attr_accessor, attr_reader, and attr_writer</title>
-        <pubTime>2016-06-20T14:26:46.000Z</pubTime>
+        <title>SNAKE - System Design Principles to crack a system design in 5 steps</title>
+        <pubTime>2016-06-28T15:07:46.000Z</pubTime>
         
-        <tag>ruby accessors</tag>
-         
-        <tag>attribute accessors</tag>
+        <tag>SNAKE principles of system design</tag>
          
          
            
              
-              <breadCrumb title="ruby" url="https://phoenixjiangnan.github.io/categories/ruby/"/>
+              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
           
         </display>
     </data>
@@ -1610,113 +1733,26 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/03/spring/Spring-Spring-configuration-styles/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/03/30/java/guava/Guava-Cache/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Spring - Spring configuration styles</title>
-        <pubTime>2016-04-03T15:37:39.000Z</pubTime>
+        <title>Guava - Cache</title>
+        <pubTime>2016-03-30T07:47:22.000Z</pubTime>
         
-        <tag>spring configuration</tag>
+        <tag>guava</tag>
          
-        <tag>spring config</tag>
+        <tag>guava cache</tag>
          
-        <tag>spring java config</tag>
-         
-        <tag>spring xml config</tag>
-         
-        <tag>spring combining config</tag>
-         
-        <tag>spring config styles</tag>
+        <tag>cache design</tag>
          
          
            
              
-              <breadCrumb title="spring" url="https://phoenixjiangnan.github.io/categories/spring/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/06/21/ruby/Ruby-Variables-in-Ruby/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Ruby - Variables and Constant in Ruby</title>
-        <pubTime>2016-06-21T14:49:27.000Z</pubTime>
-        
-        <tag>ruby variables</tag>
-         
-        <tag>ruby variable types</tag>
-         
-         
-           
-             
-              <breadCrumb title="ruby" url="https://phoenixjiangnan.github.io/categories/ruby/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/05/17/database/hibernate/Hibernate-the-hi-lo-algorithm/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hibernate - the hi/lo algorithm</title>
-        <pubTime>2016-05-17T15:10:04.000Z</pubTime>
-        
-        <tag>hi/lo</tag>
-         
-        <tag>hibernate high low</tag>
-         
-        <tag>high low algorithm</tag>
-         
-         
-           
-             
-              <breadCrumb title="database" url="https://phoenixjiangnan.github.io/categories/database/"/>
+              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
           
              
-              <breadCrumb title="hibernate" url="https://phoenixjiangnan.github.io/categories/database/hibernate/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/02/16/distributed%20system/algorithems/Merkle-Tree-and-Anti-Entropy/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Merkle Tree and Anti-Entropy</title>
-        <pubTime>2016-02-16T08:56:25.000Z</pubTime>
-        
-        <tag>merkle tree</tag>
-         
-        <tag>anti entropy</tag>
-         
-        <tag>anti-entropy</tag>
-         
-        <tag>cassandra</tag>
-         
-        <tag>apache cassandra</tag>
-         
-        <tag>nosql</tag>
-         
-        <tag>no sql</tag>
-         
-         
-           
-             
-              <breadCrumb title="distributed system" url="https://phoenixjiangnan.github.io/categories/distributed-system/"/>
-          
-             
-              <breadCrumb title="algorithms" url="https://phoenixjiangnan.github.io/categories/distributed-system/algorithms/"/>
+              <breadCrumb title="guava" url="https://phoenixjiangnan.github.io/categories/java/guava/"/>
           
         </display>
     </data>
@@ -1748,6 +1784,113 @@
           
              
               <breadCrumb title="concurrency" url="https://phoenixjiangnan.github.io/categories/java/concurrency/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/01/24/hexo/Hexo-Hexo-commands/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo - Hexo commands</title>
+        <pubTime>2016-01-24T15:00:37.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>hexo commands</tag>
+         
+        <tag>hexo and github pages</tag>
+         
+        <tag>hexo on mac</tag>
+         
+         
+           
+             
+              <breadCrumb title="hexo" url="https://phoenixjiangnan.github.io/categories/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/01/29/java/guava/Guava-EventBus/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Google Guava EventBus - an Easy and Elegant Way for Your Publisher - Subscriber Use Cases</title>
+        <pubTime>2016-01-29T14:46:21.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>guava</tag>
+         
+        <tag>eventbus</tag>
+         
+        <tag>guava eventbus</tag>
+         
+        <tag>google guava</tag>
+         
+        <tag>google eventbus</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
+          
+             
+              <breadCrumb title="guava" url="https://phoenixjiangnan.github.io/categories/java/guava/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2015/04/08/data%20structures%20and%20algorithms/Array/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Data Strucutre - Array</title>
+        <pubTime>2015-04-08T14:17:38.000Z</pubTime>
+        
+        <tag>data structures and algorithms</tag>
+         
+        <tag>array</tag>
+         
+        <tag>1d array</tag>
+         
+        <tag>2d array</tag>
+         
+         
+           
+             
+              <breadCrumb title="data structures and algorithms" url="https://phoenixjiangnan.github.io/categories/data-structures-and-algorithms/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/06/07/spring/Spring-Conditional-Annotation-and-Condition-Interface-in-Action/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Spring - @Conditional Annotation and Condition Interface in Action</title>
+        <pubTime>2016-06-07T08:03:09.000Z</pubTime>
+        
+        <tag>spring condition</tag>
+         
+        <tag>spring conditional</tag>
+         
+         
+           
+             
+              <breadCrumb title="spring" url="https://phoenixjiangnan.github.io/categories/spring/"/>
           
         </display>
     </data>
@@ -1801,13 +1944,13 @@
          
         <tag>apache cassandra</tag>
          
-        <tag>nosql</tag>
-         
-        <tag>no sql</tag>
-         
         <tag>hbase</tag>
          
         <tag>apache hbase</tag>
+         
+        <tag>nosql</tag>
+         
+        <tag>no sql</tag>
          
          
            
@@ -1816,86 +1959,6 @@
           
              
               <breadCrumb title="nosql" url="https://phoenixjiangnan.github.io/categories/distributed-system/nosql/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/03/30/java/guava/Guava-Cache/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Guava - Cache</title>
-        <pubTime>2016-03-30T07:47:22.000Z</pubTime>
-        
-        <tag>guava</tag>
-         
-        <tag>guava cache</tag>
-         
-        <tag>cache design</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
-          
-             
-              <breadCrumb title="guava" url="https://phoenixjiangnan.github.io/categories/java/guava/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/01/29/java/guava/Guava-EventBus/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Google Guava EventBus - an Easy and Elegant Way for Your Publisher - Subscriber Use Cases</title>
-        <pubTime>2016-01-29T14:46:21.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>guava</tag>
-         
-        <tag>eventbus</tag>
-         
-        <tag>guava eventbus</tag>
-         
-        <tag>google guava</tag>
-         
-        <tag>google eventbus</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
-          
-             
-              <breadCrumb title="guava" url="https://phoenixjiangnan.github.io/categories/java/guava/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/06/21/ruby/Ruby-Methods-in-Ruby/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Ruby - Methods in Ruby</title>
-        <pubTime>2016-06-21T15:54:37.000Z</pubTime>
-        
-        <tag>ruby methods</tag>
-         
-         
-           
-             
-              <breadCrumb title="ruby" url="https://phoenixjiangnan.github.io/categories/ruby/"/>
           
         </display>
     </data>
@@ -1935,16 +1998,18 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/06/07/spring/Spring-Conditional-Annotation-and-Condition-Interface-in-Action/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/05/02/spring/Spring-Primary-annotation/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Spring - @Conditional Annotation and Condition Interface in Action</title>
-        <pubTime>2016-06-07T08:03:09.000Z</pubTime>
+        <title>Spring - @Primary annotation</title>
+        <pubTime>2016-05-02T13:19:54.000Z</pubTime>
         
-        <tag>spring condition</tag>
+        <tag>spring primary</tag>
          
-        <tag>spring conditional</tag>
+        <tag>primary annotation</tag>
+         
+        <tag>primary bean</tag>
          
          
            
@@ -1957,65 +2022,26 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/06/28/system%20design/SNAKE-System-Design-Principles-to-crack-a-system-design-in-5-steps/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/04/28/database/hibernate/Hibernate-Hibernate-Enum-and-Decoupling-Java-Class-with-Database-Record/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>SNAKE - System Design Principles to crack a system design in 5 steps</title>
-        <pubTime>2016-06-28T15:07:46.000Z</pubTime>
+        <title>Hibernate - Hibernate Enum and Decoupling Java Class with Database Record</title>
+        <pubTime>2016-04-28T07:34:59.000Z</pubTime>
         
-        <tag>SNAKE principles of system design</tag>
+        <tag>hibernate enum</tag>
+         
+        <tag>enum in database</tag>
+         
+        <tag>decouple enum with database data</tag>
          
          
            
              
-              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
+              <breadCrumb title="database" url="https://phoenixjiangnan.github.io/categories/database/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/01/26/best%20practices/Logging/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Logging</title>
-        <pubTime>2016-01-26T13:45:22.000Z</pubTime>
-        
-        <tag>best practices</tag>
-         
-        <tag>logging best practices</tag>
-         
-         
-           
              
-              <breadCrumb title="best practices" url="https://phoenixjiangnan.github.io/categories/best-practices/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/05/10/spring/Spring-Set-up-and-Enable-Scheduled-Tasks/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Spring - Set up and Enable Scheduled Tasks</title>
-        <pubTime>2016-05-10T03:25:40.000Z</pubTime>
-        
-        <tag>scheduled task</tag>
-         
-        <tag>spring task</tag>
-         
-        <tag>enable scheduling</tag>
-         
-         
-           
-             
-              <breadCrumb title="spring" url="https://phoenixjiangnan.github.io/categories/spring/"/>
+              <breadCrumb title="hibernate" url="https://phoenixjiangnan.github.io/categories/database/hibernate/"/>
           
         </display>
     </data>
@@ -2052,92 +2078,18 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/03/27/spring/Spring-Factory-Pattern/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/05/17/database/hibernate/Hibernate-the-hi-lo-algorithm/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Spring - Factory Pattern</title>
-        <pubTime>2016-03-27T08:01:17.000Z</pubTime>
+        <title>Hibernate - the hi/lo algorithm</title>
+        <pubTime>2016-05-17T15:10:04.000Z</pubTime>
         
-        <tag>spring</tag>
+        <tag>hi/lo</tag>
          
-        <tag>spring factory</tag>
+        <tag>hibernate high low</tag>
          
-        <tag>spring factory pattern</tag>
-         
-         
-           
-             
-              <breadCrumb title="spring" url="https://phoenixjiangnan.github.io/categories/spring/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/05/02/spring/Spring-Primary-annotation/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Spring - @Primary annotation</title>
-        <pubTime>2016-05-02T13:19:54.000Z</pubTime>
-        
-        <tag>spring primary</tag>
-         
-        <tag>primary annotation</tag>
-         
-        <tag>primary bean</tag>
-         
-         
-           
-             
-              <breadCrumb title="spring" url="https://phoenixjiangnan.github.io/categories/spring/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/01/24/hexo/Hexo-Hexo-commands/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo - Hexo commands</title>
-        <pubTime>2016-01-24T15:00:37.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>hexo commands</tag>
-         
-        <tag>hexo and github pages</tag>
-         
-        <tag>hexo on mac</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="https://phoenixjiangnan.github.io/categories/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/28/database/hibernate/Hibernate-Hibernate-Enum-and-Decoupling-Java-Class-with-Database-Record/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hibernate - Hibernate Enum and Decoupling Java Class with Database Record</title>
-        <pubTime>2016-04-28T07:34:59.000Z</pubTime>
-        
-        <tag>hibernate enum</tag>
-         
-        <tag>enum in database</tag>
-         
-        <tag>decouple enum with database data</tag>
+        <tag>high low algorithm</tag>
          
          
            
@@ -2146,60 +2098,6 @@
           
              
               <breadCrumb title="hibernate" url="https://phoenixjiangnan.github.io/categories/database/hibernate/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/20/java/concurrency/Java-Concurrency-BlockingQueue/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Java Concurrency - BlockingQueue</title>
-        <pubTime>2016-04-20T08:51:31.000Z</pubTime>
-        
-        <tag>java concurrency</tag>
-         
-        <tag>java blockingqueue</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
-          
-             
-              <breadCrumb title="concurrency" url="https://phoenixjiangnan.github.io/categories/java/concurrency/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/20/java/concurrency/Java-Concurrency-Callable-Future-and-FutureTask/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Java Concurrency - Callable, Future, and FutureTask</title>
-        <pubTime>2016-04-20T13:51:31.000Z</pubTime>
-        
-        <tag>java concurrency</tag>
-         
-        <tag>java callable</tag>
-         
-        <tag>callable</tag>
-         
-        <tag>future</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
-          
-             
-              <breadCrumb title="concurrency" url="https://phoenixjiangnan.github.io/categories/java/concurrency/"/>
           
         </display>
     </data>
@@ -2249,6 +2147,104 @@
            
              
               <breadCrumb title="database" url="https://phoenixjiangnan.github.io/categories/database/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/04/03/spring/Spring-Spring-configuration-styles/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Spring - Spring configuration styles</title>
+        <pubTime>2016-04-03T15:37:39.000Z</pubTime>
+        
+        <tag>spring configuration</tag>
+         
+        <tag>spring config</tag>
+         
+        <tag>spring java config</tag>
+         
+        <tag>spring xml config</tag>
+         
+        <tag>spring combining config</tag>
+         
+        <tag>spring config styles</tag>
+         
+         
+           
+             
+              <breadCrumb title="spring" url="https://phoenixjiangnan.github.io/categories/spring/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/06/21/ruby/Ruby-Methods-in-Ruby/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ruby - Methods in Ruby</title>
+        <pubTime>2016-06-21T15:54:37.000Z</pubTime>
+        
+        <tag>ruby methods</tag>
+         
+         
+           
+             
+              <breadCrumb title="ruby" url="https://phoenixjiangnan.github.io/categories/ruby/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/05/10/spring/Spring-Set-up-and-Enable-Scheduled-Tasks/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Spring - Set up and Enable Scheduled Tasks</title>
+        <pubTime>2016-05-10T03:25:40.000Z</pubTime>
+        
+        <tag>scheduled task</tag>
+         
+        <tag>spring task</tag>
+         
+        <tag>enable scheduling</tag>
+         
+         
+           
+             
+              <breadCrumb title="spring" url="https://phoenixjiangnan.github.io/categories/spring/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/03/27/spring/Spring-Factory-Pattern/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Spring - Factory Pattern</title>
+        <pubTime>2016-03-27T08:01:17.000Z</pubTime>
+        
+        <tag>spring</tag>
+         
+        <tag>spring factory</tag>
+         
+        <tag>spring factory pattern</tag>
+         
+         
+           
+             
+              <breadCrumb title="spring" url="https://phoenixjiangnan.github.io/categories/spring/"/>
           
         </display>
     </data>
@@ -2320,28 +2316,43 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/03/java/concurrency/Java-Concurrency-CountDownLatch/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/06/20/ruby/Ruby-attr-accessor-attr-reader-and-attr-writer/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Java Concurrency - CountDownLatch</title>
-        <pubTime>2016-04-03T15:51:49.000Z</pubTime>
+        <title>Ruby - attr_accessor, attr_reader, and attr_writer</title>
+        <pubTime>2016-06-20T14:26:46.000Z</pubTime>
         
-        <tag>java concurrency</tag>
+        <tag>ruby accessors</tag>
          
-        <tag>java countdownlatch</tag>
-         
-        <tag>latch priciple</tag>
-         
-        <tag>countdownlatch tutorial</tag>
+        <tag>attribute accessors</tag>
          
          
            
              
-              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
+              <breadCrumb title="ruby" url="https://phoenixjiangnan.github.io/categories/ruby/"/>
           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/06/21/ruby/Ruby-Variables-in-Ruby/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ruby - Variables and Constant in Ruby</title>
+        <pubTime>2016-06-21T14:49:27.000Z</pubTime>
+        
+        <tag>ruby variables</tag>
+         
+        <tag>ruby variable types</tag>
+         
+         
+           
              
-              <breadCrumb title="concurrency" url="https://phoenixjiangnan.github.io/categories/java/concurrency/"/>
+              <breadCrumb title="ruby" url="https://phoenixjiangnan.github.io/categories/ruby/"/>
           
         </display>
     </data>
@@ -2403,26 +2414,34 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/03/java/concurrency/Java-Concurrency-Executor-and-Thread-Pools/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/02/16/distributed%20system/algorithems/Merkle-Tree-and-Anti-Entropy/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Java Concurrency - Executor and Thread Pools</title>
-        <pubTime>2016-04-03T15:56:13.000Z</pubTime>
+        <title>Merkle Tree and Anti-Entropy</title>
+        <pubTime>2016-02-16T08:56:25.000Z</pubTime>
         
-        <tag>java concurrency</tag>
+        <tag>cassandra</tag>
          
-        <tag>java executor</tag>
+        <tag>apache cassandra</tag>
          
-        <tag>thread pools</tag>
+        <tag>nosql</tag>
+         
+        <tag>no sql</tag>
+         
+        <tag>merkle tree</tag>
+         
+        <tag>anti entropy</tag>
+         
+        <tag>anti-entropy</tag>
          
          
            
              
-              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
+              <breadCrumb title="distributed system" url="https://phoenixjiangnan.github.io/categories/distributed-system/"/>
           
              
-              <breadCrumb title="concurrency" url="https://phoenixjiangnan.github.io/categories/java/concurrency/"/>
+              <breadCrumb title="algorithms" url="https://phoenixjiangnan.github.io/categories/distributed-system/algorithms/"/>
           
         </display>
     </data>
@@ -2482,22 +2501,54 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Consumer-and-BiConsumber/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Predicate-and-BiPredicate/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Java 8 Functional Interface - Consumer and BiConsumber</title>
-        <pubTime>2016-01-31T08:01:12.000Z</pubTime>
+        <title>Java 8 Functional Interface - Predicate and BiPredicate</title>
+        <pubTime>2016-01-31T07:35:16.000Z</pubTime>
         
         <tag>java lambda</tag>
          
         <tag>lambda</tag>
          
-        <tag>consumer</tag>
+        <tag>predicate</tag>
          
-        <tag>biconsumer</tag>
+        <tag>bipredicate</tag>
          
         <tag>functional interface</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
+          
+             
+              <breadCrumb title="java 8" url="https://phoenixjiangnan.github.io/categories/java/java-8/"/>
+          
+             
+              <breadCrumb title="lambda" url="https://phoenixjiangnan.github.io/categories/java/java-8/lambda/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Supplier/</loc>
+    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Java 8 Functional Interface - Supplier</title>
+        <pubTime>2016-01-31T07:42:17.000Z</pubTime>
+        
+        <tag>java lambda</tag>
+         
+        <tag>lambda</tag>
+         
+        <tag>functional interface</tag>
+         
+        <tag>supplier</tag>
          
          
            
@@ -2550,12 +2601,12 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Supplier/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Consumer-and-BiConsumber/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Java 8 Functional Interface - Supplier</title>
-        <pubTime>2016-01-31T07:42:17.000Z</pubTime>
+        <title>Java 8 Functional Interface - Consumer and BiConsumber</title>
+        <pubTime>2016-01-31T08:01:12.000Z</pubTime>
         
         <tag>java lambda</tag>
          
@@ -2563,7 +2614,9 @@
          
         <tag>functional interface</tag>
          
-        <tag>supplier</tag>
+        <tag>consumer</tag>
+         
+        <tag>biconsumer</tag>
          
          
            
@@ -2582,22 +2635,22 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Predicate-and-BiPredicate/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/03/05/java/java%208/lambda/Java-8-Method-Reference/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Java 8 Functional Interface - Predicate and BiPredicate</title>
-        <pubTime>2016-01-31T07:35:16.000Z</pubTime>
+        <title>Java 8 Method Reference</title>
+        <pubTime>2016-03-05T13:27:30.000Z</pubTime>
         
         <tag>java lambda</tag>
          
         <tag>lambda</tag>
          
-        <tag>functional interface</tag>
+        <tag>method reference</tag>
          
-        <tag>predicate</tag>
+        <tag>java 8 method</tag>
          
-        <tag>bipredicate</tag>
+        <tag>java 8</tag>
          
          
            
@@ -2682,33 +2735,33 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/03/05/java/java%208/lambda/Java-8-Method-Reference/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/05/15/web%20development/json/jackson/Jackson-How-does-Jackson-deserialize-json-to-complex-objects/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Java 8 Method Reference</title>
-        <pubTime>2016-03-05T13:27:30.000Z</pubTime>
+        <title>Jackson - How does Jackson deserialize json to complex objects?</title>
+        <pubTime>2016-05-15T10:02:43.000Z</pubTime>
         
-        <tag>java lambda</tag>
+        <tag>spring boot</tag>
          
-        <tag>lambda</tag>
+        <tag>spring web</tag>
          
-        <tag>java 8</tag>
+        <tag>spring restful</tag>
          
-        <tag>method reference</tag>
+        <tag>spring rest</tag>
          
-        <tag>java 8 method</tag>
+        <tag>jackson</tag>
          
          
            
              
-              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
+              <breadCrumb title="web development" url="https://phoenixjiangnan.github.io/categories/web-development/"/>
           
              
-              <breadCrumb title="java 8" url="https://phoenixjiangnan.github.io/categories/java/java-8/"/>
+              <breadCrumb title="json" url="https://phoenixjiangnan.github.io/categories/web-development/json/"/>
           
              
-              <breadCrumb title="lambda" url="https://phoenixjiangnan.github.io/categories/java/java-8/lambda/"/>
+              <breadCrumb title="jackson" url="https://phoenixjiangnan.github.io/categories/web-development/json/jackson/"/>
           
         </display>
     </data>
@@ -2750,40 +2803,6 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/05/15/web%20development/json/jackson/Jackson-How-does-Jackson-deserialize-json-to-complex-objects/</loc>
-    <lastmod>2016-06-29T22:06:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Jackson - How does Jackson deserialize json to complex objects?</title>
-        <pubTime>2016-05-15T10:02:43.000Z</pubTime>
-        
-        <tag>spring boot</tag>
-         
-        <tag>spring web</tag>
-         
-        <tag>spring restful</tag>
-         
-        <tag>spring rest</tag>
-         
-        <tag>jackson</tag>
-         
-         
-           
-             
-              <breadCrumb title="web development" url="https://phoenixjiangnan.github.io/categories/web-development/"/>
-          
-             
-              <breadCrumb title="json" url="https://phoenixjiangnan.github.io/categories/web-development/json/"/>
-          
-             
-              <breadCrumb title="jackson" url="https://phoenixjiangnan.github.io/categories/web-development/json/jackson/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://phoenixjiangnan.github.io/2016/06/28/web%20development/json/jackson/Jackson-How-to-use-Jackson-to-parse-basic-Json-to-Java-POJO/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
@@ -2812,25 +2831,28 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2015/04/08/data%20structures%20and%20algorithms/Array/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/04/20/java/concurrency/Java-Concurrency-Callable-Future-and-FutureTask/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
-        <title>Data Strucutre - Array</title>
-        <pubTime>2015-04-08T14:17:38.000Z</pubTime>
+        <title>Java Concurrency - Callable, Future, and FutureTask</title>
+        <pubTime>2016-04-20T13:51:31.000Z</pubTime>
         
-        <tag>data structures and algorithms</tag>
+        <tag>java concurrency</tag>
          
-        <tag>array</tag>
+        <tag>java callable</tag>
          
-        <tag>1d array</tag>
+        <tag>callable</tag>
          
-        <tag>2d array</tag>
+        <tag>future</tag>
          
          
            
              
-              <breadCrumb title="data structures and algorithms" url="https://phoenixjiangnan.github.io/categories/data-structures-and-algorithms/"/>
+              <breadCrumb title="java" url="https://phoenixjiangnan.github.io/categories/java/"/>
+          
+             
+              <breadCrumb title="concurrency" url="https://phoenixjiangnan.github.io/categories/java/concurrency/"/>
           
         </display>
     </data>

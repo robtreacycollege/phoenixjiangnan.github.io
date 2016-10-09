@@ -304,6 +304,144 @@
             
               
                 
+                <a class="post-title-link" href="/2016/07/01/distributed system/zookeeper/ZooKeeper-Security-and-ACL-Access-Control-List/" itemprop="url">
+                  ZooKeeper - Security and ACL (Access Control List)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-07-01T20:57:43+08:00" content="2016-07-01">
+              2016-07-01
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/distributed-system/" itemprop="url" rel="index">
+                    <span itemprop="name">distributed system</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/distributed-system/zookeeper/" itemprop="url" rel="index">
+                    <span itemprop="name">zookeeper</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/01/distributed system/zookeeper/ZooKeeper-Security-and-ACL-Access-Control-List/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/01/distributed system/zookeeper/ZooKeeper-Security-and-ACL-Access-Control-List/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>ZooKeeper uses ACLs (Access Control List) to control access to its znodes (the data nodes of a ZooKeeper data tree).</p>
+<p>The ACL implementation is quite similar to <code>UNIX</code> file access permissions: it employs permission bits to allow/disallow various operations against a node and the scope to which the bits apply.</p>
+<p>Unlike standard UNIX permissions, a ZooKeeper node is not limited by the three standard scopes for user (owner of the file), group, and world (other). ZooKeeper does not have a notion of an owner of a znode. Instead, an ACL specifies sets of ids and permissions that are associated with those ids.</p>
+<p>ZooKeeper supports pluggable authentication schemes. Ids are specified using the form <code>scheme:id</code>, where scheme is a the authentication scheme that the id corresponds to. For example, <code>hostId:host.corp.com</code> is an id for a host named <code>host.corp.com</code>.</p>
+<p>When a client connects to ZooKeeper and authenticates itself, ZooKeeper associates all the ids that correspond to a client with the clients connection. These ids are checked against the ACLs of znodes when a clients tries to access a node. ACLs are made up of pairs of (scheme:expression, perms). The format of the expression is specific to the scheme. For example, the pair (ip:19.22.0.0/16, READ) gives the READ permission to any clients with an IP address that starts with 19.22.</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/01/distributed system/zookeeper/ZooKeeper-Security-and-ACL-Access-Control-List/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/06/28/system design/SNAKE-System-Design-Principles-to-crack-a-system-design-in-5-steps/" itemprop="url">
                   SNAKE - System Design Principles to crack a system design in 5 steps
                 </a>
@@ -2965,155 +3103,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/25/test/jmockit/Unit-Test-JMockit-Difference-between-Expectations-NonStrictExpectations-and-StrictExpectations/" itemprop="url">
-                  Unit Test - JMockit - Difference between Expectations, NonStrictExpectations, and StrictExpectations
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-25T16:22:09+08:00" content="2016-04-25">
-              2016-04-25
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/test/" itemprop="url" rel="index">
-                    <span itemprop="name">test</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/test/jmockit/" itemprop="url" rel="index">
-                    <span itemprop="name">jmockit</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/25/test/jmockit/Unit-Test-JMockit-Difference-between-Expectations-NonStrictExpectations-and-StrictExpectations/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/25/test/jmockit/Unit-Test-JMockit-Difference-between-Expectations-NonStrictExpectations-and-StrictExpectations/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="NonStrictExpectations-is-deprecated-now"><a href="#NonStrictExpectations-is-deprecated-now" class="headerlink" title="NonStrictExpectations is deprecated now!"></a>NonStrictExpectations is deprecated now!</h2><p>Before V1.23, <code>Expectations</code> equals <code>StrictExpectations</code>. From V1.23, JMockit has dropped <code>NonStrictExpectations</code>, and replace it with <code>Expectations</code>.</p>
-<p>Here’s the release note from JMockit</p>
-<blockquote>
-<p>Version 1.23 (Apr 24, 2016):</p>
-<ul>
-<li>Dropped support for the mocking of private methods/constructors when using the <code>Expectations</code> API, to prevent misuse. If still needed, they can be mocked or stubbed out with the application of a <code>MockUp&lt;T&gt;</code>.</li>
-<li>Deprecated the <code>NonStrictExpectations</code> class. Existing tests should use <code>Expectations</code> instead.</li>
-<li>Added support for JDK 9 (tested with builds 112 to 114).</li>
-</ul>
-</blockquote>
-<h2 id="Regular-versus-strict-expectations"><a href="#Regular-versus-strict-expectations" class="headerlink" title="Regular versus strict expectations"></a>Regular versus strict expectations</h2><p>Expectations recorded inside a <code>new Expectations() {...}</code> block are the regular ones. What this means is that:</p>
-<ul>
-<li>the invocations they specify are expected to occur at least once during the replay phase</li>
-<li>they may occur more than once, though, and in a different order relative to other recorded expectations</li>
-<li>additionally, invocations that don’t match any recorded expectation are allowed to occur in any number and in any order. </li>
-</ul>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/25/test/jmockit/Unit-Test-JMockit-Difference-between-Expectations-NonStrictExpectations-and-StrictExpectations/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3159,7 +3148,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives/">
-              <span class="site-state-item-count">108</span>
+              <span class="site-state-item-count">109</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -3176,7 +3165,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags/">
-                <span class="site-state-item-count">259</span>
+                <span class="site-state-item-count">261</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://phoenixjiangnan.github.io/"/>
-  <updated>2016-10-08T02:56:29.000Z</updated>
+  <updated>2016-10-09T16:15:31.000Z</updated>
   <id>https://phoenixjiangnan.github.io/</id>
   
   <author>
@@ -14,6 +14,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Repost - Job-Hopping and Salary Raise 跳槽加薪</title>
+    <link href="https://phoenixjiangnan.github.io/2016/10/10/career%20and%20leadership/Repost-Job-Hopping-and-Salary-Raise-%E8%B7%B3%E6%A7%BD%E5%8A%A0%E8%96%AA/"/>
+    <id>https://phoenixjiangnan.github.io/2016/10/10/career and leadership/Repost-Job-Hopping-and-Salary-Raise-跳槽加薪/</id>
+    <published>2016-10-09T16:13:13.000Z</published>
+    <updated>2016-10-09T16:15:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<p>From <a href="http://weibo.com/1134424202/E50IpFN45?from=page_1005051134424202_profile&amp;wvr=6&amp;mod=weibotime&amp;type=comment" target="_blank" rel="external">http://weibo.com/1134424202/E50IpFN45?from=page_1005051134424202_profile&amp;wvr=6&amp;mod=weibotime&amp;type=comment</a></p>
+<hr>
+<p>互联网行业“跳槽加薪”这件事，除了常见解释，还有一个隐性的理由。</p>
+<p>对于公司内部，加薪体系通常是线性的，类似于每年+10-20%这样。但是在人才市场上存在非线性的涨幅。</p>
+<p>举例来说，一位1年经验，资历尚浅的普通程序员，薪水12-15K是可以接受的。进入公司工作了两年，每年+20%，薪水18-22K。两年后，他已经从普通程序员成长为能独当一面的优秀程序员，而这个位置的市场价格是25-35K。</p>
+<p>然后他跳个槽，30K，比公司给出的加薪幅度高10K。</p>
+<p>公司只好招聘新人来弥补这个位置，顶替缺口的是另一位独当一面的优秀程序员，薪水同样是30K。这时围观群众纷纷嘲笑HR是傻逼，老板是臭傻逼。</p>
+<p>之所以出现这种情况，是因为管理者不容易精准地动态判断，一个人什么时候该线性加薪，什么时候该非线性加薪，哪里是员工市场价出现跳跃式增长的时间点。如果不考虑这个时间点的话，每年+10%-20%已经是很不错的待遇了。而每个人每年来一次非线性加薪也是不合理的，公司分分钟破产。</p>
+<p>大家都知道，跳个槽加薪多，原地不动加薪少。老板个个都是臭傻逼。但“老板个个都是臭傻逼”这件事其实不符合常识，毕竟很多“老板”其实也只是高级经理人，掏钱发工资的又不是他，得力下属都跑掉了，并不符合他的利益。</p>
+<p>从结果上来说，当管理者不能判断非线性加薪的时间点时，跳个槽，由市场决定自己的新身价，是最合理的解决方案。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;From &lt;a href=&quot;http://weibo.com/1134424202/E50IpFN45?from=page_1005051134424202_profile&amp;amp;wvr=6&amp;amp;mod=weibotime&amp;amp;type=comment&quot;
+    
+    </summary>
+    
+      <category term="career and leadership" scheme="https://phoenixjiangnan.github.io/categories/career-and-leadership/"/>
+    
+    
+      <category term="job hopping" scheme="https://phoenixjiangnan.github.io/tags/job-hopping/"/>
+    
+      <category term="跳槽加薪" scheme="https://phoenixjiangnan.github.io/tags/%E8%B7%B3%E6%A7%BD%E5%8A%A0%E8%96%AA/"/>
+    
+  </entry>
   
   <entry>
     <title>Cache - Cache Design Patterns</title>
@@ -2545,152 +2581,6 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
       <category term="spring" scheme="https://phoenixjiangnan.github.io/categories/spring/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>How did I build a custom dynamic ZooKeeper management and migration framework and an asynchronous job framework for Tableau Server 11</title>
-    <link href="https://phoenixjiangnan.github.io/2016/08/16/system%20design/project%20experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/"/>
-    <id>https://phoenixjiangnan.github.io/2016/08/16/system design/project experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/</id>
-    <published>2016-08-16T05:45:18.000Z</published>
-    <updated>2016-09-30T06:53:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>First of all, Tableau Server 11 is not out yet. Tableau Server 10 is just released yesterday.</p>
-<h2 id="Product-Strategy-Overview"><a href="#Product-Strategy-Overview" class="headerlink" title="Product Strategy Overview"></a>Product Strategy Overview</h2><p>Tableau Server is an enterpise data analytics and visualization platform, and our customers are business people. In order to make the project usage experience as smooth as possible, we believe we should enable business people to manage Tableau Server on their own without any help from enterprise IT. </p>
-<p>Therefore, one of the most critical goals for developing Tableau Server is that Tableau will provide GUIs and built-in workflows to automate as many managing processes as possible.  </p>
-<h2 id="Project-and-Feature-Requirements"><a href="#Project-and-Feature-Requirements" class="headerlink" title="Project and Feature Requirements"></a>Project and Feature Requirements</h2><p>Tableau core server team is building a new Java-based Tableau Server architecutre for Tableau Server 11 (target release, might change in the future) to replace the old jruby one.</p>
-<p>Notably, old jruby Tabadmin persisting cluster-wide configuration and topology information in a local file (workgroup.yml). The role of ZooKeeper (referenced as ZK) is only used a distributed lock and a temp data store - it keeps some vilatile data that can be lost or wiped out and no one cares about it. This characteristic also makes managing and migrating ZooKeeper very very easy - you only need to clean up all data in existing ZooKeeper nodes, deploy the ZooKeeper bits to new nodes, and bring the new cluster up. </p>
-<p>Unlike the old world, new Tabadmin will persist all essential configuration and topology data in ZK as a single source of truth, which makes managing, expanding, and migrating ZK much harder than before. </p>
-<h2 id="The-Problem"><a href="#The-Problem" class="headerlink" title="The Problem"></a>The Problem</h2><p>The problem we are facing is how to maintain ZK’s data and expand/shrink ZK cluster, as well as making this process super reliable and easy for users.</p>
-<p>Let’s elaborate more about the problem.</p>
-<p>Say we start with a single Tableau Server node A, which has a single node ZK cluster runs on it. Then we want to expand the Tableau Server cluster from 1 node (A) to 3 nodes (A, B, C), as well as the ZK cluster runs on top of it. How to achieve that?</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(A) -&gt; (A, B, C)</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<h3 id="Non-Goal"><a href="#Non-Goal" class="headerlink" title="Non-Goal"></a>Non-Goal</h3><p>For customers who already have a ZK cluster in house and want to reuse that cluster, Tableau Server provides configurations that enable them to do so. That is not part of the project, and will not be discussed here. This project is focusing on smoothing the experience of managing Tableau Server’s built-in ZooKeeper cluster.</p>
-<h3 id="Naive-Approach"><a href="#Naive-Approach" class="headerlink" title="Naive Approach"></a>Naive Approach</h3><p>The naive approach is to shut down (A), deploy ZK bits on B and C, change their configuration files, and bring up (A, B, C). Well, this can lead to disasters. The reason being that ZK runs on a quorum mode, means that if more than half nodes in a ZK cluster form a quorum, their decision will be the final decision that all nodes should follow. In this case, if B and C come up first and form a quorum, their decision will be “there’s no data in our cluster”. When A joins them, B and C will force A to delete its data, causing data loss.</p>
-<h3 id="ZooKeeper’s-built-in-Approach"><a href="#ZooKeeper’s-built-in-Approach" class="headerlink" title="ZooKeeper’s built-in Approach"></a>ZooKeeper’s built-in Approach</h3><p>Actually all developers using ZooKeeper faces the same problem. Think about running a ZooKeeper in your data center. If a ZooKeeper node fails, the common practice is that admin will try to bring it back manually/through scripts. If the machine dies, admins have to bring up a new machine, change its IP to match the failed one, and join it to the cluster. And you must know that machine failure is more than normal.</p>
-<p>So ZooKeeper 3.5 starts to build a native rolling based approach to solve this common problem. The principle is to bring up a new node each time, join it to the existing cluster, wait them to sync up and become stable, bring up another new node.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(A) -&gt; (A, B) -&gt; (A, B, C)</div></pre></td></tr></table></figure>
-<p>The problem is that ZK is not originally developed to support this use case. It involves lots of refactoring, produces lots of bugs, and is not stable for production.</p>
-<p>Take a look at ZK’s <a href="https://zookeeper.apache.org/" target="_blank" rel="external">release page</a>. 3.5.0 was released around 3 years ago. Apache then release 3.5.1 and 3.5.2, both are alpha version. They themselves even don’t recommend using it for production.</p>
-<h3 id="Other-Open-Sourced-Approach-Framework"><a href="#Other-Open-Sourced-Approach-Framework" class="headerlink" title="Other Open-Sourced Approach / Framework"></a>Other Open-Sourced Approach / Framework</h3><p>The closet solution we found online is Netflix’s Exebitor library. Exhibitor is a Java supervisor system for ZooKeeper built and <a href="https://github.com/Netflix/exhibitor/wiki" target="_blank" rel="external">opensourced by Netflix</a></p>
-<p>Though Exhibitor is an off-the-shelf zookeeper-managing library from Netflix, we found Exhibitor does not fit our needs because it also takes the way of rolling reconfiguration. What’s worse is that it’s not even a native solution, it’s only a wrapper. It’s so prone to errors that even Netflix doesn’t recommend using it.</p>
-<blockquote>
-<p>Netflix has warned users “Experience has shown that rolling config changes can lead to runtime problems with the ZooKeeper ensemble.” as stated <a href="https://github.com/Netflix/exhibitor/wiki/Configuration-UI" target="_blank" rel="external">here</a></p>
-</blockquote>
-<p>Our conclusion is that Exhibitor is more of a monitoring tool with good UI, rather than a true automated ZK management framework.</p>
-<h3 id="Our-Tableau-Approach"><a href="#Our-Tableau-Approach" class="headerlink" title="Our Tableau Approach"></a>Our Tableau Approach</h3><p>We took a completely new approach that is different from any solution on the market.</p>
-<p>The core idea behind the scene is that Tableau Server will run two ZooKeeper clusters side by side to facilitate migration. If they overlap on a machine, they will run on different ports. Besides, this migration framework relies on our async job framework on top of ZooKeeper.</p>
-<h4 id="Our-New-Asynchronous-Job-Framework-in-Tableau-Server-11"><a href="#Our-New-Asynchronous-Job-Framework-in-Tableau-Server-11" class="headerlink" title="Our New Asynchronous Job Framework in Tableau Server 11"></a>Our New Asynchronous Job Framework in Tableau Server 11</h4><p>First thing first, the new <code>Async Job</code> Framework that I’m talking about is different from <code>Async Background Jobs</code>.</p>
-<p><code>Async Background Jobs</code> are taken care of by backgrounder processes in Tableau Server. Those jobs are all kinds of scheduled jobs that can be run in parallel by multiple backgrounders.</p>
-<p><code>Async Jobs</code> in new Tableau Server are a serial of configuring and initializing jobs that have to be executed in order and one at a time, to perform changes to cluster Configuration and Topology.</p>
-<p>Each of our Async Job is created as <code>PERSISTENT_SEQUENTIAL</code> node under a ZK node <code>/asyncjobs</code>, so that name of each async job node looks like <code>asyncjob00000000001</code>, <code>asyncjob00000000002</code>, and keep on increasing. How that works is discussed <a href="https://phoenixjiangnan.github.io/2016/07/07/distributed%20system/zookeeper/How-does-ZooKeeper-s-persistent-sequential-id-work/">here</a>.</p>
-<p>Other Components involved are:</p>
-<ul>
-<li><p>Configuration / Topology</p>
-<ul>
-<li>key-values pairs stored as string binary in a ZK node</li>
-</ul>
-</li>
-<li><p>Agent </p>
-<ul>
-<li>Runs on every machine    . All Agents are the same.</li>
-<li>Does NOT make any decision but execute whatever commands it receives, from either Configuration/Topology in ZooKeeper or commands issued by users on terminal</li>
-<li><p>Controls the actual life cycle of ZK</p>
-<ul>
-<li>Start/stop local ZK instance on a given port</li>
-<li>Create/delete/update zoo.cfg and myid files to support cluster migration</li>
-<li>Restart itself when a new ZK connection string appear in Configuration </li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Controller</p>
-<ul>
-<li>Runs on every machine. Only one Controller across the cluster is the Controller Leader (selected by Leader Election with Curator).</li>
-<li>Any Controller can create Async Jobs, but only Controller Leader can execute Async Jobs</li>
-<li><p>The Controller Leader will curate the whole ZK migration process</p>
-<ul>
-<li>Read/write Topology (which machines run ZK) and Configuration (ZK connection string) from/to both old and new ZK clusters</li>
-<li>Trigger rollback or recover from a broken situation if anything goes wrong</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="High-Level-Steps"><a href="#High-Level-Steps" class="headerlink" title="High Level Steps"></a>High Level Steps</h4><p>The high level steps for migrating from (A) to (A, B, C) are like this: </p>
-<ol>
-<li><p>Take a global lock of ZK, so that no one can write/update important data during migration</p>
-</li>
-<li><p>First identify the machines where new cluster is targeted to sit on, and create a new Async Job to cluster (A1) - say <code>AsyncJob(A, B, C)</code> in our case. The async job is composed of several substeps</p>
-</li>
-<li><p>Substep 1. Controller Leader will add the target cluster as a config key to Configuration in ZooKeeper. Deploy ZK bits to B and C, and create data dirs and configurations for (A2, B2, C2)</p>
-</li>
-<li><p>Substep 2. Bring up new ZK cluster (A2, B2, C2), migrate all data (all persisitent data excluding async jobs. Will discuss in detail later in this post) from (A1) to (A2, B2, C2)</p>
-</li>
-<li><p>Substep 3. Migrate all persistent data excluding asyncjobs by backup() and restore(). Do a live check by iterating trees in both ZK cluster. At the end, create the same <code>AsyncJob(A, B, C)</code> in new ZK cluster</p>
-</li>
-<li><p>Substep 4. Begin a two phase commmit</p>
-<ol>
-<li>Ask all clients to try to connect to the new ZK cluster. If anyone is missing, roll back</li>
-<li>If all shows up, update all clients’ ZK connection string. Clients have built-in mechanism to watch its configuration file, and will restart automatically when its ZK connection string is updated</li>
-<li>If any client doesn’t show up in new ZK after the switch, manual intervention is required. Will discuss later in the post. </li>
-</ol>
-</li>
-<li><p>When Controller Leader restarts and comes up, it ensures all clients show up in new ZK (A2, B2, C2). </p>
-<ol>
-<li>If so, it proceed to substep 5 to clean up the old ZK cluster (A1), and mark the migration as <code>Succeed</code>.</li>
-<li>If not, an error message will be shown to users to ask for manual intervention. The old ZK cluster won’t be deleted.</li>
-</ol>
-</li>
-<li><p>Release the global lock so clients can resume operations</p>
-</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(A1) -&gt; ((A1, A2), B2, C2)</div></pre></td></tr></table></figure>
-<h4 id="More-Details-that-are-Important-to-Keep-In-Mind"><a href="#More-Details-that-are-Important-to-Keep-In-Mind" class="headerlink" title="More Details that are Important to Keep In Mind"></a>More Details that are Important to Keep In Mind</h4><ul>
-<li><p>Controller Leader need to lock() both ZK cluster to prevent data being modified during the migration, and releases locks after the migration finishes.</p>
-</li>
-<li><p>The # of ZK instances is required to be an odd number less or equal to 7, because 1) ZK quorum mechanism so that even number of ZK instances doesn’t make sense 2) too many ZK will not improve the stability of TS and may bring troubles (thinking of fsync issue).</p>
-<p>  So ZK migration scenarios are as followed:</p>
-<pre><code>The # of old ZK cluster &lt;-&gt; # of new ZK cluster (machines here may overlap or be totally different ones)  
-</code></pre></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1 &lt;-&gt; 3</div><div class="line">1 &lt;-&gt; 5</div><div class="line">3 &lt;-&gt; 3</div><div class="line">3 &lt;-&gt; 5</div><div class="line">5 &lt;-&gt; 5</div></pre></td></tr></table></figure>
-<ul>
-<li>Why Not migrate all async jobs?<ul>
-<li>Old jobs are not necessary to be there. As I mentioned above, <code>Async Jobs</code> in new Tableau Server are a serial of configuring and initializing jobs that have to be executed in order and one at a time, to perform changes to cluster Configuration and Topology. Thus, anytime you migrate ZK, it means the Topology has changed, and you need to rerun all those serial jobs again. Thus, there’s no need to migrate them.</li>
-</ul>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;First of all, Tableau Server 11 is not out yet. Tableau Server 10 is just released yesterday.&lt;/p&gt;
-&lt;h2 id=&quot;Product-Strategy-Overview&quot;&gt;&lt;a href=&quot;#Product-Strategy-Overview&quot; class=&quot;headerlink&quot; title=&quot;Product Strategy Overview&quot;&gt;&lt;/a&gt;Product Strategy Overview&lt;/h2&gt;&lt;p&gt;Tableau Server is an enterpise data analytics and visualization platform, and our customers are business people. In order to make the project usage experience as smooth as possible, we believe we should enable business people to manage Tableau Server on their own without any help from enterprise IT. &lt;/p&gt;
-&lt;p&gt;Therefore, one of the most critical goals for developing Tableau Server is that Tableau will provide GUIs and built-in workflows to automate as many managing processes as possible.  &lt;/p&gt;
-&lt;h2 id=&quot;Project-and-Feature-Requirements&quot;&gt;&lt;a href=&quot;#Project-and-Feature-Requirements&quot; class=&quot;headerlink&quot; title=&quot;Project and Feature Requirements&quot;&gt;&lt;/a&gt;Project and Feature Requirements&lt;/h2&gt;&lt;p&gt;Tableau core server team is building a new Java-based Tableau Server architecutre for Tableau Server 11 (target release, might change in the future) to replace the old jruby one.&lt;/p&gt;
-&lt;p&gt;Notably, old jruby Tabadmin persisting cluster-wide configuration and topology information in a local file (workgroup.yml). The role of ZooKeeper (referenced as ZK) is only used a distributed lock and a temp data store - it keeps some vilatile data that can be lost or wiped out and no one cares about it. This characteristic also makes managing and migrating ZooKeeper very very easy - you only need to clean up all data in existing ZooKeeper nodes, deploy the ZooKeeper bits to new nodes, and bring the new cluster up. &lt;/p&gt;
-&lt;p&gt;Unlike the old world, new Tabadmin will persist all essential configuration and topology data in ZK as a single source of truth, which makes managing, expanding, and migrating ZK much harder than before. &lt;/p&gt;
-&lt;h2 id=&quot;The-Problem&quot;&gt;&lt;a href=&quot;#The-Problem&quot; class=&quot;headerlink&quot; title=&quot;The Problem&quot;&gt;&lt;/a&gt;The Problem&lt;/h2&gt;&lt;p&gt;The problem we are facing is how to maintain ZK’s data and expand/shrink ZK cluster, as well as making this process super reliable and easy for users.&lt;/p&gt;
-&lt;p&gt;Let’s elaborate more about the problem.&lt;/p&gt;
-&lt;p&gt;Say we start with a single Tableau Server node A, which has a single node ZK cluster runs on it. Then we want to expand the Tableau Server cluster from 1 node (A) to 3 nodes (A, B, C), as well as the ZK cluster runs on top of it. How to achieve that?&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;(A) -&amp;gt; (A, B, C)&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="system design" scheme="https://phoenixjiangnan.github.io/categories/system-design/"/>
-    
-      <category term="project experience" scheme="https://phoenixjiangnan.github.io/categories/system-design/project-experience/"/>
-    
-    
-      <category term="zookeeper management" scheme="https://phoenixjiangnan.github.io/tags/zookeeper-management/"/>
-    
-      <category term="zookeeper migration" scheme="https://phoenixjiangnan.github.io/tags/zookeeper-migration/"/>
-    
-      <category term="tableau server 11" scheme="https://phoenixjiangnan.github.io/tags/tableau-server-11/"/>
-    
-      <category term="async job framework" scheme="https://phoenixjiangnan.github.io/tags/async-job-framework/"/>
     
   </entry>
   
