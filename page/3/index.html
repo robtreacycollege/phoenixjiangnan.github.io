@@ -304,6 +304,154 @@
             
               
                 
+                <a class="post-title-link" href="/2016/07/04/java/exception/Java - Exception - Principles to Handle Exception/" itemprop="url">
+                  Java - Exception - Principles to Handle Exception
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-07-04T16:22:56+08:00" content="2016-07-04">
+              2016-07-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/java/exception/" itemprop="url" rel="index">
+                    <span itemprop="name">exception</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/04/java/exception/Java - Exception - Principles to Handle Exception/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/04/java/exception/Java - Exception - Principles to Handle Exception/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="Introduction-to-Exception"><a href="#Introduction-to-Exception" class="headerlink" title="Introduction to Exception"></a>Introduction to Exception</h2><p><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html">https://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html</a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Exception</span> <span class="keyword">extends</span> <span class="title">Throwable</span></span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>The class <code>Exception</code> and its subclasses are a form of <code>Throwable</code> that indicates conditions that a reasonable application might want to catch.</p>
+<p>The class <code>Exception</code> and any subclasses that are not also subclasses of <code>RuntimeException</code> are <code>checked exceptions</code>. Checked exceptions need to be declared in a method or constructor’s throws clause if they can be thrown by the execution of the method or constructor and propagate outside the method or constructor boundary.</p>
+</blockquote>
+<h2 id="Two-Types-of-Exceptions"><a href="#Two-Types-of-Exceptions" class="headerlink" title="Two Types of Exceptions"></a>Two Types of Exceptions</h2><h3 id="1-Checked-Exception"><a href="#1-Checked-Exception" class="headerlink" title="1. Checked Exception"></a>1. Checked Exception</h3><blockquote>
+<p>Exceptions that will be detected during compiling</p>
+</blockquote>
+<p>Usually all types <code>Exceptions</code> except <code>RuntimeException</code> and its subclass</p>
+<h3 id="2-Unchecked-Exception-runtime-exception"><a href="#2-Unchecked-Exception-runtime-exception" class="headerlink" title="2. Unchecked Exception - runtime exception"></a>2. Unchecked Exception - runtime exception</h3><blockquote>
+<p>Exceptions that won’t be detected during compiling</p>
+</blockquote>
+<p>Usually <code>RuntimeException</code> and all its subclasses. This kind of exceptions indicate the function cannot run anymore and the computation cannot proceed.</p>
+<h2 id="Programmer-Defined-Exception"><a href="#Programmer-Defined-Exception" class="headerlink" title="Programmer-Defined Exception"></a>Programmer-Defined Exception</h2><p>When developers try to define their own exceptions, they have to extend either <code>Exception</code> or <code>RuntimeException</code> or either’s subclasses.</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/04/java/exception/Java - Exception - Principles to Handle Exception/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/07/01/distributed system/zookeeper/ZooKeeper-Security-and-ACL-Access-Control-List/" itemprop="url">
                   ZooKeeper - Security and ACL (Access Control List)
                 </a>
@@ -2973,136 +3121,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/25/database/The-N-1-Query-Problem/" itemprop="url">
-                  The N + 1 Query Problem
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-25T22:49:59+08:00" content="2016-04-25">
-              2016-04-25
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/database/" itemprop="url" rel="index">
-                    <span itemprop="name">database</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/25/database/The-N-1-Query-Problem/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/25/database/The-N-1-Query-Problem/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><a href="https://secure.phabricator.com/book/phabcontrib/article/n_plus_one/">https://secure.phabricator.com/book/phabcontrib/article/n_plus_one/</a></p>
-<h1 id="What-is-N-1-Query-Problem"><a href="#What-is-N-1-Query-Problem" class="headerlink" title="What is N+1 Query Problem"></a>What is N+1 Query Problem</h1><p>The N+1 query problem is a common performance anti-pattern. It looks like this:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Set&lt;division&gt; divisions = getAllDivisions();</div><div class="line">divisions.foreach (</div><div class="line">    d -&gt; &#123;</div><div class="line">        Set&lt;Employee&gt; employees = getEmployeesByDivision(d)Ï</div><div class="line">        <span class="comment">// ...</span></div><div class="line">    &#125;</div><div class="line">);</div></pre></td></tr></table></figure>
-<p>Assuming getAllDivisions() has an implementation that boils down to:</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> divisions;</div></pre></td></tr></table></figure>
-<p>and <code>getEmployeesByDivision(d)</code> has an implementation something like this:</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> employees <span class="keyword">WHERE</span> divisionId = d.id;</div></pre></td></tr></table></figure>
-<p>You will issue “N+1” queries when the code executes, where N is the number of divisions:</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> divisions;</div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> employees <span class="keyword">WHERE</span> divisionID = <span class="number">1</span></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> employees <span class="keyword">WHERE</span> divisionID = <span class="number">2</span></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> employees <span class="keyword">WHERE</span> divisionID = <span class="number">3</span></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> employees <span class="keyword">WHERE</span> divisionID = <span class="number">4</span></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> employees <span class="keyword">WHERE</span> divisionID = <span class="number">5</span></div><div class="line">...</div></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/25/database/The-N-1-Query-Problem/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3148,7 +3166,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives/">
-              <span class="site-state-item-count">109</span>
+              <span class="site-state-item-count">110</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -3165,7 +3183,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags/">
-                <span class="site-state-item-count">261</span>
+                <span class="site-state-item-count">262</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

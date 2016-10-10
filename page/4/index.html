@@ -304,6 +304,136 @@
             
               
                 
+                <a class="post-title-link" href="/2016/04/25/database/The-N-1-Query-Problem/" itemprop="url">
+                  The N + 1 Query Problem
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-04-25T22:49:59+08:00" content="2016-04-25">
+              2016-04-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/database/" itemprop="url" rel="index">
+                    <span itemprop="name">database</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/25/database/The-N-1-Query-Problem/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/25/database/The-N-1-Query-Problem/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><a href="https://secure.phabricator.com/book/phabcontrib/article/n_plus_one/">https://secure.phabricator.com/book/phabcontrib/article/n_plus_one/</a></p>
+<h1 id="What-is-N-1-Query-Problem"><a href="#What-is-N-1-Query-Problem" class="headerlink" title="What is N+1 Query Problem"></a>What is N+1 Query Problem</h1><p>The N+1 query problem is a common performance anti-pattern. It looks like this:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Set&lt;division&gt; divisions = getAllDivisions();</div><div class="line">divisions.foreach (</div><div class="line">    d -&gt; &#123;</div><div class="line">        Set&lt;Employee&gt; employees = getEmployeesByDivision(d)Ï</div><div class="line">        <span class="comment">// ...</span></div><div class="line">    &#125;</div><div class="line">);</div></pre></td></tr></table></figure>
+<p>Assuming getAllDivisions() has an implementation that boils down to:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> divisions;</div></pre></td></tr></table></figure>
+<p>and <code>getEmployeesByDivision(d)</code> has an implementation something like this:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> employees <span class="keyword">WHERE</span> divisionId = d.id;</div></pre></td></tr></table></figure>
+<p>You will issue “N+1” queries when the code executes, where N is the number of divisions:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> divisions;</div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> employees <span class="keyword">WHERE</span> divisionID = <span class="number">1</span></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> employees <span class="keyword">WHERE</span> divisionID = <span class="number">2</span></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> employees <span class="keyword">WHERE</span> divisionID = <span class="number">3</span></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> employees <span class="keyword">WHERE</span> divisionID = <span class="number">4</span></div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> employees <span class="keyword">WHERE</span> divisionID = <span class="number">5</span></div><div class="line">...</div></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/04/25/database/The-N-1-Query-Problem/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/25/test/jmockit/Unit-Test-JMockit-Difference-between-Expectations-NonStrictExpectations-and-StrictExpectations/" itemprop="url">
                   Unit Test - JMockit - Difference between Expectations, NonStrictExpectations, and StrictExpectations
                 </a>
@@ -2198,146 +2328,6 @@
             
               
                 
-                <a class="post-title-link" href="/2016/04/14/best practices/design pattern/Design-Pattern-Observer-Pattern/" itemprop="url">
-                  Design Pattern - Observer Pattern
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-14T14:53:28+08:00" content="2016-04-14">
-              2016-04-14
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/best-practice/" itemprop="url" rel="index">
-                    <span itemprop="name">best practice</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/best-practice/design-pattern/" itemprop="url" rel="index">
-                    <span itemprop="name">design pattern</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/14/best practices/design pattern/Design-Pattern-Observer-Pattern/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/14/best practices/design pattern/Design-Pattern-Observer-Pattern/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Keeping-your-Objects-in-the-know-Observer-Pattern"><a href="#Keeping-your-Objects-in-the-know-Observer-Pattern" class="headerlink" title="Keeping your Objects in the know - Observer Pattern"></a>Keeping your Objects in the know - Observer Pattern</h1><blockquote>
-<p>Publishers + Subscribers = Observer Pattern</p>
-<p><code>Observer Pattern</code> defines a one-to-many dependency between objects so that when one object changes state, all of its dependents are notified and updated automatically.</p>
-<p>The key idea is that your <code>Subject</code> will maintain a set of <code>Observers</code> who want to know events happening to <code>Subject</code>. <code>Subject</code> should notify and update all <code>Observers</code> after each observed action by calling <code>Observers&#39;</code> cooresponding methods</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">interface Subject              ---&gt;             interface Observer</div><div class="line">    - registerObserver()                            - update()</div><div class="line">    - removeObserver()</div><div class="line">    - notifyObserver()</div><div class="line">    </div><div class="line">        /\                                              /\</div><div class="line">         |                                               |</div><div class="line"></div><div class="line">ConcreateSubject                &lt;---            ConcreteObserver</div><div class="line">    - registerObserver() &#123;&#125;                         - update()</div><div class="line">    - removeObserver() &#123;&#125;                           - other Observer specific methods </div><div class="line">    - notifyObserver() &#123;&#125;</div><div class="line"></div><div class="line">    - getState()</div><div class="line">    - setState()</div></pre></td></tr></table></figure>
-<p>E.g.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// interfaces</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Subject</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">registerObserver</span><span class="params">(Observer o)</span></span>;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">removeObserver</span><span class="params">(Observer o)</span></span>;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">notifyObserver</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Observer</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">float</span> temp, <span class="keyword">float</span> humidity, <span class="keyword">float</span> pressure)</span></span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">DisplayElement</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Implementations</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WeatherData</span> <span class="keyword">implements</span> <span class="title">Subject</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> List&lt;Observers&gt; observers;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">float</span> temperature;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">float</span> humidity;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">float</span> pressure;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">WeatherData</span><span class="params">()</span> </span>&#123;</div><div class="line">        observers = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">registerObserver</span><span class="params">(Observer o)</span> </span>&#123;</div><div class="line">        observers.add(o);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">removeObserver</span><span class="params">(Observer o)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> i = observers.indexOf(o);</div><div class="line">        <span class="keyword">if</span>(i &gt;= <span class="number">0</span>) &#123;</div><div class="line">            observers.remove(o);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">notifyObservers</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; observers.size(); i ++) &#123;</div><div class="line">            observers.get(i).update(temperature, humidity, pressure);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setMeasurements</span><span class="params">(<span class="keyword">float</span> t, <span class="keyword">float</span> h, <span class="keyword">float</span> p)</span> </span>&#123;</div><div class="line">        temperature = t;</div><div class="line">        humidity = h;</div><div class="line">        pressure = p;</div><div class="line">        notifyObservers();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CurrentConditionsDisplay</span> <span class="keyword">implements</span> <span class="title">Observer</span>, <span class="title">DisplayElement</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">float</span> temperature;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">float</span> humidity;</div><div class="line">    <span class="keyword">private</span> Subject weatherData;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CurrentConditionDisplay</span><span class="params">(Subject w)</span> </span>&#123;</div><div class="line">        weatherData = w;</div><div class="line">        weatherData.registerObserver(<span class="keyword">this</span>);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">float</span> t, <span class="keyword">float</span> h, <span class="keyword">float</span> p)</span> </span>&#123;</div><div class="line">        temperature = t;</div><div class="line">        humidity = h;</div><div class="line">        display();</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">display</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="comment">// ...</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WeatherStation</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        WeatherData w = <span class="keyword">new</span> WeatherData();</div><div class="line">        </div><div class="line">        CurrentConditionDisplay c = <span class="keyword">new</span> CurrentConditionDisplay(w);</div><div class="line">        StatisticsDisplay s = <span class="keyword">new</span> StatisticsDisplay(w);</div><div class="line">        ForecastDisplay f = <span class="keyword">new</span> ForecastDisplay(w);</div><div class="line">        </div><div class="line">        w.serMeasurements(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>);</div><div class="line">        w.setMeasurements(<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="Java-built-in-Observer-Pattern"><a href="#Java-built-in-Observer-Pattern" class="headerlink" title="Java built-in Observer Pattern"></a>Java built-in Observer Pattern</h1>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2016/04/14/best practices/design pattern/Design-Pattern-Command-Pattern/" itemprop="url">
                   Design Pattern - Command Pattern
                 </a>
@@ -2450,6 +2440,146 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/** The Receiver class */</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Light</span> </span>&#123;</div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">turnOn</span><span class="params">()</span> </span>&#123;</div><div class="line">      System.out.println(<span class="string">"The light is on"</span>);</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">turnOff</span><span class="params">()</span> </span>&#123;</div><div class="line">      System.out.println(<span class="string">"The light is off"</span>);</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* The test class or Client */</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PressSwitch</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</div><div class="line">        <span class="comment">// Receiver </span></div><div class="line">        Light lamp = <span class="keyword">new</span> Light();</div><div class="line">        </div><div class="line">        <span class="comment">// Command</span></div><div class="line">        Command switchUp = <span class="keyword">new</span> FlipUpCommand(lamp);</div><div class="line">        Command switchDown = <span class="keyword">new</span> FlipDownCommand(lamp);</div><div class="line">        </div><div class="line">        <span class="comment">// Invoker</span></div><div class="line">        Switch mySwitch = <span class="keyword">new</span> Switch();</div><div class="line"></div><div class="line">        <span class="keyword">switch</span>(args[<span class="number">0</span>]) &#123;</div><div class="line">            <span class="keyword">case</span> <span class="string">"ON"</span>:</div><div class="line">                mySwitch.storeAndExecute(switchUp);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="string">"OFF"</span>:</div><div class="line">                mySwitch.storeAndExecute(switchDown);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">default</span>:</div><div class="line">                System.err.println(<span class="string">"Argument \"ON\" or \"OFF\" is required."</span>);</div><div class="line">                System.exit(-<span class="number">1</span>);</div><div class="line">        &#125;</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/04/14/best practices/design pattern/Design-Pattern-Observer-Pattern/" itemprop="url">
+                  Design Pattern - Observer Pattern
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-04-14T14:53:28+08:00" content="2016-04-14">
+              2016-04-14
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/best-practice/" itemprop="url" rel="index">
+                    <span itemprop="name">best practice</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/best-practice/design-pattern/" itemprop="url" rel="index">
+                    <span itemprop="name">design pattern</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/14/best practices/design pattern/Design-Pattern-Observer-Pattern/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/14/best practices/design pattern/Design-Pattern-Observer-Pattern/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Keeping-your-Objects-in-the-know-Observer-Pattern"><a href="#Keeping-your-Objects-in-the-know-Observer-Pattern" class="headerlink" title="Keeping your Objects in the know - Observer Pattern"></a>Keeping your Objects in the know - Observer Pattern</h1><blockquote>
+<p>Publishers + Subscribers = Observer Pattern</p>
+<p><code>Observer Pattern</code> defines a one-to-many dependency between objects so that when one object changes state, all of its dependents are notified and updated automatically.</p>
+<p>The key idea is that your <code>Subject</code> will maintain a set of <code>Observers</code> who want to know events happening to <code>Subject</code>. <code>Subject</code> should notify and update all <code>Observers</code> after each observed action by calling <code>Observers&#39;</code> cooresponding methods</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">interface Subject              ---&gt;             interface Observer</div><div class="line">    - registerObserver()                            - update()</div><div class="line">    - removeObserver()</div><div class="line">    - notifyObserver()</div><div class="line">    </div><div class="line">        /\                                              /\</div><div class="line">         |                                               |</div><div class="line"></div><div class="line">ConcreateSubject                &lt;---            ConcreteObserver</div><div class="line">    - registerObserver() &#123;&#125;                         - update()</div><div class="line">    - removeObserver() &#123;&#125;                           - other Observer specific methods </div><div class="line">    - notifyObserver() &#123;&#125;</div><div class="line"></div><div class="line">    - getState()</div><div class="line">    - setState()</div></pre></td></tr></table></figure>
+<p>E.g.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// interfaces</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Subject</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">registerObserver</span><span class="params">(Observer o)</span></span>;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">removeObserver</span><span class="params">(Observer o)</span></span>;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">notifyObserver</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Observer</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">float</span> temp, <span class="keyword">float</span> humidity, <span class="keyword">float</span> pressure)</span></span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">DisplayElement</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Implementations</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WeatherData</span> <span class="keyword">implements</span> <span class="title">Subject</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> List&lt;Observers&gt; observers;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">float</span> temperature;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">float</span> humidity;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">float</span> pressure;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">WeatherData</span><span class="params">()</span> </span>&#123;</div><div class="line">        observers = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">registerObserver</span><span class="params">(Observer o)</span> </span>&#123;</div><div class="line">        observers.add(o);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">removeObserver</span><span class="params">(Observer o)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> i = observers.indexOf(o);</div><div class="line">        <span class="keyword">if</span>(i &gt;= <span class="number">0</span>) &#123;</div><div class="line">            observers.remove(o);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">notifyObservers</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; observers.size(); i ++) &#123;</div><div class="line">            observers.get(i).update(temperature, humidity, pressure);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setMeasurements</span><span class="params">(<span class="keyword">float</span> t, <span class="keyword">float</span> h, <span class="keyword">float</span> p)</span> </span>&#123;</div><div class="line">        temperature = t;</div><div class="line">        humidity = h;</div><div class="line">        pressure = p;</div><div class="line">        notifyObservers();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CurrentConditionsDisplay</span> <span class="keyword">implements</span> <span class="title">Observer</span>, <span class="title">DisplayElement</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">float</span> temperature;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">float</span> humidity;</div><div class="line">    <span class="keyword">private</span> Subject weatherData;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CurrentConditionDisplay</span><span class="params">(Subject w)</span> </span>&#123;</div><div class="line">        weatherData = w;</div><div class="line">        weatherData.registerObserver(<span class="keyword">this</span>);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">float</span> t, <span class="keyword">float</span> h, <span class="keyword">float</span> p)</span> </span>&#123;</div><div class="line">        temperature = t;</div><div class="line">        humidity = h;</div><div class="line">        display();</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">display</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="comment">// ...</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WeatherStation</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        WeatherData w = <span class="keyword">new</span> WeatherData();</div><div class="line">        </div><div class="line">        CurrentConditionDisplay c = <span class="keyword">new</span> CurrentConditionDisplay(w);</div><div class="line">        StatisticsDisplay s = <span class="keyword">new</span> StatisticsDisplay(w);</div><div class="line">        ForecastDisplay f = <span class="keyword">new</span> ForecastDisplay(w);</div><div class="line">        </div><div class="line">        w.serMeasurements(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>);</div><div class="line">        w.setMeasurements(<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="Java-built-in-Observer-Pattern"><a href="#Java-built-in-Observer-Pattern" class="headerlink" title="Java built-in Observer Pattern"></a>Java built-in Observer Pattern</h1>
           
         
       
@@ -3331,149 +3461,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/03/java/concurrency/Java-Concurrency-java-util-concurrent-atomic-package/" itemprop="url">
-                  Java Concurrency - java.util.concurrent.atomic package
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-03T23:55:46+08:00" content="2016-04-03">
-              2016-04-03
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index">
-                    <span itemprop="name">java</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/java/concurrency/" itemprop="url" rel="index">
-                    <span itemprop="name">concurrency</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/03/java/concurrency/Java-Concurrency-java-util-concurrent-atomic-package/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/03/java/concurrency/Java-Concurrency-java-util-concurrent-atomic-package/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="package-java-util-concurrent-atomic"><a href="#package-java-util-concurrent-atomic" class="headerlink" title="package java.util.concurrent.atomic"></a>package java.util.concurrent.atomic</h1><h2 id="volatile-keyword-in-Java"><a href="#volatile-keyword-in-Java" class="headerlink" title="volatile keyword in Java"></a>volatile keyword in Java</h2><p>Essentially, <code>volatile</code> is used to indicate that <code>a variable&#39;s value will be modified by different threads</code>.</p>
-<p>Declaring a volatile Java variable means:</p>
-<blockquote>
-<ul>
-<li>The value of this variable will <code>never be cached thread-locally</code>: all reads and writes will go straight to “main memory”</li>
-<li>Access to the variable <code>acts as though it is enclosed in a synchronized block</code>, synchronized on itself</li>
-</ul>
-</blockquote>
-<p><code>Static variables</code> are used in the context of Object where update made by one object would reflect in all the other objects of the same class but not in the context of Thread where update of one thread to the static variable will reflect the changes immediately to all the threads (in their local cache).</p>
-<p><code>Volatile variable</code>: If two Threads(suppose t1 and t2) are accessing the same object and updating a variable which is declared as volatile then it means t1 and t2 can make their own local cache of the Object except the variable which is declared as a volatile . So the volatile variable will have only one main copy which will be updated by different threads and update made by one thread to the volatile variable will immediately reflect to the other Thread.</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/03/java/concurrency/Java-Concurrency-java-util-concurrent-atomic-package/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3519,7 +3506,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives/">
-              <span class="site-state-item-count">109</span>
+              <span class="site-state-item-count">110</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -3536,7 +3523,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags/">
-                <span class="site-state-item-count">261</span>
+                <span class="site-state-item-count">262</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

@@ -304,6 +304,149 @@
             
               
                 
+                <a class="post-title-link" href="/2016/04/03/java/concurrency/Java-Concurrency-java-util-concurrent-atomic-package/" itemprop="url">
+                  Java Concurrency - java.util.concurrent.atomic package
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-04-03T23:55:46+08:00" content="2016-04-03">
+              2016-04-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/java/concurrency/" itemprop="url" rel="index">
+                    <span itemprop="name">concurrency</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/03/java/concurrency/Java-Concurrency-java-util-concurrent-atomic-package/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/03/java/concurrency/Java-Concurrency-java-util-concurrent-atomic-package/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="package-java-util-concurrent-atomic"><a href="#package-java-util-concurrent-atomic" class="headerlink" title="package java.util.concurrent.atomic"></a>package java.util.concurrent.atomic</h1><h2 id="volatile-keyword-in-Java"><a href="#volatile-keyword-in-Java" class="headerlink" title="volatile keyword in Java"></a>volatile keyword in Java</h2><p>Essentially, <code>volatile</code> is used to indicate that <code>a variable&#39;s value will be modified by different threads</code>.</p>
+<p>Declaring a volatile Java variable means:</p>
+<blockquote>
+<ul>
+<li>The value of this variable will <code>never be cached thread-locally</code>: all reads and writes will go straight to “main memory”</li>
+<li>Access to the variable <code>acts as though it is enclosed in a synchronized block</code>, synchronized on itself</li>
+</ul>
+</blockquote>
+<p><code>Static variables</code> are used in the context of Object where update made by one object would reflect in all the other objects of the same class but not in the context of Thread where update of one thread to the static variable will reflect the changes immediately to all the threads (in their local cache).</p>
+<p><code>Volatile variable</code>: If two Threads(suppose t1 and t2) are accessing the same object and updating a variable which is declared as volatile then it means t1 and t2 can make their own local cache of the Object except the variable which is declared as a volatile . So the volatile variable will have only one main copy which will be updated by different threads and update made by one thread to the volatile variable will immediately reflect to the other Thread.</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/04/03/java/concurrency/Java-Concurrency-java-util-concurrent-atomic-package/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/03/java/concurrency/Java-Concurrency-CountDownLatch/" itemprop="url">
                   Java Concurrency - CountDownLatch
                 </a>
@@ -3196,160 +3339,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/01/java/java 8/lambda/Java-8-Functional-Interface/" itemprop="url">
-                  Java 8 Functional Interface
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-02-01T17:00:03+08:00" content="2016-02-01">
-              2016-02-01
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index">
-                    <span itemprop="name">java</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/java/java-8/" itemprop="url" rel="index">
-                    <span itemprop="name">java 8</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/java/java-8/lambda/" itemprop="url" rel="index">
-                    <span itemprop="name">lambda</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/01/java/java 8/lambda/Java-8-Functional-Interface/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/01/java/java 8/lambda/Java-8-Functional-Interface/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Java-8-Built-in-Interface-Summary"><a href="#Java-8-Built-in-Interface-Summary" class="headerlink" title="Java 8 Built-in Interface    Summary"></a>Java 8 Built-in Interface    Summary</h1><p><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html">Java 8 functional interface summary</a></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">Consumer&lt;T&gt;</div><div class="line"><span class="comment">// An operation that accepts a single input argument and returns no result.</span></div><div class="line">BiConsumer&lt;T,U&gt;	</div><div class="line"><span class="comment">// An operation that accepts two input arguments and returns no result.</span></div><div class="line"></div><div class="line"><span class="comment">//--------------</span></div><div class="line">Function&lt;T,R&gt;</div><div class="line"><span class="comment">// A function that accepts one argument and produces a result.</span></div><div class="line">BiFunction&lt;T,U,R&gt;</div><div class="line"><span class="comment">// A function that accepts two arguments and produces a result.</span></div><div class="line"></div><div class="line"><span class="comment">//--------------</span></div><div class="line">UnaryOperator&lt;T&gt;</div><div class="line"><span class="comment">// An operation on a single operand that produces a result of the same type as its operand.</span></div><div class="line">BinaryOperator&lt;T&gt;</div><div class="line"><span class="comment">// An operation upon two operands of the same type, producing a result of the same type as the operands.</span></div><div class="line"></div><div class="line"><span class="comment">//--------------</span></div><div class="line">Predicate&lt;T&gt;</div><div class="line"><span class="comment">// A predicate (boolean-valued function) of one argument.</span></div><div class="line">BiPredicate&lt;T,U&gt;</div><div class="line"><span class="comment">// A predicate (boolean-valued function) of two arguments.</span></div><div class="line"></div><div class="line"><span class="comment">//--------------</span></div><div class="line">Supplier&lt;T&gt;</div><div class="line"><span class="comment">// A supplier of results.</span></div><div class="line">BooleanSupplier</div><div class="line"><span class="comment">// A supplier of boolean-valued results.</span></div></pre></td></tr></table></figure>
-<h1 id="What-is-a-functional-interface"><a href="#What-is-a-functional-interface" class="headerlink" title="What is a functional interface"></a>What is a functional interface</h1><ul>
-<li>java.lang.Runnable</li>
-<li>java.util.Comparator</li>
-<li>java.util.concurrent.Callable. </li>
-</ul>
-<p>There is some common feature among the stated interfaces and that feature is they have <code>only one method declared in their interface definition</code>. There are lot more such interfaces in JDK and also lot more created by java developers. These interfaces are also called <code>Single Abstract Method interfaces (SAM Interfaces)</code>. And a popular way in which these are used is by creating Anonymous Inner classes using these interfaces, something like:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AnonymousInnerClassTest</span> </span>&#123;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">    <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</div><div class="line">      <span class="meta">@Override</span></div><div class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">        System.out.println(<span class="string">"A thread running ..."</span>);</div><div class="line">      &#125;</div><div class="line">    &#125;).start();</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/01/java/java 8/lambda/Java-8-Functional-Interface/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3395,7 +3384,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives/">
-              <span class="site-state-item-count">109</span>
+              <span class="site-state-item-count">110</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -3412,7 +3401,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags/">
-                <span class="site-state-item-count">261</span>
+                <span class="site-state-item-count">262</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
