@@ -1,0 +1,923 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="oISntcv5wYv-gFzCbOejeG4TxriAsyU0TghcNXvJUUw" />
+
+
+
+  <meta name="baidu-site-verification" content="Ydbs8NMx8X" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="rake,rake build," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Bowen's blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="Ruby code for build12345678910111213141516171819202122232425#!/usr/bin/env rubyrequire &apos;ftools&apos;def make_directories  File.makedirs &quot;html&quot;  File.makedirs &quot;html/images&quot;enddef copy_images  File.copy &quot;pic">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Rake - Introduction to Rake">
+<meta property="og:url" content="https://phoenixjiangnan.github.io/2016/04/15/tools/rake/Rake-Introduction-to-Rake/index.html">
+<meta property="og:site_name" content="Bowen's blog">
+<meta property="og:description" content="Ruby code for build12345678910111213141516171819202122232425#!/usr/bin/env rubyrequire &apos;ftools&apos;def make_directories  File.makedirs &quot;html&quot;  File.makedirs &quot;html/images&quot;enddef copy_images  File.copy &quot;pic">
+<meta property="og:updated_time" content="2016-06-29T22:06:42.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Rake - Introduction to Rake">
+<meta name="twitter:description" content="Ruby code for build12345678910111213141516171819202122232425#!/usr/bin/env rubyrequire &apos;ftools&apos;def make_directories  File.makedirs &quot;html&quot;  File.makedirs &quot;html/images&quot;enddef copy_images  File.copy &quot;pic">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="https://phoenixjiangnan.github.io/2016/04/15/tools/rake/Rake-Introduction-to-Rake/"/>
+
+  <title> Rake - Introduction to Rake | Bowen's blog </title>
+
+  <script type='text/javascript'>
+    var _vds = _vds || [];
+    window._vds = _vds;
+    (function(){
+      _vds.push(['setAccountId', 'a6c23d16341d6115']);
+      (function() {
+        var vds = document.createElement('script');
+        vds.type='text/javascript';
+        vds.async = true;
+        vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(vds, s);
+      })();
+    })();
+  </script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-40978428-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Bowen's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">keep learning - learning notes and blogs</p>
+</div>
+
+
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Rake - Introduction to Rake
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-04-15T13:58:30-07:00" content="2016-04-15">
+              2016-04-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/tools/" itemprop="url" rel="index">
+                    <span itemprop="name">tools</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/tools/rake/" itemprop="url" rel="index">
+                    <span itemprop="name">rake</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/15/tools/rake/Rake-Introduction-to-Rake/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/15/tools/rake/Rake-Introduction-to-Rake/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Ruby-code-for-build"><a href="#Ruby-code-for-build" class="headerlink" title="Ruby code for build"></a>Ruby code for build</h1><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/env ruby</span></div><div class="line"></div><div class="line"><span class="keyword">require</span> <span class="string">'ftools'</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_directories</span></span></div><div class="line">  File.makedirs <span class="string">"html"</span></div><div class="line">  File.makedirs <span class="string">"html/images"</span></div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">copy_images</span></span></div><div class="line">  File.copy <span class="string">"pics/rake.gif"</span>, <span class="string">"html/images/rake.gif"</span></div><div class="line">  File.copy <span class="string">"pics/target.jpg"</span>, <span class="string">"html/images/target.jpg"</span></div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">generate_html</span></span></div><div class="line">  system <span class="string">%&#123;./runwpb rake.wpb&#125;</span></div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">build</span></span></div><div class="line">  make_directories</div><div class="line">  copy_images</div><div class="line">  generate_html</div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line">build</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h1 id="Task-Dependencies"><a href="#Task-Dependencies" class="headerlink" title="Task Dependencies"></a>Task Dependencies</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">      / Generate HTML \</div><div class="line">Build                   Create Directories</div><div class="line">      \ Copy Images   /</div></pre></td></tr></table></figure>
+<h2 id="Task-dependencies-in-a-Rakefile"><a href="#Task-dependencies-in-a-Rakefile" class="headerlink" title="Task dependencies in a Rakefile"></a>Task dependencies in a Rakefile</h2><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">task <span class="symbol">:build</span> =&gt; [<span class="symbol">:generate_html</span>, <span class="symbol">:copy_images</span>]</div><div class="line">task <span class="symbol">:generate_html</span> =&gt; [<span class="symbol">:create_directories</span>]</div><div class="line">task <span class="symbol">:copy_images</span> =&gt; [<span class="symbol">:create_directories</span>]</div><div class="line">task <span class="symbol">:create_directories</span></div></pre></td></tr></table></figure>
+<h2 id="Building-with-Rake"><a href="#Building-with-Rake" class="headerlink" title="Building with Rake"></a>Building with Rake</h2><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">task <span class="symbol">:build</span> =&gt; [<span class="symbol">:generate_html</span>, <span class="symbol">:copy_images</span>]</div><div class="line"></div><div class="line">task <span class="symbol">:generate_html</span> =&gt; [<span class="symbol">:create_directories</span>] <span class="keyword">do</span></div><div class="line">  system <span class="string">%&#123;./runwpb rake.wpb&#125;</span></div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line">task <span class="symbol">:copy_images</span> =&gt; [<span class="symbol">:create_directories</span>] <span class="keyword">do</span></div><div class="line">  File.copy <span class="string">"pics/rake.gif"</span>, <span class="string">"html/images/rake.gif"</span></div><div class="line">  File.copy <span class="string">"pics/target.jpg"</span>, <span class="string">"html/images/target.jpg"</span></div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line">task <span class="symbol">:create_directories</span> <span class="keyword">do</span></div><div class="line">  File.makedirs <span class="string">"html"</span></div><div class="line">  File.makedirs <span class="string">"html/images"</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+<h2 id="Tasks-are-like-Functions"><a href="#Tasks-are-like-Functions" class="headerlink" title="Tasks are like Functions"></a>Tasks are like Functions</h2><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># test_rake.rake</span></div><div class="line"><span class="comment"># Run with 'rake a'</span></div><div class="line">task <span class="symbol">:a</span> =&gt; [<span class="symbol">:b</span>, <span class="symbol">:c</span>] <span class="keyword">do</span> print <span class="string">"a"</span> <span class="keyword">end</span></div><div class="line">task <span class="symbol">:b</span> =&gt; [<span class="symbol">:d</span>]     <span class="keyword">do</span> print <span class="string">"b"</span> <span class="keyword">end</span></div><div class="line">task <span class="symbol">:c</span> =&gt; [<span class="symbol">:d</span>]     <span class="keyword">do</span> print <span class="string">"c"</span> <span class="keyword">end</span></div><div class="line">task <span class="symbol">:d</span>             <span class="keyword">do</span> print <span class="string">"d"</span> <span class="keyword">end</span></div><div class="line"><span class="comment"># Result: dbca</span></div></pre></td></tr></table></figure>
+<h2 id="Warning-Use-do-end"><a href="#Warning-Use-do-end" class="headerlink" title="Warning: Use do/end"></a>Warning: Use do/end</h2><p><code>Actions blocks</code> should be specified using <code>do/end</code>. </p>
+<ul>
+<li>Rakefile syntax takes advantage of Ruby’s flexible syntax</li>
+<li>Using {} for blocks could be ambiguous …</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">task :doit =&gt; calc_dependents &#123; actions &#125;</div></pre></td></tr></table></figure>
+<p>is parsed<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">task(:doit =&gt; (calc_dependents &#123; actions &#125;))</div></pre></td></tr></table></figure></p>
+<h1 id="Rules"><a href="#Rules" class="headerlink" title="Rules"></a>Rules</h1><p>Sometimes you don’t want to write rules for every single file task … so use a rule.</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">rule <span class="string">'.o'</span> =&gt; [<span class="string">'.c'</span>] <span class="keyword">do</span> <span class="params">|t|</span></div><div class="line">    sh <span class="string">%&#123;cc <span class="subst">#&#123;t.source&#125;</span> -c -o <span class="subst">#&#123;t.name&#125;</span>&#125;</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+<p>When you need to build a file named “main.o”</p>
+<ul>
+<li>And “main.o” doesn’t exist, But “main.c” does …</li>
+<li>Then synthesize a file task to build “main.o” from “main.c”</li>
+</ul>
+<h2 id="Rule-Limitations"><a href="#Rule-Limitations" class="headerlink" title="Rule Limitations"></a>Rule Limitations</h2><p>Rules will only do <code>one level of inference</code><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">rule <span class="string">".c"</span> =&gt; [<span class="string">".y"</span>] <span class="keyword">do</span> <span class="params">|t|</span> yacc(t.source) <span class="keyword">end</span></div><div class="line">rule <span class="string">".o"</span> =&gt; [<span class="string">".c"</span>] <span class="keyword">do</span> <span class="params">|t|</span> compile_c(t.source) <span class="keyword">end</span></div></pre></td></tr></table></figure></p>
+<p>If lex.y exists … Rake will not build lex.c from lex.y and lex.o from lex.c.</p>
+<h1 id="Documenting-Tasks"><a href="#Documenting-Tasks" class="headerlink" title="Documenting Tasks"></a>Documenting Tasks</h1><p>Add a <code>desc</code> command before a task to describe it.<br>Use the <code>-T</code> flag to see the described tasks.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">desc &quot;Remove any temporary products&quot;</div><div class="line">task :clean do ... end</div><div class="line"></div><div class="line">desc &quot;Build the presentation&quot;</div><div class="line">task :presentation</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ rake -T</div><div class="line">(in /home/jim/working/doc/talks/buildingwithrake)</div><div class="line">rake archive                       # Copy directory to an archive.</div><div class="line">rake build                         # Build the presentation</div><div class="line">rake clean                         # Remove any temporary products.</div></pre></td></tr></table></figure>
+<h1 id="File-Lists"><a href="#File-Lists" class="headerlink" title="File Lists"></a>File Lists</h1><p><code>FileLists</code> are arrays with a few extras</p>
+<ul>
+<li>sub and sub! supported (no blocks)</li>
+<li>add(pattern) will add file matching the glob pattern</li>
+</ul>
+<h1 id="File-Utils"><a href="#File-Utils" class="headerlink" title="File Utils"></a>File Utils</h1><p>File Commands:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd pwd, mkdir, mkdir_p, rmdir, ln, ln_s, ln_sf, cp, cp_r, mv, rm, rm_r, rm_rf, install, chmod, touch</div></pre></td></tr></table></figure>
+<p>Most commands will work with a list of files</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cp &quot;file1&quot;, &quot;file2&quot;, &quot;file3&quot;, &quot;destdir&quot;</div></pre></td></tr></table></figure>
+<p>Commands can take options</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cp &quot;a&quot;, &quot;b&quot;, :verbose=&gt;true, :nowrite=&gt;true</div></pre></td></tr></table></figure>
+<h1 id="Extended-File-Utils"><a href="#Extended-File-Utils" class="headerlink" title="Extended File Utils"></a>Extended File Utils</h1><ul>
+<li>Functions verbose and nowrite control globally or locally.</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Verbose globally set</span></div><div class="line">verbose(<span class="literal">true</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Verbose set while executing code</span></div><div class="line">verbose(<span class="literal">true</span>) &#123; code &#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>Two Commands added to FileUtils:</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Runs an external shell command</span></div><div class="line">sh <span class="string">%&#123;shell command&#125;</span></div></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Runs an external ruby process</span></div><div class="line">ruby <span class="string">%&#123;ruby command line&#125;</span></div></pre></td></tr></table></figure>
+<h1 id="Task-Libraries"><a href="#Task-Libraries" class="headerlink" title="Task Libraries"></a>Task Libraries</h1><ul>
+<li>A Task Library <code>defines one or more related rake tasks</code>.</li>
+<li>The task library is configured by the user as needed.</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Rake::RDocTask.new &#123; <span class="params">|rdoc|</span></div><div class="line">  rdoc.rdoc_dir = <span class="string">'html'</span></div><div class="line">  rdoc.template = <span class="string">'kilmer'</span></div><div class="line">  rdoc.options &lt;&lt; <span class="string">'--line-numbers'</span></div><div class="line">  rdoc.rdoc_files.add(<span class="string">'README'</span>, <span class="string">'MIT-LICENSE'</span>, <span class="string">'TODO'</span>, <span class="string">'CHANGES'</span>)</div><div class="line">  rdoc.rdoc_files.add(<span class="string">'lib/**/*.rb'</span>, <span class="string">'doc/**/*.rdoc'</span>, <span class="string">'test/*.rb'</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/rake/" rel="tag">#rake</a>
+          
+            <a href="/tags/rake-build/" rel="tag">#rake build</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/15/distributed system/thrift/Apache-Thrift-Detailed-Thrift-Examples/" rel="next" title="Apache Thrift - Detailed Thrift Examples">
+                <i class="fa fa-chevron-left"></i> Apache Thrift - Detailed Thrift Examples
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/17/test/jmockit/Unit-Test-JMockit-Capturing-Invocation-Arguments-for-Verification/" rel="prev" title="Unit Test - JMockit - Capturing Invocation Arguments for Verification">
+                Unit Test - JMockit - Capturing Invocation Arguments for Verification <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/avatar/avatar.jpg"
+               alt="Bowen" />
+          <p class="site-author-name" itemprop="name">Bowen</p>
+          <p class="site-description motion-element" itemprop="description">keep learning - learning notes and blogs</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives/">
+              <span class="site-state-item-count">111</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/">
+                <span class="site-state-item-count">264</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/phoenixjiangnan" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/phoenixjiangnan" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.linkedin.com/in/bowenli90" target="_blank" title="Linkedin">
+                  
+                    <i class="fa fa-fw fa-linkedin"></i>
+                  
+                  Linkedin
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Ruby-code-for-build"><span class="nav-number">1.</span> <span class="nav-text">Ruby code for build</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Task-Dependencies"><span class="nav-number">2.</span> <span class="nav-text">Task Dependencies</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Task-dependencies-in-a-Rakefile"><span class="nav-number">2.1.</span> <span class="nav-text">Task dependencies in a Rakefile</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Building-with-Rake"><span class="nav-number">2.2.</span> <span class="nav-text">Building with Rake</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tasks-are-like-Functions"><span class="nav-number">2.3.</span> <span class="nav-text">Tasks are like Functions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Warning-Use-do-end"><span class="nav-number">2.4.</span> <span class="nav-text">Warning: Use do/end</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Rules"><span class="nav-number">3.</span> <span class="nav-text">Rules</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Rule-Limitations"><span class="nav-number">3.1.</span> <span class="nav-text">Rule Limitations</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Documenting-Tasks"><span class="nav-number">4.</span> <span class="nav-text">Documenting Tasks</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#File-Lists"><span class="nav-number">5.</span> <span class="nav-text">File Lists</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#File-Utils"><span class="nav-number">6.</span> <span class="nav-text">File Utils</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Extended-File-Utils"><span class="nav-number">7.</span> <span class="nav-text">Extended File Utils</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Task-Libraries"><span class="nav-number">8.</span> <span class="nav-text">Task Libraries</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bowen</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'bowensgithubblog';
+      var disqus_identifier = '2016/04/15/tools/rake/Rake-Introduction-to-Rake/';
+      var disqus_title = "Rake - Introduction to Rake";
+      var disqus_url = 'https://phoenixjiangnan.github.io/2016/04/15/tools/rake/Rake-Introduction-to-Rake/';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
+    </script>
+  
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

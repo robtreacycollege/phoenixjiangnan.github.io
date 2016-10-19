@@ -313,6 +313,154 @@
             
               
                 
+                <a class="post-title-link" href="/2016/08/23/java/concurrency/Java-Concurrency-Multi-Thread-1-Implements-Runnable-or-Extends-Thread/" itemprop="url">
+                  Java - Concurrency - Multi-Thread 1 - Implements Runnable or Extends Thread
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-23T14:37:24-07:00" content="2016-08-23">
+              2016-08-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/java/concurrency/" itemprop="url" rel="index">
+                    <span itemprop="name">concurrency</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/23/java/concurrency/Java-Concurrency-Multi-Thread-1-Implements-Runnable-or-Extends-Thread/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/23/java/concurrency/Java-Concurrency-Multi-Thread-1-Implements-Runnable-or-Extends-Thread/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="1-Difference-between-Process-and-Thread"><a href="#1-Difference-between-Process-and-Thread" class="headerlink" title="1. Difference between Process and Thread"></a>1. Difference between Process and Thread</h2><ul>
+<li><code>Threads</code> are used for small tasks, whereas <code>processes</code> are used for more ‘heavyweight’ tasks – basically the execution of applications. </li>
+<li><code>Threads</code> within the same process share the same address space, whereas different <code>processes</code> do not.</li>
+<li>A process can have multiple threads, and at least one</li>
+</ul>
+<h2 id="2-Pros-and-Cons-for-Multi-Threads"><a href="#2-Pros-and-Cons-for-Multi-Threads" class="headerlink" title="2. Pros and Cons for Multi-Threads"></a>2. Pros and Cons for Multi-Threads</h2><ul>
+<li>Pro: resolves the problem to run multiple parts at the same time</li>
+<li>Cons: too many multi-threads will decrease the efficiency</li>
+</ul>
+<h2 id="3-JVM-multi-thread"><a href="#3-JVM-multi-thread" class="headerlink" title="3. JVM multi-thread"></a>3. JVM multi-thread</h2><p>There are at least <code>two threads</code> when JVM starts up</p>
+<ul>
+<li>the <code>main function thread</code></li>
+<li>the <code>garbage collection thread</code></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Subobj</span> <span class="keyword">extends</span> <span class="title">Object</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">finalize</span><span class="params">()</span></span>&#123;</div><div class="line">        sop(<span class="string">"subobj destroyed"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</div><div class="line">        <span class="keyword">new</span> Subobj();</div><div class="line">        <span class="keyword">new</span> Subobj();</div><div class="line"></div><div class="line">        System.gc();  <span class="comment">//启动系统垃圾回收器</span></div><div class="line"></div><div class="line">        <span class="keyword">new</span> Subobj();</div><div class="line">        sop(<span class="string">"Hello World!"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/23/java/concurrency/Java-Concurrency-Multi-Thread-1-Implements-Runnable-or-Extends-Thread/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/08/21/spring/Spring-What-is-dependency-injection-and-how-it-works-in-Spring/" itemprop="url">
                   Spring - What is dependency injection and how it works in Spring
                 </a>
@@ -327,7 +475,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-08-21T08:18:28-07:00" content="2016-08-21">
+            <time itemprop="dateCreated" datetime="2016-08-21T23:18:28-07:00" content="2016-08-21">
               2016-08-21
             </time>
           </span>
@@ -451,7 +599,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/08/15/system design/project experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/" itemprop="url">
+                <a class="post-title-link" href="/2016/08/16/system design/project experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/" itemprop="url">
                   How did I build a custom dynamic ZooKeeper management and migration framework and an asynchronous job framework for Tableau Server 11
                 </a>
               
@@ -465,8 +613,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-08-15T22:45:18-07:00" content="2016-08-15">
-              2016-08-15
+            <time itemprop="dateCreated" datetime="2016-08-16T13:45:18-07:00" content="2016-08-16">
+              2016-08-16
             </time>
           </span>
 
@@ -507,8 +655,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/08/15/system design/project experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/15/system design/project experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/" itemprop="commentsCount"></span>
+                <a href="/2016/08/16/system design/project experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/16/system design/project experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -543,7 +691,7 @@
 <p>Say we start with a single Tableau Server node A, which has a single node ZK cluster runs on it. Then we want to expand the Tableau Server cluster from 1 node (A) to 3 nodes (A, B, C), as well as the ZK cluster runs on top of it. How to achieve that?</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(A) -&gt; (A, B, C)</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/15/system design/project experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/#more" rel="contents">
+            <a class="btn" href="/2016/08/16/system design/project experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -608,7 +756,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-08-10T08:35:25-07:00" content="2016-08-10">
+            <time itemprop="dateCreated" datetime="2016-08-10T23:35:25-07:00" content="2016-08-10">
               2016-08-10
             </time>
           </span>
@@ -774,7 +922,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/08/09/machine learning/Inverted-Index/" itemprop="url">
+                <a class="post-title-link" href="/2016/08/10/machine learning/Inverted-Index/" itemprop="url">
                   Inverted Index
                 </a>
               
@@ -788,8 +936,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-08-09T09:04:07-07:00" content="2016-08-09">
-              2016-08-09
+            <time itemprop="dateCreated" datetime="2016-08-10T00:04:07-07:00" content="2016-08-10">
+              2016-08-10
             </time>
           </span>
 
@@ -818,8 +966,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/08/09/machine learning/Inverted-Index/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/09/machine learning/Inverted-Index/" itemprop="commentsCount"></span>
+                <a href="/2016/08/10/machine learning/Inverted-Index/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/08/10/machine learning/Inverted-Index/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -952,7 +1100,7 @@
 </tbody>
 </table>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/09/machine learning/Inverted-Index/#more" rel="contents">
+            <a class="btn" href="/2016/08/10/machine learning/Inverted-Index/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1017,7 +1165,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-07-26T07:51:35-07:00" content="2016-07-26">
+            <time itemprop="dateCreated" datetime="2016-07-26T22:51:35-07:00" content="2016-07-26">
               2016-07-26
             </time>
           </span>
@@ -1146,7 +1294,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/07/22/system design/project experience/How-did-I-improved-our-system-monitoring-accuracy-from-40-50-to-99/" itemprop="url">
+                <a class="post-title-link" href="/2016/07/23/system design/project experience/How-did-I-improved-our-system-monitoring-accuracy-from-40-50-to-99/" itemprop="url">
                   How did I improved our system monitoring accuracy from ~40%/50% to ~99%
                 </a>
               
@@ -1160,8 +1308,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-07-22T09:47:33-07:00" content="2016-07-22">
-              2016-07-22
+            <time itemprop="dateCreated" datetime="2016-07-23T00:47:33-07:00" content="2016-07-23">
+              2016-07-23
             </time>
           </span>
 
@@ -1202,8 +1350,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/22/system design/project experience/How-did-I-improved-our-system-monitoring-accuracy-from-40-50-to-99/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/22/system design/project experience/How-did-I-improved-our-system-monitoring-accuracy-from-40-50-to-99/" itemprop="commentsCount"></span>
+                <a href="/2016/07/23/system design/project experience/How-did-I-improved-our-system-monitoring-accuracy-from-40-50-to-99/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/23/system design/project experience/How-did-I-improved-our-system-monitoring-accuracy-from-40-50-to-99/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1237,7 +1385,7 @@
 <li>We run <code>Postgres</code> as our database. Users need to specify a few configurations for <code>Postgres</code>, like which two machines will run the active <code>Postgres</code> and the standby <code>Postgres</code>, and which machine runs the preferred active <code>Postgres</code>. For machines where <code>Postgres</code> reside, <code>Cluster Controller</code> runs <code>PostgresManager</code> to control the lifecycle of the database. <code>Active PostgresManager</code> runs active <code>Postgres</code>, and <code>passive PostgresManager</code> manages standby <code>Postgres</code> </li>
 </ol>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/22/system design/project experience/How-did-I-improved-our-system-monitoring-accuracy-from-40-50-to-99/#more" rel="contents">
+            <a class="btn" href="/2016/07/23/system design/project experience/How-did-I-improved-our-system-monitoring-accuracy-from-40-50-to-99/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1302,7 +1450,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-07-19T06:29:44-07:00" content="2016-07-19">
+            <time itemprop="dateCreated" datetime="2016-07-19T21:29:44-07:00" content="2016-07-19">
               2016-07-19
             </time>
           </span>
@@ -1494,7 +1642,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-07-16T08:50:44-07:00" content="2016-07-16">
+            <time itemprop="dateCreated" datetime="2016-07-16T23:50:44-07:00" content="2016-07-16">
               2016-07-16
             </time>
           </span>
@@ -1620,7 +1768,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-07-14T07:59:43-07:00" content="2016-07-14">
+            <time itemprop="dateCreated" datetime="2016-07-14T22:59:43-07:00" content="2016-07-14">
               2016-07-14
             </time>
           </span>
@@ -1812,7 +1960,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-07-12T07:42:49-07:00" content="2016-07-12">
+            <time itemprop="dateCreated" datetime="2016-07-12T22:42:49-07:00" content="2016-07-12">
               2016-07-12
             </time>
           </span>
@@ -1956,7 +2104,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-07-12T03:54:02-07:00" content="2016-07-12">
+            <time itemprop="dateCreated" datetime="2016-07-12T18:54:02-07:00" content="2016-07-12">
               2016-07-12
             </time>
           </span>
@@ -2098,7 +2246,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/07/10/distributed system/zookeeper/ZooKeeper-Watches/" itemprop="url">
+                <a class="post-title-link" href="/2016/07/11/distributed system/zookeeper/ZooKeeper-Watches/" itemprop="url">
                   ZooKeeper - Watches
                 </a>
               
@@ -2112,8 +2260,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-07-10T11:44:00-07:00" content="2016-07-10">
-              2016-07-10
+            <time itemprop="dateCreated" datetime="2016-07-11T02:44:00-07:00" content="2016-07-11">
+              2016-07-11
             </time>
           </span>
 
@@ -2154,8 +2302,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/10/distributed system/zookeeper/ZooKeeper-Watches/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/10/distributed system/zookeeper/ZooKeeper-Watches/" itemprop="commentsCount"></span>
+                <a href="/2016/07/11/distributed system/zookeeper/ZooKeeper-Watches/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/11/distributed system/zookeeper/ZooKeeper-Watches/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -2192,7 +2340,7 @@
 <p><code>getData()</code> and <code>exists()</code> set data watches. <code>getChildren()</code> sets child watches. Alternatively, it may help to think of watches being set according to the kind of data returned. <code>getData()</code> and <code>exists()</code> return information about the data of the node, whereas <code>getChildren()</code> returns a list of children. Thus, <code>setData()</code> will trigger data watches for the znode being set (assuming the set is successful). A successful <code>create()</code> will trigger a data watch for the znode being created and a child watch for the parent znode. A successful <code>delete()</code> will trigger both a data watch and a child watch (since there can be no more children) for a znode being deleted as well as a child watch for the parent znode.</p>
 <hr>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/10/distributed system/zookeeper/ZooKeeper-Watches/#more" rel="contents">
+            <a class="btn" href="/2016/07/11/distributed system/zookeeper/ZooKeeper-Watches/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -2257,7 +2405,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-07-10T08:05:55-07:00" content="2016-07-10">
+            <time itemprop="dateCreated" datetime="2016-07-10T23:05:55-07:00" content="2016-07-10">
               2016-07-10
             </time>
           </span>
@@ -2372,7 +2520,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/07/09/ruby/Ruby-Understanding-class-eval-and-instance-eval/" itemprop="url">
+                <a class="post-title-link" href="/2016/07/10/ruby/Ruby-Understanding-class-eval-and-instance-eval/" itemprop="url">
                   Ruby - Understanding class_eval and instance_eval
                 </a>
               
@@ -2386,8 +2534,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-07-09T17:16:40-07:00" content="2016-07-09">
-              2016-07-09
+            <time itemprop="dateCreated" datetime="2016-07-10T08:16:40-07:00" content="2016-07-10">
+              2016-07-10
             </time>
           </span>
 
@@ -2416,8 +2564,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/09/ruby/Ruby-Understanding-class-eval-and-instance-eval/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/09/ruby/Ruby-Understanding-class-eval-and-instance-eval/" itemprop="commentsCount"></span>
+                <a href="/2016/07/10/ruby/Ruby-Understanding-class-eval-and-instance-eval/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/10/ruby/Ruby-Understanding-class-eval-and-instance-eval/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -2450,7 +2598,7 @@
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyClass</span></span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span><span class="params">(num)</span></span></div><div class="line">    @num = num</div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line">a = MyClass.new(<span class="number">1</span>)</div><div class="line">b = MyClass.new(<span class="number">2</span>)</div></pre></td></tr></table></figure>
 <p>Before we get going, remember that in Ruby everything is an object. That means classes are objects too (just like Java’s <code>Class</code> objects). When you define <code>MyClass</code>, Ruby will create a global variable with the name <code>MyClass</code>, which is the class object for <code>MyClass</code>. When you write <code>MyClass.new</code> you are getting the class object <code>MyClass</code> and then calling the new method on that object, which gives you a new instance of <code>MyClass</code>. Instances are the actual objects of the class that you would normally use. There is one class with many instances.</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/09/ruby/Ruby-Understanding-class-eval-and-instance-eval/#more" rel="contents">
+            <a class="btn" href="/2016/07/10/ruby/Ruby-Understanding-class-eval-and-instance-eval/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -2515,7 +2663,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-07-09T08:14:21-07:00" content="2016-07-09">
+            <time itemprop="dateCreated" datetime="2016-07-09T23:14:21-07:00" content="2016-07-09">
               2016-07-09
             </time>
           </span>
@@ -2663,7 +2811,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-07-08T08:10:38-07:00" content="2016-07-08">
+            <time itemprop="dateCreated" datetime="2016-07-08T23:10:38-07:00" content="2016-07-08">
               2016-07-08
             </time>
           </span>
@@ -2779,7 +2927,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-07-07T08:53:06-07:00" content="2016-07-07">
+            <time itemprop="dateCreated" datetime="2016-07-07T23:53:06-07:00" content="2016-07-07">
               2016-07-07
             </time>
           </span>
@@ -2917,7 +3065,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-07-04T05:33:30-07:00" content="2016-07-04">
+            <time itemprop="dateCreated" datetime="2016-07-04T20:33:30-07:00" content="2016-07-04">
               2016-07-04
             </time>
           </span>
@@ -3061,7 +3209,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-07-04T01:58:31-07:00" content="2016-07-04">
+            <time itemprop="dateCreated" datetime="2016-07-04T16:58:31-07:00" content="2016-07-04">
               2016-07-04
             </time>
           </span>
@@ -3151,147 +3299,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/04/spring/hibernate integration/Spring-Spring-Hibernate-Integration-Configuration-for-DataSource-and-EntityManager/" itemprop="url">
-                  Spring - Spring-Hibernate Integration Configuration for DataSource and EntityManager
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-07-04T01:40:37-07:00" content="2016-07-04">
-              2016-07-04
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/spring/" itemprop="url" rel="index">
-                    <span itemprop="name">spring</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/spring/hibernate-integration/" itemprop="url" rel="index">
-                    <span itemprop="name">hibernate integration</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/07/04/spring/hibernate integration/Spring-Spring-Hibernate-Integration-Configuration-for-DataSource-and-EntityManager/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/04/spring/hibernate integration/Spring-Spring-Hibernate-Integration-Configuration-for-DataSource-and-EntityManager/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Interface-PlatformTransactionManager"><a href="#Interface-PlatformTransactionManager" class="headerlink" title="Interface PlatformTransactionManager"></a>Interface PlatformTransactionManager</h2><p><a href="http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html">http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/transaction/PlatformTransactionManager.html</a></p>
-<blockquote>
-<p>This is the central interface in Spring’s transaction infrastructure. Applications can use this directly, but it is not primarily meant as API: Typically, applications will work with either <code>TransactionTemplate</code> or declarative transaction demarcation through AOP.</p>
-<p>For implementors, it is recommended to derive from the provided <code>AbstractPlatformTransactionManager</code> class, which pre-implements the defined propagation behavior and takes care of transaction synchronization handling. Subclasses have to implement template methods for specific states of the underlying transaction, for example: begin, suspend, resume, commit.</p>
-<p>The default implementations of this strategy interface are <code>JtaTransactionManager</code> and <code>DataSourceTransactionManager</code>, which can serve as an implementation guide for other transaction strategies.</p>
-</blockquote>
-<h1 id="AspectJ’s-Role"><a href="#AspectJ’s-Role" class="headerlink" title="AspectJ’s Role"></a>AspectJ’s Role</h1><p>AspectJ’s role seems important in this Spring app context. I haven’t figured out how, but it didn’t work if removing the AspectJ part.</p>
-<p>W.r.t. the principle, I’ll do more research. Stay tuned.</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/04/spring/hibernate integration/Spring-Spring-Hibernate-Integration-Configuration-for-DataSource-and-EntityManager/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3337,7 +3344,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives/">
-              <span class="site-state-item-count">110</span>
+              <span class="site-state-item-count">111</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -3354,7 +3361,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags/">
-                <span class="site-state-item-count">262</span>
+                <span class="site-state-item-count">264</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

@@ -313,6 +313,139 @@
             
               
                 
+                <a class="post-title-link" href="/2016/04/28/database/hibernate/Hibernate-Hibernate-Enum-and-Decoupling-Java-Class-with-Database-Record/" itemprop="url">
+                  Hibernate - Hibernate Enum and Decoupling Java Class with Database Record
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-04-28T15:34:59-07:00" content="2016-04-28">
+              2016-04-28
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/database/" itemprop="url" rel="index">
+                    <span itemprop="name">database</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/database/hibernate/" itemprop="url" rel="index">
+                    <span itemprop="name">hibernate</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/28/database/hibernate/Hibernate-Hibernate-Enum-and-Decoupling-Java-Class-with-Database-Record/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/28/database/hibernate/Hibernate-Hibernate-Enum-and-Decoupling-Java-Class-with-Database-Record/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Example-that-Hibernate-Persists-Enum"><a href="#Example-that-Hibernate-Persists-Enum" class="headerlink" title="Example that Hibernate Persists Enum"></a>Example that Hibernate Persists Enum</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Table</span>(name = <span class="string">"tasks"</span>)</div><div class="line"><span class="meta">@Entity</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Tasks</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">enum</span> Task &#123;</div><div class="line">        Task1                  (<span class="string">"task 1"</span>, Type.Job1),</div><div class="line">        Task2                  (<span class="string">"task 2"</span>, Type.Job2),</div><div class="line">        </div><div class="line">        <span class="keyword">private</span> String name;</div><div class="line">        <span class="keyword">private</span> Type Type;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">private</span> <span class="title">Task</span><span class="params">(String n, Type j)</span> </span>&#123;</div><div class="line">            name = n;</div><div class="line">            Type = j;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span>｛</span></div><div class="line">            return name;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Type <span class="title">getType</span><span class="params">()</span> </span>&#123;</div><div class="line">            <span class="keyword">return</span> Type;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">// A map that maps enum name with Task</span></div><div class="line">        <span class="keyword">private</span> <span class="keyword">static</span> Map&lt;String, Task&gt; s_typeMap = <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line">        <span class="keyword">static</span> &#123;</div><div class="line">            <span class="keyword">for</span> (Task tt : Task.values()) &#123;</div><div class="line">                s_typeMap.put(tt.name(), tt);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">/**</span></div><div class="line">         * Converts a String to a enum instance of Task.</div><div class="line">         * Throw an exception if the String does not match any enum's name</div><div class="line">         * */</div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Task <span class="title">fromString</span><span class="params">(String TaskName)</span> </span>&#123;</div><div class="line">            <span class="keyword">if</span>(!s_typeMap.containsKey(TaskName)) &#123;</div><div class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"No task type named"</span> + TaskName));</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="keyword">return</span> s_typeMap.get(TaskName);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    ...</div><div class="line">    <span class="keyword">private</span> Task m_Task;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Tasks</span><span class="params">()</span> </span>&#123;&#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Tasks</span><span class="params">(Task type)</span> </span>&#123;</div><div class="line">        m_Task = type;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Column</span>(name = <span class="string">"type"</span>)</div><div class="line">    <span class="meta">@Enumerated</span>(EnumType.String)</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getType</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> m_type;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">setType</span><span class="params">(String type)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.m_type= type;</div><div class="line">    &#125;</div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Example-that-decouples-enum-and-db-values"><a href="#Example-that-decouples-enum-and-db-values" class="headerlink" title="Example that decouples enum and db values"></a>Example that decouples enum and db values</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Table</span>(name = <span class="string">"tasks"</span>)</div><div class="line"><span class="meta">@Entity</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Task</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">enum</span> Task &#123;</div><div class="line">        Task1                  (<span class="string">"task 1"</span>, Type.Job1),</div><div class="line">        Task2                  (<span class="string">"task 2"</span>, Type.Job2),</div><div class="line">        </div><div class="line">        <span class="keyword">private</span> String name;</div><div class="line">        <span class="keyword">private</span> Type Type;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">private</span> <span class="title">Task</span><span class="params">(String n, Type j)</span> </span>&#123;</div><div class="line">            name = n;</div><div class="line">            Type = j;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span>｛</span></div><div class="line">            return name;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Type <span class="title">getType</span><span class="params">()</span> </span>&#123;</div><div class="line">            <span class="keyword">return</span> Type;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">// A map that maps enum name with Task</span></div><div class="line">        <span class="keyword">private</span> <span class="keyword">static</span> Map&lt;String, Task&gt; s_typeMap = <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line">        <span class="keyword">static</span> &#123;</div><div class="line">            <span class="keyword">for</span> (Task tt : Task.values()) &#123;</div><div class="line">                s_typeMap.put(tt.name(), tt);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">/**</span></div><div class="line">         * Converts a String to a enum instance of Task.</div><div class="line">         * Throw an exception if the String does not match any enum's name</div><div class="line">         * */</div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Task <span class="title">fromString</span><span class="params">(String TaskName)</span> </span>&#123;</div><div class="line">            <span class="keyword">if</span>(!s_typeMap.containsKey(TaskName)) &#123;</div><div class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"No task type named"</span> + TaskName));</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="keyword">return</span> s_typeMap.get(TaskName);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    ...</div><div class="line">    <span class="keyword">private</span> Task m_Task;</div><div class="line">    <span class="keyword">private</span> String m_typeName;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Tasks</span><span class="params">()</span> </span>&#123;&#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Tasks</span><span class="params">(Task type)</span> </span>&#123;</div><div class="line">        m_Task = type;</div><div class="line">        m_typeName = type.name();</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="meta">@Transient</span></div><div class="line">    <span class="function"><span class="keyword">public</span> Task <span class="title">getType</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> Task.fromString(getTypeName());</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setType</span><span class="params">(Task type)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.m_Task = type;</div><div class="line">        setTypeName(m_Task.name());</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Column</span>(name = <span class="string">"type"</span>)</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getTypeName</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> m_typeName;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * <span class="doctag">@param</span> typeName the name of the Task</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">setTypeName</span><span class="params">(String typeName)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.m_typeName = typeName;</div><div class="line">    &#125;</div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/25/database/The-N-1-Query-Problem/" itemprop="url">
                   The N + 1 Query Problem
                 </a>
@@ -327,7 +460,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-25T07:49:59-07:00" content="2016-04-25">
+            <time itemprop="dateCreated" datetime="2016-04-25T22:49:59-07:00" content="2016-04-25">
               2016-04-25
             </time>
           </span>
@@ -457,7 +590,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-25T01:22:09-07:00" content="2016-04-25">
+            <time itemprop="dateCreated" datetime="2016-04-25T16:22:09-07:00" content="2016-04-25">
               2016-04-25
             </time>
           </span>
@@ -606,7 +739,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-20T07:51:31-07:00" content="2016-04-20">
+            <time itemprop="dateCreated" datetime="2016-04-20T22:51:31-07:00" content="2016-04-20">
               2016-04-20
             </time>
           </span>
@@ -745,7 +878,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-20T06:51:31-07:00" content="2016-04-20">
+            <time itemprop="dateCreated" datetime="2016-04-20T21:51:31-07:00" content="2016-04-20">
               2016-04-20
             </time>
           </span>
@@ -887,7 +1020,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-20T01:51:31-07:00" content="2016-04-20">
+            <time itemprop="dateCreated" datetime="2016-04-20T16:51:31-07:00" content="2016-04-20">
               2016-04-20
             </time>
           </span>
@@ -1063,7 +1196,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-17T07:10:23-07:00" content="2016-04-17">
+            <time itemprop="dateCreated" datetime="2016-04-17T22:10:23-07:00" content="2016-04-17">
               2016-04-17
             </time>
           </span>
@@ -1189,7 +1322,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-17T07:07:43-07:00" content="2016-04-17">
+            <time itemprop="dateCreated" datetime="2016-04-17T22:07:43-07:00" content="2016-04-17">
               2016-04-17
             </time>
           </span>
@@ -1318,7 +1451,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/04/14/tools/rake/Rake-Introduction-to-Rake/" itemprop="url">
+                <a class="post-title-link" href="/2016/04/15/tools/rake/Rake-Introduction-to-Rake/" itemprop="url">
                   Rake - Introduction to Rake
                 </a>
               
@@ -1332,8 +1465,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-14T22:58:30-07:00" content="2016-04-14">
-              2016-04-14
+            <time itemprop="dateCreated" datetime="2016-04-15T13:58:30-07:00" content="2016-04-15">
+              2016-04-15
             </time>
           </span>
 
@@ -1374,8 +1507,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/14/tools/rake/Rake-Introduction-to-Rake/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/14/tools/rake/Rake-Introduction-to-Rake/" itemprop="commentsCount"></span>
+                <a href="/2016/04/15/tools/rake/Rake-Introduction-to-Rake/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/15/tools/rake/Rake-Introduction-to-Rake/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1401,7 +1534,7 @@
         
           <h1 id="Ruby-code-for-build"><a href="#Ruby-code-for-build" class="headerlink" title="Ruby code for build"></a>Ruby code for build</h1><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/env ruby</span></div><div class="line"></div><div class="line"><span class="keyword">require</span> <span class="string">'ftools'</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_directories</span></span></div><div class="line">  File.makedirs <span class="string">"html"</span></div><div class="line">  File.makedirs <span class="string">"html/images"</span></div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">copy_images</span></span></div><div class="line">  File.copy <span class="string">"pics/rake.gif"</span>, <span class="string">"html/images/rake.gif"</span></div><div class="line">  File.copy <span class="string">"pics/target.jpg"</span>, <span class="string">"html/images/target.jpg"</span></div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">generate_html</span></span></div><div class="line">  system <span class="string">%&#123;./runwpb rake.wpb&#125;</span></div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">build</span></span></div><div class="line">  make_directories</div><div class="line">  copy_images</div><div class="line">  generate_html</div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line">build</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/14/tools/rake/Rake-Introduction-to-Rake/#more" rel="contents">
+            <a class="btn" href="/2016/04/15/tools/rake/Rake-Introduction-to-Rake/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1452,7 +1585,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/04/14/distributed system/thrift/Apache-Thrift-Detailed-Thrift-Examples/" itemprop="url">
+                <a class="post-title-link" href="/2016/04/15/distributed system/thrift/Apache-Thrift-Detailed-Thrift-Examples/" itemprop="url">
                   Apache Thrift - Detailed Thrift Examples
                 </a>
               
@@ -1466,8 +1599,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-14T22:44:21-07:00" content="2016-04-14">
-              2016-04-14
+            <time itemprop="dateCreated" datetime="2016-04-15T13:44:21-07:00" content="2016-04-15">
+              2016-04-15
             </time>
           </span>
 
@@ -1508,8 +1641,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/14/distributed system/thrift/Apache-Thrift-Detailed-Thrift-Examples/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/14/distributed system/thrift/Apache-Thrift-Detailed-Thrift-Examples/" itemprop="commentsCount"></span>
+                <a href="/2016/04/15/distributed system/thrift/Apache-Thrift-Detailed-Thrift-Examples/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/15/distributed system/thrift/Apache-Thrift-Detailed-Thrift-Examples/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1537,7 +1670,7 @@
 <h2 id="2-Run-thrift-exe-to-autogenerate-a-corresponding-class-to-the-service"><a href="#2-Run-thrift-exe-to-autogenerate-a-corresponding-class-to-the-service" class="headerlink" title="2. Run thrift .exe to autogenerate a corresponding class to the service,"></a>2. Run thrift .exe to autogenerate a corresponding class to the service,</h2><p>with an interface <code>Iface</code> containing all the methods</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// <span class="keyword">In</span> Mac/Linux, <span class="built_in">cd</span> to thrift-<span class="number">0</span>.<span class="number">9</span>.<span class="number">2</span> folder</div><div class="line">$ thrift –gen java arithmetic.thrift</div><div class="line">or</div><div class="line">$ "thrift.exe" –gen java arithmetic.thrift</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/14/distributed system/thrift/Apache-Thrift-Detailed-Thrift-Examples/#more" rel="contents">
+            <a class="btn" href="/2016/04/15/distributed system/thrift/Apache-Thrift-Detailed-Thrift-Examples/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1588,7 +1721,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/04/14/best practices/design pattern/Design-Pattern-Singleton/" itemprop="url">
+                <a class="post-title-link" href="/2016/04/15/best practices/design pattern/Design-Pattern-Singleton/" itemprop="url">
                   Design Pattern - Singleton
                 </a>
               
@@ -1602,8 +1735,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-14T20:38:38-07:00" content="2016-04-14">
-              2016-04-14
+            <time itemprop="dateCreated" datetime="2016-04-15T11:38:38-07:00" content="2016-04-15">
+              2016-04-15
             </time>
           </span>
 
@@ -1644,8 +1777,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/14/best practices/design pattern/Design-Pattern-Singleton/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/14/best practices/design pattern/Design-Pattern-Singleton/" itemprop="commentsCount"></span>
+                <a href="/2016/04/15/best practices/design pattern/Design-Pattern-Singleton/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/15/best practices/design pattern/Design-Pattern-Singleton/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1738,7 +1871,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-14T00:27:29-07:00" content="2016-04-14">
+            <time itemprop="dateCreated" datetime="2016-04-14T15:27:29-07:00" content="2016-04-14">
               2016-04-14
             </time>
           </span>
@@ -1877,7 +2010,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-14T00:08:14-07:00" content="2016-04-14">
+            <time itemprop="dateCreated" datetime="2016-04-14T15:08:14-07:00" content="2016-04-14">
               2016-04-14
             </time>
           </span>
@@ -2049,7 +2182,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-14T00:03:24-07:00" content="2016-04-14">
+            <time itemprop="dateCreated" datetime="2016-04-14T15:03:24-07:00" content="2016-04-14">
               2016-04-14
             </time>
           </span>
@@ -2183,7 +2316,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/04/13/best practices/design pattern/Design-Pattern-Strategy-Pattern-Program-to-an-interface-not-an-implementation/" itemprop="url">
+                <a class="post-title-link" href="/2016/04/14/best practices/design pattern/Design-Pattern-Strategy-Pattern-Program-to-an-interface-not-an-implementation/" itemprop="url">
                   Design Pattern - Strategy Pattern - Program to an interface, not an implementation
                 </a>
               
@@ -2197,8 +2330,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-13T23:58:10-07:00" content="2016-04-13">
-              2016-04-13
+            <time itemprop="dateCreated" datetime="2016-04-14T14:58:10-07:00" content="2016-04-14">
+              2016-04-14
             </time>
           </span>
 
@@ -2239,8 +2372,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/13/best practices/design pattern/Design-Pattern-Strategy-Pattern-Program-to-an-interface-not-an-implementation/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/13/best practices/design pattern/Design-Pattern-Strategy-Pattern-Program-to-an-interface-not-an-implementation/" itemprop="commentsCount"></span>
+                <a href="/2016/04/14/best practices/design pattern/Design-Pattern-Strategy-Pattern-Program-to-an-interface-not-an-implementation/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/14/best practices/design pattern/Design-Pattern-Strategy-Pattern-Program-to-an-interface-not-an-implementation/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -2337,8 +2470,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/04/13/best practices/design pattern/Design-Pattern-Command-Pattern/" itemprop="url">
-                  Design Pattern - Command Pattern
+                <a class="post-title-link" href="/2016/04/14/best practices/design pattern/Design-Pattern-Observer-Pattern/" itemprop="url">
+                  Design Pattern - Observer Pattern
                 </a>
               
             
@@ -2351,8 +2484,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-13T23:53:28-07:00" content="2016-04-13">
-              2016-04-13
+            <time itemprop="dateCreated" datetime="2016-04-14T14:53:28-07:00" content="2016-04-14">
+              2016-04-14
             </time>
           </span>
 
@@ -2393,8 +2526,148 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/13/best practices/design pattern/Design-Pattern-Command-Pattern/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/13/best practices/design pattern/Design-Pattern-Command-Pattern/" itemprop="commentsCount"></span>
+                <a href="/2016/04/14/best practices/design pattern/Design-Pattern-Observer-Pattern/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/14/best practices/design pattern/Design-Pattern-Observer-Pattern/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Keeping-your-Objects-in-the-know-Observer-Pattern"><a href="#Keeping-your-Objects-in-the-know-Observer-Pattern" class="headerlink" title="Keeping your Objects in the know - Observer Pattern"></a>Keeping your Objects in the know - Observer Pattern</h1><blockquote>
+<p>Publishers + Subscribers = Observer Pattern</p>
+<p><code>Observer Pattern</code> defines a one-to-many dependency between objects so that when one object changes state, all of its dependents are notified and updated automatically.</p>
+<p>The key idea is that your <code>Subject</code> will maintain a set of <code>Observers</code> who want to know events happening to <code>Subject</code>. <code>Subject</code> should notify and update all <code>Observers</code> after each observed action by calling <code>Observers&#39;</code> cooresponding methods</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">interface Subject              ---&gt;             interface Observer</div><div class="line">    - registerObserver()                            - update()</div><div class="line">    - removeObserver()</div><div class="line">    - notifyObserver()</div><div class="line">    </div><div class="line">        /\                                              /\</div><div class="line">         |                                               |</div><div class="line"></div><div class="line">ConcreateSubject                &lt;---            ConcreteObserver</div><div class="line">    - registerObserver() &#123;&#125;                         - update()</div><div class="line">    - removeObserver() &#123;&#125;                           - other Observer specific methods </div><div class="line">    - notifyObserver() &#123;&#125;</div><div class="line"></div><div class="line">    - getState()</div><div class="line">    - setState()</div></pre></td></tr></table></figure>
+<p>E.g.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// interfaces</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Subject</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">registerObserver</span><span class="params">(Observer o)</span></span>;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">removeObserver</span><span class="params">(Observer o)</span></span>;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">notifyObserver</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Observer</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">float</span> temp, <span class="keyword">float</span> humidity, <span class="keyword">float</span> pressure)</span></span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">DisplayElement</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Implementations</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WeatherData</span> <span class="keyword">implements</span> <span class="title">Subject</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> List&lt;Observers&gt; observers;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">float</span> temperature;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">float</span> humidity;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">float</span> pressure;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">WeatherData</span><span class="params">()</span> </span>&#123;</div><div class="line">        observers = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">registerObserver</span><span class="params">(Observer o)</span> </span>&#123;</div><div class="line">        observers.add(o);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">removeObserver</span><span class="params">(Observer o)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> i = observers.indexOf(o);</div><div class="line">        <span class="keyword">if</span>(i &gt;= <span class="number">0</span>) &#123;</div><div class="line">            observers.remove(o);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">notifyObservers</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; observers.size(); i ++) &#123;</div><div class="line">            observers.get(i).update(temperature, humidity, pressure);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setMeasurements</span><span class="params">(<span class="keyword">float</span> t, <span class="keyword">float</span> h, <span class="keyword">float</span> p)</span> </span>&#123;</div><div class="line">        temperature = t;</div><div class="line">        humidity = h;</div><div class="line">        pressure = p;</div><div class="line">        notifyObservers();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CurrentConditionsDisplay</span> <span class="keyword">implements</span> <span class="title">Observer</span>, <span class="title">DisplayElement</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">float</span> temperature;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">float</span> humidity;</div><div class="line">    <span class="keyword">private</span> Subject weatherData;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CurrentConditionDisplay</span><span class="params">(Subject w)</span> </span>&#123;</div><div class="line">        weatherData = w;</div><div class="line">        weatherData.registerObserver(<span class="keyword">this</span>);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">float</span> t, <span class="keyword">float</span> h, <span class="keyword">float</span> p)</span> </span>&#123;</div><div class="line">        temperature = t;</div><div class="line">        humidity = h;</div><div class="line">        display();</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">display</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="comment">// ...</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WeatherStation</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        WeatherData w = <span class="keyword">new</span> WeatherData();</div><div class="line">        </div><div class="line">        CurrentConditionDisplay c = <span class="keyword">new</span> CurrentConditionDisplay(w);</div><div class="line">        StatisticsDisplay s = <span class="keyword">new</span> StatisticsDisplay(w);</div><div class="line">        ForecastDisplay f = <span class="keyword">new</span> ForecastDisplay(w);</div><div class="line">        </div><div class="line">        w.serMeasurements(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>);</div><div class="line">        w.setMeasurements(<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="Java-built-in-Observer-Pattern"><a href="#Java-built-in-Observer-Pattern" class="headerlink" title="Java built-in Observer Pattern"></a>Java built-in Observer Pattern</h1>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/04/14/best practices/design pattern/Design-Pattern-Command-Pattern/" itemprop="url">
+                  Design Pattern - Command Pattern
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-04-14T14:53:28-07:00" content="2016-04-14">
+              2016-04-14
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/best-practice/" itemprop="url" rel="index">
+                    <span itemprop="name">best practice</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/best-practice/design-pattern/" itemprop="url" rel="index">
+                    <span itemprop="name">design pattern</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/14/best practices/design pattern/Design-Pattern-Command-Pattern/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/14/best practices/design pattern/Design-Pattern-Command-Pattern/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -2497,147 +2770,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/04/13/best practices/design pattern/Design-Pattern-Observer-Pattern/" itemprop="url">
-                  Design Pattern - Observer Pattern
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-13T23:53:28-07:00" content="2016-04-13">
-              2016-04-13
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/best-practice/" itemprop="url" rel="index">
-                    <span itemprop="name">best practice</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/best-practice/design-pattern/" itemprop="url" rel="index">
-                    <span itemprop="name">design pattern</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/13/best practices/design pattern/Design-Pattern-Observer-Pattern/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/13/best practices/design pattern/Design-Pattern-Observer-Pattern/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Keeping-your-Objects-in-the-know-Observer-Pattern"><a href="#Keeping-your-Objects-in-the-know-Observer-Pattern" class="headerlink" title="Keeping your Objects in the know - Observer Pattern"></a>Keeping your Objects in the know - Observer Pattern</h1><blockquote>
-<p>Publishers + Subscribers = Observer Pattern</p>
-<p><code>Observer Pattern</code> defines a one-to-many dependency between objects so that when one object changes state, all of its dependents are notified and updated automatically.</p>
-<p>The key idea is that your <code>Subject</code> will maintain a set of <code>Observers</code> who want to know events happening to <code>Subject</code>. <code>Subject</code> should notify and update all <code>Observers</code> after each observed action by calling <code>Observers&#39;</code> cooresponding methods</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">interface Subject              ---&gt;             interface Observer</div><div class="line">    - registerObserver()                            - update()</div><div class="line">    - removeObserver()</div><div class="line">    - notifyObserver()</div><div class="line">    </div><div class="line">        /\                                              /\</div><div class="line">         |                                               |</div><div class="line"></div><div class="line">ConcreateSubject                &lt;---            ConcreteObserver</div><div class="line">    - registerObserver() &#123;&#125;                         - update()</div><div class="line">    - removeObserver() &#123;&#125;                           - other Observer specific methods </div><div class="line">    - notifyObserver() &#123;&#125;</div><div class="line"></div><div class="line">    - getState()</div><div class="line">    - setState()</div></pre></td></tr></table></figure>
-<p>E.g.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// interfaces</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Subject</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">registerObserver</span><span class="params">(Observer o)</span></span>;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">removeObserver</span><span class="params">(Observer o)</span></span>;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">notifyObserver</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Observer</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">float</span> temp, <span class="keyword">float</span> humidity, <span class="keyword">float</span> pressure)</span></span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">DisplayElement</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Implementations</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WeatherData</span> <span class="keyword">implements</span> <span class="title">Subject</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> List&lt;Observers&gt; observers;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">float</span> temperature;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">float</span> humidity;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">float</span> pressure;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">WeatherData</span><span class="params">()</span> </span>&#123;</div><div class="line">        observers = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">registerObserver</span><span class="params">(Observer o)</span> </span>&#123;</div><div class="line">        observers.add(o);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">removeObserver</span><span class="params">(Observer o)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> i = observers.indexOf(o);</div><div class="line">        <span class="keyword">if</span>(i &gt;= <span class="number">0</span>) &#123;</div><div class="line">            observers.remove(o);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">notifyObservers</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; observers.size(); i ++) &#123;</div><div class="line">            observers.get(i).update(temperature, humidity, pressure);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setMeasurements</span><span class="params">(<span class="keyword">float</span> t, <span class="keyword">float</span> h, <span class="keyword">float</span> p)</span> </span>&#123;</div><div class="line">        temperature = t;</div><div class="line">        humidity = h;</div><div class="line">        pressure = p;</div><div class="line">        notifyObservers();</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CurrentConditionsDisplay</span> <span class="keyword">implements</span> <span class="title">Observer</span>, <span class="title">DisplayElement</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">float</span> temperature;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">float</span> humidity;</div><div class="line">    <span class="keyword">private</span> Subject weatherData;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CurrentConditionDisplay</span><span class="params">(Subject w)</span> </span>&#123;</div><div class="line">        weatherData = w;</div><div class="line">        weatherData.registerObserver(<span class="keyword">this</span>);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">float</span> t, <span class="keyword">float</span> h, <span class="keyword">float</span> p)</span> </span>&#123;</div><div class="line">        temperature = t;</div><div class="line">        humidity = h;</div><div class="line">        display();</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">display</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="comment">// ...</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WeatherStation</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        WeatherData w = <span class="keyword">new</span> WeatherData();</div><div class="line">        </div><div class="line">        CurrentConditionDisplay c = <span class="keyword">new</span> CurrentConditionDisplay(w);</div><div class="line">        StatisticsDisplay s = <span class="keyword">new</span> StatisticsDisplay(w);</div><div class="line">        ForecastDisplay f = <span class="keyword">new</span> ForecastDisplay(w);</div><div class="line">        </div><div class="line">        w.serMeasurements(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>);</div><div class="line">        w.setMeasurements(<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="Java-built-in-Observer-Pattern"><a href="#Java-built-in-Observer-Pattern" class="headerlink" title="Java built-in Observer Pattern"></a>Java built-in Observer Pattern</h1>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/13/system design/cache/Cache-Design-a-cache-with-inspiration-from-Guava-Cache/" itemprop="url">
+                <a class="post-title-link" href="/2016/04/14/system design/cache/Cache-Design-a-cache-with-inspiration-from-Guava-Cache/" itemprop="url">
                   Cache - Design a cache with inspiration from Guava Cache
                 </a>
               
@@ -2651,8 +2784,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-13T23:48:01-07:00" content="2016-04-13">
-              2016-04-13
+            <time itemprop="dateCreated" datetime="2016-04-14T14:48:01-07:00" content="2016-04-14">
+              2016-04-14
             </time>
           </span>
 
@@ -2693,8 +2826,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/13/system design/cache/Cache-Design-a-cache-with-inspiration-from-Guava-Cache/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/13/system design/cache/Cache-Design-a-cache-with-inspiration-from-Guava-Cache/" itemprop="commentsCount"></span>
+                <a href="/2016/04/14/system design/cache/Cache-Design-a-cache-with-inspiration-from-Guava-Cache/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/14/system design/cache/Cache-Design-a-cache-with-inspiration-from-Guava-Cache/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -2853,7 +2986,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-08T07:08:43-07:00" content="2016-04-08">
+            <time itemprop="dateCreated" datetime="2016-04-08T22:08:43-07:00" content="2016-04-08">
               2016-04-08
             </time>
           </span>
@@ -3225,7 +3358,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-06T06:34:00-07:00" content="2016-04-06">
+            <time itemprop="dateCreated" datetime="2016-04-06T21:34:00-07:00" content="2016-04-06">
               2016-04-06
             </time>
           </span>
@@ -3326,150 +3459,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/03/java/concurrency/Java-Concurrency-Executor-and-Thread-Pools/" itemprop="url">
-                  Java Concurrency - Executor and Thread Pools
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-04-03T08:56:13-07:00" content="2016-04-03">
-              2016-04-03
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index">
-                    <span itemprop="name">java</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/java/concurrency/" itemprop="url" rel="index">
-                    <span itemprop="name">concurrency</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/03/java/concurrency/Java-Concurrency-Executor-and-Thread-Pools/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/03/java/concurrency/Java-Concurrency-Executor-and-Thread-Pools/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Executor-Interfaces"><a href="#Executor-Interfaces" class="headerlink" title="Executor Interfaces"></a>Executor Interfaces</h1><p>The <code>java.util.concurrent</code> package defines <code>three executor interfaces</code>to <code>provide us the basic interface for a thread pool</code>:</p>
-<ul>
-<li><code>Executor</code>, a simple interface that supports launching new tasks.</li>
-<li><code>ExecutorService</code>, a subinterface of <code>Executor</code>, which adds features that help manage the lifecycle, both of the individual tasks and of the executor itself.</li>
-<li><code>ScheduledExecutorService</code>, a subinterface of <code>ExecutorService</code>, supports future and/or periodic execution of tasks.</li>
-</ul>
-<p>Typically, variables that refer to executor objects are declared as one of these three interface types, not with an executor class type. </p>
-<h2 id="The-Executor-Interface"><a href="#The-Executor-Interface" class="headerlink" title="The Executor Interface"></a>The Executor Interface</h2><p>Provides a single method, <code>execute</code>, designed to be a drop-in replacement for a common thread-creation idiom. If <code>r</code> is <code>a Runnable object</code>, and <code>e</code> is <code>an Executor object</code> you can replace<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(new Thread(r)).start();</div></pre></td></tr></table></figure></p>
-<p>with<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">e.execute(r);</div></pre></td></tr></table></figure></p>
-<p>However, the definition of execute is less specific. The low-level idiom creates a new thread and launches it immediately. Depending on the Executor implementation, execute may do the same thing, but is more likely to use an existing worker thread to run r, or to place r in a queue to wait for a worker thread to become available. (We’ll describe worker threads in the section on Thread Pools.)</p>
-<p>The executor implementations in java.util.concurrent are designed to make full use of the more advanced <code>ExecutorService</code> and <code>ScheduledExecutorService</code> interfaces, although they also work with the base Executor interface.</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/03/java/concurrency/Java-Concurrency-Executor-and-Thread-Pools/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3515,7 +3504,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives/">
-              <span class="site-state-item-count">110</span>
+              <span class="site-state-item-count">111</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -3532,7 +3521,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags/">
-                <span class="site-state-item-count">262</span>
+                <span class="site-state-item-count">264</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

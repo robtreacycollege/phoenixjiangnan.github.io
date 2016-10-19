@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://phoenixjiangnan.github.io/"/>
-  <updated>2016-10-10T16:52:03.000Z</updated>
+  <updated>2016-10-19T23:10:31.000Z</updated>
   <id>https://phoenixjiangnan.github.io/</id>
   
   <author>
@@ -16,10 +16,85 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo SEO | Hexo SEO Tutorial</title>
+    <link href="https://phoenixjiangnan.github.io/2016/10/19/hexo/Hexo-SEO-Hexo-SEO-Tutorial/"/>
+    <id>https://phoenixjiangnan.github.io/2016/10/19/hexo/Hexo-SEO-Hexo-SEO-Tutorial/</id>
+    <published>2016-10-19T23:09:54.000Z</published>
+    <updated>2016-10-19T23:10:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://hunao.info/2016/06/01/Hexo-Seo%E4%BC%98%E5%8C%96%E8%AE%A9%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%9C%A8google%E6%90%9C%E7%B4%A2%E6%8E%92%E5%90%8D%E7%AC%AC%E4%B8%80/" target="_blank" rel="external">This blog</a> is very helpful and practical tutorial of how to do SEO on Hexo and Next theme, as well as how to use Google Search Console as a general tool for SEO.</p>
+<p>I’ve followed the tutorial to tune up my site configs. Try to search my blogs on google!</p>
+<hr>
+<h2 id="Hexo-SEO-优化让你的博客在google搜索排名第一"><a href="#Hexo-SEO-优化让你的博客在google搜索排名第一" class="headerlink" title="Hexo SEO 优化让你的博客在google搜索排名第一"></a>Hexo SEO 优化让你的博客在google搜索排名第一</h2><p>刚刚建买了域名建了博客，发现在google，百度毛都搜不到，真是悲伤，后来才知道原来是要seo的，所以看了一些文章，然后自己也摸索了一下，终于在让自己的博客在google搜索排名第一了!!!上图！</p>
+<p><img src="http://i.imgur.com/eA6Jesb.png" alt="google更新了"></p>
+<p>哈哈，顿时觉得自己好厉害耶!<br>下面给大家分享一些我的经验。</p>
+<h2 id="本教程在NexT主题上操作，其他主题请自行测试"><a href="#本教程在NexT主题上操作，其他主题请自行测试" class="headerlink" title="本教程在NexT主题上操作，其他主题请自行测试"></a>本教程在NexT主题上操作，其他主题请自行测试</h2><h3 id="首页title优化"><a href="#首页title优化" class="headerlink" title="首页title优化"></a>首页title优化</h3><p>更改<strong>index.swig</strong>文件<strong>(your-hexo-site\themes\next\layout)</strong>;</p>
+<p>将下面这段代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% block title %&#125; &#123;&#123; config.title &#125;&#125; &#123;% endblock %&#125;</div></pre></td></tr></table></figure>
+<p>改成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% block title %&#125; &#123;&#123; config.title &#125;&#125; - &#123;&#123; theme.description &#125;&#125; &#123;% endblock %&#125;</div></pre></td></tr></table></figure>
+<p>这时候你的首页会更符合<strong>网站名称 - 网站描述</strong>这习惯。<br>进阶，做了 SEO 优化，把关键词也显示在title标题里，可改成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% block title %&#125; &#123;&#123; theme.keywords &#125;&#125; - &#123;&#123; config.title &#125;&#125;&#123;&#123; theme.description &#125;&#125; &#123;% endblock %&#125;</div></pre></td></tr></table></figure>
+<p>注意：别堆砌关键字，整个标题一般不超过80个字符，可以通过chinaz的seo综合查询检查。</p>
+<h3 id="给你的博客添加sitemap站点地图"><a href="#给你的博客添加sitemap站点地图" class="headerlink" title="给你的博客添加sitemap站点地图"></a>给你的博客添加sitemap站点地图</h3><p>安装sitemap站点地图自动生成插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install hexo-generator-sitemap --save</div><div class="line">npm install hexo-generator-baidu-sitemap --save</div></pre></td></tr></table></figure>
+<p>在主题配置文件中添加一下配置,这里有的文章说的是在站点配置文章中添加，这个应该问题不大。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sitemap: </div><div class="line">  path: sitemap.xml</div><div class="line">baidusitemap:</div><div class="line">  path: baidusitemap.xml</div></pre></td></tr></table></figure>
+<p>注意：上面的格式一定要正确，一定要有缩进，不然会出错，我想信很多小伙伴因为没有缩进而不能编译的。</p>
+<p>然后在<strong>主题配置文件</strong>中修改<strong>url</strong>为你的域名，例如我的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url: http://hunao.info</div></pre></td></tr></table></figure>
+<p>NexT主题默认的是<code>http://yoursite.com</code></p>
+<p>配置好后，<code>hexo g</code> 就能在<strong>your-hexo-site\public</strong> 中生成<strong>sitemap.xml</strong> 和 <strong>baidusitemap.xml</strong>了;其中第一个是一会要提交给google的，后面那个看名字当然就是提交给Baidu的了；</p>
+<p>在<code>your-hexo-site\source</code>中新建文件<strong>robots.txt</strong>,内容可以参照我的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">User-agent: *</div><div class="line">Allow: /</div><div class="line">Allow: /archives/</div><div class="line">Allow: /categories/</div><div class="line">Allow: /tags/ </div><div class="line">Disallow: /vendors/</div><div class="line">Disallow: /js/</div><div class="line">Disallow: /css/</div><div class="line">Disallow: /fonts/</div><div class="line">Disallow: /vendors/</div><div class="line">Disallow: /fancybox/</div></pre></td></tr></table></figure>
+<p><strong>其中Allow后面的就是你的menu；</strong></p>
+<p>在<strong>robots.txt</strong>中添加下面的代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Sitemap: http://www.hunao.info/sitemap.xml</div><div class="line">Sitemap: http://www.hunao.info/baidusitemap.xml</div></pre></td></tr></table></figure>
+<p>请自行将<strong>www.hunao.info</strong>改成自己的域名, 然后<code>hexo d -g</code>提交一下</p>
+<h3 id="给非友情链接的出站链接添加-“nofollow”-标签"><a href="#给非友情链接的出站链接添加-“nofollow”-标签" class="headerlink" title="给非友情链接的出站链接添加 “nofollow” 标签"></a>给非友情链接的出站链接添加 “nofollow” 标签</h3><p>这个可以参考文章末尾提供的参考链接，写的很详细，我就不贴出来了。</p>
+<h3 id="注册Google-Search-Console"><a href="#注册Google-Search-Console" class="headerlink" title="注册Google Search Console"></a>注册Google Search Console</h3><p>链接：<a href="https://www.google.com/webmasters/" target="_blank" rel="external">https://www.google.com/webmasters/</a></p>
+<p>根据提示注册好之后，添加你的博客域名。</p>
+<p><img src="http://i.imgur.com/LkWvicZ.png" alt="google console"></p>
+<p>如图，我添加了两个，你可以视情况而定。然后点击你的域名进入:</p>
+<p><img src="http://i.imgur.com/7ehsLCS.png" alt="管理界面"></p>
+<h3 id="测试robots-txt"><a href="#测试robots-txt" class="headerlink" title="测试robots.txt"></a>测试robots.txt</h3><p>点击左侧的<strong>robots.txt</strong>测试工具，根据提示提交你的<strong>robots.txt</strong>，其实刚才我们已经提交了。</p>
+<p><img src="http://i.imgur.com/zcCe2ep.png" alt="robots"></p>
+<p>注意要0错误才可以，如果有错误的话，会有提示，改正确就可以了。</p>
+<h3 id="提交站点地图"><a href="#提交站点地图" class="headerlink" title="提交站点地图"></a>提交站点地图</h3><p>还记得我们刚才创建创建sitemap.xml文件吧,现在它要派上用场了。点击左侧工具栏的站点地图</p>
+<p><img src="http://i.imgur.com/jMkaqRv.png" alt="站点地图"></p>
+<p>这里我已经添加了，所以你看到的和我看到界面应该不一样，然后点右上角的添加/测试站点地图。输入sitemap先点测试，如果没问题的话，再提交。</p>
+<p><img src="http://i.imgur.com/gIURT3t.png" alt="添加sitemap"></p>
+<h3 id="Google-抓取方式"><a href="#Google-抓取方式" class="headerlink" title="Google 抓取方式"></a>Google 抓取方式</h3><p>提交站点地图之后，点击左侧的Google 抓取方式</p>
+<p><img src="http://i.imgur.com/VWnQNUs.png" alt="google抓取方式"></p>
+<p>这一步很重要！这一不很重要！这一步很重要！</p>
+<p><img src="http://i.imgur.com/NdZ6zFx.png" alt="抓取url"></p>
+<p>在这里我们填上我们需要抓取的url,不填这表示抓取首页，抓取方式可以选择桌面，智能手机等等，自行根据需要选择。填好url之后，点击抓取.</p>
+<p>然后可能会出现几种情况，如:完成、部分完成、重定向等，自由这三种情况是可以提交的。<br>提交完成后，提交至索引，根据提示操作就可以了，我的提交：</p>
+<p><img src="http://i.imgur.com/etmgeUL.png" alt="提交"></p>
+<p>至此，你的博客在google搜索上排名想不靠前都难了，马上上google搜索一下你的关键词和博客title测试一下吧；</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.arao.me/2015/hexo-next-theme-optimize-seo/" target="_blank" rel="external">动动手指，不限于NexT主题的Hexo优化（SEO篇）</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://hunao.info/2016/06/01/Hexo-Seo%E4%BC%98%E5%8C%96%E8%AE%A9%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%9C%A8google%E6%90%9C%E7%
+    
+    </summary>
+    
+      <category term="hexo" scheme="https://phoenixjiangnan.github.io/categories/hexo/"/>
+    
+    
+      <category term="Hexo SEO" scheme="https://phoenixjiangnan.github.io/tags/Hexo-SEO/"/>
+    
+      <category term="Hexo SEO tutorial" scheme="https://phoenixjiangnan.github.io/tags/Hexo-SEO-tutorial/"/>
+    
+  </entry>
+  
+  <entry>
     <title>The Always On Architecture - Moving Beyond Legacy Disaster Recovery</title>
-    <link href="https://phoenixjiangnan.github.io/2016/10/10/distributed%20system/The-Always-On-Architecture-Moving-Beyond-Legacy-Disaster-Recovery/"/>
-    <id>https://phoenixjiangnan.github.io/2016/10/10/distributed system/The-Always-On-Architecture-Moving-Beyond-Legacy-Disaster-Recovery/</id>
-    <published>2016-10-10T16:49:59.000Z</published>
+    <link href="https://phoenixjiangnan.github.io/2016/10/11/distributed%20system/The-Always-On-Architecture-Moving-Beyond-Legacy-Disaster-Recovery/"/>
+    <id>https://phoenixjiangnan.github.io/2016/10/11/distributed system/The-Always-On-Architecture-Moving-Beyond-Legacy-Disaster-Recovery/</id>
+    <published>2016-10-11T07:49:59.000Z</published>
     <updated>2016-10-10T16:52:03.000Z</updated>
     
     <content type="html"><![CDATA[<p>This post caught my eyes immediatelly when I browsed my <a href="http://feedly.com/" target="_blank" rel="external">Feedly</a>.</p>
@@ -108,9 +183,9 @@ It’s far past time to update these systems. Otherwise, more heartache pain and
   
   <entry>
     <title>Repost - Job-Hopping and Salary Raise 跳槽加薪</title>
-    <link href="https://phoenixjiangnan.github.io/2016/10/09/career%20and%20leadership/Repost-Job-Hopping-and-Salary-Raise-%E8%B7%B3%E6%A7%BD%E5%8A%A0%E8%96%AA/"/>
-    <id>https://phoenixjiangnan.github.io/2016/10/09/career and leadership/Repost-Job-Hopping-and-Salary-Raise-跳槽加薪/</id>
-    <published>2016-10-09T16:13:13.000Z</published>
+    <link href="https://phoenixjiangnan.github.io/2016/10/10/career%20and%20leadership/Repost-Job-Hopping-and-Salary-Raise-%E8%B7%B3%E6%A7%BD%E5%8A%A0%E8%96%AA/"/>
+    <id>https://phoenixjiangnan.github.io/2016/10/10/career and leadership/Repost-Job-Hopping-and-Salary-Raise-跳槽加薪/</id>
+    <published>2016-10-10T07:13:13.000Z</published>
     <updated>2016-10-09T16:15:31.000Z</updated>
     
     <content type="html"><![CDATA[<hr>
@@ -144,9 +219,9 @@ It’s far past time to update these systems. Otherwise, more heartache pain and
   
   <entry>
     <title>Cache - Cache Design Patterns</title>
-    <link href="https://phoenixjiangnan.github.io/2016/10/07/system%20design/cache/Cache-Cache-Design-Patterns/"/>
-    <id>https://phoenixjiangnan.github.io/2016/10/07/system design/cache/Cache-Cache-Design-Patterns/</id>
-    <published>2016-10-08T02:54:44.000Z</published>
+    <link href="https://phoenixjiangnan.github.io/2016/10/08/system%20design/cache/Cache-Cache-Design-Patterns/"/>
+    <id>https://phoenixjiangnan.github.io/2016/10/08/system design/cache/Cache-Cache-Design-Patterns/</id>
+    <published>2016-10-08T17:54:44.000Z</published>
     <updated>2016-10-08T02:56:29.000Z</updated>
     
     <content type="html"><![CDATA[<p>I read a blog a couple months ago talking about four most common cache design patterns, and want to summarize that post and add my understandings here.</p>
@@ -310,9 +385,9 @@ It’s far past time to update these systems. Otherwise, more heartache pain and
   
   <entry>
     <title>Bloom Filter - Introduction</title>
-    <link href="https://phoenixjiangnan.github.io/2016/10/06/data%20structures%20and%20algorithms/bloom%20filter/Bloom-Filter-Introduction/"/>
-    <id>https://phoenixjiangnan.github.io/2016/10/06/data structures and algorithms/bloom filter/Bloom-Filter-Introduction/</id>
-    <published>2016-10-07T03:50:33.000Z</published>
+    <link href="https://phoenixjiangnan.github.io/2016/10/07/data%20structures%20and%20algorithms/bloom%20filter/Bloom-Filter-Introduction/"/>
+    <id>https://phoenixjiangnan.github.io/2016/10/07/data structures and algorithms/bloom filter/Bloom-Filter-Introduction/</id>
+    <published>2016-10-07T18:50:33.000Z</published>
     <updated>2016-10-07T03:56:42.000Z</updated>
     
     <content type="html"><![CDATA[<p>Bloom Filter has become a hot topic in interviewing.</p>
@@ -428,7 +503,7 @@ It’s far past time to update these systems. Otherwise, more heartache pain and
     <title>Apache Kafka, Samza, and the Unix Philosopy of Distributed Data</title>
     <link href="https://phoenixjiangnan.github.io/2016/10/06/distributed%20system/kafka/Apache-Kafka-Samza-and-the-Unix-Philosopy-of-Distributed-Data/"/>
     <id>https://phoenixjiangnan.github.io/2016/10/06/distributed system/kafka/Apache-Kafka-Samza-and-the-Unix-Philosopy-of-Distributed-Data/</id>
-    <published>2016-10-06T11:55:32.000Z</published>
+    <published>2016-10-07T02:55:32.000Z</published>
     <updated>2016-10-06T12:09:05.000Z</updated>
     
     <content type="html"><![CDATA[<p>Here’s another blog from Confluent’s website. What’s interesting about this article is that it compares the design philosophy between Unix and monolith database, and refers to Kafka as a distributed version of Unix pipeline. The latter point is exceptionally interesting and brings a whole new view of Kafka to me.</p>
@@ -580,7 +655,7 @@ It’s far past time to update these systems. Otherwise, more heartache pain and
     <title>Throttling and Traffic Shaping</title>
     <link href="https://phoenixjiangnan.github.io/2016/10/05/system%20design/Throttling-and-Traffic-Shaping/"/>
     <id>https://phoenixjiangnan.github.io/2016/10/05/system design/Throttling-and-Traffic-Shaping/</id>
-    <published>2016-10-05T15:49:42.000Z</published>
+    <published>2016-10-06T06:49:42.000Z</published>
     <updated>2016-10-06T15:45:30.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Throttling-and-Traffic-Shaping"><a href="#Throttling-and-Traffic-Shaping" class="headerlink" title="Throttling and Traffic Shaping"></a>Throttling and Traffic Shaping</h2><blockquote>
@@ -751,7 +826,7 @@ It’s far past time to update these systems. Otherwise, more heartache pain and
     <title>Putting Apache Kafka To Use: A Practical Guide to Building a Stream Data Platform (Part 2)</title>
     <link href="https://phoenixjiangnan.github.io/2016/10/03/distributed%20system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-2/"/>
     <id>https://phoenixjiangnan.github.io/2016/10/03/distributed system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-2/</id>
-    <published>2016-10-03T15:21:05.000Z</published>
+    <published>2016-10-04T06:21:05.000Z</published>
     <updated>2016-10-03T15:24:31.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
@@ -1002,7 +1077,7 @@ It’s far past time to update these systems. Otherwise, more heartache pain and
     <title>Putting Apache Kafka To Use - A Practical Guide to Building a Stream Data Platform (Part 1)</title>
     <link href="https://phoenixjiangnan.github.io/2016/10/03/distributed%20system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-1/"/>
     <id>https://phoenixjiangnan.github.io/2016/10/03/distributed system/kafka/Putting-Apache-Kafka-To-Use-A-Practical-Guide-to-Building-a-Stream-Data-Platform-Part-1/</id>
-    <published>2016-10-03T10:47:07.000Z</published>
+    <published>2016-10-04T01:47:07.000Z</published>
     <updated>2016-10-03T15:19:28.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
@@ -1166,7 +1241,7 @@ It’s far past time to update these systems. Otherwise, more heartache pain and
     <title>Spring Boot - Introduction to Spring Boot</title>
     <link href="https://phoenixjiangnan.github.io/2016/09/30/spring/spring%20boot/Spring-Boot-Introduction-to-Spring-Boot/"/>
     <id>https://phoenixjiangnan.github.io/2016/09/30/spring/spring boot/Spring-Boot-Introduction-to-Spring-Boot/</id>
-    <published>2016-09-30T15:18:56.000Z</published>
+    <published>2016-10-01T06:18:56.000Z</published>
     <updated>2016-09-30T15:35:58.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Spring-io-Spring-Boot"><a href="#Spring-io-Spring-Boot" class="headerlink" title="Spring.io - Spring Boot"></a>Spring.io - Spring Boot</h2><p>I’m taking some important parts from it and summarizing them as my learning notes.</p>
@@ -1433,7 +1508,7 @@ It’s far past time to update these systems. Otherwise, more heartache pain and
     <title>Hexo - How to backup configs and blogs of Github Pages in a Github repository</title>
     <link href="https://phoenixjiangnan.github.io/2016/09/29/hexo/Hexo-How-to-backup-configs-and-blogs-of-Github-Pages-in-a-Github-repository/"/>
     <id>https://phoenixjiangnan.github.io/2016/09/29/hexo/Hexo-How-to-backup-configs-and-blogs-of-Github-Pages-in-a-Github-repository/</id>
-    <published>2016-09-29T09:50:02.000Z</published>
+    <published>2016-09-30T00:50:02.000Z</published>
     <updated>2016-09-29T10:00:35.000Z</updated>
     
     <content type="html"><![CDATA[<p>Github Pages is great - it allows you to set up static website on it and use it as a blog.</p>
@@ -1482,7 +1557,7 @@ It’s far past time to update these systems. Otherwise, more heartache pain and
     <title>Repost - &quot;Farewell, App Academy. Hello, Airbnb. (Part II)&quot;</title>
     <link href="https://phoenixjiangnan.github.io/2016/09/21/career%20and%20leadership/Repost-Farewell-App-Academy-Hello-Airbnb-Part-II/"/>
     <id>https://phoenixjiangnan.github.io/2016/09/21/career and leadership/Repost-Farewell-App-Academy-Hello-Airbnb-Part-II/</id>
-    <published>2016-09-21T15:10:23.000Z</published>
+    <published>2016-09-22T06:10:23.000Z</published>
     <updated>2016-09-29T09:36:41.000Z</updated>
     
     <content type="html"><![CDATA[<p>I think this is a great great blog talking about, as a SDE, how to negotiate your salary package with tech companies.</p>
@@ -1691,9 +1766,9 @@ It’s far past time to update these systems. Otherwise, more heartache pain and
   
   <entry>
     <title>Java Network - TCP and Socket</title>
-    <link href="https://phoenixjiangnan.github.io/2016/09/18/java/network/Java-Network-TCP-and-Socket/"/>
-    <id>https://phoenixjiangnan.github.io/2016/09/18/java/network/Java-Network-TCP-and-Socket/</id>
-    <published>2016-09-18T16:34:53.000Z</published>
+    <link href="https://phoenixjiangnan.github.io/2016/09/19/java/network/Java-Network-TCP-and-Socket/"/>
+    <id>https://phoenixjiangnan.github.io/2016/09/19/java/network/Java-Network-TCP-and-Socket/</id>
+    <published>2016-09-19T07:34:53.000Z</published>
     <updated>2016-09-21T08:10:35.000Z</updated>
     
     <content type="html"><![CDATA[<p>The <code>Transmission Control Protocol (TCP)</code> is a core protocol of the Internet protocol suite.</p>
@@ -1809,9 +1884,9 @@ It’s far past time to update these systems. Otherwise, more heartache pain and
   
   <entry>
     <title>Java Concurrency - wait(), notify(), and notifyAll()</title>
-    <link href="https://phoenixjiangnan.github.io/2016/09/16/java/concurrency/Java-Concurrency-wait-notify-and-notifyAll/"/>
-    <id>https://phoenixjiangnan.github.io/2016/09/16/java/concurrency/Java-Concurrency-wait-notify-and-notifyAll/</id>
-    <published>2016-09-17T02:57:30.000Z</published>
+    <link href="https://phoenixjiangnan.github.io/2016/09/17/java/concurrency/Java-Concurrency-wait-notify-and-notifyAll/"/>
+    <id>https://phoenixjiangnan.github.io/2016/09/17/java/concurrency/Java-Concurrency-wait-notify-and-notifyAll/</id>
+    <published>2016-09-17T17:57:30.000Z</published>
     <updated>2016-09-30T06:53:04.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="How-to-Work-With-wait-notify-and-notifyAll-in-Java"><a href="#How-to-Work-With-wait-notify-and-notifyAll-in-Java" class="headerlink" title="How to Work With wait(), notify() and notifyAll() in Java?"></a>How to Work With <code>wait()</code>, <code>notify()</code> and <code>notifyAll()</code> in Java?</h2><p>Multithreading in java is pretty complex topic and requires a lot of attention while writing application code dealing with multiple threads accessing one/more shared resources at any given time.</p>
@@ -1921,7 +1996,7 @@ It’s far past time to update these systems. Otherwise, more heartache pain and
     <title>Apache Thrift - Introduction</title>
     <link href="https://phoenixjiangnan.github.io/2016/09/16/distributed%20system/thrift/Apache-Thrift-Introduction/"/>
     <id>https://phoenixjiangnan.github.io/2016/09/16/distributed system/thrift/Apache-Thrift-Introduction/</id>
-    <published>2016-09-16T09:17:06.000Z</published>
+    <published>2016-09-17T00:17:06.000Z</published>
     <updated>2016-09-17T00:19:29.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="What-is-Thrift"><a href="#What-is-Thrift" class="headerlink" title="What is Thrift"></a>What is Thrift</h2><p>According to <a href="https://thrift.apache.org/" target="_blank" rel="external">Apache Thrift</a>, </p>
@@ -1982,7 +2057,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     <title>ZooKeeper - Sessions and Session Management</title>
     <link href="https://phoenixjiangnan.github.io/2016/09/15/distributed%20system/zookeeper/ZooKeeper-Sessions-and-Session-Management/"/>
     <id>https://phoenixjiangnan.github.io/2016/09/15/distributed system/zookeeper/ZooKeeper-Sessions-and-Session-Management/</id>
-    <published>2016-09-15T07:14:21.000Z</published>
+    <published>2016-09-15T22:14:21.000Z</published>
     <updated>2016-09-15T22:16:11.000Z</updated>
     
     <content type="html"><![CDATA[<p>A ZooKeeper client establishes a <code>session</code> with the ZooKeeper service by creating a handle to the service using a language binding.</p>
@@ -2077,7 +2152,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     <title>How did I develop a crypto service for Tableau Server</title>
     <link href="https://phoenixjiangnan.github.io/2016/09/14/system%20design/project%20experience/How-did-I-develop-a-crypto-service-for-Tableau-Server/"/>
     <id>https://phoenixjiangnan.github.io/2016/09/14/system design/project experience/How-did-I-develop-a-crypto-service-for-Tableau-Server/</id>
-    <published>2016-09-14T14:23:35.000Z</published>
+    <published>2016-09-15T05:23:35.000Z</published>
     <updated>2016-09-30T06:52:58.000Z</updated>
     
     <content type="html"><![CDATA[<p>For more information about Tableau Server, you can read my blogs <a href="https://phoenixjiangnan.github.io/categories/system-design/project-experience/">here</a></p>
@@ -2245,7 +2320,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     <title>How to compare float numbers</title>
     <link href="https://phoenixjiangnan.github.io/2016/08/27/best%20practices/How-to-compare-float-numbers/"/>
     <id>https://phoenixjiangnan.github.io/2016/08/27/best practices/How-to-compare-float-numbers/</id>
-    <published>2016-08-27T08:49:26.000Z</published>
+    <published>2016-08-27T23:49:26.000Z</published>
     <updated>2016-09-10T04:10:06.000Z</updated>
     
     <content type="html"><![CDATA[<p>The reason I want to have a special blog talking about this problem is that, many people I know tend to think that float number comparison is the same as integer comparison. </p>
@@ -2315,7 +2390,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     <title>How to test a program involving probability - take an algorithm that shuffles array as example</title>
     <link href="https://phoenixjiangnan.github.io/2016/08/26/data%20structures%20and%20algorithms/probability/How-to-test-a-program-involving-probability-take-an-algorithm-that-shuffles-array-as-example/"/>
     <id>https://phoenixjiangnan.github.io/2016/08/26/data structures and algorithms/probability/How-to-test-a-program-involving-probability-take-an-algorithm-that-shuffles-array-as-example/</id>
-    <published>2016-08-26T15:00:49.000Z</published>
+    <published>2016-08-27T06:00:49.000Z</published>
     <updated>2016-09-07T21:41:42.000Z</updated>
     
     <content type="html"><![CDATA[<p>This article is about some inspirations I got from another blog pasted below.</p>
@@ -2434,7 +2509,7 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     <title>Facebook User Group and Bipartite Graph</title>
     <link href="https://phoenixjiangnan.github.io/2016/08/26/data%20structures%20and%20algorithms/interview/Facebook-User-Group-and-Bipartite-Graph/"/>
     <id>https://phoenixjiangnan.github.io/2016/08/26/data structures and algorithms/interview/Facebook-User-Group-and-Bipartite-Graph/</id>
-    <published>2016-08-26T07:31:30.000Z</published>
+    <published>2016-08-26T22:31:30.000Z</published>
     <updated>2016-08-26T22:37:50.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="The-Problem"><a href="#The-Problem" class="headerlink" title="The Problem"></a>The Problem</h2><p>大家都知道Facebook用户都是双向的好友，a是b的好友，那么b一定是a的好友，现在给定一个用户列表，其中有些用户是好友，有些不是，请判断，这些用户是否可以划分为两组，并且每组内的用户，互相都不是好友。如果能，请给出这个划分。</p>
@@ -2542,97 +2617,6 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
     
     
       <category term="bipartite graph" scheme="https://phoenixjiangnan.github.io/tags/bipartite-graph/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java - Concurrency - Multi-Thread 1 - Implements Runnable or Extends Thread</title>
-    <link href="https://phoenixjiangnan.github.io/2016/08/22/java/concurrency/Java-Concurrency-Multi-Thread-1-Implements-Runnable-or-Extends-Thread/"/>
-    <id>https://phoenixjiangnan.github.io/2016/08/22/java/concurrency/Java-Concurrency-Multi-Thread-1-Implements-Runnable-or-Extends-Thread/</id>
-    <published>2016-08-23T06:37:24.000Z</published>
-    <updated>2016-08-24T06:10:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="1-Difference-between-Process-and-Thread"><a href="#1-Difference-between-Process-and-Thread" class="headerlink" title="1. Difference between Process and Thread"></a>1. Difference between Process and Thread</h2><ul>
-<li><code>Threads</code> are used for small tasks, whereas <code>processes</code> are used for more ‘heavyweight’ tasks – basically the execution of applications. </li>
-<li><code>Threads</code> within the same process share the same address space, whereas different <code>processes</code> do not.</li>
-<li>A process can have multiple threads, and at least one</li>
-</ul>
-<h2 id="2-Pros-and-Cons-for-Multi-Threads"><a href="#2-Pros-and-Cons-for-Multi-Threads" class="headerlink" title="2. Pros and Cons for Multi-Threads"></a>2. Pros and Cons for Multi-Threads</h2><ul>
-<li>Pro: resolves the problem to run multiple parts at the same time</li>
-<li>Cons: too many multi-threads will decrease the efficiency</li>
-</ul>
-<h2 id="3-JVM-multi-thread"><a href="#3-JVM-multi-thread" class="headerlink" title="3. JVM multi-thread"></a>3. JVM multi-thread</h2><p>There are at least <code>two threads</code> when JVM starts up</p>
-<ul>
-<li>the <code>main function thread</code></li>
-<li>the <code>garbage collection thread</code></li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Subobj</span> <span class="keyword">extends</span> <span class="title">Object</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">finalize</span><span class="params">()</span></span>&#123;</div><div class="line">        sop(<span class="string">"subobj destroyed"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</div><div class="line">        <span class="keyword">new</span> Subobj();</div><div class="line">        <span class="keyword">new</span> Subobj();</div><div class="line"></div><div class="line">        System.gc();  <span class="comment">//启动系统垃圾回收器</span></div><div class="line"></div><div class="line">        <span class="keyword">new</span> Subobj();</div><div class="line">        sop(<span class="string">"Hello World!"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<h2 id="4-Thread-Class-in-Java"><a href="#4-Thread-Class-in-Java" class="headerlink" title="4. Thread Class in Java"></a>4. <code>Thread</code> Class in Java</h2><p>Java’s <code>Thread</code> class also implements <code>Runnable</code> interface.</p>
-<h2 id="5-How-to-create-a-Java-Thread"><a href="#5-How-to-create-a-Java-Thread" class="headerlink" title="5. How to create a Java Thread"></a>5. How to create a Java Thread</h2><h3 id="1-Extends-Thread-class-and-Override-run-method"><a href="#1-Extends-Thread-class-and-Override-run-method" class="headerlink" title="1. Extends Thread class and Override run() method"></a>1. Extends <code>Thread</code> class and Override <code>run()</code> method</h3><ol>
-<li>Define a class <code>MyThread</code> extends <code>Thread</code> class </li>
-<li><code>Override</code> <code>run()</code> methods in <code>MyThread</code> class</li>
-<li>Create an object <code>t</code> of <code>MyThread</code> class</li>
-<li>Call <code>start()</code> method to start the thread, which results in executing <code>run()</code> method</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1.</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyThread</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</div><div class="line">	<span class="comment">// 2.</span></div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="comment">// ...</span></div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> avoid anotherMethod &#123;</div><div class="line">	<span class="comment">// 3.</span></div><div class="line">	MyThread t = <span class="keyword">new</span> MyThread();</div><div class="line">	</div><div class="line">	<span class="comment">// 4.</span></div><div class="line">	t.start();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="2-Implements-Runnable-interface-and-Override-run-method-Most-Frequently-Used"><a href="#2-Implements-Runnable-interface-and-Override-run-method-Most-Frequently-Used" class="headerlink" title="2. Implements Runnable interface and Override run() method (Most Frequently Used)"></a>2. Implements <code>Runnable</code> interface and Override <code>run()</code> method (Most Frequently Used)</h3><ol>
-<li>Define a class that implements <code>Runnable</code> interface</li>
-<li>Override <code>run()</code> methods in the impl class, which basically encapsulates the business logic to <code>run()</code> method</li>
-<li><p>Create a new <code>Thread</code> object, and pass in the impl class to that instance as constructor parameter </p>
-<p> Why? Because the business logic of a thread is all well encapsulated in the <code>run()</code> method, a <code>Thread</code> instance needs to be specified how it should run when initialized</p>
-</li>
-<li><p>Call <code>start()</code> method of that <code>Thread</code> instance</p>
-</li>
-</ol>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div></pre></td><td class="code"><pre><div class="line">// 1.</div><div class="line">class MyRunnable implements Runnable &#123;</div><div class="line">	// 2.</div><div class="line">	@Override</div><div class="line">	public void run() &#123;</div><div class="line">		// ...</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">public void anotherMethod &#123;</div><div class="line">	// 3.</div><div class="line">	Thread t = new Thread(new MyRunnable());</div><div class="line">	</div><div class="line">	// 4.</div><div class="line">	t.start();</div><div class="line">&#125;</div><div class="line">``` </div><div class="line"> </div><div class="line"></div><div class="line">## 6. Advantages to `implements Runnable` over `extends Thread`</div><div class="line"></div><div class="line">1. Separate and encapsulate the business logic of a thread from subclasses of `Thread`, which conforms to the core idea of object oriented programming</div><div class="line"></div><div class="line">2. Avoided the limitation of Java's single extension mechanism. </div><div class="line"></div><div class="line">    - When you `extends Thread` class, after that you can’t extend any other class which you required. (As you know, Java does not allow inheriting more than one class).</div><div class="line">    - When you `implements Runnable`, you can save a space for your class to extend any other class in future or now.</div><div class="line"></div><div class="line">3. `implements Runnable` allows sharing the same instance</div><div class="line"></div><div class="line">    - When you extends Thread class, each of your thread creates unique object and associate with it.</div><div class="line">    - When you implements Runnable, it shares the same object to multiple threads.</div><div class="line">    </div><div class="line">    </div><div class="line">The following example helps you to understand more clearly.</div><div class="line"></div><div class="line">```java</div><div class="line">class ImplementsRunnable implements Runnable &#123;</div><div class="line"></div><div class="line">    private int counter = 0;</div><div class="line"></div><div class="line">    public void run() &#123;</div><div class="line">        counter++;</div><div class="line">        System.out.println("ImplementsRunnable : Counter : " + counter);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class ExtendsThread extends Thread &#123;</div><div class="line"></div><div class="line">    private int counter = 0;</div><div class="line"></div><div class="line">    public void run() &#123;</div><div class="line">        counter++;</div><div class="line">        System.out.println("ExtendsThread : Counter : " + counter);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">public class ThreadVsRunnable &#123;</div><div class="line"></div><div class="line">    public static void main(String args[]) throws Exception &#123;</div><div class="line">        //Multiple threads share the same object.</div><div class="line">        ImplementsRunnable rc = new ImplementsRunnable();</div><div class="line">        Thread t1 = new Thread(rc);</div><div class="line">        t1.start();</div><div class="line">        Thread.sleep(1000); // Waiting for 1 second before starting next thread</div><div class="line">        Thread t2 = new Thread(rc);</div><div class="line">        t2.start();</div><div class="line">        Thread.sleep(1000); // Waiting for 1 second before starting next thread</div><div class="line">        Thread t3 = new Thread(rc);</div><div class="line">        t3.start();</div><div class="line"></div><div class="line">        //Creating new instance for every thread access.</div><div class="line">        ExtendsThread tc1 = new ExtendsThread();</div><div class="line">        tc1.start();</div><div class="line">        Thread.sleep(1000); // Waiting for 1 second before starting next thread</div><div class="line">        ExtendsThread tc2 = new ExtendsThread();</div><div class="line">        tc2.start();</div><div class="line">        Thread.sleep(1000); // Waiting for 1 second before starting next thread</div><div class="line">        ExtendsThread tc3 = new ExtendsThread();</div><div class="line">        tc3.start();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Output of the above program.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">ImplementsRunnable : Counter : 1</div><div class="line">ImplementsRunnable : Counter : 2</div><div class="line">ImplementsRunnable : Counter : 3</div><div class="line">ExtendsThread : Counter : 1</div><div class="line">ExtendsThread : Counter : 1</div><div class="line">ExtendsThread : Counter : 1</div></pre></td></tr></table></figure>
-<p>In the <code>Runnable</code> interface approach, only one instance of a class is being created and it has been shared by different threads. So the value of counter is incremented for each and every thread access.</p>
-<p>Whereas, <code>Thread</code> class approach, you must have to create separate instance for every thread access. Hence different memory is allocated for every class instances and each has separate counter, the value remains same, which means no increment will happen because none of the object reference is same.</p>
-<blockquote>
-<p>So, use <code>Runnable</code> interface when you want to access the same resource from the group of threads. Avoid using <code>Thread</code> class here, because multiple objects creation consumes more memory and it becomes a big performance overhead.</p>
-</blockquote>
-<p>Reference: <a href="https://manikandanmv.wordpress.com/tag/extends-thread-vs-implements-runnable/" target="_blank" rel="external">https://manikandanmv.wordpress.com/tag/extends-thread-vs-implements-runnable/</a></p>
-<h2 id="Methods-in-Thread-class"><a href="#Methods-in-Thread-class" class="headerlink" title="Methods in Thread class"></a>Methods in Thread class</h2><p>We can get the name of a <code>Thread</code> via <code>getName()</code>.</p>
-<p>Thread’s naming convention is like <code>Thread-#(start from 0)</code>  </p>
-<p>The main thread’s name is <code>main</code>.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyRunnable</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span>&#123;</div><div class="line">	<span class="meta">@Override</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</div><div class="line">		System.out.println(Thread.currentThread().getName());</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</div><div class="line">        MyRunnable myRunnable = <span class="keyword">new</span> MyRunnable();</div><div class="line">        </div><div class="line">        Thread t1 = <span class="keyword">new</span> Thread(myRunnable);</div><div class="line">        Thread t2 = <span class="keyword">new</span> Thread(myRunnable);</div><div class="line">        Thread t3 = <span class="keyword">new</span> Thread(myRunnable);</div><div class="line">        Thread t4 = <span class="keyword">new</span> Thread(myRunnable);</div><div class="line"></div><div class="line">        t1.start();</div><div class="line">        t2.start();</div><div class="line">        t3.start();</div><div class="line">        t4.start();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Thread-0</div><div class="line">Thread-2</div><div class="line">Thread-1</div><div class="line">Thread-3</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;1-Difference-between-Process-and-Thread&quot;&gt;&lt;a href=&quot;#1-Difference-between-Process-and-Thread&quot; class=&quot;headerlink&quot; title=&quot;1. Difference between Process and Thread&quot;&gt;&lt;/a&gt;1. Difference between Process and Thread&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Threads&lt;/code&gt; are used for small tasks, whereas &lt;code&gt;processes&lt;/code&gt; are used for more ‘heavyweight’ tasks – basically the execution of applications. &lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Threads&lt;/code&gt; within the same process share the same address space, whereas different &lt;code&gt;processes&lt;/code&gt; do not.&lt;/li&gt;
-&lt;li&gt;A process can have multiple threads, and at least one&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;2-Pros-and-Cons-for-Multi-Threads&quot;&gt;&lt;a href=&quot;#2-Pros-and-Cons-for-Multi-Threads&quot; class=&quot;headerlink&quot; title=&quot;2. Pros and Cons for Multi-Threads&quot;&gt;&lt;/a&gt;2. Pros and Cons for Multi-Threads&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Pro: resolves the problem to run multiple parts at the same time&lt;/li&gt;
-&lt;li&gt;Cons: too many multi-threads will decrease the efficiency&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;3-JVM-multi-thread&quot;&gt;&lt;a href=&quot;#3-JVM-multi-thread&quot; class=&quot;headerlink&quot; title=&quot;3. JVM multi-thread&quot;&gt;&lt;/a&gt;3. JVM multi-thread&lt;/h2&gt;&lt;p&gt;There are at least &lt;code&gt;two threads&lt;/code&gt; when JVM starts up&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;the &lt;code&gt;main function thread&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;the &lt;code&gt;garbage collection thread&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Subobj&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Object&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;finalize&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        sop(&lt;span class=&quot;string&quot;&gt;&quot;subobj destroyed&quot;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Demo&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(String[] args)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Subobj();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Subobj();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        System.gc();  &lt;span class=&quot;comment&quot;&gt;//启动系统垃圾回收器&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Subobj();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        sop(&lt;span class=&quot;string&quot;&gt;&quot;Hello World!&quot;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="java" scheme="https://phoenixjiangnan.github.io/categories/java/"/>
-    
-      <category term="concurrency" scheme="https://phoenixjiangnan.github.io/categories/java/concurrency/"/>
-    
-    
-      <category term="java concurrency" scheme="https://phoenixjiangnan.github.io/tags/java-concurrency/"/>
-    
-      <category term="multiple threads" scheme="https://phoenixjiangnan.github.io/tags/multiple-threads/"/>
-    
-      <category term="implements runnable" scheme="https://phoenixjiangnan.github.io/tags/implements-runnable/"/>
-    
-      <category term="extends thread" scheme="https://phoenixjiangnan.github.io/tags/extends-thread/"/>
     
   </entry>
   

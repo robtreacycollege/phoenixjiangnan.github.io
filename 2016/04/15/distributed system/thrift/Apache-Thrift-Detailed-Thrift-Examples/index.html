@@ -1,0 +1,888 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="oISntcv5wYv-gFzCbOejeG4TxriAsyU0TghcNXvJUUw" />
+
+
+
+  <meta name="baidu-site-verification" content="Ydbs8NMx8X" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="thrift,apache thrift," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Bowen's blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="Simple Thrift Server and Client Example1. define a service with methods in a .thrift file12345678910namespace java servertypedef i64 longtypedef i32 intservice ArithmeticService &amp;#123;  // defines sim">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Apache Thrift - Detailed Thrift Examples">
+<meta property="og:url" content="https://phoenixjiangnan.github.io/2016/04/15/distributed system/thrift/Apache-Thrift-Detailed-Thrift-Examples/index.html">
+<meta property="og:site_name" content="Bowen's blog">
+<meta property="og:description" content="Simple Thrift Server and Client Example1. define a service with methods in a .thrift file12345678910namespace java servertypedef i64 longtypedef i32 intservice ArithmeticService &amp;#123;  // defines sim">
+<meta property="og:updated_time" content="2016-09-17T00:18:55.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Apache Thrift - Detailed Thrift Examples">
+<meta name="twitter:description" content="Simple Thrift Server and Client Example1. define a service with methods in a .thrift file12345678910namespace java servertypedef i64 longtypedef i32 intservice ArithmeticService &amp;#123;  // defines sim">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="https://phoenixjiangnan.github.io/2016/04/15/distributed system/thrift/Apache-Thrift-Detailed-Thrift-Examples/"/>
+
+  <title> Apache Thrift - Detailed Thrift Examples | Bowen's blog </title>
+
+  <script type='text/javascript'>
+    var _vds = _vds || [];
+    window._vds = _vds;
+    (function(){
+      _vds.push(['setAccountId', 'a6c23d16341d6115']);
+      (function() {
+        var vds = document.createElement('script');
+        vds.type='text/javascript';
+        vds.async = true;
+        vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(vds, s);
+      })();
+    })();
+  </script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-40978428-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Bowen's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">keep learning - learning notes and blogs</p>
+</div>
+
+
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Apache Thrift - Detailed Thrift Examples
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-04-15T13:44:21-07:00" content="2016-04-15">
+              2016-04-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/distributed-system/" itemprop="url" rel="index">
+                    <span itemprop="name">distributed system</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/distributed-system/thrift/" itemprop="url" rel="index">
+                    <span itemprop="name">thrift</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/15/distributed system/thrift/Apache-Thrift-Detailed-Thrift-Examples/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/15/distributed system/thrift/Apache-Thrift-Detailed-Thrift-Examples/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Simple-Thrift-Server-and-Client-Example"><a href="#Simple-Thrift-Server-and-Client-Example" class="headerlink" title="Simple Thrift Server and Client Example"></a>Simple Thrift Server and Client Example</h1><h2 id="1-define-a-service-with-methods-in-a-thrift-file"><a href="#1-define-a-service-with-methods-in-a-thrift-file" class="headerlink" title="1. define a service with methods in a .thrift file"></a>1. define a service with methods in a .thrift file</h2><figure class="highlight thrift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">namespace java server</div><div class="line"></div><div class="line">typedef i64 long</div><div class="line">typedef i32 int</div><div class="line"></div><div class="line">service ArithmeticService &#123;  // defines simple arithmetic service</div><div class="line">    long add(1:int num1, 2:int num2);</div><div class="line"></div><div class="line">    long multiply(1:int num1, 2:int num2);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="2-Run-thrift-exe-to-autogenerate-a-corresponding-class-to-the-service"><a href="#2-Run-thrift-exe-to-autogenerate-a-corresponding-class-to-the-service" class="headerlink" title="2. Run thrift .exe to autogenerate a corresponding class to the service,"></a>2. Run thrift .exe to autogenerate a corresponding class to the service,</h2><p>with an interface <code>Iface</code> containing all the methods</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// <span class="keyword">In</span> Mac/Linux, <span class="built_in">cd</span> to thrift-<span class="number">0</span>.<span class="number">9</span>.<span class="number">2</span> folder</div><div class="line">$ thrift –gen java arithmetic.thrift</div><div class="line">or</div><div class="line">$ "thrift.exe" –gen java arithmetic.thrift</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>The following is generated file by thrift</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> server;</div><div class="line"></div><div class="line"><span class="meta">@SuppressWarnings</span>(&#123;<span class="string">"cast"</span>, <span class="string">"rawtypes"</span>, <span class="string">"serial"</span>, <span class="string">"unchecked"</span>&#125;)</div><div class="line"><span class="meta">@Generated</span>(value = <span class="string">"Autogenerated by Thrift Compiler (0.9.2)"</span>, date = <span class="string">"2015-3-10"</span>)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArithmeticService</span> </span>&#123;</div><div class="line"></div><div class="line">  <span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Iface</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">long</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> num1, <span class="keyword">int</span> num2)</span> <span class="keyword">throws</span> org.apache.thrift.TException</span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">long</span> <span class="title">multiply</span><span class="params">(<span class="keyword">int</span> num1, <span class="keyword">int</span> num2)</span> <span class="keyword">throws</span> org.apache.thrift.TException</span>;</div><div class="line"></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">AsyncIface</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> num1, <span class="keyword">int</span> num2, org.apache.thrift.async.AsyncMethodCallback resultHandler)</span> <span class="keyword">throws</span> org.apache.thrift.TException</span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">multiply</span><span class="params">(<span class="keyword">int</span> num1, <span class="keyword">int</span> num2, org.apache.thrift.async.AsyncMethodCallback resultHandler)</span> <span class="keyword">throws</span> org.apache.thrift.TException</span>;</div><div class="line"></div><div class="line">  &#125;</div><div class="line">    ...</div></pre></td></tr></table></figure>
+<h2 id="3-Write-a-Impl-or-Handler-to-implement-the-Service-Iface-interface-with-method-implementations-The-implementation-and-handler-should-be-on-the-server-side"><a href="#3-Write-a-Impl-or-Handler-to-implement-the-Service-Iface-interface-with-method-implementations-The-implementation-and-handler-should-be-on-the-server-side" class="headerlink" title="3. Write a Impl or Handler to implement the Service.Iface interface with method implementations. The implementation and handler should be on the server side."></a>3. Write a <code>Impl</code> or <code>Handler</code> to implement the <code>Service.Iface</code> interface with method implementations. The implementation and handler should be on the <code>server side</code>.</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> org.apache.thrift.TException;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArithmeticServiceImpl</span> <span class="keyword">implements</span> <span class="title">ArithmeticService</span>.<span class="title">Iface</span></span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">long</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> num1, <span class="keyword">int</span> num2)</span> <span class="keyword">throws</span> TException </span>&#123;</div><div class="line">        <span class="keyword">return</span> num1 + num2;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">long</span> <span class="title">multiply</span><span class="params">(<span class="keyword">int</span> num1, <span class="keyword">int</span> num2)</span> <span class="keyword">throws</span> TException </span>&#123;</div><div class="line">        <span class="keyword">return</span> num1 * num2;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="4-Write-a-Server-that-initiates-the-following-variants-and-starts-to-listen-to-request"><a href="#4-Write-a-Server-that-initiates-the-following-variants-and-starts-to-listen-to-request" class="headerlink" title="4. Write a Server that initiates the following variants and starts to listen to request:"></a>4. Write a <code>Server</code> that initiates the following variants and starts to listen to request:</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">TServerSocket(PortNumber)</div><div class="line">Service.Processor&lt;ServiceImpl&gt;(ServiceImpl/ServiceHandler)</div><div class="line">TServer (<span class="keyword">new</span> TServer.Args(TServerSocket).processor(Service.Processor))</div><div class="line">TServer.serve()</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyServer</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> TTransportException </span>&#123;</div><div class="line">        TServerSocket serverSocket = <span class="keyword">new</span> TServerSocket(<span class="number">7911</span>);</div><div class="line">        </div><div class="line">        Processor&lt;ArithmeticServiceHandler&gt; processor = <span class="keyword">new</span> Processor&lt;&gt;(<span class="keyword">new</span> ArithmeticServiceHandler());</div><div class="line">        </div><div class="line">        Args options = <span class="keyword">new</span> Args(serverSocket);</div><div class="line">        options.processor(processor)</div><div class="line">        </div><div class="line">        TServer t_server = <span class="keyword">new</span> TSimpleServer(options);</div><div class="line">        </div><div class="line">        System.out.println(<span class="string">"Starting the simple server..."</span>);</div><div class="line">        </div><div class="line">        t_server.serve();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="5-Write-a-client-that-initiates-the-following-variants-and-connects-to-Server"><a href="#5-Write-a-client-that-initiates-the-following-variants-and-connects-to-Server" class="headerlink" title="5. Write a client that initiates the following variants and connects to Server"></a>5. Write a <code>client</code> that initiates the following variants and connects to <code>Server</code></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">TTransport = TSocket(IP, PortNumber)</div><div class="line">TTransport.open()</div><div class="line">TProtocol(TTransport)</div><div class="line">Service.Client(TProtocol)</div><div class="line">Client calls methods</div><div class="line">TTransport.close()</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyClient</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> TException </span>&#123;</div><div class="line">        TTransport t_transport = <span class="keyword">new</span> TSocket(<span class="string">"localhost"</span>, <span class="number">7911</span>);</div><div class="line">        t_transport.open();</div><div class="line"></div><div class="line">        TProtocol t_protocol = <span class="keyword">new</span> TBinaryProtocol(t_transport);</div><div class="line"></div><div class="line">        ArithmeticService.Client client = <span class="keyword">new</span> ArithmeticService.Client(t_protocol);</div><div class="line"></div><div class="line">        System.out.println(client.add(<span class="number">1</span>, <span class="number">2</span>));</div><div class="line">        System.out.println(client.multiply(<span class="number">1</span>, <span class="number">2</span>));</div><div class="line"></div><div class="line">        t_transport.close();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<h1 id="Thrift-Multiplexing-Services"><a href="#Thrift-Multiplexing-Services" class="headerlink" title="Thrift Multiplexing Services"></a>Thrift Multiplexing Services</h1><h2 id="Thrift-Multiplexed-Server"><a href="#Thrift-Multiplexed-Server" class="headerlink" title="Thrift Multiplexed Server"></a>Thrift Multiplexed Server</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">TMultiplexedProcessor processor = <span class="keyword">new</span> TMultiplexedProcessor();</div><div class="line"></div><div class="line">processor.registerProcessor(<span class="string">"AddService"</span>,</div><div class="line">                            <span class="keyword">new</span> AddService.Processor(<span class="keyword">new</span> AddHandler()));</div><div class="line">processor.registerProcessor(<span class="string">"MultiplyService"</span>,</div><div class="line">                            <span class="keyword">new</span> MultiplyService.Processor(<span class="keyword">new</span> MultiplyHandler()));</div><div class="line"></div><div class="line">TServerTransport serverTransport = <span class="keyword">new</span> TServerSocket(<span class="number">7911</span>);</div><div class="line"></div><div class="line">TServer.Args args = <span class="keyword">new</span> TServer.Args(serverTransport);</div><div class="line">args.processor(processor);</div><div class="line"></div><div class="line">TTransportFactory factory = <span class="keyword">new</span> TFramedTransport.Factory();</div><div class="line">args.transportFactory(factory);</div><div class="line"></div><div class="line">TSimpleServer server = <span class="keyword">new</span> TSimpleServer(args);</div><div class="line"></div><div class="line">System.out.println(<span class="string">"Starting server on port 7911 ..."</span>);</div><div class="line">server.serve();</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// official thrift example</span></div><div class="line"></div><div class="line">TSocket transport = <span class="keyword">new</span> TSocket(<span class="string">"localhost"</span>, <span class="number">9090</span>);</div><div class="line">TBinaryProtocol protocol = <span class="keyword">new</span> TBinaryProtocol(transport);</div><div class="line">transport.open();</div><div class="line"></div><div class="line">TMultiplexedProtocol mp = <span class="keyword">new</span> TMultiplexedProtocol(protocol, <span class="string">"Calculator"</span>);</div><div class="line">Calculator.Client service = <span class="keyword">new</span> Calculator.Client(mp);</div><div class="line"></div><div class="line">TMultiplexedProtocol mp2 = <span class="keyword">new</span> TMultiplexedProtocol(protocol, <span class="string">"WeatherReport"</span>);</div><div class="line">WeatherReport.Client service2 = <span class="keyword">new</span> WeatherReport.Client(mp2);</div><div class="line"></div><div class="line">System.out.println(service.add(<span class="number">2</span>,<span class="number">2</span>));</div><div class="line">System.out.println(service2.getTemperature());</div></pre></td></tr></table></figure>
+<h2 id="Thrift-Multiplexed-Client"><a href="#Thrift-Multiplexed-Client" class="headerlink" title="Thrift Multiplexed Client"></a>Thrift Multiplexed Client</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">TSocket transport = <span class="keyword">new</span> TSocket(<span class="string">"localhost"</span>, <span class="number">9090</span>);</div><div class="line">transport.open();</div><div class="line"></div><div class="line">TBinaryProtocol protocol = <span class="keyword">new</span> TBinaryProtocol(transport);</div><div class="line"></div><div class="line">TMultiplexedProtocol mp = <span class="keyword">new</span> TMultiplexedProtocol(protocol, <span class="string">"Calculator"</span>);</div><div class="line">Calculator.Client service = <span class="keyword">new</span> Calculator.Client(mp);</div><div class="line"></div><div class="line">TMultiplexedProtocol mp2 = <span class="keyword">new</span> TMultiplexedProtocol(protocol, <span class="string">"WeatherReport"</span>);</div><div class="line">WeatherReport.Client service2 = <span class="keyword">new</span> WeatherReport.Client(mp2);</div><div class="line"></div><div class="line">System.out.println(service.add(<span class="number">2</span>,<span class="number">2</span>));</div><div class="line">System.out.println(service2.getTemperature());</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/thrift/" rel="tag">#thrift</a>
+          
+            <a href="/tags/apache-thrift/" rel="tag">#apache thrift</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/15/best practices/design pattern/Design-Pattern-Singleton/" rel="next" title="Design Pattern - Singleton">
+                <i class="fa fa-chevron-left"></i> Design Pattern - Singleton
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/15/tools/rake/Rake-Introduction-to-Rake/" rel="prev" title="Rake - Introduction to Rake">
+                Rake - Introduction to Rake <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/avatar/avatar.jpg"
+               alt="Bowen" />
+          <p class="site-author-name" itemprop="name">Bowen</p>
+          <p class="site-description motion-element" itemprop="description">keep learning - learning notes and blogs</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives/">
+              <span class="site-state-item-count">111</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/">
+                <span class="site-state-item-count">264</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/phoenixjiangnan" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/phoenixjiangnan" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.linkedin.com/in/bowenli90" target="_blank" title="Linkedin">
+                  
+                    <i class="fa fa-fw fa-linkedin"></i>
+                  
+                  Linkedin
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Simple-Thrift-Server-and-Client-Example"><span class="nav-number">1.</span> <span class="nav-text">Simple Thrift Server and Client Example</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-define-a-service-with-methods-in-a-thrift-file"><span class="nav-number">1.1.</span> <span class="nav-text">1. define a service with methods in a .thrift file</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Run-thrift-exe-to-autogenerate-a-corresponding-class-to-the-service"><span class="nav-number">1.2.</span> <span class="nav-text">2. Run thrift .exe to autogenerate a corresponding class to the service,</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Write-a-Impl-or-Handler-to-implement-the-Service-Iface-interface-with-method-implementations-The-implementation-and-handler-should-be-on-the-server-side"><span class="nav-number">1.3.</span> <span class="nav-text">3. Write a Impl or Handler to implement the Service.Iface interface with method implementations. The implementation and handler should be on the server side.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Write-a-Server-that-initiates-the-following-variants-and-starts-to-listen-to-request"><span class="nav-number">1.4.</span> <span class="nav-text">4. Write a Server that initiates the following variants and starts to listen to request:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Write-a-client-that-initiates-the-following-variants-and-connects-to-Server"><span class="nav-number">1.5.</span> <span class="nav-text">5. Write a client that initiates the following variants and connects to Server</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Thrift-Multiplexing-Services"><span class="nav-number">2.</span> <span class="nav-text">Thrift Multiplexing Services</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Thrift-Multiplexed-Server"><span class="nav-number">2.1.</span> <span class="nav-text">Thrift Multiplexed Server</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Thrift-Multiplexed-Client"><span class="nav-number">2.2.</span> <span class="nav-text">Thrift Multiplexed Client</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bowen</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'bowensgithubblog';
+      var disqus_identifier = '2016/04/15/distributed system/thrift/Apache-Thrift-Detailed-Thrift-Examples/';
+      var disqus_title = "Apache Thrift - Detailed Thrift Examples";
+      var disqus_url = 'https://phoenixjiangnan.github.io/2016/04/15/distributed system/thrift/Apache-Thrift-Detailed-Thrift-Examples/';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
+    </script>
+  
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
