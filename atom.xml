@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://phoenixjiangnan.github.io/"/>
-  <updated>2016-10-19T23:10:31.000Z</updated>
+  <updated>2016-10-19T23:22:12.000Z</updated>
   <id>https://phoenixjiangnan.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://phoenixjiangnan.github.io/2016/10/19/hexo/Hexo-SEO-Hexo-SEO-Tutorial/"/>
     <id>https://phoenixjiangnan.github.io/2016/10/19/hexo/Hexo-SEO-Hexo-SEO-Tutorial/</id>
     <published>2016-10-19T23:09:54.000Z</published>
-    <updated>2016-10-19T23:10:31.000Z</updated>
+    <updated>2016-10-19T23:22:12.000Z</updated>
     
     <content type="html"><![CDATA[<p><a href="http://hunao.info/2016/06/01/Hexo-Seo%E4%BC%98%E5%8C%96%E8%AE%A9%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%9C%A8google%E6%90%9C%E7%B4%A2%E6%8E%92%E5%90%8D%E7%AC%AC%E4%B8%80/" target="_blank" rel="external">This blog</a> is very helpful and practical tutorial of how to do SEO on Hexo and Next theme, as well as how to use Google Search Console as a general tool for SEO.</p>
 <p>I’ve followed the tutorial to tune up my site configs. Try to search my blogs on google!</p>
@@ -28,7 +28,7 @@
 <h2 id="Hexo-SEO-优化让你的博客在google搜索排名第一"><a href="#Hexo-SEO-优化让你的博客在google搜索排名第一" class="headerlink" title="Hexo SEO 优化让你的博客在google搜索排名第一"></a>Hexo SEO 优化让你的博客在google搜索排名第一</h2><p>刚刚建买了域名建了博客，发现在google，百度毛都搜不到，真是悲伤，后来才知道原来是要seo的，所以看了一些文章，然后自己也摸索了一下，终于在让自己的博客在google搜索排名第一了!!!上图！</p>
 <p><img src="http://i.imgur.com/eA6Jesb.png" alt="google更新了"></p>
 <p>哈哈，顿时觉得自己好厉害耶!<br>下面给大家分享一些我的经验。</p>
-<h2 id="本教程在NexT主题上操作，其他主题请自行测试"><a href="#本教程在NexT主题上操作，其他主题请自行测试" class="headerlink" title="本教程在NexT主题上操作，其他主题请自行测试"></a>本教程在NexT主题上操作，其他主题请自行测试</h2><h3 id="首页title优化"><a href="#首页title优化" class="headerlink" title="首页title优化"></a>首页title优化</h3><p>更改<strong>index.swig</strong>文件<strong>(your-hexo-site\themes\next\layout)</strong>;</p>
+<h3 id="本教程在NexT主题上操作，其他主题请自行测试"><a href="#本教程在NexT主题上操作，其他主题请自行测试" class="headerlink" title="本教程在NexT主题上操作，其他主题请自行测试"></a>本教程在NexT主题上操作，其他主题请自行测试</h3><h3 id="首页title优化"><a href="#首页title优化" class="headerlink" title="首页title优化"></a>首页title优化</h3><p>更改<strong>index.swig</strong>文件<strong>(your-hexo-site\themes\next\layout)</strong>;</p>
 <p>将下面这段代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% block title %&#125; &#123;&#123; config.title &#125;&#125; &#123;% endblock %&#125;</div></pre></td></tr></table></figure>
 <p>改成</p>
@@ -51,6 +51,7 @@
 <p>在<strong>robots.txt</strong>中添加下面的代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Sitemap: http://www.hunao.info/sitemap.xml</div><div class="line">Sitemap: http://www.hunao.info/baidusitemap.xml</div></pre></td></tr></table></figure>
 <p>请自行将<strong>www.hunao.info</strong>改成自己的域名, 然后<code>hexo d -g</code>提交一下</p>
+<a id="more"></a>
 <h3 id="给非友情链接的出站链接添加-“nofollow”-标签"><a href="#给非友情链接的出站链接添加-“nofollow”-标签" class="headerlink" title="给非友情链接的出站链接添加 “nofollow” 标签"></a>给非友情链接的出站链接添加 “nofollow” 标签</h3><p>这个可以参考文章末尾提供的参考链接，写的很详细，我就不贴出来了。</p>
 <h3 id="注册Google-Search-Console"><a href="#注册Google-Search-Console" class="headerlink" title="注册Google Search Console"></a>注册Google Search Console</h3><p>链接：<a href="https://www.google.com/webmasters/" target="_blank" rel="external">https://www.google.com/webmasters/</a></p>
 <p>根据提示注册好之后，添加你的博客域名。</p>
@@ -77,7 +78,35 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;a href=&quot;http://hunao.info/2016/06/01/Hexo-Seo%E4%BC%98%E5%8C%96%E8%AE%A9%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%9C%A8google%E6%90%9C%E7%
+      &lt;p&gt;&lt;a href=&quot;http://hunao.info/2016/06/01/Hexo-Seo%E4%BC%98%E5%8C%96%E8%AE%A9%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%9C%A8google%E6%90%9C%E7%B4%A2%E6%8E%92%E5%90%8D%E7%AC%AC%E4%B8%80/&quot;&gt;This blog&lt;/a&gt; is very helpful and practical tutorial of how to do SEO on Hexo and Next theme, as well as how to use Google Search Console as a general tool for SEO.&lt;/p&gt;
+&lt;p&gt;I’ve followed the tutorial to tune up my site configs. Try to search my blogs on google!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;Hexo-SEO-优化让你的博客在google搜索排名第一&quot;&gt;&lt;a href=&quot;#Hexo-SEO-优化让你的博客在google搜索排名第一&quot; class=&quot;headerlink&quot; title=&quot;Hexo SEO 优化让你的博客在google搜索排名第一&quot;&gt;&lt;/a&gt;Hexo SEO 优化让你的博客在google搜索排名第一&lt;/h2&gt;&lt;p&gt;刚刚建买了域名建了博客，发现在google，百度毛都搜不到，真是悲伤，后来才知道原来是要seo的，所以看了一些文章，然后自己也摸索了一下，终于在让自己的博客在google搜索排名第一了!!!上图！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/eA6Jesb.png&quot; alt=&quot;google更新了&quot;&gt;&lt;/p&gt;
+&lt;p&gt;哈哈，顿时觉得自己好厉害耶!&lt;br&gt;下面给大家分享一些我的经验。&lt;/p&gt;
+&lt;h3 id=&quot;本教程在NexT主题上操作，其他主题请自行测试&quot;&gt;&lt;a href=&quot;#本教程在NexT主题上操作，其他主题请自行测试&quot; class=&quot;headerlink&quot; title=&quot;本教程在NexT主题上操作，其他主题请自行测试&quot;&gt;&lt;/a&gt;本教程在NexT主题上操作，其他主题请自行测试&lt;/h3&gt;&lt;h3 id=&quot;首页title优化&quot;&gt;&lt;a href=&quot;#首页title优化&quot; class=&quot;headerlink&quot; title=&quot;首页title优化&quot;&gt;&lt;/a&gt;首页title优化&lt;/h3&gt;&lt;p&gt;更改&lt;strong&gt;index.swig&lt;/strong&gt;文件&lt;strong&gt;(your-hexo-site\themes\next\layout)&lt;/strong&gt;;&lt;/p&gt;
+&lt;p&gt;将下面这段代码&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;#123;% block title %&amp;#125; &amp;#123;&amp;#123; config.title &amp;#125;&amp;#125; &amp;#123;% endblock %&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;改成&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;#123;% block title %&amp;#125; &amp;#123;&amp;#123; config.title &amp;#125;&amp;#125; - &amp;#123;&amp;#123; theme.description &amp;#125;&amp;#125; &amp;#123;% endblock %&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这时候你的首页会更符合&lt;strong&gt;网站名称 - 网站描述&lt;/strong&gt;这习惯。&lt;br&gt;进阶，做了 SEO 优化，把关键词也显示在title标题里，可改成&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;#123;% block title %&amp;#125; &amp;#123;&amp;#123; theme.keywords &amp;#125;&amp;#125; - &amp;#123;&amp;#123; config.title &amp;#125;&amp;#125;&amp;#123;&amp;#123; theme.description &amp;#125;&amp;#125; &amp;#123;% endblock %&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;注意：别堆砌关键字，整个标题一般不超过80个字符，可以通过chinaz的seo综合查询检查。&lt;/p&gt;
+&lt;h3 id=&quot;给你的博客添加sitemap站点地图&quot;&gt;&lt;a href=&quot;#给你的博客添加sitemap站点地图&quot; class=&quot;headerlink&quot; title=&quot;给你的博客添加sitemap站点地图&quot;&gt;&lt;/a&gt;给你的博客添加sitemap站点地图&lt;/h3&gt;&lt;p&gt;安装sitemap站点地图自动生成插件&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;npm install hexo-generator-sitemap --save&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;npm install hexo-generator-baidu-sitemap --save&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;在主题配置文件中添加一下配置,这里有的文章说的是在站点配置文章中添加，这个应该问题不大。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;sitemap: &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  path: sitemap.xml&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;baidusitemap:&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  path: baidusitemap.xml&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;注意：上面的格式一定要正确，一定要有缩进，不然会出错，我想信很多小伙伴因为没有缩进而不能编译的。&lt;/p&gt;
+&lt;p&gt;然后在&lt;strong&gt;主题配置文件&lt;/strong&gt;中修改&lt;strong&gt;url&lt;/strong&gt;为你的域名，例如我的&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;url: http://hunao.info&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;NexT主题默认的是&lt;code&gt;http://yoursite.com&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;配置好后，&lt;code&gt;hexo g&lt;/code&gt; 就能在&lt;strong&gt;your-hexo-site\public&lt;/strong&gt; 中生成&lt;strong&gt;sitemap.xml&lt;/strong&gt; 和 &lt;strong&gt;baidusitemap.xml&lt;/strong&gt;了;其中第一个是一会要提交给google的，后面那个看名字当然就是提交给Baidu的了；&lt;/p&gt;
+&lt;p&gt;在&lt;code&gt;your-hexo-site\source&lt;/code&gt;中新建文件&lt;strong&gt;robots.txt&lt;/strong&gt;,内容可以参照我的&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;User-agent: *&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Allow: /&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Allow: /archives/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Allow: /categories/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Allow: /tags/ &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Disallow: /vendors/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Disallow: /js/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Disallow: /css/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Disallow: /fonts/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Disallow: /vendors/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Disallow: /fancybox/&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;其中Allow后面的就是你的menu；&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在&lt;strong&gt;robots.txt&lt;/strong&gt;中添加下面的代码&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;Sitemap: http://www.hunao.info/sitemap.xml&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Sitemap: http://www.hunao.info/baidusitemap.xml&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;请自行将&lt;strong&gt;www.hunao.info&lt;/strong&gt;改成自己的域名, 然后&lt;code&gt;hexo d -g&lt;/code&gt;提交一下&lt;/p&gt;
     
     </summary>
     
