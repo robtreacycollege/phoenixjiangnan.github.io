@@ -17,8 +17,8 @@
   
   <entry>
     <title>The Always On Architecture - Moving Beyond Legacy Disaster Recovery</title>
-    <link href="https://phoenixjiangnan.github.io/2016/10/11/distributed%20system/The-Always-On-Architecture-Moving-Beyond-Legacy-Disaster-Recovery/"/>
-    <id>https://phoenixjiangnan.github.io/2016/10/11/distributed system/The-Always-On-Architecture-Moving-Beyond-Legacy-Disaster-Recovery/</id>
+    <link href="https://phoenixjiangnan.github.io/2016/10/10/distributed%20system/The-Always-On-Architecture-Moving-Beyond-Legacy-Disaster-Recovery/"/>
+    <id>https://phoenixjiangnan.github.io/2016/10/10/distributed system/The-Always-On-Architecture-Moving-Beyond-Legacy-Disaster-Recovery/</id>
     <published>2016-10-10T16:49:59.000Z</published>
     <updated>2016-10-10T16:52:03.000Z</updated>
     
@@ -108,8 +108,8 @@ It’s far past time to update these systems. Otherwise, more heartache pain and
   
   <entry>
     <title>Repost - Job-Hopping and Salary Raise 跳槽加薪</title>
-    <link href="https://phoenixjiangnan.github.io/2016/10/10/career%20and%20leadership/Repost-Job-Hopping-and-Salary-Raise-%E8%B7%B3%E6%A7%BD%E5%8A%A0%E8%96%AA/"/>
-    <id>https://phoenixjiangnan.github.io/2016/10/10/career and leadership/Repost-Job-Hopping-and-Salary-Raise-跳槽加薪/</id>
+    <link href="https://phoenixjiangnan.github.io/2016/10/09/career%20and%20leadership/Repost-Job-Hopping-and-Salary-Raise-%E8%B7%B3%E6%A7%BD%E5%8A%A0%E8%96%AA/"/>
+    <id>https://phoenixjiangnan.github.io/2016/10/09/career and leadership/Repost-Job-Hopping-and-Salary-Raise-跳槽加薪/</id>
     <published>2016-10-09T16:13:13.000Z</published>
     <updated>2016-10-09T16:15:31.000Z</updated>
     
@@ -144,8 +144,8 @@ It’s far past time to update these systems. Otherwise, more heartache pain and
   
   <entry>
     <title>Cache - Cache Design Patterns</title>
-    <link href="https://phoenixjiangnan.github.io/2016/10/08/system%20design/cache/Cache-Cache-Design-Patterns/"/>
-    <id>https://phoenixjiangnan.github.io/2016/10/08/system design/cache/Cache-Cache-Design-Patterns/</id>
+    <link href="https://phoenixjiangnan.github.io/2016/10/07/system%20design/cache/Cache-Cache-Design-Patterns/"/>
+    <id>https://phoenixjiangnan.github.io/2016/10/07/system design/cache/Cache-Cache-Design-Patterns/</id>
     <published>2016-10-08T02:54:44.000Z</published>
     <updated>2016-10-08T02:56:29.000Z</updated>
     
@@ -310,8 +310,8 @@ It’s far past time to update these systems. Otherwise, more heartache pain and
   
   <entry>
     <title>Bloom Filter - Introduction</title>
-    <link href="https://phoenixjiangnan.github.io/2016/10/07/data%20structures%20and%20algorithms/bloom%20filter/Bloom-Filter-Introduction/"/>
-    <id>https://phoenixjiangnan.github.io/2016/10/07/data structures and algorithms/bloom filter/Bloom-Filter-Introduction/</id>
+    <link href="https://phoenixjiangnan.github.io/2016/10/06/data%20structures%20and%20algorithms/bloom%20filter/Bloom-Filter-Introduction/"/>
+    <id>https://phoenixjiangnan.github.io/2016/10/06/data structures and algorithms/bloom filter/Bloom-Filter-Introduction/</id>
     <published>2016-10-07T03:50:33.000Z</published>
     <updated>2016-10-07T03:56:42.000Z</updated>
     
@@ -1691,8 +1691,8 @@ It’s far past time to update these systems. Otherwise, more heartache pain and
   
   <entry>
     <title>Java Network - TCP and Socket</title>
-    <link href="https://phoenixjiangnan.github.io/2016/09/19/java/network/Java-Network-TCP-and-Socket/"/>
-    <id>https://phoenixjiangnan.github.io/2016/09/19/java/network/Java-Network-TCP-and-Socket/</id>
+    <link href="https://phoenixjiangnan.github.io/2016/09/18/java/network/Java-Network-TCP-and-Socket/"/>
+    <id>https://phoenixjiangnan.github.io/2016/09/18/java/network/Java-Network-TCP-and-Socket/</id>
     <published>2016-09-18T16:34:53.000Z</published>
     <updated>2016-09-21T08:10:35.000Z</updated>
     
@@ -1809,8 +1809,8 @@ It’s far past time to update these systems. Otherwise, more heartache pain and
   
   <entry>
     <title>Java Concurrency - wait(), notify(), and notifyAll()</title>
-    <link href="https://phoenixjiangnan.github.io/2016/09/17/java/concurrency/Java-Concurrency-wait-notify-and-notifyAll/"/>
-    <id>https://phoenixjiangnan.github.io/2016/09/17/java/concurrency/Java-Concurrency-wait-notify-and-notifyAll/</id>
+    <link href="https://phoenixjiangnan.github.io/2016/09/16/java/concurrency/Java-Concurrency-wait-notify-and-notifyAll/"/>
+    <id>https://phoenixjiangnan.github.io/2016/09/16/java/concurrency/Java-Concurrency-wait-notify-and-notifyAll/</id>
     <published>2016-09-17T02:57:30.000Z</published>
     <updated>2016-09-30T06:53:04.000Z</updated>
     
@@ -2547,8 +2547,8 @@ Specifically, Thrift allows developers to define `datatypes` and `service interf
   
   <entry>
     <title>Java - Concurrency - Multi-Thread 1 - Implements Runnable or Extends Thread</title>
-    <link href="https://phoenixjiangnan.github.io/2016/08/23/java/concurrency/Java-Concurrency-Multi-Thread-1-Implements-Runnable-or-Extends-Thread/"/>
-    <id>https://phoenixjiangnan.github.io/2016/08/23/java/concurrency/Java-Concurrency-Multi-Thread-1-Implements-Runnable-or-Extends-Thread/</id>
+    <link href="https://phoenixjiangnan.github.io/2016/08/22/java/concurrency/Java-Concurrency-Multi-Thread-1-Implements-Runnable-or-Extends-Thread/"/>
+    <id>https://phoenixjiangnan.github.io/2016/08/22/java/concurrency/Java-Concurrency-Multi-Thread-1-Implements-Runnable-or-Extends-Thread/</id>
     <published>2016-08-23T06:37:24.000Z</published>
     <updated>2016-08-24T06:10:19.000Z</updated>
     

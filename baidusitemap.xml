@@ -4,7 +4,35 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/10/11/distributed%20system/The-Always-On-Architecture-Moving-Beyond-Legacy-Disaster-Recovery/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/01/23/hexo/Hexo-How-to-install-hexo-on-Mac-with-github-pages/</loc>
+    <lastmod>2016-10-19T21:54:17.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo - How to install Hexo on Mac with github pages</title>
+        <pubTime>2016-01-24T04:46:21.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>hexo and github pages</tag>
+         
+        <tag>hexo on mac</tag>
+         
+        <tag>hexo mac github</tag>
+         
+        <tag>hexo with github pages</tag>
+         
+         
+           
+             
+              <breadCrumb title="hexo" url="https://phoenixjiangnan.github.io/categories/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/10/10/distributed%20system/The-Always-On-Architecture-Moving-Beyond-Legacy-Disaster-Recovery/</loc>
     <lastmod>2016-10-10T16:52:03.000Z</lastmod>
     <data>
         <display>
@@ -26,7 +54,7 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/10/10/career%20and%20leadership/Repost-Job-Hopping-and-Salary-Raise-%E8%B7%B3%E6%A7%BD%E5%8A%A0%E8%96%AA/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/10/09/career%20and%20leadership/Repost-Job-Hopping-and-Salary-Raise-%E8%B7%B3%E6%A7%BD%E5%8A%A0%E8%96%AA/</loc>
     <lastmod>2016-10-09T16:15:31.000Z</lastmod>
     <data>
         <display>
@@ -48,7 +76,7 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/10/08/system%20design/cache/Cache-Cache-Design-Patterns/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/10/07/system%20design/cache/Cache-Cache-Design-Patterns/</loc>
     <lastmod>2016-10-08T02:56:29.000Z</lastmod>
     <data>
         <display>
@@ -110,7 +138,7 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/10/07/data%20structures%20and%20algorithms/bloom%20filter/Bloom-Filter-Introduction/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/10/06/data%20structures%20and%20algorithms/bloom%20filter/Bloom-Filter-Introduction/</loc>
     <lastmod>2016-10-07T03:56:42.000Z</lastmod>
     <data>
         <display>
@@ -230,34 +258,6 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/01/23/hexo/Hexo-How-to-install-hexo-on-Mac-with-github-pages/</loc>
-    <lastmod>2016-10-01T01:25:01.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo - How to install Hexo on Mac with github pages</title>
-        <pubTime>2016-01-23T12:46:21.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>hexo and github pages</tag>
-         
-        <tag>hexo on mac</tag>
-         
-        <tag>hexo mac github</tag>
-         
-        <tag>hexo with github pages</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="https://phoenixjiangnan.github.io/categories/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://phoenixjiangnan.github.io/2016/09/30/spring/spring%20boot/Spring-Boot-Introduction-to-Spring-Boot/</loc>
     <lastmod>2016-09-30T15:35:58.000Z</lastmod>
     <data>
@@ -281,7 +281,7 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/09/17/java/concurrency/Java-Concurrency-wait-notify-and-notifyAll/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/09/16/java/concurrency/Java-Concurrency-wait-notify-and-notifyAll/</loc>
     <lastmod>2016-09-30T06:53:04.000Z</lastmod>
     <data>
         <display>
@@ -296,7 +296,7 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/08/16/system%20design/project%20experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/08/15/system%20design/project%20experience/How-did-I-build-a-custom-dynamic-ZooKeeper-management-and-migration-framework-and-an-asynchronous-job-framework-for-Tableau-Server-11/</loc>
     <lastmod>2016-09-30T06:53:01.000Z</lastmod>
     <data>
         <display>
@@ -310,31 +310,6 @@
         <tag>tableau server 11</tag>
          
         <tag>async job framework</tag>
-         
-         
-           
-             
-              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
-          
-             
-              <breadCrumb title="project experience" url="https://phoenixjiangnan.github.io/categories/system-design/project-experience/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://phoenixjiangnan.github.io/2016/07/26/system%20design/project%20experience/How-did-I-reduce-Tableau-Server-s-downtime-in-a-Postgres-failover-from-3-min-to-1-sec/</loc>
-    <lastmod>2016-09-30T06:52:58.000Z</lastmod>
-    <data>
-        <display>
-        <title>How did I reduce Tableau Server's downtime in a Postgres failover from 3 min to 1 sec</title>
-        <pubTime>2016-07-26T14:51:35.000Z</pubTime>
-        
-        <tag>failover</tag>
-         
-        <tag>tableau server</tag>
          
          
            
@@ -375,7 +350,32 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/06/17/system%20design/task%20queue/System-Design-How-to-query-status-of-10-000-machines/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/07/26/system%20design/project%20experience/How-did-I-reduce-Tableau-Server-s-downtime-in-a-Postgres-failover-from-3-min-to-1-sec/</loc>
+    <lastmod>2016-09-30T06:52:58.000Z</lastmod>
+    <data>
+        <display>
+        <title>How did I reduce Tableau Server's downtime in a Postgres failover from 3 min to 1 sec</title>
+        <pubTime>2016-07-26T14:51:35.000Z</pubTime>
+        
+        <tag>failover</tag>
+         
+        <tag>tableau server</tag>
+         
+         
+           
+             
+              <breadCrumb title="system design" url="https://phoenixjiangnan.github.io/categories/system-design/"/>
+          
+             
+              <breadCrumb title="project experience" url="https://phoenixjiangnan.github.io/categories/system-design/project-experience/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://phoenixjiangnan.github.io/2016/06/16/system%20design/task%20queue/System-Design-How-to-query-status-of-10-000-machines/</loc>
     <lastmod>2016-09-30T06:52:57.000Z</lastmod>
     <data>
         <display>
@@ -466,7 +466,7 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/09/19/java/network/Java-Network-TCP-and-Socket/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/09/18/java/network/Java-Network-TCP-and-Socket/</loc>
     <lastmod>2016-09-21T08:10:35.000Z</lastmod>
     <data>
         <display>
@@ -568,7 +568,7 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/15/distributed%20system/thrift/Apache-Thrift-Detailed-Thrift-Examples/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/04/14/distributed%20system/thrift/Apache-Thrift-Detailed-Thrift-Examples/</loc>
     <lastmod>2016-09-17T00:18:55.000Z</lastmod>
     <data>
         <display>
@@ -685,7 +685,7 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/08/10/machine%20learning/Inverted-Index/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/08/09/machine%20learning/Inverted-Index/</loc>
     <lastmod>2016-08-30T23:59:46.000Z</lastmod>
     <data>
         <display>
@@ -786,7 +786,7 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/14/best%20practices/design%20pattern/Design-Pattern-Command-Pattern/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/04/13/best%20practices/design%20pattern/Design-Pattern-Command-Pattern/</loc>
     <lastmod>2016-08-27T23:58:10.000Z</lastmod>
     <data>
         <display>
@@ -863,7 +863,7 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/14/best%20practices/design%20pattern/Design-Pattern-Observer-Pattern/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/04/13/best%20practices/design%20pattern/Design-Pattern-Observer-Pattern/</loc>
     <lastmod>2016-08-27T23:58:02.000Z</lastmod>
     <data>
         <display>
@@ -917,7 +917,7 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/15/best%20practices/design%20pattern/Design-Pattern-Singleton/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/04/14/best%20practices/design%20pattern/Design-Pattern-Singleton/</loc>
     <lastmod>2016-08-27T23:57:57.000Z</lastmod>
     <data>
         <display>
@@ -944,7 +944,7 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/14/best%20practices/design%20pattern/Design-Pattern-Strategy-Pattern-Program-to-an-interface-not-an-implementation/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/04/13/best%20practices/design%20pattern/Design-Pattern-Strategy-Pattern-Program-to-an-interface-not-an-implementation/</loc>
     <lastmod>2016-08-27T23:57:54.000Z</lastmod>
     <data>
         <display>
@@ -1039,7 +1039,7 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/08/23/java/concurrency/Java-Concurrency-Multi-Thread-1-Implements-Runnable-or-Extends-Thread/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/08/22/java/concurrency/Java-Concurrency-Multi-Thread-1-Implements-Runnable-or-Extends-Thread/</loc>
     <lastmod>2016-08-24T06:10:19.000Z</lastmod>
     <data>
         <display>
@@ -1099,7 +1099,7 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/07/23/system%20design/project%20experience/How-did-I-improved-our-system-monitoring-accuracy-from-40-50-to-99/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/07/22/system%20design/project%20experience/How-did-I-improved-our-system-monitoring-accuracy-from-40-50-to-99/</loc>
     <lastmod>2016-08-16T20:25:44.000Z</lastmod>
     <data>
         <display>
@@ -1385,7 +1385,7 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/07/11/distributed%20system/zookeeper/ZooKeeper-Watches/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/07/10/distributed%20system/zookeeper/ZooKeeper-Watches/</loc>
     <lastmod>2016-07-14T03:51:48.000Z</lastmod>
     <data>
         <display>
@@ -1408,7 +1408,7 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/07/10/ruby/Ruby-Understanding-class-eval-and-instance-eval/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/07/09/ruby/Ruby-Understanding-class-eval-and-instance-eval/</loc>
     <lastmod>2016-07-10T07:18:48.000Z</lastmod>
     <data>
         <display>
@@ -1582,7 +1582,7 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/06/16/java/reflection/Java-Reflection-and-the-Class-Objects/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/06/15/java/reflection/Java-Reflection-and-the-Class-Objects/</loc>
     <lastmod>2016-07-04T23:26:19.000Z</lastmod>
     <data>
         <display>
@@ -1607,7 +1607,7 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/05/10/spring/Spring-Set-up-and-Enable-Scheduled-Tasks/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/05/09/spring/Spring-Set-up-and-Enable-Scheduled-Tasks/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
@@ -2096,7 +2096,7 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/14/system%20design/cache/Cache-Design-a-cache-with-inspiration-from-Guava-Cache/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/04/13/system%20design/cache/Cache-Design-a-cache-with-inspiration-from-Guava-Cache/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
@@ -2310,7 +2310,7 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/04/15/tools/rake/Rake-Introduction-to-Rake/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/04/14/tools/rake/Rake-Introduction-to-Rake/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
@@ -2560,7 +2560,7 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Function-and-BiFunction/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/01/30/java/java%208/lambda/Java-8-Functional-Interface-Function-and-BiFunction/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
@@ -2594,7 +2594,7 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Supplier/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/01/30/java/java%208/lambda/Java-8-Functional-Interface-Supplier/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>
@@ -2626,7 +2626,7 @@
 
     
   <url>
-    <loc>https://phoenixjiangnan.github.io/2016/01/31/java/java%208/lambda/Java-8-Functional-Interface-Predicate-and-BiPredicate/</loc>
+    <loc>https://phoenixjiangnan.github.io/2016/01/30/java/java%208/lambda/Java-8-Functional-Interface-Predicate-and-BiPredicate/</loc>
     <lastmod>2016-06-29T22:06:42.000Z</lastmod>
     <data>
         <display>

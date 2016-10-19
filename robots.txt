@@ -4,7 +4,6 @@ Allow: /2015/
 Allow: /2016/
 Allow: /about/
 Allow: /archives/
-Allow: /avatar/
 Allow: /categories/
 Allow: /tags/
 
