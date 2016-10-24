@@ -1,3 +1,10 @@
+User-Agent: AhrefsBot
+Disallow: /
+User-Agent: Ezooms
+Disallow: /
+User-Agent: Linguee Bot
+Disallow: /
+
 User-agent: *
 Allow: /
 Allow: /2015/
