@@ -4,6 +4,74 @@
   
     
     <entry>
+      <title><![CDATA[Big Data and Google's Three Papers I - GFS and MapReduce]]></title>
+      <url>https://phoenixjiangnan.github.io/2016/10/23/distributed%20system/data/Big-Data-and-Google-s-Three-Papers-I-GFS-and-MapReduce/</url>
+      <content type="html"><![CDATA[<p><strong>Big data</strong> is a pretty new concept that came up only serveral years ago. It emerged along with three papers from Google, <a href="http://static.googleusercontent.com/media/research.google.com/en//archive/gfs-sosp2003.pdf" target="_blank" rel="external">Google File System</a>(2003), <a href="http://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf" target="_blank" rel="external">MapReduce</a>(2004), and <a href="http://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf" target="_blank" rel="external">BigTable</a>(2006).</p>
+<p>Today I want to talk about some of my observation and understanding of the three papers, their impacts on open source big data community, particularly Hadoop ecosystem, and their positions in big data area according to the evolvement of Hadoop ecosystem.</p>
+<h2 id="Google-File-System-GFS"><a href="#Google-File-System-GFS" class="headerlink" title="Google File System (GFS)"></a>Google File System (GFS)</h2><p><strong>Hadoop Distributed File System (HDFS)</strong> is an open sourced version of GFS, and the foundation of Hadoop ecosystem. Its fundamental role is not only documented clearly in Hadoop’s official website, but also reflected during the past ten years as big data tools evolve.</p>
+<p>One example is that there have been so many alternatives to Hadoop MapReduce and BigTable-like NoSQL data stores coming up. For MapReduce, you have Hadoop Pig, Hadoop Hive, Spark, Kafka + Samza, Storm, and other batch/streaming processing frameworks. For NoSQL, you have HBase, AWS Dynamo, Cassandra, MongoDB, and other document, graph, key-value data stores. You can find out this trend even inside Google, e.g. 1) Google released DataFlow as official replacement of MapReduce, I bet there must be more alternatives to MapReduce within Google that haven’t been annouced 2) Google is actually emphasizing more on Spanner currently than BigTable.</p>
+<blockquote>
+<p>But I havn’t heard any replacement or planned replacement of GFS/HDFS.</p>
+</blockquote>
+<p>HDFS makes three essential assumptions among all others:</p>
+<blockquote>
+<ol>
+<li><p>it runs on a large number of commodity hardwards, and is able to replicate files among machines to tolerate and recover from failures</p>
+</li>
+<li><p>it only handles extremely large files, usually at GB, or even TB and PB</p>
+</li>
+<li><p>it only support file append, but not update</p>
+</li>
+</ol>
+</blockquote>
+<p>These properties, plus some other ones, indicate two important characteristics that big data cares about:</p>
+<blockquote>
+<ol>
+<li><p>it is able to persist files or other states with high reliability, availability, and scalability. It minimizes the possibility of losing anything; files or states are always available; the file system can scale horizontally as the size of files it stores increase</p>
+</li>
+<li><p>it handles <strong>big</strong> data! And as a tradeoff, it prefers throughput than low latency</p>
+</li>
+</ol>
+</blockquote>
+<p>In short, GFS/HDFS have proven to be the most influential component to support big data. Long live GFS/HDFS!</p>
+<h2 id="MapReduce"><a href="#MapReduce" class="headerlink" title="MapReduce"></a>MapReduce</h2><p>Frankly, I’m not a big fan of MapReduce.</p>
+<p>Google’s MapReduce paper is actually composed of two things: 1) A data processing model named MapReduce 2) A distributed, large scale data processing paradigm. The first is just one implementation of the second, and to be honest, I don’t think that implementation is a good one.</p>
+<h3 id="1-A-data-processing-model-named-MapReduce"><a href="#1-A-data-processing-model-named-MapReduce" class="headerlink" title="1. A data processing model named MapReduce"></a>1. A data processing model named MapReduce</h3><p>I first learned map and reduce from <strong>Hadoop MapReduce</strong>. It has been an old idea, and is orginiated from functional programming, though Google carried it forward and made it well-known.</p>
+<p>MapReduce can be strictly broken into three phases:</p>
+<blockquote>
+<ol>
+<li>Map</li>
+<li>Sort/Shuffle/Merge</li>
+<li>Reduce</li>
+</ol>
+</blockquote>
+<p><code>Map</code> and <code>Reduce</code> is programmable and provided by developers, and <code>Shuffle</code> is built-in. <code>Map</code> takes some inputs (usually a GFS/HDFS file), and breaks them into <strong>key-value</strong> pairs. <code>Sort/Shuffle/Merge</code> sorts outputs from all <code>Map</code> by <strong>key</strong>, and transport all records with the same key to the same place, guaranteed. <code>Reduce</code> does some other computations to records with the same key, and generates the final outcome by storing it in a new GFS/HDFS file.</p>
+<p>From a data processing point of view, this design is quite rough with lots of really obvious practical defects or limitations. For example, it’s a batching processing model, thus not suitable for stream/real time data processing; it’s not good at iterating data, chaining up MapReduce jobs are costly, slow, and painful; it’s terrible at handling complex business logic; etc.</p>
+<p>From a database stand pint of view, MapReduce is basically a <code>SELECT + GROUP BY</code> from a database point.</p>
+<p>There’s no need for Google to preach such outdated tricks as panacea.</p>
+<h3 id="2-A-distributed-large-scale-data-processing-paradigm"><a href="#2-A-distributed-large-scale-data-processing-paradigm" class="headerlink" title="2. A distributed, large scale data processing paradigm"></a>2. A distributed, large scale data processing paradigm</h3><p>This part in Google’s paper seems much more meaningful to me. It describes <strong>an distribued system paradigm that realizes large scale parallel computation on top of huge amount of commodity hardware</strong>.<br>Though MapReduce looks less valuable as Google tends to claim, this paradigm enpowers MapReduce with a breakingthough capability to process large amount of data unprecedentedly.</p>
+<p>There are three noticing units in this paradigm.</p>
+<blockquote>
+<ol>
+<li><p>Move computation to data, rather than transport data to where computation happens. This significantly reduces the network I/O patterns and keeps most of the I/O on the local disk or within the same rack.</p>
+</li>
+<li><p>Put all input, intermediate output, and final output to a large scale, highly reliable, highly available, and highly scalable file system, a.k.a. GFS/HDFS, to have the file system take cares lots of concerns.</p>
+</li>
+<li><p>Take advantage of an advanced resource management system. That system is able to automatically manage and monitor all work machines, assign resources to applications and jobs, recover from failure, and retry tasks.</p>
+</li>
+</ol>
+</blockquote>
+<p>The first point is actually the only innovative and practical idea Google gave in MapReduce paper. As data is extremely large, moving it will also be costly. So, instead of moving data around cluster to feed different computations, it’s much cheaper to move computations to where the data is located.</p>
+<p>The secondly thing is, as you have guessed, GFS/HDFS.</p>
+<p>Lastly, there’s a resource management system called <a href="http://research.google.com/pubs/pub43438.html" target="_blank" rel="external">Borg</a> inside Google. Google has been using it for decades, but not revealed it until 2015. Even with that, it’s not because Google is generous to give it to the world, but because Docker emerged and stripped away Borg’s competitive advantages. Google didn’t even mention Borg, such a profound piece in its data processing system, in its MapReduce paper - shame on Google!</p>
+<p>Now you can see that the MapReduce promoted by Google is nothing significant. It’s an old programming pattern, and its implementation takes huge advantage of other systems.</p>
+<p>That’s also why Yahoo! developed <a href="http://hortonworks.com/blog/apache-hadoop-yarn-background-and-an-overview/" target="_blank" rel="external">Apache Hadoop YARN</a>, a general-purpose, distributed, application management framework that supersedes the classic Apache Hadoop MapReduce framework for processing data in Hadoop clusters.</p>
+<hr>
+<p>I will talk about BigTable and its open sourced version in another post</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hexo SEO | Hexo SEO Tutorial]]></title>
       <url>https://phoenixjiangnan.github.io/2016/10/19/hexo/Hexo-SEO-Hexo-SEO-Tutorial/</url>
       <content type="html"><![CDATA[<p><a href="http://hunao.info/2016/06/01/Hexo-Seo%E4%BC%98%E5%8C%96%E8%AE%A9%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%9C%A8google%E6%90%9C%E7%B4%A2%E6%8E%92%E5%90%8D%E7%AC%AC%E4%B8%80/" target="_blank" rel="external">This blog</a> is very helpful and practical tutorial of how to do SEO on Hexo and Next theme, as well as how to use Google Search Console as a general tool for SEO.</p>

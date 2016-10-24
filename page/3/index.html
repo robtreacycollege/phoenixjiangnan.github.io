@@ -313,6 +313,131 @@
             
               
                 
+                <a class="post-title-link" href="/2016/07/04/ruby/Ruby-Basic-Data-Structures-Array-List-and-Hash/" itemprop="url">
+                  Ruby - Basic Data Structures, Array, List, and Hash
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-07-04T16:58:31-07:00" content="2016-07-04">
+              2016-07-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/ruby/" itemprop="url" rel="index">
+                    <span itemprop="name">ruby</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/04/ruby/Ruby-Basic-Data-Structures-Array-List-and-Hash/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/04/ruby/Ruby-Basic-Data-Structures-Array-List-and-Hash/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="Arrays"><a href="#Arrays" class="headerlink" title="Arrays"></a>Arrays</h2><p>Array indexing starts at 0, as in C or Java. <code>A negative index is assumed relative to the end of the array</code> — that is, <code>an index of -1 indicates the last element of the array</code>, <code>-2 is the next to last element in the array</code>, and so on.</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Creating arrays</span></div><div class="line">names = Array.new</div><div class="line">names = Array.new(<span class="number">20</span>)  <span class="comment"># Set the size of an array</span></div><div class="line"></div><div class="line">puts names.size <span class="comment"># 20</span></div><div class="line">puts names.length <span class="comment">#20</span></div><div class="line"></div><div class="line"><span class="comment">#----------------</span></div><div class="line"></div><div class="line">names = Array.new(<span class="number">4</span>, <span class="string">"mac"</span>)</div><div class="line">puts <span class="string">"<span class="subst">#&#123;names&#125;</span>"</span> <span class="comment"># macmacmacmac</span></div><div class="line"></div><div class="line"><span class="comment">#----------------</span></div><div class="line"></div><div class="line">nums = Array.new(<span class="number">10</span>) &#123;<span class="params">|e|</span> e = e * <span class="number">2</span>&#125;</div><div class="line">puts <span class="string">"<span class="subst">#&#123;nums&#125;</span>"</span> <span class="comment"># 024681012141618</span></div><div class="line"></div><div class="line">nums = Array.new(<span class="number">10</span>) &#123;<span class="params">|e|</span> e = e + <span class="number">1</span>&#125;</div><div class="line">puts <span class="string">"<span class="subst">#&#123;nums&#125;</span>"</span> <span class="comment"># 12345678910</span></div><div class="line"></div><div class="line"><span class="comment">#----------------</span></div><div class="line"></div><div class="line">nums = Array.[](<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>)</div><div class="line">puts <span class="string">"<span class="subst">#&#123;nums&#125;</span>"</span> <span class="comment"># 12345</span></div><div class="line"></div><div class="line">nums = Array[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</div><div class="line">puts <span class="string">"<span class="subst">#&#123;nums&#125;</span>"</span> <span class="comment"># 12345</span></div></pre></td></tr></table></figure>
+<p>The <code>Kernel</code> module available in core Ruby has an Array method, which only accepts a single argument. Here, the method takes a range as an argument to create an array of digits:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">digits = Array(<span class="number">0</span>..<span class="number">3</span>)</div><div class="line">puts <span class="string">"<span class="subst">#&#123;digits&#125;</span>"</span> <span class="comment"># 0123</span></div></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/04/ruby/Ruby-Basic-Data-Structures-Array-List-and-Hash/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/07/04/spring/hibernate integration/Spring-Spring-Hibernate-Integration-Configuration-for-DataSource-and-EntityManager/" itemprop="url">
                   Spring - Spring-Hibernate Integration Configuration for DataSource and EntityManager
                 </a>
@@ -3015,129 +3140,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/02/spring/Spring-Primary-annotation/" itemprop="url">
-                  Spring - @Primary annotation
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-05-02T21:19:54-07:00" content="2016-05-02">
-              2016-05-02
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/spring/" itemprop="url" rel="index">
-                    <span itemprop="name">spring</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/05/02/spring/Spring-Primary-annotation/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/05/02/spring/Spring-Primary-annotation/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><code>@Primary</code> indicates that a bean should be given preference when multiple candidates are qualified to autowire a single-valued dependency. If exactly one <code>primary</code> bean exists among the candidates, it will be the autowired value. This annotation is semantically equivalent to the <code>&lt;bean&gt;</code> element’s primary attribute in Spring XML.</p>
-<p>May be used on any class directly or indirectly annotated with <code>@Component</code> or on methods annotated with <code>@Bean</code>.</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/05/02/spring/Spring-Primary-annotation/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -3183,7 +3185,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives/">
-              <span class="site-state-item-count">111</span>
+              <span class="site-state-item-count">112</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -3191,7 +3193,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories/">
-                <span class="site-state-item-count">49</span>
+                <span class="site-state-item-count">50</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -3200,7 +3202,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags/">
-                <span class="site-state-item-count">264</span>
+                <span class="site-state-item-count">270</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
