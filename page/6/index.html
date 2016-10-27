@@ -313,6 +313,164 @@
             
               
                 
+                <a class="post-title-link" href="/2016/02/06/java/java 8/stream/Java-8-Stream/" itemprop="url">
+                  Java 8 Stream
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-02-06T23:36:01-08:00" content="2016-02-06">
+              2016-02-06
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/java/java-8/" itemprop="url" rel="index">
+                    <span itemprop="name">java 8</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/java/java-8/stream/" itemprop="url" rel="index">
+                    <span itemprop="name">stream</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/06/java/java 8/stream/Java-8-Stream/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/06/java/java 8/stream/Java-8-Stream/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="Package-java-util-stream"><a href="#Package-java-util-stream" class="headerlink" title="Package - java.util.stream"></a>Package - java.util.stream</h1><p>Classes to support functional-style operations on streams of elements, such as map-reduce transformations on collections.</p>
+<p>For example:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> sum = widgets.stream()</div><div class="line">           .filter(b -&gt; b.getColor() == RED)</div><div class="line">           .mapToInt(b -&gt; b.getWeight())</div><div class="line">           .sum();</div></pre></td></tr></table></figure>
+<p>Here we use <code>widgets</code>, <code>a Collection&lt;Widget&gt;</code>, as a source for a stream, and then perform a <code>filter-map-reduce</code> on the stream to obtain the sum of the weights of the red widgets. (Summation is an example of a reduction operation.)</p>
+<p>The key abstraction introduced in this package is <code>stream</code>. The classes <code>Stream</code>, <code>IntStream</code>, <code>LongStream</code>, and <code>DoubleStream</code> are streams over objects and the primitive int, long and double types. </p>
+<h1 id="Difference-between-Streams-and-Collections"><a href="#Difference-between-Streams-and-Collections" class="headerlink" title="Difference between Streams and Collections"></a>Difference between Streams and Collections</h1><p>Streams differ from collections in several ways:</p>
+<ul>
+<li><code>No storage</code>. A stream is not a data structure that stores elements; instead, it conveys elements from a source such as a data structure, an array, a generator function, or an I/O channel, through a pipeline of computational operations.</li>
+<li><code>Functional in nature</code>. An operation on a stream produces a result, but does not modify its source. For example, filtering a Stream obtained from a collection produces a new Stream without the filtered elements, rather than removing elements from the source collection.</li>
+<li><code>Laziness-seeking</code>. Many stream operations, such as filtering, mapping, or duplicate removal, can be implemented lazily, exposing opportunities for optimization. For example, “find the first String with three consecutive vowels” need not examine all the input strings. Stream operations are divided into intermediate (Stream-producing) operations and terminal (value- or side-effect-producing) operations. Intermediate operations are always lazy.</li>
+<li><code>Possibly unbounded</code>. While collections have a finite size, streams need not. Short-circuiting operations such as limit(n) or findFirst() can allow computations on infinite streams to complete in finite time.</li>
+<li><code>Consumable</code>. The elements of a stream are only visited once during the life of a stream. Like an Iterator, a new stream must be generated to revisit the same elements of the source.</li>
+</ul>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/02/06/java/java 8/stream/Java-8-Stream/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/02/04/java/Java-String-Formatting/" itemprop="url">
                   Java - String Formatting
                 </a>
@@ -2039,7 +2197,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives/">
-              <span class="site-state-item-count">112</span>
+              <span class="site-state-item-count">113</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -2056,7 +2214,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags/">
-                <span class="site-state-item-count">270</span>
+                <span class="site-state-item-count">273</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
